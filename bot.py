@@ -126,13 +126,18 @@ def enviar_video(container_id, dados):
 
 
 # ---------------- conta ----------------
+# Este robô só posta nesta conta. Outra conta no mesmo token (ex.: @meu_cao_obedece) é ignorada.
+CONTA_PADRAO = "seriavoce.historias"
 def conta():
     """Devolve (id, @usuario) da conta do Instagram que o token acessa."""
+    alvo = (os.environ.get("IG_USERNAME", "").strip() or CONTA_PADRAO).lstrip("@").lower()
     fixo = os.environ.get("IG_USER_ID", "").strip()
     if fixo:
         r = get(f"/{fixo}", fields="id,username")
+        if r.get("username", "").lower() != alvo:
+            raise ErroAPI(f"IG_USER_ID aponta para @{r.get('username')}, não para @{alvo}. Nada foi postado.")
         return r["id"], r.get("username", "")
-    diagnostico = []
+    diagnostico = [f"Conta procurada: @{alvo}"]
     try:
         r = get("/me/accounts", fields="name,instagram_business_account{id,username}")
         paginas = r.get("data", [])
@@ -140,15 +145,17 @@ def conta():
         for pagina in paginas:
             ig = pagina.get("instagram_business_account")
             diagnostico.append(f"- {pagina.get('name')}: " + (f"Instagram @{ig.get('username')}" if ig else "sem Instagram ligado"))
-            if ig:
+            if ig and ig.get("username", "").lower() == alvo:
                 return ig["id"], ig.get("username", "")
     except ErroAPI as e:
         diagnostico.append(f"/me/accounts falhou: {e}")
     try:  # token de página: /me já é a página
         r = get("/me", fields="id,name,instagram_business_account{id,username}")
         ig = r.get("instagram_business_account")
-        if ig:
+        if ig and ig.get("username", "").lower() == alvo:
             return ig["id"], ig.get("username", "")
+        if ig:
+            diagnostico.append(f"O token é da página de @{ig.get('username')}, que não é a conta deste robô.")
     except ErroAPI as e:
         if "expired" in str(e).lower() or '"code":190' in str(e):
             raise ErroAPI("O token venceu. Gere um token de página que não expira (veja o README) e atualize o segredo IG_TOKEN.\n" + str(e))
@@ -161,7 +168,7 @@ def conta():
             diagnostico.append("Permissões negadas: " + ", ".join(nao))
     except ErroAPI as e:
         diagnostico.append(f"Diagnóstico extra falhou: {e}")
-    raise ErroAPI("O token não enxerga nenhuma conta do Instagram ligada a uma página.\n" + "\n".join(diagnostico))
+    raise ErroAPI(f"O token não dá acesso à conta @{alvo}. Nada foi postado.\n" + "\n".join(diagnostico))
 
 
 # ---------------- postar ----------------

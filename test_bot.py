@@ -60,7 +60,7 @@ class TesteRobo(unittest.TestCase):
             mock.patch.object(bot, "ARQ_FILA", os.path.join(self.dir, "fila", "fila.json")),
             mock.patch.object(bot, "ARQ_ESTADO", os.path.join(self.dir, "estado.json")),
             mock.patch.object(bot, "ARQ_STATUS", os.path.join(self.dir, "status.md")),
-            mock.patch.dict(os.environ, {"IG_TOKEN": "TOKEN-SECRETO", "IG_USER_ID": ""}),
+            mock.patch.dict(os.environ, {"IG_TOKEN": "TOKEN-SECRETO", "IG_USER_ID": "", "IG_USERNAME": "esefossevoce"}),
             mock.patch.object(bot.time, "sleep", lambda s: None),
         ]
         for p in self.patches:
@@ -143,8 +143,33 @@ class TesteRobo(unittest.TestCase):
             if url.split("?")[0].endswith("/me"):
                 return {"id": "P1", "name": "Página", "instagram_business_account": {"id": "1784", "username": "seriavoce"}}
             raise AssertionError(url)
-        with mock.patch.object(bot, "http", meta):
+        with mock.patch.object(bot, "http", meta), mock.patch.dict(os.environ, {"IG_USERNAME": "seriavoce"}):
             self.assertEqual(bot.conta(), ("1784", "seriavoce"))
+
+    def test_ignora_conta_de_outro_perfil(self):
+        """Token com as duas páginas: o robô escolhe só a conta dele, nunca a primeira da lista."""
+        def meta(metodo, url, corpo=None, cabecalhos=None):
+            if url.split("?")[0].endswith("/me/accounts"):
+                return {"data": [{"name": "Meu cão obedece", "instagram_business_account": {"id": "999", "username": "meu_cao_obedece"}},
+                                 {"name": "E Se Fosse Você", "instagram_business_account": {"id": "1784", "username": "esefossevoce"}}]}
+            raise AssertionError(url)
+        with mock.patch.object(bot, "http", meta):
+            self.assertEqual(bot.conta(), ("1784", "esefossevoce"))
+
+    def test_recusa_quando_so_tem_outro_perfil(self):
+        def meta(metodo, url, corpo=None, cabecalhos=None):
+            caminho = url.split("?")[0]
+            if caminho.endswith("/me/accounts"):
+                return {"data": [{"name": "Meu cão obedece", "instagram_business_account": {"id": "999", "username": "meu_cao_obedece"}}]}
+            if caminho.endswith("/me"):
+                return {"id": "P2", "name": "Meu cão obedece"}
+            if caminho.endswith("/me/permissions"):
+                return {"data": []}
+            raise AssertionError(url)
+        with mock.patch.object(bot, "http", meta):
+            with self.assertRaises(bot.ErroAPI) as cm:
+                bot.conta()
+        self.assertIn("Nada foi postado", str(cm.exception))
 
     def test_token_vencido_explica(self):
         def meta(metodo, url, corpo=None, cabecalhos=None):
