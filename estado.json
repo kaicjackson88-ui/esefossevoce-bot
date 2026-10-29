@@ -21,6 +21,28 @@
           "PAI": "h1-p2-pai"
         }
       }
+    },
+    {
+      "id": "h2-copa-p1",
+      "media_id": "18115090805329322",
+      "permalink": "https://www.instagram.com/reel/DfFJtZqsBOV/",
+      "publicado_em": "2026-10-29T13:49:44+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "VAMOS",
+          "FICAMOS"
+        ],
+        "ate": "2026-10-30T13:49:44+00:00",
+        "votos": {
+          "VAMOS": 0,
+          "FICAMOS": 0
+        },
+        "continuacao": {
+          "VAMOS": "h2-p2-vamos",
+          "FICAMOS": "h2-p2-ficamos"
+        }
+      }
     }
   ]
 }
