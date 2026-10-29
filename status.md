@@ -1,10 +1,12 @@
 # Status do robô
 
-Última execução: 28/10 22:38 (Brasília) — ação `descobrir`
+Última execução: 28/10 22:39 (Brasília) — ação `postar` — **FALHOU**
 
-## Avisos
+## Erro
 
-- Token OK: conta @seriavoce.historias.
+```
+HTTP 400 em https://rupload.facebook.com/ig-api-upload/v24.0/18182066617389805: {"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}}
+```
 
 ## Fila
 
