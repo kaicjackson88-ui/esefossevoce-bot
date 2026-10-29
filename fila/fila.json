@@ -8,7 +8,14 @@
   "s05",
   "s06",
   "s07",
-  "s08"
+  "s08",
+  "s09",
+  "s10",
+  "s11",
+  "s12",
+  "s13",
+  "s14",
+  "s15"
  ],
  "itens": {
   "h1-mega-p1": {
@@ -159,6 +166,111 @@
    "continuacao": {
     "VOLTAR": "s08-p2-voltar",
     "AVANÇAR": "s08-p2-avancar"
+   }
+  },
+  "s09": {
+   "video": "fila/s09.mp4",
+   "legenda": "Você é o gato da casa. Às 3h da manhã você vê uma coisa que ninguém da família consegue ver... e ela sabe que você está vendo.\n\n👉 Comenta MIO ou ESCONDO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #gato #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "MIO",
+     "ESCONDO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "MIO": "s09-p2-mio",
+    "ESCONDO": "s09-p2-escondo"
+   }
+  },
+  "s10": {
+   "video": "fila/s10.mp4",
+   "legenda": "Seu prédio tem 12 andares. Hoje o elevador passou do 12. E quando a porta abriu... tinha um corredor igual ao seu.\n\n👉 Comenta SAIO ou FICO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #elevador #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "SAIO",
+     "FICO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "SAIO": "s10-p2-saio",
+    "FICO": "s10-p2-fico"
+   }
+  },
+  "s11": {
+   "video": "fila/s11.mp4",
+   "legenda": "Você dirige o último ônibus da noite. Um passageiro senta no fundo. No ponto seguinte, o banco está vazio... mas a campainha toca.\n\n👉 Comenta PARO ou SIGO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #suspense #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "PARO",
+     "SIGO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "PARO": "s11-p2-paro",
+    "SIGO": "s11-p2-sigo"
+   }
+  },
+  "s12": {
+   "video": "fila/s12.mp4",
+   "legenda": "Você é a câmera de segurança de uma loja. Às 3h da manhã aparece alguém no seu monitor que o caixa não vê... e ela olha direto pra sua lente.\n\n👉 Comenta GRAVO ou DESLIGO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #suspense #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "GRAVO",
+     "DESLIGO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "GRAVO": "s12-p2-gravo",
+    "DESLIGO": "s12-p2-desligo"
+   }
+  },
+  "s13": {
+   "video": "fila/s13.mp4",
+   "legenda": "Réveillon de 1999. Todo mundo com medo do bug do milênio. Só você sabe o que vem pela frente... porque você veio de 2026.\n\n👉 Comenta CONTO ou CALO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #nostalgia #anos90 #reels",
+   "votacao": {
+    "opcoes": [
+     "CONTO",
+     "CALO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "CONTO": "s13-p2-conto",
+    "CALO": "s13-p2-calo"
+   }
+  },
+  "s14": {
+   "video": "fila/s14.mp4",
+   "legenda": "Você é um boneco esquecido na prateleira. A criança voltou, agora com 18 anos, fazendo as malas. O que ela não levar vai pro lixo amanhã.\n\n👉 Comenta MEXO ou FICO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #nostalgia #infancia #reels",
+   "votacao": {
+    "opcoes": [
+     "MEXO",
+     "FICO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "MEXO": "s14-p2-mexo",
+    "FICO": "s14-p2-fico"
+   }
+  },
+  "s15": {
+   "video": "fila/s15.mp4",
+   "legenda": "Você acha uma carta com a sua letra, escrita em 2007: \"abrir só em 2026\". Você não lembra de ter escrito. E no verso tem mais uma frase...\n\n👉 Comenta ABRO ou QUEIMO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #suspense #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "ABRO",
+     "QUEIMO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "ABRO": "s15-p2-abro",
+    "QUEIMO": "s15-p2-queimo"
    }
   }
  }
