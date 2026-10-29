@@ -5,6 +5,9 @@ on:
     - cron: "0 15 * * *"   # 12h de Brasília: conta votos e posta
     - cron: "0 22 * * *"   # 19h de Brasília: conta votos e posta
     - cron: "20 * * * *"   # toda hora: só conta votos
+  push:
+    branches: [main]
+    paths: [comando.txt]   # editar este arquivo roda a ação escrita na 1ª linha
   workflow_dispatch:
     inputs:
       acao:
@@ -40,6 +43,7 @@ jobs:
           MANUAL: ${{ inputs.acao }}
         run: |
           if [ "$EVENTO" = "workflow_dispatch" ]; then acao="$MANUAL"
+          elif [ "$EVENTO" = "push" ]; then acao="$(head -n 1 comando.txt | tr -cd 'a-z')"
           elif [ "$AGENDA" = "20 * * * *" ]; then acao="votos"
           else acao="ciclo"; fi
           echo "acao=$acao" >> "$GITHUB_OUTPUT"
