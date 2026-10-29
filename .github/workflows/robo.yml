@@ -1,0 +1,64 @@
+name: Robô E Se Fosse Você
+
+on:
+  schedule:
+    - cron: "0 15 * * *"   # 12h de Brasília: conta votos e posta
+    - cron: "0 22 * * *"   # 19h de Brasília: conta votos e posta
+    - cron: "20 * * * *"   # toda hora: só conta votos
+  workflow_dispatch:
+    inputs:
+      acao:
+        description: "O que fazer: descobrir, postar, votos ou ciclo"
+        required: true
+        default: "descobrir"
+        type: choice
+        options: [descobrir, postar, votos, ciclo]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: robo
+  cancel-in-progress: false
+
+jobs:
+  rodar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Escolher ação
+        id: escolha
+        env:
+          EVENTO: ${{ github.event_name }}
+          AGENDA: ${{ github.event.schedule }}
+          MANUAL: ${{ inputs.acao }}
+        run: |
+          if [ "$EVENTO" = "workflow_dispatch" ]; then acao="$MANUAL"
+          elif [ "$AGENDA" = "20 * * * *" ]; then acao="votos"
+          else acao="ciclo"; fi
+          echo "acao=$acao" >> "$GITHUB_OUTPUT"
+
+      - name: Rodar robô
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          ACAO: ${{ steps.escolha.outputs.acao }}
+        run: python bot.py "$ACAO"
+
+      - name: Salvar estado no repositório
+        if: always()
+        run: |
+          git config user.name "robo-esefossevoce"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add estado.json status.md fila/fila.json
+          if ! git diff --cached --quiet; then
+            git commit -m "robô: atualiza estado"
+            git pull --rebase
+            git push
+          fi

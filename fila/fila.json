@@ -1,0 +1,22 @@
+{
+  "proximos": [
+    "h1-mega-p1"
+  ],
+  "itens": {
+    "h1-mega-p1": {
+      "video": "fila/h1-mega-p1.mp4",
+      "legenda": "Você acorda em 31/12/2010 com as memórias de 2026... e hoje é a Mega da Virada.\n\nVocê joga sozinho ou conta pro seu pai?\nComenta SOZINHO ou PAI. A mais votada vira a parte 2.\n\n#historias #esefossevoce #viagemnotempo #megadavirada #2010",
+      "votacao": {
+        "opcoes": [
+          "SOZINHO",
+          "PAI"
+        ],
+        "horas": 24
+      },
+      "continuacao": {
+        "SOZINHO": "h1-p2-sozinho",
+        "PAI": "h1-p2-pai"
+      }
+    }
+  }
+}
