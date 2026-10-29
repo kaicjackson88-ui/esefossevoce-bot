@@ -111,11 +111,18 @@ def post(caminho, **params):
 
 
 def enviar_video(container_id, dados):
-    return http("POST", f"{RUPLOAD}/{container_id}", corpo=dados, cabecalhos={
-        "Authorization": f"OAuth {token()}",
-        "offset": "0",
-        "file_size": str(len(dados)),
-    })
+    cab = {"Authorization": f"OAuth {token()}", "offset": "0", "file_size": str(len(dados))}
+    tentativas = [f"{RUPLOAD}/{container_id}", f"https://rupload.facebook.com/ig-api-upload/{container_id}"]
+    ultimo = None
+    for url in tentativas:
+        try:
+            r = http("POST", url, corpo=dados, cabecalhos=cab)
+            print(f"Envio do vídeo aceito em {url.split('/ig-api-upload/')[1].split('/')[0]}")
+            return r
+        except ErroAPI as e:
+            ultimo = e
+            print(f"Envio recusado: {e}")
+    raise ultimo
 
 
 # ---------------- conta ----------------
