@@ -1,18 +1,29 @@
 # Status do robô
 
-Última execução: 29/10 05:38 (Brasília) — ação `votos` — **FALHOU**
+Última execução: 29/10 10:36 (Brasília) — ação `descobrir`
 
-## Erro
+## Avisos
 
-```
-O token não enxerga nenhuma conta do Instagram ligada a uma página.
-/me/accounts falhou: HTTP 400 em https://graph.facebook.com/v24.0/me/accounts: {"error":{"message":"Error validating access token: Session has expired on Wednesday, 28-Oct-26 20:00:00 PDT. The current time is Thursday, 29-Oct-26 01:38:50 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"APmmBJChabwhdrxZjpOk3KV"}}
-Diagnóstico extra falhou: HTTP 400 em https://graph.facebook.com/v24.0/me: {"error":{"message":"Error validating access token: Session has expired on Wednesday, 28-Oct-26 20:00:00 PDT. The current time is Thursday, 29-Oct-26 01:38:50 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"AV3qmJN4drebHnkAh11inzm"}}
-```
+- Token OK: conta @seriavoce.historias.
 
 ## Fila
 
-(vazia)
+1. h2-copa-p1
+2. s01
+3. s02
+4. s03
+5. s04
+6. s05
+7. s06
+8. s07
+9. s08
+10. s09
+11. s10
+12. s11
+13. s12
+14. s13
+15. s14
+16. s15
 
 ## Votações
 
