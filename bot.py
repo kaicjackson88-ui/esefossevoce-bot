@@ -126,20 +126,34 @@ def conta():
     if fixo:
         r = get(f"/{fixo}", fields="id,username")
         return r["id"], r.get("username", "")
+    diagnostico = []
     try:
         r = get("/me/accounts", fields="name,instagram_business_account{id,username}")
-        for pagina in r.get("data", []):
+        paginas = r.get("data", [])
+        diagnostico.append(f"Páginas que o token enxerga: {len(paginas)}")
+        for pagina in paginas:
             ig = pagina.get("instagram_business_account")
+            diagnostico.append(f"- {pagina.get('name')}: " + (f"Instagram @{ig.get('username')}" if ig else "sem Instagram ligado"))
             if ig:
                 return ig["id"], ig.get("username", "")
-    except ErroAPI:
-        pass
-    r = get("/me", fields="name,instagram_business_account{id,username}")
-    ig = r.get("instagram_business_account")
-    if ig:
-        return ig["id"], ig.get("username", "")
-    raise ErroAPI("O token não enxerga nenhuma conta do Instagram ligada a uma página. "
-                  "Confira a ligação página ↔ Instagram e as permissões do token.")
+    except ErroAPI as e:
+        diagnostico.append(f"/me/accounts falhou: {e}")
+    try:
+        r = get("/me", fields="id,name")
+        if "instagram_business_account" not in r:
+            r2 = get(f"/{r['id']}", fields="instagram_business_account{id,username}") if r.get("category") else {}
+            ig = r2.get("instagram_business_account")
+            if ig:
+                return ig["id"], ig.get("username", "")
+        perms = get("/me/permissions").get("data", [])
+        ok = [p["permission"] for p in perms if p.get("status") == "granted"]
+        nao = [p["permission"] for p in perms if p.get("status") != "granted"]
+        diagnostico.append("Permissões concedidas: " + (", ".join(ok) or "nenhuma"))
+        if nao:
+            diagnostico.append("Permissões negadas: " + ", ".join(nao))
+    except ErroAPI as e:
+        diagnostico.append(f"Diagnóstico extra falhou: {e}")
+    raise ErroAPI("O token não enxerga nenhuma conta do Instagram ligada a uma página.\n" + "\n".join(diagnostico))
 
 
 # ---------------- postar ----------------
