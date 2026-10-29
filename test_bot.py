@@ -136,6 +136,24 @@ class TesteRobo(unittest.TestCase):
             self.assertEqual(bot.main(["bot.py", "descobrir"]), 1)
         self.assertIn("IG_TOKEN", self.ler("status.md"))
 
+    def test_token_de_pagina(self):
+        def meta(metodo, url, corpo=None, cabecalhos=None):
+            if url.split("?")[0].endswith("/me/accounts"):
+                raise bot.ErroAPI("HTTP 400: (#100) Tried accessing nonexisting field (accounts)")
+            if url.split("?")[0].endswith("/me"):
+                return {"id": "P1", "name": "Página", "instagram_business_account": {"id": "1784", "username": "seriavoce"}}
+            raise AssertionError(url)
+        with mock.patch.object(bot, "http", meta):
+            self.assertEqual(bot.conta(), ("1784", "seriavoce"))
+
+    def test_token_vencido_explica(self):
+        def meta(metodo, url, corpo=None, cabecalhos=None):
+            raise bot.ErroAPI('HTTP 400: {"error":{"message":"Session has expired","code":190}}')
+        with mock.patch.object(bot, "http", meta):
+            with self.assertRaises(bot.ErroAPI) as cm:
+                bot.conta()
+        self.assertIn("token venceu", str(cm.exception))
+
     def test_acao_invalida(self):
         self.assertEqual(bot.main(["bot.py", "apagar-tudo"]), 2)
 

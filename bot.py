@@ -144,13 +144,15 @@ def conta():
                 return ig["id"], ig.get("username", "")
     except ErroAPI as e:
         diagnostico.append(f"/me/accounts falhou: {e}")
+    try:  # token de página: /me já é a página
+        r = get("/me", fields="id,name,instagram_business_account{id,username}")
+        ig = r.get("instagram_business_account")
+        if ig:
+            return ig["id"], ig.get("username", "")
+    except ErroAPI as e:
+        if "expired" in str(e).lower() or '"code":190' in str(e):
+            raise ErroAPI("O token venceu. Gere um token de página que não expira (veja o README) e atualize o segredo IG_TOKEN.\n" + str(e))
     try:
-        r = get("/me", fields="id,name")
-        if "instagram_business_account" not in r:
-            r2 = get(f"/{r['id']}", fields="instagram_business_account{id,username}") if r.get("category") else {}
-            ig = r2.get("instagram_business_account")
-            if ig:
-                return ig["id"], ig.get("username", "")
         perms = get("/me/permissions").get("data", [])
         ok = [p["permission"] for p in perms if p.get("status") == "granted"]
         nao = [p["permission"] for p in perms if p.get("status") != "granted"]

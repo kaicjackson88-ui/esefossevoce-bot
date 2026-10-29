@@ -17,6 +17,14 @@ Também dá para rodar na mão: aba **Actions** > **Robô E Se Fosse Você** > *
 2. Rode a ação **descobrir**. O arquivo `status.md` deve mostrar "Token OK: conta @...".
 3. Rode a ação **postar** para publicar o primeiro vídeo da fila, ou espere o próximo horário.
 
+## Token que não expira (token de página)
+
+1. No [Explorador da Graph API](https://developers.facebook.com/tools/explorer/), gere um token de usuário com `instagram_basic`, `instagram_content_publish`, `instagram_manage_comments`, `pages_show_list`, `pages_read_engagement` e `business_management`.
+2. No [Depurador de token](https://developers.facebook.com/tools/debug/accesstoken/), toque em **Estender token de acesso** e copie o token longo.
+3. De volta ao Explorador, cole o token longo no campo de token e envie a consulta `me/accounts?fields=name,access_token`.
+4. Copie o `access_token` da página **E Se Fosse Você?**. Confira no Depurador: em "Expira" deve aparecer **Nunca**.
+5. Salve esse token no segredo `IG_TOKEN`.
+
 ## Arquivos
 
 - `fila/fila.json` — ordem dos próximos posts (`proximos`) e os dados de cada vídeo (`itens`): arquivo, legenda, opções de voto e qual continuação corresponde a cada opção.
