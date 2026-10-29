@@ -1,37 +1,165 @@
 {
-  "proximos": [
-    "h2-copa-p1"
-  ],
-  "itens": {
-    "h1-mega-p1": {
-      "video": "fila/h1-mega-p1.mp4",
-      "legenda": "Você acordou em 31/12/2010… com todas as memórias de 2026. ⏳\n\nHoje à noite é a Mega da Virada. E você lembra dos 6 números.\nSó tem um problema: se você ganhar, todo mundo vai querer saber COMO você sabia.\n\n👉 Você joga SOZINHO e esconde de todo mundo… ou conta pro seu PAI?\n\nComenta SOZINHO ou PAI. A resposta mais votada decide a Parte 2.\n\n#esefossevoce #historias #viagemnotempo #megadavirada #2010 #nostalgia #suspense #historiasanimadas #reels",
-      "votacao": {
-        "opcoes": [
-          "SOZINHO",
-          "PAI"
-        ],
-        "horas": 24
-      },
-      "continuacao": {
-        "SOZINHO": "h1-p2-sozinho",
-        "PAI": "h1-p2-pai"
-      }
-    },
-    "h2-copa-p1": {
-      "video": "fila/h2-copa-p1.mp4",
-      "legenda": "Você acordou em 08/07/2014… com todas as memórias de 2026. ⚽\n\nHoje é Brasil x Alemanha. Semifinal da Copa, em casa.\nE você sabe o placar: 7 a 1.\n\nSeu pai entra no quarto com dois ingressos pro Mineirão. Ele esperou a vida inteira por esse dia.\n\n👉 Você leva seu pai pro estádio… ou inventa uma desculpa pra ele ficar em casa?\n\nComenta VAMOS ou FICAMOS. A resposta mais votada decide a Parte 2.\n\n#esefossevoce #historias #viagemnotempo #copa2014 #7a1 #brasilxalemanha #nostalgia #futebol #reels",
-      "votacao": {
-        "opcoes": [
-          "VAMOS",
-          "FICAMOS"
-        ],
-        "horas": 24
-      },
-      "continuacao": {
-        "VAMOS": "h2-p2-vamos",
-        "FICAMOS": "h2-p2-ficamos"
-      }
-    }
+ "proximos": [
+  "h2-copa-p1",
+  "s01",
+  "s02",
+  "s03",
+  "s04",
+  "s05",
+  "s06",
+  "s07",
+  "s08"
+ ],
+ "itens": {
+  "h1-mega-p1": {
+   "video": "fila/h1-mega-p1.mp4",
+   "legenda": "Você acordou em 31/12/2010… com todas as memórias de 2026. ⏳\n\nHoje à noite é a Mega da Virada. E você lembra dos 6 números.\nSó tem um problema: se você ganhar, todo mundo vai querer saber COMO você sabia.\n\n👉 Você joga SOZINHO e esconde de todo mundo… ou conta pro seu PAI?\n\nComenta SOZINHO ou PAI. A resposta mais votada decide a Parte 2.\n\n#esefossevoce #historias #viagemnotempo #megadavirada #2010 #nostalgia #suspense #historiasanimadas #reels",
+   "votacao": {
+    "opcoes": [
+     "SOZINHO",
+     "PAI"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "SOZINHO": "h1-p2-sozinho",
+    "PAI": "h1-p2-pai"
+   }
+  },
+  "h2-copa-p1": {
+   "video": "fila/h2-copa-p1.mp4",
+   "legenda": "Você acordou em 08/07/2014… com todas as memórias de 2026. ⚽\n\nHoje é Brasil x Alemanha. Semifinal da Copa, em casa.\nE você sabe o placar: 7 a 1.\n\nSeu pai entra no quarto com dois ingressos pro Mineirão. Ele esperou a vida inteira por esse dia.\n\n👉 Você leva seu pai pro estádio… ou inventa uma desculpa pra ele ficar em casa?\n\nComenta VAMOS ou FICAMOS. A resposta mais votada decide a Parte 2.\n\n#esefossevoce #historias #viagemnotempo #copa2014 #7a1 #brasilxalemanha #nostalgia #futebol #reels",
+   "votacao": {
+    "opcoes": [
+     "VAMOS",
+     "FICAMOS"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "VAMOS": "h2-p2-vamos",
+    "FICAMOS": "h2-p2-ficamos"
+   }
+  },
+  "s01": {
+   "video": "fila/s01.mp4",
+   "legenda": "Você é um celular esquecido num carro de aplicativo, às 2h da manhã. E a mãe do seu dono acabou de mandar a mensagem mais estranha da vida dela.\n\n👉 O motorista atende ou desliga? Comenta ATENDE ou DESLIGA. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #suspense #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "ATENDE",
+     "DESLIGA"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "ATENDE": "s01-p2-atende",
+    "DESLIGA": "s01-p2-desliga"
+   }
+  },
+  "s02": {
+   "video": "fila/s02.mp4",
+   "legenda": "Você está no voo 2049. Faltam 10 minutos pro pouso. E lá embaixo... não tem nada.\n\n👉 Comenta PERGUNTO ou FINJO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #suspense #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "PERGUNTO",
+     "FINJO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "PERGUNTO": "s02-p2-pergunto",
+    "FINJO": "s02-p2-finjo"
+   }
+  },
+  "s03": {
+   "video": "fila/s03.mp4",
+   "legenda": "Você é o cachorro da família. Seu dono sumiu há 3 dias. Hoje ele voltou... mas o cheiro não é dele.\n\n👉 Comenta LATE ou ABANA. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #suspense #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "LATE",
+     "ABANA"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "LATE": "s03-p2-late",
+    "ABANA": "s03-p2-abana"
+   }
+  },
+  "s04": {
+   "video": "fila/s04.mp4",
+   "legenda": "Último dia da 8ª série, 2008. Você tem um bilhete na mochila e as memórias de 2026 na cabeça. Depois de hoje, nunca mais vai ver essa pessoa.\n\n👉 Comenta ENTREGO ou GUARDO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #nostalgia #2008 #reels",
+   "votacao": {
+    "opcoes": [
+     "ENTREGO",
+     "GUARDO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "ENTREGO": "s04-p2-entrego",
+    "GUARDO": "s04-p2-guardo"
+   }
+  },
+  "s05": {
+   "video": "fila/s05.mp4",
+   "legenda": "Você é o espelho do banheiro. Toda noite você imita a moradora. Hoje apareceu alguém atrás dela... e só você vê.\n\n👉 Comenta AVISO ou IMITO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #terror #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "AVISO",
+     "IMITO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "AVISO": "s05-p2-aviso",
+    "IMITO": "s05-p2-imito"
+   }
+  },
+  "s06": {
+   "video": "fila/s06.mp4",
+   "legenda": "Seu celular toca. É o seu próprio número. E a sua voz pede pra você não pegar o ônibus das 7h40.\n\n👉 Comenta PEGO ou ESPERO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #suspense #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "PEGO",
+     "ESPERO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "PEGO": "s06-p2-pego",
+    "ESPERO": "s06-p2-espero"
+   }
+  },
+  "s07": {
+   "video": "fila/s07.mp4",
+   "legenda": "Você sai do provador e o shopping está fechado. Vazio. Só a escada rolante continua ligada... com alguém nela.\n\n👉 Comenta SIGO ou ESCONDO. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #terror #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "SIGO",
+     "ESCONDO"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "SIGO": "s07-p2-sigo",
+    "ESCONDO": "s07-p2-escondo"
+   }
+  },
+  "s08": {
+   "video": "fila/s08.mp4",
+   "legenda": "Você acha um controle remoto na casa da sua avó. Só tem dois botões: VOLTAR e AVANÇAR. E a TV mostra coisas que não deveria.\n\n👉 Comenta VOLTAR ou AVANÇAR. A mais votada decide a Parte 2.\n\n#esefossevoce #historias #nostalgia #misterio #reels",
+   "votacao": {
+    "opcoes": [
+     "VOLTAR",
+     "AVANÇAR"
+    ],
+    "horas": 24
+   },
+   "continuacao": {
+    "VOLTAR": "s08-p2-voltar",
+    "AVANÇAR": "s08-p2-avancar"
+   }
   }
+ }
 }
