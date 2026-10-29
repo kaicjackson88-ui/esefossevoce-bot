@@ -115,7 +115,6 @@ def enviar_video(container_id, dados):
         "Authorization": f"OAuth {token()}",
         "offset": "0",
         "file_size": str(len(dados)),
-        "Content-Type": "application/octet-stream",
     })
 
 
