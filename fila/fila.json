@@ -1,5 +1,7 @@
 {
-  "proximos": [],
+  "proximos": [
+    "h2-copa-p1"
+  ],
   "itens": {
     "h1-mega-p1": {
       "video": "fila/h1-mega-p1.mp4",
@@ -14,6 +16,21 @@
       "continuacao": {
         "SOZINHO": "h1-p2-sozinho",
         "PAI": "h1-p2-pai"
+      }
+    },
+    "h2-copa-p1": {
+      "video": "fila/h2-copa-p1.mp4",
+      "legenda": "Você acordou em 08/07/2014… com todas as memórias de 2026. ⚽\n\nHoje é Brasil x Alemanha. Semifinal da Copa, em casa.\nE você sabe o placar: 7 a 1.\n\nSeu pai entra no quarto com dois ingressos pro Mineirão. Ele esperou a vida inteira por esse dia.\n\n👉 Você leva seu pai pro estádio… ou inventa uma desculpa pra ele ficar em casa?\n\nComenta VAMOS ou FICAMOS. A resposta mais votada decide a Parte 2.\n\n#esefossevoce #historias #viagemnotempo #copa2014 #7a1 #brasilxalemanha #nostalgia #futebol #reels",
+      "votacao": {
+        "opcoes": [
+          "VAMOS",
+          "FICAMOS"
+        ],
+        "horas": 24
+      },
+      "continuacao": {
+        "VAMOS": "h2-p2-vamos",
+        "FICAMOS": "h2-p2-ficamos"
       }
     }
   }
