@@ -89,6 +89,20 @@ class TesteRobo(unittest.TestCase):
         self.assertIn(("POST", "https://rupload.facebook.com/ig-api-upload/v24.0/C1"), meta.chamadas)
         self.assertNotIn("TOKEN-SECRETO", self.ler("status.md"))
 
+    def test_plano_b_link_do_github(self):
+        meta = MetaFalsa()
+        original = meta.__call__
+        def recusa_rupload(metodo, url, corpo=None, cabecalhos=None):
+            if "rupload" in url:
+                raise bot.ErroAPI('HTTP 400: {"debug_info":{"type":"ProcessingFailedError"}}')
+            if url.split("?")[0].endswith("/1784/media") and metodo == "POST":
+                meta.corpos = getattr(meta, "corpos", []) + [corpo.decode()]
+            return original(metodo, url, corpo, cabecalhos)
+        with mock.patch.object(bot, "http", recusa_rupload), \
+                mock.patch.dict(os.environ, {"GITHUB_REPOSITORY": "dono/repo", "GITHUB_REF_NAME": "main"}):
+            self.assertEqual(bot.main(["bot.py", "postar"]), 0)
+        self.assertIn("raw.githubusercontent.com%2Fdono%2Frepo%2Fmain%2Ffila%2Fv.mp4", meta.corpos[-1])
+
     def test_contagem_um_voto_por_pessoa(self):
         comentarios = [
             {"id": "1", "username": "ana", "text": "sozinho!!", "timestamp": "2026-10-29T10:00:00+0000"},

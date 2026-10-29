@@ -201,8 +201,24 @@ def postar(fila, estado):
     c = post(f"/{ig_id}/media", media_type="REELS", upload_type="resumable",
              caption=item["legenda"], share_to_feed="true")
     container = c["id"]
-    enviar_video(container, dados)
-    esperar_processamento(container)
+    try:
+        enviar_video(container, dados)
+    except ErroAPI as e:
+        # Plano B: o Instagram baixa o vídeo do próprio GitHub (só funciona com o repositório público).
+        repo = os.environ.get("GITHUB_REPOSITORY", "")
+        if not repo:
+            raise
+        url = f"https://raw.githubusercontent.com/{repo}/{os.environ.get('GITHUB_REF_NAME', 'main')}/{item['video']}"
+        print(f"Envio direto falhou ({e}). Tentando pelo link do GitHub: {url}")
+        c = post(f"/{ig_id}/media", media_type="REELS", video_url=url,
+                 caption=item["legenda"], share_to_feed="true")
+        container = c["id"]
+        try:
+            esperar_processamento(container)
+        except ErroAPI as e2:
+            raise ErroAPI(f"{e2}\nSe o repositório estiver privado, o Instagram não consegue baixar o vídeo pelo link: deixe o repositório público.")
+    else:
+        esperar_processamento(container)
     publicado = post(f"/{ig_id}/media_publish", creation_id=container)
     media_id = publicado["id"]
     try:
