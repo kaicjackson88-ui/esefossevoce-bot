@@ -184,6 +184,28 @@
           "ESPERO": "s06-p2-espero"
         }
       }
+    },
+    {
+      "id": "s07",
+      "media_id": "",
+      "permalink": "https://www.instagram.com/reel/DfHyhubBgt3/",
+      "publicado_em": "2026-10-30T14:24:48+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "SIGO",
+          "ESCONDO"
+        ],
+        "ate": "2026-10-31T14:24:48+00:00",
+        "votos": {
+          "SIGO": 0,
+          "ESCONDO": 0
+        },
+        "continuacao": {
+          "SIGO": "s07-p2-sigo",
+          "ESCONDO": "s07-p2-escondo"
+        }
+      }
     }
   ]
 }

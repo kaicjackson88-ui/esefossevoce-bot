@@ -285,9 +285,16 @@ def atualizar_votos(fila, estado):
     abertas = [p for p in estado["publicados"] if p.get("votacao", {}).get("aberta")]
     if not abertas:
         return
-    _, usuario = conta()
+    ig_id, usuario = conta()
     for p in abertas:
         v = p["votacao"]
+        if not p.get("media_id"):  # post registrado à mão: acha o id pelo link
+            r = get(f"/{ig_id}/media", fields="id,permalink", limit=50)
+            achado = [m["id"] for m in r.get("data", []) if m.get("permalink", "").rstrip("/") == p.get("permalink", "").rstrip("/")]
+            if not achado:
+                avisos.append(f"Não achei o post de '{p['id']}' ({p.get('permalink')}) para contar votos.")
+                continue
+            p["media_id"] = achado[0]
         v["votos"] = contar(todos_comentarios(p["media_id"]), v["opcoes"], ignorar={usuario})
         v["atualizado_em"] = agora().isoformat(timespec="seconds")
         if agora() >= datetime.fromisoformat(v["ate"]):
