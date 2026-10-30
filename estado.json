@@ -43,6 +43,28 @@
           "FICAMOS": "h2-p2-ficamos"
         }
       }
+    },
+    {
+      "id": "s01",
+      "media_id": "18080568182416551",
+      "permalink": "https://www.instagram.com/reel/DfHPHPjJPvw/",
+      "publicado_em": "2026-10-30T09:15:24+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "ATENDE",
+          "DESLIGA"
+        ],
+        "ate": "2026-10-31T09:15:24+00:00",
+        "votos": {
+          "ATENDE": 0,
+          "DESLIGA": 0
+        },
+        "continuacao": {
+          "ATENDE": "s01-p2-atende",
+          "DESLIGA": "s01-p2-desliga"
+        }
+      }
     }
   ]
 }
