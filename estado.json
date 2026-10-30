@@ -87,6 +87,28 @@
           "FINJO": "s02-p2-finjo"
         }
       }
+    },
+    {
+      "id": "s03",
+      "media_id": "18077390531466756",
+      "permalink": "https://www.instagram.com/reel/DfHPkXChyAn/",
+      "publicado_em": "2026-10-30T09:19:22+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "LATE",
+          "ABANA"
+        ],
+        "ate": "2026-10-31T09:19:22+00:00",
+        "votos": {
+          "LATE": 0,
+          "ABANA": 0
+        },
+        "continuacao": {
+          "LATE": "s03-p2-late",
+          "ABANA": "s03-p2-abana"
+        }
+      }
     }
   ]
 }
