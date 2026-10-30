@@ -68,7 +68,7 @@
           "ATENDE": "s01-p2-atende",
           "DESLIGA": "s01-p2-desliga"
         },
-        "atualizado_em": "2026-10-30T14:20:02+00:00"
+        "atualizado_em": "2026-10-30T19:31:47+00:00"
       }
     },
     {
@@ -91,7 +91,7 @@
           "PERGUNTO": "s02-p2-pergunto",
           "FINJO": "s02-p2-finjo"
         },
-        "atualizado_em": "2026-10-30T14:20:02+00:00"
+        "atualizado_em": "2026-10-30T19:31:48+00:00"
       }
     },
     {
@@ -107,14 +107,14 @@
         ],
         "ate": "2026-10-31T09:19:22+00:00",
         "votos": {
-          "LATE": 9,
+          "LATE": 10,
           "ABANA": 1
         },
         "continuacao": {
           "LATE": "s03-p2-late",
           "ABANA": "s03-p2-abana"
         },
-        "atualizado_em": "2026-10-30T14:20:03+00:00"
+        "atualizado_em": "2026-10-30T19:31:48+00:00"
       }
     },
     {
@@ -137,7 +137,7 @@
           "ENTREGO": "s04-p2-entrego",
           "GUARDO": "s04-p2-guardo"
         },
-        "atualizado_em": "2026-10-30T14:20:04+00:00"
+        "atualizado_em": "2026-10-30T19:31:49+00:00"
       }
     },
     {
@@ -160,7 +160,7 @@
           "AVISO": "s05-p2-aviso",
           "IMITO": "s05-p2-imito"
         },
-        "atualizado_em": "2026-10-30T14:20:04+00:00"
+        "atualizado_em": "2026-10-30T19:31:49+00:00"
       }
     },
     {
@@ -177,17 +177,18 @@
         "ate": "2026-10-31T14:21:51+00:00",
         "votos": {
           "PEGO": 0,
-          "ESPERO": 0
+          "ESPERO": 2
         },
         "continuacao": {
           "PEGO": "s06-p2-pego",
           "ESPERO": "s06-p2-espero"
-        }
+        },
+        "atualizado_em": "2026-10-30T19:31:50+00:00"
       }
     },
     {
       "id": "s07",
-      "media_id": "",
+      "media_id": "18272652856305389",
       "permalink": "https://www.instagram.com/reel/DfHyhubBgt3/",
       "publicado_em": "2026-10-30T14:24:48+00:00",
       "votacao": {
@@ -204,7 +205,8 @@
         "continuacao": {
           "SIGO": "s07-p2-sigo",
           "ESCONDO": "s07-p2-escondo"
-        }
+        },
+        "atualizado_em": "2026-10-30T19:31:51+00:00"
       }
     },
     {
@@ -220,13 +222,14 @@
         ],
         "ate": "2026-10-31T14:29:25+00:00",
         "votos": {
-          "VOLTAR": 0,
+          "VOLTAR": 1,
           "AVANÇAR": 0
         },
         "continuacao": {
           "VOLTAR": "s08-p2-voltar",
           "AVANÇAR": "s08-p2-avancar"
-        }
+        },
+        "atualizado_em": "2026-10-30T19:31:51+00:00"
       }
     },
     {
@@ -248,7 +251,8 @@
         "continuacao": {
           "MIO": "s09-p2-mio",
           "ESCONDO": "s09-p2-escondo"
-        }
+        },
+        "atualizado_em": "2026-10-30T19:31:52+00:00"
       }
     }
   ]
