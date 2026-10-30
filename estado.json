@@ -162,6 +162,28 @@
         },
         "atualizado_em": "2026-10-30T14:20:04+00:00"
       }
+    },
+    {
+      "id": "s06",
+      "media_id": "18350440588265681",
+      "permalink": "https://www.instagram.com/reel/DfHyKR2hjTV/",
+      "publicado_em": "2026-10-30T14:21:51+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "PEGO",
+          "ESPERO"
+        ],
+        "ate": "2026-10-31T14:21:51+00:00",
+        "votos": {
+          "PEGO": 0,
+          "ESPERO": 0
+        },
+        "continuacao": {
+          "PEGO": "s06-p2-pego",
+          "ESPERO": "s06-p2-espero"
+        }
+      }
     }
   ]
 }
