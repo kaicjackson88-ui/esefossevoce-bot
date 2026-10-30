@@ -1,19 +1,19 @@
 # Status do robô
 
-Última execução: 30/10 11:29 (Brasília) — ação `postar`
+Última execução: 30/10 11:31 (Brasília) — ação `postar`
 
 ## Fila
 
-1. s09
-2. s10
-3. s11
-4. s12
-5. s13
-6. s14
-7. s15
+1. s10
+2. s11
+3. s12
+4. s13
+5. s14
+6. s15
 
 ## Votações
 
+- **s09** (aberta até 31/10 11:31): MIO: 0 · ESCONDO: 0 https://www.instagram.com/reel/DfHzPwIort1/
 - **s08** (aberta até 31/10 11:29): VOLTAR: 0 · AVANÇAR: 0 https://www.instagram.com/reel/DfHzBfsOfPK/
 - **s07** (aberta até 31/10 11:24): SIGO: 0 · ESCONDO: 0 https://www.instagram.com/reel/DfHyhubBgt3/
 - **s06** (aberta até 31/10 11:21): PEGO: 0 · ESPERO: 0 https://www.instagram.com/reel/DfHyKR2hjTV/
@@ -23,4 +23,3 @@
 - **s02** (aberta até 31/10 06:18): PERGUNTO: 3 · FINJO: 0 https://www.instagram.com/reel/DfHPaGzPk2C/
 - **s01** (aberta até 31/10 06:15): ATENDE: 0 · DESLIGA: 0 https://www.instagram.com/reel/DfHPHPjJPvw/
 - **h2-copa-p1** (encerrada — venceu VAMOS): VAMOS: 0 · FICAMOS: 0 https://www.instagram.com/reel/DfFJtZqsBOV/
-- **h1-mega-p1** (encerrada — venceu SOZINHO): SOZINHO: 0 · PAI: 0 https://www.instagram.com/reel/DfD24hKzRrF/
