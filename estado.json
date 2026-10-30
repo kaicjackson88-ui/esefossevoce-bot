@@ -206,6 +206,28 @@
           "ESCONDO": "s07-p2-escondo"
         }
       }
+    },
+    {
+      "id": "s08",
+      "media_id": "18087612209334979",
+      "permalink": "https://www.instagram.com/reel/DfHzBfsOfPK/",
+      "publicado_em": "2026-10-30T14:29:25+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "VOLTAR",
+          "AVANÇAR"
+        ],
+        "ate": "2026-10-31T14:29:25+00:00",
+        "votos": {
+          "VOLTAR": 0,
+          "AVANÇAR": 0
+        },
+        "continuacao": {
+          "VOLTAR": "s08-p2-voltar",
+          "AVANÇAR": "s08-p2-avancar"
+        }
+      }
     }
   ]
 }
