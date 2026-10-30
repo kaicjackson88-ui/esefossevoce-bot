@@ -131,6 +131,28 @@
           "GUARDO": "s04-p2-guardo"
         }
       }
+    },
+    {
+      "id": "s05",
+      "media_id": "17954692026268728",
+      "permalink": "https://www.instagram.com/reel/DfHx5kqg2dx/",
+      "publicado_em": "2026-10-30T14:19:19+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "AVISO",
+          "IMITO"
+        ],
+        "ate": "2026-10-31T14:19:19+00:00",
+        "votos": {
+          "AVISO": 0,
+          "IMITO": 0
+        },
+        "continuacao": {
+          "AVISO": "s05-p2-aviso",
+          "IMITO": "s05-p2-imito"
+        }
+      }
     }
   ]
 }
