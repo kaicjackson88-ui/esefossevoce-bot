@@ -1,24 +1,24 @@
 # Status do robô
 
-Última execução: 30/10 06:19 (Brasília) — ação `postar`
+Última execução: 30/10 06:20 (Brasília) — ação `postar`
 
 ## Fila
 
-1. s04
-2. s05
-3. s06
-4. s07
-5. s08
-6. s09
-7. s10
-8. s11
-9. s12
-10. s13
-11. s14
-12. s15
+1. s05
+2. s06
+3. s07
+4. s08
+5. s09
+6. s10
+7. s11
+8. s12
+9. s13
+10. s14
+11. s15
 
 ## Votações
 
+- **s04** (aberta até 31/10 06:20): ENTREGO: 0 · GUARDO: 0 https://www.instagram.com/reel/DfHPupXTD6z/
 - **s03** (aberta até 31/10 06:19): LATE: 0 · ABANA: 0 https://www.instagram.com/reel/DfHPkXChyAn/
 - **s02** (aberta até 31/10 06:18): PERGUNTO: 0 · FINJO: 0 https://www.instagram.com/reel/DfHPaGzPk2C/
 - **s01** (aberta até 31/10 06:15): ATENDE: 0 · DESLIGA: 0 https://www.instagram.com/reel/DfHPHPjJPvw/

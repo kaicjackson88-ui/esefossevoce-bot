@@ -109,6 +109,28 @@
           "ABANA": "s03-p2-abana"
         }
       }
+    },
+    {
+      "id": "s04",
+      "media_id": "17943022968366549",
+      "permalink": "https://www.instagram.com/reel/DfHPupXTD6z/",
+      "publicado_em": "2026-10-30T09:20:30+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "ENTREGO",
+          "GUARDO"
+        ],
+        "ate": "2026-10-31T09:20:30+00:00",
+        "votos": {
+          "ENTREGO": 0,
+          "GUARDO": 0
+        },
+        "continuacao": {
+          "ENTREGO": "s04-p2-entrego",
+          "GUARDO": "s04-p2-guardo"
+        }
+      }
     }
   ]
 }
