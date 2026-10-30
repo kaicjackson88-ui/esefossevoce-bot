@@ -1,12 +1,12 @@
 # Status do robô
 
-Última execução: 29/10 22:08 (Brasília) — ação `votos` — **FALHOU**
+Última execução: 29/10 22:24 (Brasília) — ação `ciclo` — **FALHOU**
 
 ## Erro
 
 ```
 O token venceu. Gere um token de página que não expira (veja o README) e atualize o segredo IG_TOKEN.
-HTTP 400 em https://graph.facebook.com/v24.0/me: {"error":{"message":"Error validating access token: Session has expired on Thursday, 29-Oct-26 08:00:00 PDT. The current time is Thursday, 29-Oct-26 18:08:09 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"Ahl5JHLg7cO39bRopZREw2Y"}}
+HTTP 400 em https://graph.facebook.com/v24.0/me: {"error":{"message":"Error validating access token: Session has expired on Thursday, 29-Oct-26 08:00:00 PDT. The current time is Thursday, 29-Oct-26 18:24:46 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"AeeIasw_2D8DoOSp1udTRQZ"}}
 ```
 
 ## Fila
