@@ -1,6 +1,6 @@
 # Status do robô
 
-Última execução: 30/10 16:54 (Brasília) — ação `ciclo`
+Última execução: 30/10 20:54 (Brasília) — ação `votos`
 
 ## Fila
 
