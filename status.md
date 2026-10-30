@@ -1,13 +1,10 @@
 # Status do robô
 
-Última execução: 30/10 04:16 (Brasília) — ação `votos` — **FALHOU**
+Última execução: 30/10 06:07 (Brasília) — ação `descobrir`
 
-## Erro
+## Avisos
 
-```
-O token venceu. Gere um token de página que não expira (veja o README) e atualize o segredo IG_TOKEN.
-HTTP 400 em https://graph.facebook.com/v24.0/me: {"error":{"message":"Error validating access token: Session has expired on Thursday, 29-Oct-26 08:00:00 PDT. The current time is Friday, 30-Oct-26 00:16:19 PDT.","type":"OAuthException","code":190,"error_subcode":463,"fbtrace_id":"AXIzmywUnNqdYuJ7V0gTKMV"}}
-```
+- Token OK: conta @seriavoce.historias.
 
 ## Fila
 
