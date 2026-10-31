@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -q numpy scipy && (which ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg))
-      - run: python narrar.py ${{ inputs.ep }} 2>&1 | tee episodios/narrar_log.txt
+      - run: python narrar.py ${{ inputs.ep }} --so-audio 2>&1 | tee episodios/narrar_log.txt
       - name: Salvar
         if: always()
         run: |

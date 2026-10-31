@@ -16,7 +16,10 @@ texto = '\n\n'.join(falas)
 voz_google.ESTILO = ('Narre em português do Brasil, sotaque brasileiro natural, como um contador de histórias de suspense: voz grave, '
                      'ritmo envolvente, tensão nas pausas, sem soar como locutor nem robô. Faça uma pausa de um segundo entre cada parágrafo. Texto:\n\n')
 tmp = Path(tempfile.mkdtemp())
-for t in range(5):
+tudo = pasta / 'tudo.mp3'
+if tudo.exists():  # reaproveita a narração já feita (não gasta cota de novo)
+    import shutil; shutil.copy(tudo, tmp / 'tudo.mp3')
+for t in range(0 if tudo.exists() else 5):
     try:
         voz_google.falar(texto, str(tmp / 'tudo.mp3'), ep.get('voz', 'pt-BR-AntonioNeural'), ep.get('rate', '+0%'))
         break
@@ -25,7 +28,12 @@ for t in range(5):
         voz_google._ESTADO['fora_ate'] = 0
         time.sleep(65)
 else:
-    sys.exit('não consegui narrar (cota da voz do Google esgotada?)')
+    if not tudo.exists():
+        sys.exit('não consegui narrar (cota da voz do Google esgotada?)')
+if not tudo.exists():
+    import shutil; shutil.copy(tmp / 'tudo.mp3', tudo); print('narração completa salva', flush=True)
+if '--so-audio' in sys.argv:
+    print('total (só o áudio)'); sys.exit(0)
 
 subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(tmp / 'tudo.mp3'), '-ac', '1', '-ar', '24000', str(tmp / 'tudo.wav')], check=True)
 sr, x = wavfile.read(tmp / 'tudo.wav'); x = x.astype(np.float32) / 32768
