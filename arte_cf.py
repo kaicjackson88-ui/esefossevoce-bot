@@ -61,7 +61,7 @@ def gerar(item):
                 return base64.b64decode(img)
             return bruto
         except urllib.error.HTTPError as e:
-            msg = e.read().decode(errors='replace')[:400]
+            msg = e.read().decode(errors='replace')[:400].replace(CONTA, '<conta>').replace(TOKEN, '<token>')
             log(f'  HTTP {e.code}: {msg}')
             if e.code in (429, 500, 502, 503) and t < 2:
                 time.sleep(15 * (t + 1)); continue
@@ -73,7 +73,14 @@ def main():
     if not CONTA or not TOKEN:
         log('FALTA SEGREDO:', 'CF_ACCOUNT_ID ok' if CONTA else 'CF_ACCOUNT_ID vazio', '|', 'CF_API_TOKEN ok' if TOKEN else 'CF_API_TOKEN vazio')
         sys.exit(1)
-    log('segredos OK (conta com', len(CONTA), 'caracteres) | GEMINI_API_KEY', 'ok' if os.environ.get('GEMINI_API_KEY', '').strip() else 'vazio')
+    import re
+    conta_ok = bool(re.fullmatch(r'[0-9a-f]{32}', CONTA))
+    if not conta_ok:
+        dica = 'parece um TOKEN (os segredos estão trocados?)' if CONTA.startswith('cf') or len(CONTA) > 32 else 'formato inválido'
+        log(f'CF_ACCOUNT_ID errado: devia ter 32 letras/números (a-f, 0-9); tem {len(CONTA)} caracteres e {dica}.')
+        log('CF_API_TOKEN:', 'parece um ID de conta (trocado?)' if re.fullmatch(r'[0-9a-f]{32}', TOKEN) else f'{len(TOKEN)} caracteres')
+        sys.exit(1)
+    log('segredos OK | GEMINI_API_KEY', 'ok' if os.environ.get('GEMINI_API_KEY', '').strip() else 'vazio')
     pedidos = json.loads((ARTE / 'pedidos.json').read_text(encoding='utf-8'))
     refazer = set(sys.argv[1:])
     for it in pedidos:
