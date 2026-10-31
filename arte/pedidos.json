@@ -47,8 +47,8 @@
   "id": "p1_c2",
   "w": 1088,
   "h": 1920,
-  "seed": 7,
-  "prompt": "Keep the exact same character from image 0: same face, same red backwards cap, same scar, same outfit, same art style. 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Biel, a 19-year-old Brazilian young man with warm brown skin, short black curly hair with a low fade, a faded red baseball cap worn backwards, small scar on his left eyebrow, white tank top with grease stains, navy-blue mechanic coverall tied at the waist, orange rag in the back pocket. Lying on a mechanic creeper half under an old rusty car inside a cramped garage, exhausted, sweaty, only his face and chest visible, a single bulb above, vertical composition.",
+  "seed": 11,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Wide shot inside a cramped garage at night: the young mechanic lies on his back on a mechanic creeper, half of his body under an old rusty car, only his tired face and chest visible, dirty hands holding a wrench, one bulb hanging above, vertical composition.",
   "refs": [
    "biel_ref"
   ]
@@ -57,8 +57,8 @@
   "id": "p1_c3",
   "w": 1088,
   "h": 1920,
-  "seed": 7,
-  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Seu Lorival: a heavy Brazilian man in his 50s, bald, dark sunglasses, thick gold chain, open floral shirt, sitting in a plastic chair at a bar table counting money, cold smile, dim bar background, vertical composition."
+  "seed": 11,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Portrait of a heavyset Brazilian businessman in his 50s, bald head, dark sunglasses, gold necklace, floral short-sleeve shirt, sitting at a table in a dim neighborhood bar with a notebook of debts, cold smug smile, vertical composition."
  },
  {
   "id": "p1_c4",
@@ -74,8 +74,8 @@
   "id": "p1_c5",
   "w": 1088,
   "h": 1920,
-  "seed": 7,
-  "prompt": "Keep the exact same character from image 0: same face, same red backwards cap, same scar, same outfit, same art style. 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Close-up of Biel, a 19-year-old Brazilian young man with warm brown skin, short black curly hair with a low fade, a faded red baseball cap worn backwards, small scar on his left eyebrow, white tank top with grease stains, navy-blue mechanic coverall tied at the waist, orange rag in the back pocket hand slowly lifting the trunk lid of the black sedan at night, tense, his eyes looking sideways, vertical composition.",
+  "seed": 11,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Extreme close-up from behind his shoulder: his greasy hand slowly lifting the trunk lid of a black sedan at night, a thin line of light coming out of the trunk, his eye looking sideways nervously, vertical composition.",
   "refs": [
    "biel_ref"
   ]
@@ -84,8 +84,8 @@
   "id": "p1_c6",
   "w": 1088,
   "h": 1920,
-  "seed": 7,
-  "prompt": "Keep the exact same character from image 0: same face, same red backwards cap, same scar, same outfit, same art style. 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Biel, a 19-year-old Brazilian young man with warm brown skin, short black curly hair with a low fade, a faded red baseball cap worn backwards, small scar on his left eyebrow, white tank top with grease stains, navy-blue mechanic coverall tied at the waist, orange rag in the back pocket. He has opened the trunk of the black sedan; his shocked face is lit from below by the trunk light. Inside: three black backpacks, one open full of stacks of Brazilian real banknotes, vertical composition.",
+  "seed": 11,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Night scene lit only by the trunk light: he stands behind the open trunk of a black sedan, shocked, eyes wide, mouth open, both hands on the trunk lid. Inside the trunk three black backpacks, one open with stacks of Brazilian money glowing. Dark street behind him, vertical composition.",
   "refs": [
    "biel_ref"
   ]
@@ -101,8 +101,8 @@
   "id": "p1_c8",
   "w": 1088,
   "h": 1920,
-  "seed": 7,
-  "prompt": "Keep the exact same character from image 0: same face, same red backwards cap, same scar, same outfit, same art style. 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Biel, a 19-year-old Brazilian young man with warm brown skin, short black curly hair with a low fade, a faded red baseball cap worn backwards, small scar on his left eyebrow, white tank top with grease stains, navy-blue mechanic coverall tied at the waist, orange rag in the back pocket. Standing between the open trunk full of money and the convenience store where the driver went, torn, sweat on his forehead, dramatic split lighting, decision moment, vertical composition.",
+  "seed": 11,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Night, dramatic split lighting: he stands next to the open trunk, looking back over his shoulder at a lit convenience store across the street where a man in a leather jacket is waiting at the counter, one of his hands hovering over an open backpack of money, sweat on his forehead, torn decision moment, vertical composition.",
   "refs": [
    "biel_ref"
   ]
