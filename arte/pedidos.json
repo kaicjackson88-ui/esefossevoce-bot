@@ -1,0 +1,39 @@
+[
+ {
+  "id": "biel_ref",
+  "w": 1024,
+  "h": 1024,
+  "seed": 7,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Biel, a 19-year-old Brazilian young man with warm brown skin, short black curly hair with a low fade, a faded red baseball cap worn backwards, thin face, tired but determined dark eyes, a small scar on his left eyebrow, white tank top with grease stains, navy-blue mechanic coverall tied at the waist, orange rag hanging from the back pocket. Close-up bust portrait facing the camera with a confident half smile, big silver wrench resting on his shoulder. Background: small dim auto repair garage at night with one hanging light bulb, warm orange glow. Face centered, fills the frame."
+ },
+ {
+  "id": "biel_corpo",
+  "w": 768,
+  "h": 1344,
+  "seed": 7,
+  "refs": [
+   "biel_ref"
+  ],
+  "prompt": "Keep the exact same character from image 0: same face, same red backwards cap, same scar, same outfit, same art style. 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Biel, a 19-year-old Brazilian young man with warm brown skin, short black curly hair with a low fade, a faded red baseball cap worn backwards, thin face, tired but determined dark eyes, a small scar on his left eyebrow, white tank top with grease stains, navy-blue mechanic coverall tied at the waist, orange rag hanging from the back pocket. Full body standing in front of a small rundown auto repair garage at night, holding a wrench, slight lean, looking at the viewer."
+ },
+ {
+  "id": "biel_expressoes",
+  "w": 1344,
+  "h": 768,
+  "seed": 7,
+  "refs": [
+   "biel_ref"
+  ],
+  "prompt": "Keep the exact same character from image 0: same face, same red backwards cap, same scar, same outfit, same art style. 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Character expression sheet of Biel, a 19-year-old Brazilian young man with warm brown skin, short black curly hair with a low fade, a faded red baseball cap worn backwards, thin face, tired but determined dark eyes, a small scar on his left eyebrow, white tank top with grease stains, navy-blue mechanic coverall tied at the waist, orange rag hanging from the back pocket: three bust portraits side by side on a plain dark background: left shocked with wide eyes and open mouth, middle worried and suspicious looking over his shoulder, right determined and angry."
+ },
+ {
+  "id": "capa_p1",
+  "w": 1088,
+  "h": 1920,
+  "seed": 7,
+  "refs": [
+   "biel_ref"
+  ],
+  "prompt": "Keep the exact same character from image 0: same face, same red backwards cap, same scar, same outfit, same art style. 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Biel, a 19-year-old Brazilian young man with warm brown skin, short black curly hair with a low fade, a faded red baseball cap worn backwards, thin face, tired but determined dark eyes, a small scar on his left eyebrow, white tank top with grease stains, navy-blue mechanic coverall tied at the waist, orange rag hanging from the back pocket. Night, 2 AM, in front of a small rundown auto repair shop on a Brazilian suburb street. He has just opened the trunk of a black sedan; his shocked face is lit from below by the trunk light. Inside the trunk three black backpacks, one open full of stacks of Brazilian real banknotes. Across the street a dark car with tinted windows is parked, watching. Vertical composition, the top third of the image is a dark empty night sky."
+ }
+]
