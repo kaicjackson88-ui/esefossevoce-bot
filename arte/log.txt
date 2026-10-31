@@ -1,0 +1,6 @@
+segredos OK (conta com 53 caracteres) | GEMINI_API_KEY ok
+  HTTP 404: {"result":null,"success":false,"errors":[{"code":7003,"message":"Could not route to /client/v4/accounts/cfut_k7nU0DbOpqCjzFdlqbiiFNvpOqSOZtGaC9wllIHQ37535e7d/ai/run/@cf/black-forest-labs/flux-2-klein-4b, perhaps your object identifier is invalid?"}],"messages":[]}
+falhou biel_ref: HTTP 404
+falhou biel_corpo: [Errno 2] No such file or directory: '/home/runner/work/esefossevoce-bot/esefossevoce-bot/arte/biel_ref.png'
+falhou biel_expressoes: [Errno 2] No such file or directory: '/home/runner/work/esefossevoce-bot/esefossevoce-bot/arte/biel_ref.png'
+falhou capa_p1: [Errno 2] No such file or directory: '/home/runner/work/esefossevoce-bot/esefossevoce-bot/arte/biel_ref.png'
