@@ -57,8 +57,8 @@
   "id": "p1_c3",
   "w": 1088,
   "h": 1920,
-  "seed": 11,
-  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Portrait of a heavyset Brazilian businessman in his 50s, bald head, dark sunglasses, gold necklace, floral short-sleeve shirt, sitting at a table in a dim neighborhood bar with a notebook of debts, cold smug smile, vertical composition."
+  "seed": 21,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting, expressive face, no text, no letters, no watermark. A chubby bald middle-aged Brazilian man with dark sunglasses and a flowery short-sleeve shirt, sitting at a small table in a neighborhood bar at night, holding a pen over a small notebook, smug smile, vertical composition."
  },
  {
   "id": "p1_c4",
@@ -74,8 +74,8 @@
   "id": "p1_c5",
   "w": 1088,
   "h": 1920,
-  "seed": 11,
-  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive exaggerated face, rich textures, gritty Brazilian suburb atmosphere, no text, no letters, no watermark. Extreme close-up from behind his shoulder: his greasy hand slowly lifting the trunk lid of a black sedan at night, a thin line of light coming out of the trunk, his eye looking sideways nervously, vertical composition.",
+  "seed": 21,
+  "prompt": "The young mechanic from image 0, same face and red backwards cap, same art style. 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting, expressive face, no text, no letters, no watermark. Close-up: his hand opening the trunk of a black car at night, a light glowing from inside the trunk onto his curious face, vertical composition.",
   "refs": [
    "biel_ref"
   ]
