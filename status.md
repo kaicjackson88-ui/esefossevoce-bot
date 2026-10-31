@@ -1,6 +1,16 @@
 # Status do robô
 
-Última execução: 31/10 10:21 (Brasília) — ação `postar`
+Última execução: 31/10 14:49 (Brasília) — ação `votos` — **FALHOU**
+
+## Erro
+
+```
+O token não dá acesso à conta @seriavoce.historias. Nada foi postado.
+Conta procurada: @seriavoce.historias
+/me/accounts falhou: HTTP 400 em https://graph.facebook.com/v24.0/me/accounts: {"error":{"message":"(#100) Tried accessing nonexisting field (accounts)","type":"OAuthException","code":100,"fbtrace_id":"ALaXdRzAKrOWrRjdQ315Kyc"}}
+O token é da página de @ocorredobiel, que não é a conta deste robô.
+Diagnóstico extra falhou: HTTP 400 em https://graph.facebook.com/v24.0/me/permissions: {"error":{"message":"(#100) Tried accessing nonexisting field (permissions)","type":"OAuthException","code":100,"fbtrace_id":"ARm2E61o0HtJNUwx7rAcory"}}
+```
 
 ## Fila
 
