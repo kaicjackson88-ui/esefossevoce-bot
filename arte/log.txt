@@ -1,0 +1,7 @@
+token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
+  verificação (token de usuário): status active
+  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
+segredos OK | GEMINI_API_KEY ok
+  HTTP 401: {"result":null,"success":false,"errors":[{"code":10000,"message":"Authentication error"}],"messages":[]}
+falhou biel_ref: HTTP 401
+parando: o token não tem acesso. Nada mais foi tentado.
