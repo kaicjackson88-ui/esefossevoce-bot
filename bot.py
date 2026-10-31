@@ -238,22 +238,66 @@ def postar(fila, estado):
             "votos": {o: 0 for o in v["opcoes"]},
             "continuacao": item.get("continuacao", {}),
         }
+    if v:
+        try:
+            registro["votacao"]["comentario_id"] = post(f"/{media_id}/comments", message=texto_enquete(v["opcoes"], item.get("emojis", {})))["id"]
+        except ErroAPI as e:
+            avisos.append(f"Não consegui comentar a enquete: {e}")
     estado["publicados"].append(registro)
     fila["proximos"].pop(0)
     print(f"Publicado '{item_id}' em @{usuario}: {link or media_id}")
     return registro
 
 
+# ---------------- enquete nos comentários ----------------
+def texto_enquete(opcoes, emojis=None):
+    emojis = emojis or {}
+    linhas = [f"{emojis.get(o, '👉')} {o}" for o in opcoes]
+    return ("🗳️ VOTAÇÃO ABERTA! O que o Biel deve fazer?\n\n" + "\n".join(linhas) +
+            f"\n\nResponda este comentário com {' ou '.join(opcoes)}. 1 voto por pessoa. O placar sai aqui embaixo 👇")
+
+
+def barra(n, total, largura=10):
+    cheio = round(largura * n / total) if total else 0
+    return "🟩" * cheio + "⬜" * (largura - cheio)
+
+
+def texto_placar(votos, opcoes, final=False):
+    total = sum(votos.values())
+    linhas = [f"{o}: {barra(votos.get(o, 0), total)} {votos.get(o, 0)} ({round(100 * votos.get(o, 0) / total) if total else 0}%)" for o in opcoes]
+    cab = "🏁 RESULTADO FINAL" if final else "📊 PLACAR PARCIAL"
+    return f"{cab} — {total} votos\n" + "\n".join(linhas) + ("" if final else "\n\nAinda dá tempo de votar! 👇")
+
+
+def placar_parcial(p):
+    """Responde o comentário da enquete com o placar a cada 6 h, se houver votos novos."""
+    v = p["votacao"]
+    if not v.get("comentario_id"):
+        return
+    total = sum(v["votos"].values())
+    ultimo = v.get("placar_em")
+    if total == 0 or total == v.get("placar_total"):
+        return
+    if ultimo and agora() - datetime.fromisoformat(ultimo) < timedelta(hours=6):
+        return
+    try:
+        post(f"/{v['comentario_id']}/replies", message=texto_placar(v["votos"], v["opcoes"]))
+        v["placar_em"] = agora().isoformat(timespec="seconds"); v["placar_total"] = total
+    except ErroAPI as e:
+        avisos.append(f"Não consegui postar o placar: {e}")
+
+
 # ---------------- votos ----------------
 def todos_comentarios(media_id):
-    r = get(f"/{media_id}/comments", fields="id,text,username,timestamp", limit=50)
+    r = get(f"/{media_id}/comments", fields="id,text,username,timestamp,replies{id,text,username,timestamp}", limit=50)
     lista = list(r.get("data", []))
     paginas = 0
     while r.get("paging", {}).get("next") and paginas < 40:
         r = get_url(r["paging"]["next"])
         lista += r.get("data", [])
         paginas += 1
-    return lista
+    respostas = [x for c in lista for x in (c.get("replies") or {}).get("data", [])]  # quem vota respondendo o comentário da enquete
+    return lista + respostas
 
 
 def contar(comentarios, opcoes, ignorar=()):
@@ -298,6 +342,8 @@ def atualizar_votos(fila, estado):
             p["media_id"] = achado[0]
         v["votos"] = contar(todos_comentarios(p["media_id"]), v["opcoes"], ignorar={usuario})
         v["atualizado_em"] = agora().isoformat(timespec="seconds")
+        if agora() < datetime.fromisoformat(v["ate"]):
+            placar_parcial(p)
         if agora() >= datetime.fromisoformat(v["ate"]):
             encerrar(p, fila)
 
@@ -310,6 +356,11 @@ def encerrar(publicacao, fila):
     v["vencedor"] = ganhou
     texto = (f"Votação encerrada! {ganhou} venceu com {v['votos'][ganhou]} de {total} votos. "
              f"A continuação sai no próximo post.")
+    if v.get("comentario_id"):
+        try:
+            post(f"/{v['comentario_id']}/replies", message=texto_placar(v["votos"], v["opcoes"], final=True) + f"\n\n✅ {ganhou} venceu! A continuação sai no próximo post.")
+        except ErroAPI as e:
+            avisos.append(f"Não consegui postar o resultado na enquete: {e}")
     try:
         post(f"/{publicacao['media_id']}/comments", message=texto)
     except ErroAPI as e:

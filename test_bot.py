@@ -1,3 +1,4 @@
+import urllib.parse
 """Testes do robô com respostas simuladas da Meta (não usa token nem internet).
 Rodar: python -m unittest test_bot
 """
@@ -19,6 +20,7 @@ class MetaFalsa:
         self.chamadas = []
         self.comentarios = comentarios or []
         self.comentarios_postados = []
+        self.respostas = []
 
     def __call__(self, metodo, url, corpo=None, cabecalhos=None):
         self.chamadas.append((metodo, url.split("?")[0]))
@@ -42,6 +44,9 @@ class MetaFalsa:
         if caminho.endswith("/M1/comments") and metodo == "POST":
             self.comentarios_postados.append(corpo.decode())
             return {"id": "R1"}
+        if caminho.endswith("/R1/replies") and metodo == "POST":
+            self.respostas.append(corpo.decode())
+            return {"id": "R2"}
         raise AssertionError(f"rota inesperada: {metodo} {caminho}")
 
 
@@ -132,7 +137,22 @@ class TesteRobo(unittest.TestCase):
         self.assertFalse(v["aberta"])
         self.assertEqual(v["vencedor"], "PAI")
         self.assertEqual(json.loads(self.ler("fila/fila.json"))["proximos"], ["p2b"])
-        self.assertEqual(len(meta.comentarios_postados), 1)
+        self.assertEqual(len(meta.comentarios_postados), 2)  # enquete + aviso de encerramento
+        self.assertIn("VOTA", urllib.parse.unquote_plus(meta.comentarios_postados[0]))
+        self.assertEqual(len(meta.respostas), 1)  # resultado final respondido na enquete
+        self.assertIn("RESULTADO", urllib.parse.unquote_plus(meta.respostas[0]))
+
+    def test_placar_parcial_e_respostas_contam(self):
+        meta = MetaFalsa([{"id": "1", "username": "ana", "text": "olha a enquete", "timestamp": "2026-10-29T10:00:00+0000",
+                           "replies": {"data": [{"id": "9", "username": "bia", "text": "PAI", "timestamp": "2026-10-29T10:01:00+0000"}]}}])
+        with mock.patch.object(bot, "http", meta):
+            bot.main(["bot.py", "postar"])
+            bot.main(["bot.py", "votos"])
+            bot.main(["bot.py", "votos"])  # sem votos novos: não repete o placar
+        v = json.loads(self.ler("estado.json"))["publicados"][0]["votacao"]
+        self.assertEqual(v["votos"], {"SOZINHO": 0, "PAI": 1})
+        self.assertEqual(len(meta.respostas), 1)
+        self.assertIn("PLACAR", urllib.parse.unquote_plus(meta.respostas[0]))
 
     def test_continuacao_faltando_vira_aviso(self):
         meta = MetaFalsa([{"id": "1", "username": "ana", "text": "SOZINHO", "timestamp": "2026-10-29T10:00:00+0000"}])
