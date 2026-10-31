@@ -370,6 +370,28 @@
           "FICO": "s14-p2-fico"
         }
       }
+    },
+    {
+      "id": "s15",
+      "media_id": "17878527654633691",
+      "permalink": "https://www.instagram.com/reel/DfKQFN_Bwp_/",
+      "publicado_em": "2026-10-31T13:21:32+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "ABRO",
+          "QUEIMO"
+        ],
+        "ate": "2026-11-01T13:21:32+00:00",
+        "votos": {
+          "ABRO": 0,
+          "QUEIMO": 0
+        },
+        "continuacao": {
+          "ABRO": "s15-p2-abro",
+          "QUEIMO": "s15-p2-queimo"
+        }
+      }
     }
   ]
 }
