@@ -1,0 +1,58 @@
+{
+ "id": "p1b",
+ "titulo": "O FURO",
+ "parte": 1,
+ "voz": "pt-BR-AntonioNeural",
+ "rate": "+10%",
+ "cenas": [
+  {
+   "img": "p1b_c1",
+   "fala": "Biel tem dezenove anos e uma oficina pequena, no pé da comunidade onde nasceu."
+  },
+  {
+   "img": "p1b_c2",
+   "fala": "Ano passado, a mãe dele perdeu o emprego. Pra não perder a casa, ele pegou cinco mil com o Seu Lorival."
+  },
+  {
+   "img": "p1_c3",
+   "fala": "Com os juros... virou oito."
+  },
+  {
+   "img": "p1b_c4",
+   "fala": "Ele dorme na oficina, trabalha até de madrugada... e mesmo assim não chega nem perto."
+  },
+  {
+   "img": "p1b_c5",
+   "fala": "Naquela segunda, quase meia-noite, um carro preto entrou cantando pneu. Desceu um cara de terno, suando, olhando pra rua o tempo todo."
+  },
+  {
+   "img": "p1b_c6",
+   "fala": "Pneu furado. Não precisa de pneu novo. Só põe o estepe. Rápido!"
+  },
+  {
+   "img": "p1b_c7",
+   "fala": "Biel agachou pra ver o pneu... e gelou. Aquilo não era prego. Era um buraco de bala."
+  },
+  {
+   "img": "p1b_c8",
+   "fala": "Ele abriu o porta-malas pra pegar o estepe. E em cima... duas malas. Abertas. Cheias de dinheiro. E uma arma."
+  },
+  {
+   "img": "p1b_c9",
+   "fala": "No fim da rua, luz azul e vermelha. Uma viatura. Quando Biel virou... o cara de terno tinha sumido."
+  },
+  {
+   "img": "p1b_c10",
+   "fala": "E o carro, com o dinheiro, ficou ali. Na oficina dele. Biel esconde o carro e fecha a oficina? Ou chama a polícia? Os comentários decidem."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "ESCONDE",
+   "CHAMA"
+  ],
+  "horas": 24
+ },
+ "voz_gemini": "Fenrir",
+ "estilo": "Narre em português do Brasil, sotaque brasileiro natural, como o narrador de uma série policial de suspense: ritmo RÁPIDO e urgente, tensão crescente, ênfase forte nas palavras de impacto (cinco mil, oito, meia-noite, bala, dinheiro, arma, viatura, sumido). Fale a frase do homem de terno com pressa e nervoso; voz baixa e chocada em \"Era um buraco de bala\" e \"E uma arma\". Nada de tom de locutor ou robô. Faça uma pausa curta entre os parágrafos. Texto:\n\n"
+}

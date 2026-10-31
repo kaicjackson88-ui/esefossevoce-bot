@@ -180,5 +180,103 @@
   "refs": [
    "biel_ref"
   ]
+ },
+ {
+  "id": "terno_ref",
+  "w": 1024,
+  "h": 1024,
+  "seed": 13,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Bust portrait of a nervous Brazilian man in his 30s wearing an expensive dark-grey suit, loosened red tie, slicked-back black hair, thin mustache, gold watch, sweating, looking over his shoulder, anxious, night street background."
+ },
+ {
+  "id": "p1b_c1",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Night wide shot: his tiny auto repair shop at the bottom of a hillside Brazilian favela, stacked brick houses with warm lights climbing the hill behind, he stands at the garage door wiping his hands, tired. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1b_c2",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Inside a simple kitchen at night: his mother, a Brazilian woman in her 40s with curly hair tied up and a simple t-shirt, sits at the table with a pile of bills, hands on her face, worried; he stands behind her with a hand on her shoulder, sad. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1b_c4",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Night inside the cramped garage: he sleeps sitting on an old tire, leaning on a workbench full of tools, exhausted, a calendar and bills pinned on the wall behind, one bulb. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1b_c5",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). The man in the suit from image 1 (same face, same suit and red tie). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Near midnight: a black sedan has just entered the small garage, headlights glaring; the man in the suit jumps out, sweating, looking back at the street; the young mechanic in the foreground watches surprised. Vertical composition.",
+  "refs": [
+   "biel_ref",
+   "terno_ref"
+  ]
+ },
+ {
+  "id": "p1b_c6",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The man in the suit from image 0 (same face, same suit and red tie, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Close-up, he points at the car tire and talks fast and anxious, sweat on his face, dim garage light. Vertical composition.",
+  "refs": [
+   "terno_ref"
+  ]
+ },
+ {
+  "id": "p1b_c7",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Close-up: he crouches next to a flat car tire and stares in shock at a small round bullet hole in the rubber, flashlight in his hand lighting the hole. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1b_c8",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. He has just opened the trunk of the black sedan inside the garage: on top of the spare tire there are two open suitcases full of stacks of Brazilian money, and a black handgun lying on the money. His face is frozen in shock, lit by the trunk light. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1b_c9",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Night street outside the garage in the favela: at the end of the street a police car with blue and red lights; in the foreground he turns around frightened, the place where the man in the suit stood is now empty. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1b_c10",
+  "w": 1088,
+  "h": 1920,
+  "seed": 13,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Inside the garage at night, he grips the half-closed metal roll-up door, looking back at the black sedan with its trunk open, red and blue police light leaking through the gap, torn decision moment, sweat on his face. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
  }
 ]
