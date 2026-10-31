@@ -348,6 +348,28 @@
           "CALO": "s13-p2-calo"
         }
       }
+    },
+    {
+      "id": "s14",
+      "media_id": "17955180690294149",
+      "permalink": "https://www.instagram.com/reel/DfKP5Fshgem/",
+      "publicado_em": "2026-10-31T13:19:50+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "MEXO",
+          "FICO"
+        ],
+        "ate": "2026-11-01T13:19:50+00:00",
+        "votos": {
+          "MEXO": 0,
+          "FICO": 0
+        },
+        "continuacao": {
+          "MEXO": "s14-p2-mexo",
+          "FICO": "s14-p2-fico"
+        }
+      }
     }
   ]
 }
