@@ -68,6 +68,20 @@ def gerar(item):
             raise RuntimeError(f'HTTP {e.code}')
 
 
+def diagnostico_token():
+    t = TOKEN
+    log(f'token: {len(t)} caracteres | começa com cfut_: {t.startswith("cfut_")} | espaço/aspas: {t != t.strip(chr(34)+chr(39)+" ")}')
+    for nome, url in (('token de usuário', 'https://api.cloudflare.com/client/v4/user/tokens/verify'),
+                      ('token da conta', f'https://api.cloudflare.com/client/v4/accounts/{CONTA}/tokens/verify')):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={'Authorization': f'Bearer {TOKEN}'}), timeout=30) as r:
+                d = json.loads(r.read())
+            log(f'  verificação ({nome}): status {d.get("result", {}).get("status")}')
+        except urllib.error.HTTPError as e:
+            msg = e.read().decode(errors='replace')[:200].replace(CONTA, '<conta>').replace(TOKEN, '<token>')
+            log(f'  verificação ({nome}): HTTP {e.code} {msg}')
+
+
 def main():
     ARTE.mkdir(exist_ok=True)
     if not CONTA or not TOKEN:
@@ -80,6 +94,7 @@ def main():
         log(f'CF_ACCOUNT_ID errado: devia ter 32 letras/números (a-f, 0-9); tem {len(CONTA)} caracteres e {dica}.')
         log('CF_API_TOKEN:', 'parece um ID de conta (trocado?)' if re.fullmatch(r'[0-9a-f]{32}', TOKEN) else f'{len(TOKEN)} caracteres')
         sys.exit(1)
+    diagnostico_token()
     log('segredos OK | GEMINI_API_KEY', 'ok' if os.environ.get('GEMINI_API_KEY', '').strip() else 'vazio')
     pedidos = json.loads((ARTE / 'pedidos.json').read_text(encoding='utf-8'))
     refazer = set(sys.argv[1:])
@@ -95,6 +110,8 @@ def main():
             log(f"OK {it['id']} ({time.time() - t:.0f}s)")
         except Exception as e:  # noqa: BLE001
             log(f"falhou {it['id']}: {str(e)[:300]}")
+            if 'HTTP 401' in str(e) or 'HTTP 403' in str(e):
+                log('parando: o token não tem acesso. Nada mais foi tentado.'); break
 
 
 if __name__ == '__main__':
