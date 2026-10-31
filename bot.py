@@ -198,8 +198,9 @@ def postar(fila, estado):
         dados = f.read()
 
     ig_id, usuario = conta()
+    extra = {"cover_url": item["capa_url"]} if item.get("capa_url") else {}
     c = post(f"/{ig_id}/media", media_type="REELS", upload_type="resumable",
-             caption=item["legenda"], share_to_feed="true")
+             caption=item["legenda"], share_to_feed="true", **extra)
     container = c["id"]
     try:
         enviar_video(container, dados)
@@ -211,7 +212,7 @@ def postar(fila, estado):
         url = f"https://raw.githubusercontent.com/{repo}/{os.environ.get('GITHUB_REF_NAME', 'main')}/{item['video']}"
         print(f"Envio direto falhou ({e}). Tentando pelo link do GitHub: {url}")
         c = post(f"/{ig_id}/media", media_type="REELS", video_url=url,
-                 caption=item["legenda"], share_to_feed="true")
+                 caption=item["legenda"], share_to_feed="true", **extra)
         container = c["id"]
         try:
             esperar_processamento(container)
