@@ -304,6 +304,28 @@
         },
         "atualizado_em": "2026-10-31T12:46:47+00:00"
       }
+    },
+    {
+      "id": "s12",
+      "media_id": "17951724471056055",
+      "permalink": "https://www.instagram.com/reel/DfKPdDxsEVI/",
+      "publicado_em": "2026-10-31T13:16:01+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "GRAVO",
+          "DESLIGO"
+        ],
+        "ate": "2026-11-01T13:16:01+00:00",
+        "votos": {
+          "GRAVO": 0,
+          "DESLIGO": 0
+        },
+        "continuacao": {
+          "GRAVO": "s12-p2-gravo",
+          "DESLIGO": "s12-p2-desligo"
+        }
+      }
     }
   ]
 }

@@ -1,23 +1,16 @@
 # Status do robô
 
-Última execução: 31/10 09:46 (Brasília) — ação `votos`
-
-## Avisos
-
-- A continuação 's01-p2-atende' (ATENDE) ainda não está na fila. Peça ao Claude para produzir.
-- A continuação 's02-p2-pergunto' (PERGUNTO) ainda não está na fila. Peça ao Claude para produzir.
-- A continuação 's03-p2-late' (LATE) ainda não está na fila. Peça ao Claude para produzir.
-- A continuação 's04-p2-entrego' (ENTREGO) ainda não está na fila. Peça ao Claude para produzir.
+Última execução: 31/10 10:16 (Brasília) — ação `postar`
 
 ## Fila
 
-1. s12
-2. s13
-3. s14
-4. s15
+1. s13
+2. s14
+3. s15
 
 ## Votações
 
+- **s12** (aberta até 01/11 10:16): GRAVO: 0 · DESLIGO: 0 https://www.instagram.com/reel/DfKPdDxsEVI/
 - **s11** (aberta até 31/10 22:11): PARO: 0 · SIGO: 0 https://www.instagram.com/reel/DfI8e2XsVW9/
 - **s10** (aberta até 31/10 16:54): SAIO: 0 · FICO: 0 https://www.instagram.com/reel/DfIYRGzBMiq/
 - **s09** (aberta até 31/10 11:31): MIO: 0 · ESCONDO: 0 https://www.instagram.com/reel/DfHzPwIort1/
@@ -27,4 +20,3 @@
 - **s05** (aberta até 31/10 11:19): AVISO: 0 · IMITO: 0 https://www.instagram.com/reel/DfHx5kqg2dx/
 - **s04** (encerrada — venceu ENTREGO): ENTREGO: 0 · GUARDO: 0 https://www.instagram.com/reel/DfHPupXTD6z/
 - **s03** (encerrada — venceu LATE): LATE: 10 · ABANA: 1 https://www.instagram.com/reel/DfHPkXChyAn/
-- **s02** (encerrada — venceu PERGUNTO): PERGUNTO: 3 · FINJO: 0 https://www.instagram.com/reel/DfHPaGzPk2C/
