@@ -326,6 +326,28 @@
           "DESLIGO": "s12-p2-desligo"
         }
       }
+    },
+    {
+      "id": "s13",
+      "media_id": "18120976840756595",
+      "permalink": "https://www.instagram.com/reel/DfKPnYQoDZP/",
+      "publicado_em": "2026-10-31T13:17:31+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "CONTO",
+          "CALO"
+        ],
+        "ate": "2026-11-01T13:17:31+00:00",
+        "votos": {
+          "CONTO": 0,
+          "CALO": 0
+        },
+        "continuacao": {
+          "CONTO": "s13-p2-conto",
+          "CALO": "s13-p2-calo"
+        }
+      }
     }
   ]
 }
