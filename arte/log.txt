@@ -1,0 +1,15 @@
+contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
+token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
+  verificação (token de usuário): status active
+  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
+segredos OK | GEMINI_API_KEY ok
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (34a3a1b1-4e05-404b-8ed3-a22e7c14ee55)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p1_c3a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (6933c313-7371-4450-9423-07d62ebe03fa)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p1_c3b: HTTP 400
+OK p1_c4a (9s)
+OK p1_c4b (9s)
+OK p1_c6a (6s)
+OK p1_c6b (7s)
+OK p1_c8a (13s)
+OK p1_c8b (10s)
