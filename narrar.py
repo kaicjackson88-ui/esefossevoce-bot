@@ -13,7 +13,10 @@ pasta = RAIZ / 'episodios' / ep_id
 pasta.mkdir(parents=True, exist_ok=True)
 falas = [c['fala'] for c in ep['cenas']]
 texto = '\n\n'.join(falas)
-voz_google.ESTILO = ('Narre em português do Brasil, sotaque brasileiro natural, como um contador de histórias de suspense: voz grave, '
+import os
+if ep.get('voz_gemini'):
+    os.environ['GEMINI_VOZ'] = ep['voz_gemini']
+voz_google.ESTILO = ep.get('estilo') or ('Narre em português do Brasil, sotaque brasileiro natural, como um contador de histórias de suspense: voz grave, '
                      'ritmo envolvente, tensão nas pausas, sem soar como locutor nem robô. Faça uma pausa de um segundo entre cada parágrafo. Texto:\n\n')
 tmp = Path(tempfile.mkdtemp())
 tudo = pasta / 'tudo.mp3'

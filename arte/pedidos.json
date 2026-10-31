@@ -106,5 +106,79 @@
   "refs": [
    "biel_ref"
   ]
+ },
+ {
+  "id": "p1_c3a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 31,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. A chubby bald middle-aged Brazilian man with dark sunglasses and a flowery short-sleeve shirt sitting alone at a wooden table in a dim bar, writing in a small notebook, smug smile, warm lamp light, plain dark wall behind him, vertical composition."
+ },
+ {
+  "id": "p1_c3b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 57,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. A chubby bald middle-aged Brazilian man with dark sunglasses and a flowery short-sleeve shirt sitting alone at a wooden table in a dim bar, writing in a small notebook, smug smile, warm lamp light, plain dark wall behind him, vertical composition."
+ },
+ {
+  "id": "p1_c4a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 31,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Medium shot at the garage entrance at night: the young mechanic catches a car key in his right hand at chest height, surprised face. Behind him, slightly out of focus, a tall man in a black leather jacket walks away toward the street. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1_c4b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 57,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Medium shot at the garage entrance at night: the young mechanic catches a car key in his right hand at chest height, surprised face. Behind him, slightly out of focus, a tall man in a black leather jacket walks away toward the street. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1_c6a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 31,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Shot from inside the open trunk looking up at him: the young mechanic leans over the open trunk of a black car at night, shocked, eyes wide, mouth open, lit from below by the warm trunk light. In the foreground, at the bottom of the frame, an open black backpack full of stacks of money. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1_c6b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 57,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Shot from inside the open trunk looking up at him: the young mechanic leans over the open trunk of a black car at night, shocked, eyes wide, mouth open, lit from below by the warm trunk light. In the foreground, at the bottom of the frame, an open black backpack full of stacks of money. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1_c8a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 31,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Close-up of the young mechanic at night, sweat on his forehead, looking down at an open backpack full of money he is holding with both hands, torn and anxious expression, a convenience store glowing far behind him, dramatic red and blue light. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p1_c8b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 57,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same dark overalls and white tank top, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct anatomy, natural hands, no text, no letters, no signs, no watermark. Close-up of the young mechanic at night, sweat on his forehead, looking down at an open backpack full of money he is holding with both hands, torn and anxious expression, a convenience store glowing far behind him, dramatic red and blue light. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
  }
 ]

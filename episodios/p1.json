@@ -3,39 +3,39 @@
  "titulo": "O PORTA-MALAS",
  "parte": 1,
  "voz": "pt-BR-AntonioNeural",
- "rate": "+4%",
+ "rate": "+10%",
  "cenas": [
   {
    "img": "p1_c1",
-   "fala": "Às duas da manhã, um carro parou na oficina do Biel. E ninguém devia ver o que tinha no porta-malas."
+   "fala": "Duas da manhã. Um carro parou na oficina do Biel... e ninguém podia ver o que tinha no porta-malas."
   },
   {
    "img": "p1_c2",
-   "fala": "Biel tem dezenove anos, conserta carro num galpão alugado... e deve oito mil reais pro Seu Lorival."
+   "fala": "Biel tem dezenove anos. Conserta carro num galpão alugado. E deve oito mil reais pro Seu Lorival."
   },
   {
    "img": "p1_c3",
-   "fala": "O prazo acaba sexta. E o Seu Lorival não cobra duas vezes."
+   "fala": "O prazo? Sexta-feira. E o Seu Lorival... não cobra duas vezes."
   },
   {
    "img": "p1_c4",
-   "fala": "O motorista jogou a chave na mão dele: troca o pneu. Dez minutos. Ninguém abre nada."
+   "fala": "O motorista jogou a chave: troca o pneu. Dez minutos. Ninguém abre nada!"
   },
   {
    "img": "p1_c5",
-   "fala": "Mas o macaco... estava no porta-malas."
+   "fala": "Só que o macaco... estava no porta-malas."
   },
   {
    "img": "p1_c6",
-   "fala": "Biel abriu. Três mochilas. Uma estava aberta. Era dinheiro. Muito dinheiro."
+   "fala": "Biel abriu. Três mochilas. Uma aberta. Dinheiro. Muito dinheiro."
   },
   {
    "img": "p1_c7",
-   "fala": "Do outro lado da rua, um carro de vidro escuro parou. E ficou ali. Olhando."
+   "fala": "Do outro lado da rua, um carro de vidro escuro parou. E ficou ali... olhando."
   },
   {
    "img": "p1_c8",
-   "fala": "Biel tem oito minutos. Ele pega uma mochila e some... ou fecha o porta-malas e finge que não viu? Os comentários decidem."
+   "fala": "Biel tem oito minutos. Pega uma mochila e some? Ou fecha o porta-malas e finge que não viu? Os comentários decidem."
   }
  ],
  "votacao": {
@@ -44,5 +44,7 @@
    "FECHA"
   ],
   "horas": 24
- }
+ },
+ "voz_gemini": "Fenrir",
+ "estilo": "Narre em português do Brasil, sotaque brasileiro natural, como o narrador de uma série policial de suspense: ritmo RÁPIDO e urgente, tensão crescente, ênfase forte nas palavras de impacto (madrugada, porta-malas, oito mil, sexta-feira, dez minutos, dinheiro, olhando, oito minutos), voz baixa e tensa nas reticências, energia alta em \"Muito dinheiro\". Nada de tom de locutor ou robô. Faça uma pausa curta entre os parágrafos. Texto:\n\n"
 }
