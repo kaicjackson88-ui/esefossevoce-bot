@@ -1,0 +1,48 @@
+{
+ "id": "p1",
+ "titulo": "O PORTA-MALAS",
+ "parte": 1,
+ "voz": "pt-BR-AntonioNeural",
+ "rate": "+4%",
+ "cenas": [
+  {
+   "img": "p1_c1",
+   "fala": "Às duas da manhã, um carro parou na oficina do Biel. E ninguém devia ver o que tinha no porta-malas."
+  },
+  {
+   "img": "p1_c2",
+   "fala": "Biel tem dezenove anos, conserta carro num galpão alugado... e deve oito mil reais pro Seu Lorival."
+  },
+  {
+   "img": "p1_c3",
+   "fala": "O prazo acaba sexta. E o Seu Lorival não cobra duas vezes."
+  },
+  {
+   "img": "p1_c4",
+   "fala": "O motorista jogou a chave na mão dele: troca o pneu. Dez minutos. Ninguém abre nada."
+  },
+  {
+   "img": "p1_c5",
+   "fala": "Mas o macaco... estava no porta-malas."
+  },
+  {
+   "img": "p1_c6",
+   "fala": "Biel abriu. Três mochilas. Uma estava aberta. Era dinheiro. Muito dinheiro."
+  },
+  {
+   "img": "p1_c7",
+   "fala": "Do outro lado da rua, um carro de vidro escuro parou. E ficou ali. Olhando."
+  },
+  {
+   "img": "p1_c8",
+   "fala": "Biel tem oito minutos. Ele pega uma mochila e some... ou fecha o porta-malas e finge que não viu? Os comentários decidem."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "PEGA",
+   "FECHA"
+  ],
+  "horas": 24
+ }
+}

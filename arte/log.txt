@@ -1,7 +1,0 @@
-contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
-token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
-  verificação (token de usuário): status active
-  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
-segredos OK | GEMINI_API_KEY ok
-OK p1_c3 (10s)
-OK p1_c5 (7s)
