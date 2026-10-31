@@ -1,7 +1,0 @@
-token: 385 caracteres | começa com cfut_: False | espaço/aspas: True
-  verificação (token de usuário): HTTP 400 {"success":false,"errors":[{"code":6003,"message":"Invalid request headers","error_chain":[{"code":6111,"message":"Invalid format for Authorization header"}]}],"messages":[],"result":null}
-  verificação (token da conta): HTTP 400 {"success":false,"errors":[{"code":6003,"message":"Invalid request headers","error_chain":[{"code":6111,"message":"Invalid format for Authorization header"}]}],"messages":[],"result":null}
-segredos OK | GEMINI_API_KEY ok
-  HTTP 401: {"result":null,"success":false,"errors":[{"code":10000,"message":"Authentication error"}],"messages":[]}
-falhou biel_ref: HTTP 401
-parando: o token não tem acesso. Nada mais foi tentado.

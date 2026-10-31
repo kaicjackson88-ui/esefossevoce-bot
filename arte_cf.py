@@ -11,6 +11,19 @@ RAIZ = Path(__file__).resolve().parent
 ARTE = RAIZ / 'arte'
 CONTA = os.environ.get('CF_ACCOUNT_ID', '').strip()
 TOKEN = os.environ.get('CF_API_TOKEN', '').strip()
+
+
+def _extrair_token(t):
+    """Se colaram um bloco de texto (ex.: o comando curl de exemplo), pega só o token de dentro."""
+    import re
+    if not re.search(r'[\s"\']', t):
+        return t
+    m = re.search(r'Bearer\s+([A-Za-z0-9_\-]{30,})', t) or re.search(r'(cfut_[A-Za-z0-9_\-]{20,})', t) \
+        or re.search(r'(?<![A-Za-z0-9_\-])([A-Za-z0-9_\-]{40})(?![A-Za-z0-9_\-])', t)
+    return m.group(1) if m else t
+
+
+TOKEN = _extrair_token(TOKEN)
 MODELO = os.environ.get('CF_MODELO', '@cf/black-forest-labs/flux-2-klein-4b')
 
 
