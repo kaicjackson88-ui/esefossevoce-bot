@@ -127,7 +127,7 @@ def enviar_video(container_id, dados):
 
 # ---------------- conta ----------------
 # Este robô só posta nesta conta. Outra conta no mesmo token (ex.: @meu_cao_obedece) é ignorada.
-CONTA_PADRAO = "seriavoce.historias"
+CONTA_PADRAO = "ocorredobiel"
 def conta():
     """Devolve (id, @usuario) da conta do Instagram que o token acessa."""
     alvo = (os.environ.get("IG_USERNAME", "").strip() or CONTA_PADRAO).lstrip("@").lower()

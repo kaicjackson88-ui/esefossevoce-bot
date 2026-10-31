@@ -1,397 +1,419 @@
 {
-  "publicados": [
-    {
-      "id": "h1-mega-p1",
-      "media_id": "17884686414526618",
-      "permalink": "https://www.instagram.com/reel/DfD24hKzRrF/",
-      "publicado_em": "2026-10-29T01:45:54+00:00",
-      "votacao": {
-        "aberta": false,
-        "opcoes": [
-          "SOZINHO",
-          "PAI"
-        ],
-        "ate": "2026-10-30T01:45:54+00:00",
-        "votos": {
-          "SOZINHO": 0,
-          "PAI": 0
-        },
-        "continuacao": {
-          "SOZINHO": "h1-p2-sozinho",
-          "PAI": "h1-p2-pai"
-        },
-        "atualizado_em": "2026-10-30T14:19:55+00:00",
-        "vencedor": "SOZINHO"
-      }
+ "publicados": [
+  {
+   "id": "h1-mega-p1",
+   "media_id": "17884686414526618",
+   "permalink": "https://www.instagram.com/reel/DfD24hKzRrF/",
+   "publicado_em": "2026-10-29T01:45:54+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "SOZINHO",
+     "PAI"
+    ],
+    "ate": "2026-10-30T01:45:54+00:00",
+    "votos": {
+     "SOZINHO": 0,
+     "PAI": 0
     },
-    {
-      "id": "h2-copa-p1",
-      "media_id": "18115090805329322",
-      "permalink": "https://www.instagram.com/reel/DfFJtZqsBOV/",
-      "publicado_em": "2026-10-29T13:49:44+00:00",
-      "votacao": {
-        "aberta": false,
-        "opcoes": [
-          "VAMOS",
-          "FICAMOS"
-        ],
-        "ate": "2026-10-30T13:49:44+00:00",
-        "votos": {
-          "VAMOS": 0,
-          "FICAMOS": 0
-        },
-        "continuacao": {
-          "VAMOS": "h2-p2-vamos",
-          "FICAMOS": "h2-p2-ficamos"
-        },
-        "atualizado_em": "2026-10-30T14:19:59+00:00",
-        "vencedor": "VAMOS"
-      }
+    "continuacao": {
+     "SOZINHO": "h1-p2-sozinho",
+     "PAI": "h1-p2-pai"
     },
-    {
-      "id": "s01",
-      "media_id": "18080568182416551",
-      "permalink": "https://www.instagram.com/reel/DfHPHPjJPvw/",
-      "publicado_em": "2026-10-30T09:15:24+00:00",
-      "votacao": {
-        "aberta": false,
-        "opcoes": [
-          "ATENDE",
-          "DESLIGA"
-        ],
-        "ate": "2026-10-31T09:15:24+00:00",
-        "votos": {
-          "ATENDE": 0,
-          "DESLIGA": 0
-        },
-        "continuacao": {
-          "ATENDE": "s01-p2-atende",
-          "DESLIGA": "s01-p2-desliga"
-        },
-        "atualizado_em": "2026-10-31T12:46:26+00:00",
-        "vencedor": "ATENDE"
-      }
+    "atualizado_em": "2026-10-30T14:19:55+00:00",
+    "vencedor": "SOZINHO"
+   }
+  },
+  {
+   "id": "h2-copa-p1",
+   "media_id": "18115090805329322",
+   "permalink": "https://www.instagram.com/reel/DfFJtZqsBOV/",
+   "publicado_em": "2026-10-29T13:49:44+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "VAMOS",
+     "FICAMOS"
+    ],
+    "ate": "2026-10-30T13:49:44+00:00",
+    "votos": {
+     "VAMOS": 0,
+     "FICAMOS": 0
     },
-    {
-      "id": "s02",
-      "media_id": "18494633083110665",
-      "permalink": "https://www.instagram.com/reel/DfHPaGzPk2C/",
-      "publicado_em": "2026-10-30T09:18:09+00:00",
-      "votacao": {
-        "aberta": false,
-        "opcoes": [
-          "PERGUNTO",
-          "FINJO"
-        ],
-        "ate": "2026-10-31T09:18:09+00:00",
-        "votos": {
-          "PERGUNTO": 3,
-          "FINJO": 0
-        },
-        "continuacao": {
-          "PERGUNTO": "s02-p2-pergunto",
-          "FINJO": "s02-p2-finjo"
-        },
-        "atualizado_em": "2026-10-31T12:46:30+00:00",
-        "vencedor": "PERGUNTO"
-      }
+    "continuacao": {
+     "VAMOS": "h2-p2-vamos",
+     "FICAMOS": "h2-p2-ficamos"
     },
-    {
-      "id": "s03",
-      "media_id": "18077390531466756",
-      "permalink": "https://www.instagram.com/reel/DfHPkXChyAn/",
-      "publicado_em": "2026-10-30T09:19:22+00:00",
-      "votacao": {
-        "aberta": false,
-        "opcoes": [
-          "LATE",
-          "ABANA"
-        ],
-        "ate": "2026-10-31T09:19:22+00:00",
-        "votos": {
-          "LATE": 10,
-          "ABANA": 1
-        },
-        "continuacao": {
-          "LATE": "s03-p2-late",
-          "ABANA": "s03-p2-abana"
-        },
-        "atualizado_em": "2026-10-31T12:46:34+00:00",
-        "vencedor": "LATE"
-      }
+    "atualizado_em": "2026-10-30T14:19:59+00:00",
+    "vencedor": "VAMOS"
+   }
+  },
+  {
+   "id": "s01",
+   "media_id": "18080568182416551",
+   "permalink": "https://www.instagram.com/reel/DfHPHPjJPvw/",
+   "publicado_em": "2026-10-30T09:15:24+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "ATENDE",
+     "DESLIGA"
+    ],
+    "ate": "2026-10-31T09:15:24+00:00",
+    "votos": {
+     "ATENDE": 0,
+     "DESLIGA": 0
     },
-    {
-      "id": "s04",
-      "media_id": "17943022968366549",
-      "permalink": "https://www.instagram.com/reel/DfHPupXTD6z/",
-      "publicado_em": "2026-10-30T09:20:30+00:00",
-      "votacao": {
-        "aberta": false,
-        "opcoes": [
-          "ENTREGO",
-          "GUARDO"
-        ],
-        "ate": "2026-10-31T09:20:30+00:00",
-        "votos": {
-          "ENTREGO": 0,
-          "GUARDO": 0
-        },
-        "continuacao": {
-          "ENTREGO": "s04-p2-entrego",
-          "GUARDO": "s04-p2-guardo"
-        },
-        "atualizado_em": "2026-10-31T12:46:38+00:00",
-        "vencedor": "ENTREGO"
-      }
+    "continuacao": {
+     "ATENDE": "s01-p2-atende",
+     "DESLIGA": "s01-p2-desliga"
     },
-    {
-      "id": "s05",
-      "media_id": "17954692026268728",
-      "permalink": "https://www.instagram.com/reel/DfHx5kqg2dx/",
-      "publicado_em": "2026-10-30T14:19:19+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "AVISO",
-          "IMITO"
-        ],
-        "ate": "2026-10-31T14:19:19+00:00",
-        "votos": {
-          "AVISO": 0,
-          "IMITO": 0
-        },
-        "continuacao": {
-          "AVISO": "s05-p2-aviso",
-          "IMITO": "s05-p2-imito"
-        },
-        "atualizado_em": "2026-10-31T12:46:42+00:00"
-      }
+    "atualizado_em": "2026-10-31T12:46:26+00:00",
+    "vencedor": "ATENDE"
+   }
+  },
+  {
+   "id": "s02",
+   "media_id": "18494633083110665",
+   "permalink": "https://www.instagram.com/reel/DfHPaGzPk2C/",
+   "publicado_em": "2026-10-30T09:18:09+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "PERGUNTO",
+     "FINJO"
+    ],
+    "ate": "2026-10-31T09:18:09+00:00",
+    "votos": {
+     "PERGUNTO": 3,
+     "FINJO": 0
     },
-    {
-      "id": "s06",
-      "media_id": "18350440588265681",
-      "permalink": "https://www.instagram.com/reel/DfHyKR2hjTV/",
-      "publicado_em": "2026-10-30T14:21:51+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "PEGO",
-          "ESPERO"
-        ],
-        "ate": "2026-10-31T14:21:51+00:00",
-        "votos": {
-          "PEGO": 0,
-          "ESPERO": 3
-        },
-        "continuacao": {
-          "PEGO": "s06-p2-pego",
-          "ESPERO": "s06-p2-espero"
-        },
-        "atualizado_em": "2026-10-31T12:46:42+00:00"
-      }
+    "continuacao": {
+     "PERGUNTO": "s02-p2-pergunto",
+     "FINJO": "s02-p2-finjo"
     },
-    {
-      "id": "s07",
-      "media_id": "18272652856305389",
-      "permalink": "https://www.instagram.com/reel/DfHyhubBgt3/",
-      "publicado_em": "2026-10-30T14:24:48+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "SIGO",
-          "ESCONDO"
-        ],
-        "ate": "2026-10-31T14:24:48+00:00",
-        "votos": {
-          "SIGO": 0,
-          "ESCONDO": 0
-        },
-        "continuacao": {
-          "SIGO": "s07-p2-sigo",
-          "ESCONDO": "s07-p2-escondo"
-        },
-        "atualizado_em": "2026-10-31T12:46:43+00:00"
-      }
+    "atualizado_em": "2026-10-31T12:46:30+00:00",
+    "vencedor": "PERGUNTO"
+   }
+  },
+  {
+   "id": "s03",
+   "media_id": "18077390531466756",
+   "permalink": "https://www.instagram.com/reel/DfHPkXChyAn/",
+   "publicado_em": "2026-10-30T09:19:22+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "LATE",
+     "ABANA"
+    ],
+    "ate": "2026-10-31T09:19:22+00:00",
+    "votos": {
+     "LATE": 10,
+     "ABANA": 1
     },
-    {
-      "id": "s08",
-      "media_id": "18087612209334979",
-      "permalink": "https://www.instagram.com/reel/DfHzBfsOfPK/",
-      "publicado_em": "2026-10-30T14:29:25+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "VOLTAR",
-          "AVANÇAR"
-        ],
-        "ate": "2026-10-31T14:29:25+00:00",
-        "votos": {
-          "VOLTAR": 1,
-          "AVANÇAR": 0
-        },
-        "continuacao": {
-          "VOLTAR": "s08-p2-voltar",
-          "AVANÇAR": "s08-p2-avancar"
-        },
-        "atualizado_em": "2026-10-31T12:46:44+00:00"
-      }
+    "continuacao": {
+     "LATE": "s03-p2-late",
+     "ABANA": "s03-p2-abana"
     },
-    {
-      "id": "s09",
-      "media_id": "18177813970452609",
-      "permalink": "https://www.instagram.com/reel/DfHzPwIort1/",
-      "publicado_em": "2026-10-30T14:31:05+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "MIO",
-          "ESCONDO"
-        ],
-        "ate": "2026-10-31T14:31:05+00:00",
-        "votos": {
-          "MIO": 0,
-          "ESCONDO": 0
-        },
-        "continuacao": {
-          "MIO": "s09-p2-mio",
-          "ESCONDO": "s09-p2-escondo"
-        },
-        "atualizado_em": "2026-10-31T12:46:45+00:00"
-      }
+    "atualizado_em": "2026-10-31T12:46:34+00:00",
+    "vencedor": "LATE"
+   }
+  },
+  {
+   "id": "s04",
+   "media_id": "17943022968366549",
+   "permalink": "https://www.instagram.com/reel/DfHPupXTD6z/",
+   "publicado_em": "2026-10-30T09:20:30+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "ENTREGO",
+     "GUARDO"
+    ],
+    "ate": "2026-10-31T09:20:30+00:00",
+    "votos": {
+     "ENTREGO": 0,
+     "GUARDO": 0
     },
-    {
-      "id": "s10",
-      "media_id": "18128001616860427",
-      "permalink": "https://www.instagram.com/reel/DfIYRGzBMiq/",
-      "publicado_em": "2026-10-30T19:54:23+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "SAIO",
-          "FICO"
-        ],
-        "ate": "2026-10-31T19:54:23+00:00",
-        "votos": {
-          "SAIO": 0,
-          "FICO": 0
-        },
-        "continuacao": {
-          "SAIO": "s10-p2-saio",
-          "FICO": "s10-p2-fico"
-        },
-        "atualizado_em": "2026-10-31T12:46:46+00:00"
-      }
+    "continuacao": {
+     "ENTREGO": "s04-p2-entrego",
+     "GUARDO": "s04-p2-guardo"
     },
-    {
-      "id": "s11",
-      "media_id": "18023674283944037",
-      "permalink": "https://www.instagram.com/reel/DfI8e2XsVW9/",
-      "publicado_em": "2026-10-31T01:11:01+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "PARO",
-          "SIGO"
-        ],
-        "ate": "2026-11-01T01:11:01+00:00",
-        "votos": {
-          "PARO": 0,
-          "SIGO": 0
-        },
-        "continuacao": {
-          "PARO": "s11-p2-paro",
-          "SIGO": "s11-p2-sigo"
-        },
-        "atualizado_em": "2026-10-31T12:46:47+00:00"
-      }
+    "atualizado_em": "2026-10-31T12:46:38+00:00",
+    "vencedor": "ENTREGO"
+   }
+  },
+  {
+   "id": "s05",
+   "media_id": "17954692026268728",
+   "permalink": "https://www.instagram.com/reel/DfHx5kqg2dx/",
+   "publicado_em": "2026-10-30T14:19:19+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "AVISO",
+     "IMITO"
+    ],
+    "ate": "2026-10-31T14:19:19+00:00",
+    "votos": {
+     "AVISO": 0,
+     "IMITO": 0
     },
-    {
-      "id": "s12",
-      "media_id": "17951724471056055",
-      "permalink": "https://www.instagram.com/reel/DfKPdDxsEVI/",
-      "publicado_em": "2026-10-31T13:16:01+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "GRAVO",
-          "DESLIGO"
-        ],
-        "ate": "2026-11-01T13:16:01+00:00",
-        "votos": {
-          "GRAVO": 0,
-          "DESLIGO": 0
-        },
-        "continuacao": {
-          "GRAVO": "s12-p2-gravo",
-          "DESLIGO": "s12-p2-desligo"
-        }
-      }
+    "continuacao": {
+     "AVISO": "s05-p2-aviso",
+     "IMITO": "s05-p2-imito"
     },
-    {
-      "id": "s13",
-      "media_id": "18120976840756595",
-      "permalink": "https://www.instagram.com/reel/DfKPnYQoDZP/",
-      "publicado_em": "2026-10-31T13:17:31+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "CONTO",
-          "CALO"
-        ],
-        "ate": "2026-11-01T13:17:31+00:00",
-        "votos": {
-          "CONTO": 0,
-          "CALO": 0
-        },
-        "continuacao": {
-          "CONTO": "s13-p2-conto",
-          "CALO": "s13-p2-calo"
-        }
-      }
+    "atualizado_em": "2026-10-31T12:46:42+00:00",
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s06",
+   "media_id": "18350440588265681",
+   "permalink": "https://www.instagram.com/reel/DfHyKR2hjTV/",
+   "publicado_em": "2026-10-30T14:21:51+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "PEGO",
+     "ESPERO"
+    ],
+    "ate": "2026-10-31T14:21:51+00:00",
+    "votos": {
+     "PEGO": 0,
+     "ESPERO": 3
     },
-    {
-      "id": "s14",
-      "media_id": "17955180690294149",
-      "permalink": "https://www.instagram.com/reel/DfKP5Fshgem/",
-      "publicado_em": "2026-10-31T13:19:50+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "MEXO",
-          "FICO"
-        ],
-        "ate": "2026-11-01T13:19:50+00:00",
-        "votos": {
-          "MEXO": 0,
-          "FICO": 0
-        },
-        "continuacao": {
-          "MEXO": "s14-p2-mexo",
-          "FICO": "s14-p2-fico"
-        }
-      }
+    "continuacao": {
+     "PEGO": "s06-p2-pego",
+     "ESPERO": "s06-p2-espero"
     },
-    {
-      "id": "s15",
-      "media_id": "17878527654633691",
-      "permalink": "https://www.instagram.com/reel/DfKQFN_Bwp_/",
-      "publicado_em": "2026-10-31T13:21:32+00:00",
-      "votacao": {
-        "aberta": true,
-        "opcoes": [
-          "ABRO",
-          "QUEIMO"
-        ],
-        "ate": "2026-11-01T13:21:32+00:00",
-        "votos": {
-          "ABRO": 0,
-          "QUEIMO": 0
-        },
-        "continuacao": {
-          "ABRO": "s15-p2-abro",
-          "QUEIMO": "s15-p2-queimo"
-        }
-      }
-    }
-  ]
+    "atualizado_em": "2026-10-31T12:46:42+00:00",
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s07",
+   "media_id": "18272652856305389",
+   "permalink": "https://www.instagram.com/reel/DfHyhubBgt3/",
+   "publicado_em": "2026-10-30T14:24:48+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "SIGO",
+     "ESCONDO"
+    ],
+    "ate": "2026-10-31T14:24:48+00:00",
+    "votos": {
+     "SIGO": 0,
+     "ESCONDO": 0
+    },
+    "continuacao": {
+     "SIGO": "s07-p2-sigo",
+     "ESCONDO": "s07-p2-escondo"
+    },
+    "atualizado_em": "2026-10-31T12:46:43+00:00",
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s08",
+   "media_id": "18087612209334979",
+   "permalink": "https://www.instagram.com/reel/DfHzBfsOfPK/",
+   "publicado_em": "2026-10-30T14:29:25+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "VOLTAR",
+     "AVANÇAR"
+    ],
+    "ate": "2026-10-31T14:29:25+00:00",
+    "votos": {
+     "VOLTAR": 1,
+     "AVANÇAR": 0
+    },
+    "continuacao": {
+     "VOLTAR": "s08-p2-voltar",
+     "AVANÇAR": "s08-p2-avancar"
+    },
+    "atualizado_em": "2026-10-31T12:46:44+00:00",
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s09",
+   "media_id": "18177813970452609",
+   "permalink": "https://www.instagram.com/reel/DfHzPwIort1/",
+   "publicado_em": "2026-10-30T14:31:05+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "MIO",
+     "ESCONDO"
+    ],
+    "ate": "2026-10-31T14:31:05+00:00",
+    "votos": {
+     "MIO": 0,
+     "ESCONDO": 0
+    },
+    "continuacao": {
+     "MIO": "s09-p2-mio",
+     "ESCONDO": "s09-p2-escondo"
+    },
+    "atualizado_em": "2026-10-31T12:46:45+00:00",
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s10",
+   "media_id": "18128001616860427",
+   "permalink": "https://www.instagram.com/reel/DfIYRGzBMiq/",
+   "publicado_em": "2026-10-30T19:54:23+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "SAIO",
+     "FICO"
+    ],
+    "ate": "2026-10-31T19:54:23+00:00",
+    "votos": {
+     "SAIO": 0,
+     "FICO": 0
+    },
+    "continuacao": {
+     "SAIO": "s10-p2-saio",
+     "FICO": "s10-p2-fico"
+    },
+    "atualizado_em": "2026-10-31T12:46:46+00:00",
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s11",
+   "media_id": "18023674283944037",
+   "permalink": "https://www.instagram.com/reel/DfI8e2XsVW9/",
+   "publicado_em": "2026-10-31T01:11:01+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "PARO",
+     "SIGO"
+    ],
+    "ate": "2026-11-01T01:11:01+00:00",
+    "votos": {
+     "PARO": 0,
+     "SIGO": 0
+    },
+    "continuacao": {
+     "PARO": "s11-p2-paro",
+     "SIGO": "s11-p2-sigo"
+    },
+    "atualizado_em": "2026-10-31T12:46:47+00:00",
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s12",
+   "media_id": "17951724471056055",
+   "permalink": "https://www.instagram.com/reel/DfKPdDxsEVI/",
+   "publicado_em": "2026-10-31T13:16:01+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "GRAVO",
+     "DESLIGO"
+    ],
+    "ate": "2026-11-01T13:16:01+00:00",
+    "votos": {
+     "GRAVO": 0,
+     "DESLIGO": 0
+    },
+    "continuacao": {
+     "GRAVO": "s12-p2-gravo",
+     "DESLIGO": "s12-p2-desligo"
+    },
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s13",
+   "media_id": "18120976840756595",
+   "permalink": "https://www.instagram.com/reel/DfKPnYQoDZP/",
+   "publicado_em": "2026-10-31T13:17:31+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "CONTO",
+     "CALO"
+    ],
+    "ate": "2026-11-01T13:17:31+00:00",
+    "votos": {
+     "CONTO": 0,
+     "CALO": 0
+    },
+    "continuacao": {
+     "CONTO": "s13-p2-conto",
+     "CALO": "s13-p2-calo"
+    },
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s14",
+   "media_id": "17955180690294149",
+   "permalink": "https://www.instagram.com/reel/DfKP5Fshgem/",
+   "publicado_em": "2026-10-31T13:19:50+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "MEXO",
+     "FICO"
+    ],
+    "ate": "2026-11-01T13:19:50+00:00",
+    "votos": {
+     "MEXO": 0,
+     "FICO": 0
+    },
+    "continuacao": {
+     "MEXO": "s14-p2-mexo",
+     "FICO": "s14-p2-fico"
+    },
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  },
+  {
+   "id": "s15",
+   "media_id": "17878527654633691",
+   "permalink": "https://www.instagram.com/reel/DfKQFN_Bwp_/",
+   "publicado_em": "2026-10-31T13:21:32+00:00",
+   "votacao": {
+    "aberta": false,
+    "opcoes": [
+     "ABRO",
+     "QUEIMO"
+    ],
+    "ate": "2026-11-01T13:21:32+00:00",
+    "votos": {
+     "ABRO": 0,
+     "QUEIMO": 0
+    },
+    "continuacao": {
+     "ABRO": "s15-p2-abro",
+     "QUEIMO": "s15-p2-queimo"
+    },
+    "vencedor": null,
+    "encerrada_sem_post": "vídeos antigos arquivados (troca para a série do Biel)"
+   }
+  }
+ ]
 }
