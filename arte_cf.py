@@ -82,6 +82,16 @@ def gerar(item):
 
 
 def diagnostico_token():
+    global CONTA
+    try:
+        with urllib.request.urlopen(urllib.request.Request('https://api.cloudflare.com/client/v4/accounts?per_page=50',
+                                    headers={'Authorization': f'Bearer {TOKEN}'}), timeout=30) as r:
+            contas = [a['id'] for a in json.loads(r.read()).get('result') or []]
+        log(f'contas que o token enxerga: {len(contas)} | o CF_ACCOUNT_ID salvo está entre elas: {CONTA in contas}')
+        if CONTA not in contas and len(contas) == 1:
+            CONTA = contas[0]; log('usando a conta do próprio token')
+    except urllib.error.HTTPError as e:
+        log(f'listar contas: HTTP {e.code} (o token não tem permissão de leitura da conta)')
     t = TOKEN
     log(f'token: {len(t)} caracteres | começa com cfut_: {t.startswith("cfut_")} | espaço/aspas: {t != t.strip(chr(34)+chr(39)+" ")}')
     for nome, url in (('token de usuário', 'https://api.cloudflare.com/client/v4/user/tokens/verify'),
