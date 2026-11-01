@@ -1,6 +1,6 @@
 # Status do robô
 
-Última execução: 01/11 04:39 (Brasília) — ação `votos`
+Última execução: 01/11 10:10 (Brasília) — ação `ciclo`
 
 ## Fila
 
@@ -8,7 +8,8 @@
 
 ## Votações
 
-- **biel-p1b** (aberta até 01/11 19:51): ESCONDE: 6 · CHAMA: 0 https://www.instagram.com/reel/DfLRRY-sZip/
+- **biel-p2-esconde** (aberta até 02/11 10:10): PAGA: 0 · ESPERA: 0 https://www.instagram.com/reel/DfMzmhCM29_/
+- **biel-p1b** (encerrada — venceu ESCONDE): ESCONDE: 6 · CHAMA: 0 https://www.instagram.com/reel/DfLRRY-sZip/
 - **biel-p1** (encerrada — venceu None): PEGA: 0 · FECHA: 0 https://www.instagram.com/reel/DfKzsFoSIFK/
 - **s15** (encerrada — venceu None): ABRO: 0 · QUEIMO: 0 https://www.instagram.com/reel/DfKQFN_Bwp_/
 - **s14** (encerrada — venceu None): MEXO: 0 · FICO: 0 https://www.instagram.com/reel/DfKP5Fshgem/
@@ -17,4 +18,3 @@
 - **s11** (encerrada — venceu None): PARO: 0 · SIGO: 0 https://www.instagram.com/reel/DfI8e2XsVW9/
 - **s10** (encerrada — venceu None): SAIO: 0 · FICO: 0 https://www.instagram.com/reel/DfIYRGzBMiq/
 - **s09** (encerrada — venceu None): MIO: 0 · ESCONDO: 0 https://www.instagram.com/reel/DfHzPwIort1/
-- **s08** (encerrada — venceu None): VOLTAR: 1 · AVANÇAR: 0 https://www.instagram.com/reel/DfHzBfsOfPK/
