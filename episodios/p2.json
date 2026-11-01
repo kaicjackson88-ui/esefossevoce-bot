@@ -18,6 +18,9 @@
   ],
   [
    "Lorival"
+  ],
+  [
+   "Biel"
   ]
  ],
  "estilo": "Leia em português do Brasil, sotaque brasileiro natural, como uma série policial de suspense. Narrador: ritmo rápido e tenso, ênfase em esconde, viatura, um milhão e duzentos mil, arma, mãe, recado, pisado, eu sei que o dinheiro tá na sua oficina (essa frase em voz baixa e ameaçadora). Biel: rapaz de 19 anos, voz baixa, assustado, sussurrando. Mae: mulher de 40 anos, voz doce, cansada e preocupada, carinhosa no 'te amo'. Lorival: homem mais velho, voz rouca, lenta, fria e ameaçadora. Nada de tom de locutor ou robô.",
@@ -97,6 +100,7 @@
  },
  "estilo_por": {
   "Lorival": "Leia em português do Brasil, voz de homem mais velho, rouca, lenta e fria, personagem de uma série de ficção:",
-  "Mae": "Leia em português do Brasil, voz de mulher, doce e preocupada:"
+  "Mae": "Leia em português do Brasil, voz de mulher, doce e preocupada:",
+  "Biel": "Leia em português do Brasil, voz de rapaz jovem de 19 anos, baixa, assustada, quase sussurrando:"
  }
 }
