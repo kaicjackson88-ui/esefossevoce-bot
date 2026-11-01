@@ -1,6 +1,6 @@
 # Status do robô
 
-Última execução: 01/11 10:10 (Brasília) — ação `ciclo`
+Última execução: 01/11 12:16 (Brasília) — ação `votos`
 
 ## Fila
 
@@ -8,7 +8,7 @@
 
 ## Votações
 
-- **biel-p2-esconde** (aberta até 02/11 10:10): PAGA: 0 · ESPERA: 0 https://www.instagram.com/reel/DfMzmhCM29_/
+- **biel-p2-esconde** (aberta até 02/11 10:10): PAGA: 5 · ESPERA: 0 https://www.instagram.com/reel/DfMzmhCM29_/
 - **biel-p1b** (encerrada — venceu ESCONDE): ESCONDE: 6 · CHAMA: 0 https://www.instagram.com/reel/DfLRRY-sZip/
 - **biel-p1** (encerrada — venceu None): PEGA: 0 · FECHA: 0 https://www.instagram.com/reel/DfKzsFoSIFK/
 - **s15** (encerrada — venceu None): ABRO: 0 · QUEIMO: 0 https://www.instagram.com/reel/DfKQFN_Bwp_/

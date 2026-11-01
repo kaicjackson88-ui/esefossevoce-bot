@@ -480,14 +480,17 @@
         ],
         "ate": "2026-11-02T13:10:41+00:00",
         "votos": {
-          "PAGA": 0,
+          "PAGA": 5,
           "ESPERA": 0
         },
         "continuacao": {
           "PAGA": "biel-p3-paga",
           "ESPERA": "biel-p3-espera"
         },
-        "comentario_id": "17917667514462604"
+        "comentario_id": "17917667514462604",
+        "atualizado_em": "2026-11-01T15:16:39+00:00",
+        "placar_em": "2026-11-01T15:16:41+00:00",
+        "placar_total": 5
       }
     }
   ]
