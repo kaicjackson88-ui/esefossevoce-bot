@@ -61,7 +61,7 @@ def main():
         if not falas:
             continue
         if len(g) == 1:
-            texto = ep['estilo'] + ' Fale como ' + g[0] + ':\n\n' + '\n\n'.join(f['texto'] for f in falas)
+            texto = (ep.get('estilo_por', {}).get(g[0]) or (ep['estilo'] + ' Fale como ' + g[0] + ':')) + '\n\n' + '\n\n'.join(f['texto'] for f in falas)
         else:
             texto = ep['estilo'] + f'\n\nConversa entre {g[0]} e {g[1]}:\n' + '\n'.join(f"{f['quem']}: {f['texto']}" for f in falas)
         try:
