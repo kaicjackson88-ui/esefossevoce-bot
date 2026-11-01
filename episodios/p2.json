@@ -1,0 +1,96 @@
+{
+ "id": "p2",
+ "titulo": "O RECADO",
+ "parte": 2,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Biel": "Puck",
+  "Mae": "Sulafat",
+  "Lorival": "Algenib"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Biel"
+  ],
+  [
+   "Mae",
+   "Lorival"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, sotaque brasileiro natural, como uma série policial de suspense. Narrador: ritmo rápido e tenso, ênfase em esconde, viatura, um milhão e duzentos mil, arma, mãe, recado, pisado, eu sei que o dinheiro tá na sua oficina (essa frase em voz baixa e ameaçadora). Biel: rapaz de 19 anos, voz baixa, assustado, sussurrando. Mae: mulher de 40 anos, voz doce, cansada e preocupada, carinhosa no 'te amo'. Lorival: homem mais velho, voz rouca, lenta, fria e ameaçadora. Nada de tom de locutor ou robô.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Vocês decidiram: esconde. Biel botou o carro pra dentro... e baixou a porta da oficina."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Uma viatura passou devagar. A luz da lanterna varreu a garagem... e Biel ficou ali, no escuro, sem respirar."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "Quando a viatura foi embora, ele voltou pras malas. Notas de cinquenta. Notas de cem. Um milhão e duzentos mil reais."
+  },
+  {
+   "cena": 3,
+   "quem": "Biel",
+   "texto": "Isso aqui não vem de coisa boa..."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Ele escondeu as malas debaixo dos pneus."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "E a arma... ele guardou na mochila."
+  },
+  {
+   "cena": 6,
+   "quem": "Narrador",
+   "texto": "O celular vibrou. Era a mãe dele."
+  },
+  {
+   "cena": 7,
+   "quem": "Mae",
+   "texto": "Filho, já tá tarde... tô com um pressentimento ruim. Vem pra casa, a comida tá pronta. Eu te espero. Te amo."
+  },
+  {
+   "cena": 8,
+   "quem": "Narrador",
+   "texto": "Dois minutos depois... outra ligação."
+  },
+  {
+   "cena": 8,
+   "quem": "Lorival",
+   "texto": "Sexta-feira, Biel. Oito mil. E até lá... eu vou mandar um recado pra você."
+  },
+  {
+   "cena": 9,
+   "quem": "Narrador",
+   "texto": "Biel cansou de ser pisado. Olhou pra mochila..."
+  },
+  {
+   "cena": 10,
+   "quem": "Narrador",
+   "texto": "E aí, o celular do porta-luvas acendeu. Eu sei que o dinheiro tá na sua oficina."
+  },
+  {
+   "cena": 11,
+   "quem": "Narrador",
+   "texto": "Biel pega os oito mil e vai atrás do Lorival? Ou vai pra casa e espera até sexta? Os comentários decidem. Segue a página pra não perder a parte três."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "PAGA",
+   "ESPERA"
+  ],
+  "horas": 24
+ }
+}
