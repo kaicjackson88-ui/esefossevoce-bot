@@ -76,6 +76,8 @@ def gerar(item):
         except urllib.error.HTTPError as e:
             msg = e.read().decode(errors='replace')[:400].replace(CONTA, '<conta>').replace(TOKEN, '<token>')
             log(f'  HTTP {e.code}: {msg}')
+            if 'daily free allocation' in msg or '4006' in msg:
+                raise RuntimeError('COTA DIÁRIA ESGOTADA (renova 00:00 UTC = 21h de Brasília)')
             if e.code in (429, 500, 502, 503) and t < 2:
                 time.sleep(15 * (t + 1)); continue
             raise RuntimeError(f'HTTP {e.code}')
@@ -133,7 +135,7 @@ def main():
             log(f"OK {it['id']} ({time.time() - t:.0f}s)")
         except Exception as e:  # noqa: BLE001
             log(f"falhou {it['id']}: {str(e)[:300]}")
-            if 'HTTP 401' in str(e) or 'HTTP 403' in str(e):
+            if 'HTTP 401' in str(e) or 'HTTP 403' in str(e) or 'COTA DIÁRIA' in str(e):
                 log('parando: o token não tem acesso. Nada mais foi tentado.'); break
 
 
