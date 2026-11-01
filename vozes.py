@@ -30,7 +30,11 @@ def pedir(texto, vozes):
             try:
                 with urllib.request.urlopen(req, timeout=240) as r:
                     d = json.loads(r.read().decode())
-                for p in d['candidates'][0]['content']['parts']:
+                cand = (d.get('candidates') or [{}])[0]
+                if 'content' not in cand:
+                    ultimo = f"{m}: recusado — {cand.get('finishReason')} {json.dumps(d.get('promptFeedback', {}))[:200]}"
+                    print('  ', ultimo, flush=True); break
+                for p in cand['content']['parts']:
                     if 'inlineData' in p:
                         return base64.b64decode(p['inlineData']['data'])
                 ultimo = 'resposta sem áudio'
@@ -60,7 +64,10 @@ def main():
             texto = ep['estilo'] + ' Fale como ' + g[0] + ':\n\n' + '\n\n'.join(f['texto'] for f in falas)
         else:
             texto = ep['estilo'] + f'\n\nConversa entre {g[0]} e {g[1]}:\n' + '\n'.join(f"{f['quem']}: {f['texto']}" for f in falas)
-        pcm = pedir(texto, {q: ep['vozes'][q] for q in g})
+        try:
+            pcm = pedir(texto, {q: ep['vozes'][q] for q in g})
+        except Exception as e:  # noqa: BLE001
+            print('FALHOU', nome, str(e)[:300], flush=True); continue
         tmp = Path(tempfile.mkdtemp()) / 'v.pcm'
         tmp.write_bytes(pcm)
         subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 's16le', '-ar', '24000', '-ac', '1', '-i', str(tmp),
