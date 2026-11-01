@@ -453,14 +453,17 @@
         ],
         "ate": "2026-11-01T22:51:15+00:00",
         "votos": {
-          "ESCONDE": 0,
+          "ESCONDE": 6,
           "CHAMA": 0
         },
         "continuacao": {
           "ESCONDE": "biel-p2-esconde",
           "CHAMA": "biel-p2-chama"
         },
-        "comentario_id": "18095689568675240"
+        "comentario_id": "18095689568675240",
+        "atualizado_em": "2026-11-01T00:31:31+00:00",
+        "placar_em": "2026-11-01T00:31:32+00:00",
+        "placar_total": 6
       }
     }
   ]

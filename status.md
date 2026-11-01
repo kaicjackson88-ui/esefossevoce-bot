@@ -1,6 +1,10 @@
 # Status do robô
 
-Última execução: 31/10 19:51 (Brasília) — ação `postar`
+Última execução: 31/10 21:31 (Brasília) — ação `ciclo`
+
+## Avisos
+
+- Fila vazia: nada foi postado. Peça novos vídeos ao Claude.
 
 ## Fila
 
@@ -8,7 +12,7 @@
 
 ## Votações
 
-- **biel-p1b** (aberta até 01/11 19:51): ESCONDE: 0 · CHAMA: 0 https://www.instagram.com/reel/DfLRRY-sZip/
+- **biel-p1b** (aberta até 01/11 19:51): ESCONDE: 6 · CHAMA: 0 https://www.instagram.com/reel/DfLRRY-sZip/
 - **biel-p1** (encerrada — venceu None): PEGA: 0 · FECHA: 0 https://www.instagram.com/reel/DfKzsFoSIFK/
 - **s15** (encerrada — venceu None): ABRO: 0 · QUEIMO: 0 https://www.instagram.com/reel/DfKQFN_Bwp_/
 - **s14** (encerrada — venceu None): MEXO: 0 · FICO: 0 https://www.instagram.com/reel/DfKP5Fshgem/
