@@ -611,5 +611,232 @@
   "h": 1920,
   "seed": 44,
   "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, warm cinematic lighting with strong contrast, expressive face, correct human anatomy, no text, no letters, no signs, no watermark. Over-the-shoulder shot from directly behind a young mechanic: we see only the back of his head with a red backwards baseball cap and his shoulders wearing a white tank top with dark denim overall straps; he looks down into the open trunk of a black car, where two open suitcases full of stacks of Brazilian money and a black handgun lie on the money, lit by warm trunk light. NO arms and NO hands visible. Vertical composition."
+ },
+ {
+  "id": "mae_ref",
+  "w": 1024,
+  "h": 1024,
+  "seed": 0,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Bust portrait of Biel's mother: Brazilian woman in her 40s, warm brown skin, curly black hair tied up, tired kind eyes, simple grey t-shirt, gentle worried look, warm kitchen light. Head and shoulders only, no hands."
+ },
+ {
+  "id": "p2_c1a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a small dark auto repair garage at night: a black sedan parked inside, the metal roll-up door pulled down and closed, a thin line of street light under the door, one dim bulb. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c1b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a small dark auto repair garage at night: a black sedan parked inside, the metal roll-up door pulled down and closed, a thin line of street light under the door, one dim bulb. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c2a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. In total darkness he hides holding his breath, eyes wide with fear; a bright white flashlight beam coming through a gap crosses his face diagonally. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c2b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. In total darkness he hides holding his breath, eyes wide with fear; a bright white flashlight beam coming through a gap crosses his face diagonally. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c2c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 51,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. In total darkness he hides holding his breath, eyes wide with fear; a bright white flashlight beam coming through a gap crosses his face diagonally. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c3a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Top-down view on a garage floor: two open suitcases packed with neat stacks of Brazilian real banknotes (blue 100 reais and brown 50 reais bills), lit by a single warm bulb. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c3b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Top-down view on a garage floor: two open suitcases packed with neat stacks of Brazilian real banknotes (blue 100 reais and brown 50 reais bills), lit by a single warm bulb. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c4a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. His face lit from below by a warm glow, astonished, mouth open, eyes reflecting the money, sweat on his forehead, dark garage behind. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c4b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. His face lit from below by a warm glow, astonished, mouth open, eyes reflecting the money, sweat on his forehead, dark garage behind. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c4c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 51,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. His face lit from below by a warm glow, astonished, mouth open, eyes reflecting the money, sweat on his forehead, dark garage behind. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c5a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. A tall pile of old worn car tires in the dark corner of a garage, the edge of a brown suitcase barely visible hidden behind the tires. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c5b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. A tall pile of old worn car tires in the dark corner of a garage, the edge of a brown suitcase barely visible hidden behind the tires. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c6a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Close-up on a workbench at night: an open black backpack, a black handgun wrapped halfway in an old rag lying inside it, dramatic single light. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c6b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Close-up on a workbench at night: an open black backpack, a black handgun wrapped halfway in an old rag lying inside it, dramatic single light. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c7a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. His face lit by the cold blue light of a phone screen below the frame, emotional, eyes glassy, soft expression, dark garage. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c7b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. His face lit by the cold blue light of a phone screen below the frame, emotional, eyes glassy, soft expression, dark garage. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c7c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 51,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. His face lit by the cold blue light of a phone screen below the frame, emotional, eyes glassy, soft expression, dark garage. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c8a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "The woman from image 0 (same face, curly hair tied up, grey t-shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. At night in a simple kitchen she stands by the window looking out, worried, a covered plate of food on the table behind her. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "p2_c8b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "The woman from image 0 (same face, curly hair tied up, grey t-shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. At night in a simple kitchen she stands by the window looking out, worried, a covered plate of food on the table behind her. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "p2_c8c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 51,
+  "prompt": "The woman from image 0 (same face, curly hair tied up, grey t-shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. At night in a simple kitchen she stands by the window looking out, worried, a covered plate of food on the table behind her. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "p2_c10a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Furious, jaw clenched, eyes burning, looking down toward something below the frame, harsh red light from one side, dark background. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c10b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Furious, jaw clenched, eyes burning, looking down toward something below the frame, harsh red light from one side, dark background. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c10c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 51,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Furious, jaw clenched, eyes burning, looking down toward something below the frame, harsh red light from one side, dark background. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p2_c11a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 17,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside the open glove compartment of a dark car at night: a black smartphone lying there, its screen glowing bright white, lighting the inside of the glove box. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p2_c11b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 34,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside the open glove compartment of a dark car at night: a black smartphone lying there, its screen glowing bright white, lighting the inside of the glove box. No people, no hands. Vertical composition."
  }
 ]
