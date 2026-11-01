@@ -107,6 +107,16 @@ def diagnostico_token():
             log(f'  verificação ({nome}): HTTP {e.code} {msg}')
 
 
+def trocar_conta():
+    """Se existir uma segunda conta grátis (CF_ACCOUNT_ID_2 / CF_API_TOKEN_2), passa a usá-la."""
+    global CONTA, TOKEN
+    c2, t2 = os.environ.get('CF_ACCOUNT_ID_2', '').strip(), _extrair_token(os.environ.get('CF_API_TOKEN_2', '').strip())
+    if not c2 or not t2 or CONTA == c2:
+        return False
+    CONTA, TOKEN = c2, t2
+    return True
+
+
 def main():
     ARTE.mkdir(exist_ok=True)
     if not CONTA or not TOKEN:
@@ -134,6 +144,15 @@ def main():
             Image.open(io.BytesIO(dados)).convert('RGB').save(destino, 'PNG')
             log(f"OK {it['id']} ({time.time() - t:.0f}s)")
         except Exception as e:  # noqa: BLE001
+            if 'COTA DIÁRIA' in str(e) and trocar_conta():
+                log('cota da conta 1 acabou: usando a conta 2')
+                try:
+                    dados = gerar(it)
+                    from PIL import Image
+                    Image.open(io.BytesIO(dados)).convert('RGB').save(destino, 'PNG')
+                    log(f"OK {it['id']} (conta 2)"); continue
+                except Exception as e2:  # noqa: BLE001
+                    e = e2
             log(f"falhou {it['id']}: {str(e)[:300]}")
             if 'HTTP 401' in str(e) or 'HTTP 403' in str(e) or 'COTA DIÁRIA' in str(e):
                 log('parando: o token não tem acesso. Nada mais foi tentado.'); break

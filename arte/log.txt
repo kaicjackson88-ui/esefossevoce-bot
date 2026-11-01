@@ -1,8 +1,0 @@
-contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
-token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
-  verificação (token de usuário): status active
-  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
-segredos OK | GEMINI_API_KEY ok
-  HTTP 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (8f483644-cc9e-4fee-a8cc-8074c8d1b70e)","code":4006}],"success":false,"result":{},"messages":[]}
-falhou mae_ref: COTA DIÁRIA ESGOTADA (renova 00:00 UTC = 21h de Brasília)
-parando: o token não tem acesso. Nada mais foi tentado.
