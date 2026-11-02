@@ -473,7 +473,7 @@
       "permalink": "https://www.instagram.com/reel/DfMzmhCM29_/",
       "publicado_em": "2026-11-01T13:10:41+00:00",
       "votacao": {
-        "aberta": true,
+        "aberta": false,
         "opcoes": [
           "PAGA",
           "ESPERA"
@@ -488,9 +488,10 @@
           "ESPERA": "biel-p3-espera"
         },
         "comentario_id": "17917667514462604",
-        "atualizado_em": "2026-11-02T06:24:37+00:00",
+        "atualizado_em": "2026-11-02T17:13:29+00:00",
         "placar_em": "2026-11-01T15:16:41+00:00",
-        "placar_total": 5
+        "placar_total": 5,
+        "vencedor": "PAGA"
       }
     }
   ]
