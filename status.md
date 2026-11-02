@@ -1,6 +1,10 @@
 # Status do robô
 
-Última execução: 01/11 20:41 (Brasília) — ação `votos`
+Última execução: 01/11 22:06 (Brasília) — ação `ciclo`
+
+## Avisos
+
+- Fila vazia: nada foi postado. Peça novos vídeos ao Claude.
 
 ## Fila
 
