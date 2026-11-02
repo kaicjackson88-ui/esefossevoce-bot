@@ -1,10 +1,10 @@
 # Status do robô
 
-Última execução: 02/11 14:13 (Brasília) — ação `votos`
+Última execução: 02/11 20:03 (Brasília) — ação `ciclo`
 
 ## Avisos
 
-- A continuação 'biel-p3-paga' (PAGA) ainda não está na fila. Peça ao Claude para produzir.
+- Fila vazia: nada foi postado. Peça novos vídeos ao Claude.
 
 ## Fila
 
