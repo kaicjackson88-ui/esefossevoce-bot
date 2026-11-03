@@ -1,4 +1,3 @@
 ok voz_Narrador.mp3
-ok voz_Lorival.mp3
-ok voz_Biel.mp3
+ok voz_Terno.mp3
 total
