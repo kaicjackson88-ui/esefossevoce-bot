@@ -954,5 +954,35 @@
   "h": 1920,
   "seed": 243,
   "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Interior of a small dark neighborhood bar at night, seen from inside: bright white car headlights shine through the open front door and the window, throwing long hard shadows of chairs across the floor and an empty wooden table. No people, no hands, no car body visible, only the blinding headlight glow outside. Suspense, thriller mood. Vertical composition."
+ },
+ {
+  "id": "p3_c4g",
+  "w": 1088,
+  "h": 1920,
+  "seed": 301,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night with bottles on shelves softly blurred behind him. He has a confident, satisfied grin. Clean background, nothing floating in the air. Tight close-up portrait: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
+ },
+ {
+  "id": "p3_c4h",
+  "w": 1088,
+  "h": 1920,
+  "seed": 322,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night with bottles on shelves softly blurred behind him. He has a confident, satisfied grin. Clean background, nothing floating in the air. Tight close-up portrait: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
+ },
+ {
+  "id": "p3_c4i",
+  "w": 1088,
+  "h": 1920,
+  "seed": 343,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night with bottles on shelves softly blurred behind him. He has a confident, satisfied grin. Clean background, nothing floating in the air. Tight close-up portrait: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
  }
 ]
