@@ -690,5 +690,167 @@
   "h": 1920,
   "seed": 34,
   "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside the open glove compartment of a dark car at night: a black smartphone lying there, its screen glowing bright white, lighting the inside of the glove box. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p3_c1a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 95,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Dim neighborhood bar at night. He has gone pale with shock and fear, mouth half open, sweat on his bald head, sunglasses slipping down his nose revealing wide frightened eyes. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
+ },
+ {
+  "id": "p3_c1b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 114,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Dim neighborhood bar at night. He has gone pale with shock and fear, mouth half open, sweat on his bald head, sunglasses slipping down his nose revealing wide frightened eyes. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
+ },
+ {
+  "id": "p3_c1c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 133,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Dim neighborhood bar at night. He has gone pale with shock and fear, mouth half open, sweat on his bald head, sunglasses slipping down his nose revealing wide frightened eyes. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
+ },
+ {
+  "id": "p3_c2a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 95,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Night in a narrow favela alley lit by one street lamp: walking forward with a determined, serious face, the strap of a black backpack over his shoulder. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p3_c2b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 114,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Night in a narrow favela alley lit by one street lamp: walking forward with a determined, serious face, the strap of a black backpack over his shoulder. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p3_c2c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 133,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Night in a narrow favela alley lit by one street lamp: walking forward with a determined, serious face, the strap of a black backpack over his shoulder. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p3_c3a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 95,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Exterior of a small rundown neighborhood bar at night in a Brazilian favela, warm light coming from the open door, plastic chairs outside, empty street, dark sky. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p3_c3b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 114,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Exterior of a small rundown neighborhood bar at night in a Brazilian favela, warm light coming from the open door, plastic chairs outside, empty street, dark sky. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p3_c3c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 133,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Exterior of a small rundown neighborhood bar at night in a Brazilian favela, warm light coming from the open door, plastic chairs outside, empty street, dark sky. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p3_c4a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 95,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night, he leans back with a smug, mocking smile, cigarette smoke in the air behind him. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
+ },
+ {
+  "id": "p3_c4b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 114,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night, he leans back with a smug, mocking smile, cigarette smoke in the air behind him. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
+ },
+ {
+  "id": "p3_c4c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 133,
+  "prompt": "The heavyset bald man from image 0 (same face, same dark sunglasses, same flowery short-sleeve shirt, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night, he leans back with a smug, mocking smile, cigarette smoke in the air behind him. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "p1_c3a"
+  ]
+ },
+ {
+  "id": "p3_c5a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 95,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Close-up on a wooden bar table: stacks of Brazilian real banknotes held by paper bands, and on the paper band of the top stack a small red scorpion symbol is printed, dramatic lamp light. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p3_c5b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 114,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Close-up on a wooden bar table: stacks of Brazilian real banknotes held by paper bands, and on the paper band of the top stack a small red scorpion symbol is printed, dramatic lamp light. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p3_c5c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 133,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Close-up on a wooden bar table: stacks of Brazilian real banknotes held by paper bands, and on the paper band of the top stack a small red scorpion symbol is printed, dramatic lamp light. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "p3_c7a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 95,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night, tense and frozen, eyes wide, realizing something terrible, warm bar light on one side of his face and red light on the other. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p3_c7b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 114,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night, tense and frozen, eyes wide, realizing something terrible, warm bar light on one side of his face and red light on the other. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "p3_c7c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 133,
+  "prompt": "The young mechanic from image 0 (same face, same red backwards cap, same white tank top and dark overall straps, same art style). 2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Inside a dim bar at night, tense and frozen, eyes wide, realizing something terrible, warm bar light on one side of his face and red light on the other. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
  }
 ]
