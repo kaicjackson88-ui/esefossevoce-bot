@@ -41,7 +41,7 @@ jobs:
           CODIGO: ${{ github.event.inputs.codigo }}
         run: |
           mkdir -p dados
-          if [ "$ACAO" = "autorizar" ]; then
+          if [ "$ACAO" = "autorizar" ] || [ -n "$CODIGO" ]; then
             echo "::add-mask::$CODIGO"
             python youtube.py autorizar "$CODIGO" 2>&1 | tee dados/youtube.log
           elif [ -f dados/youtube_token.enc ]; then
