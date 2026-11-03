@@ -1,6 +1,6 @@
 # Status do robô
 
-Última execução: 03/11 07:58 (Brasília) — ação `postar`
+Última execução: 03/11 12:20 (Brasília) — ação `votos`
 
 ## Fila
 
