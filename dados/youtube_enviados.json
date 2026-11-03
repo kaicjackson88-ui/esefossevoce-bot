@@ -28,5 +28,15 @@
   "quando": "2026-11-03T11:00:05.389405+00:00",
   "comentario_id": "Ugza16pW4GJSk6pUAa94AaABAg",
   "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess"
+ },
+ {
+  "id": "biel-v2-p1",
+  "video_id": "eYqORaboiA8",
+  "privacidade": "public",
+  "titulo": "O Corre do Biel • Parte 1 — 1 Milhão No Porta-Malas #shorts",
+  "link": "https://youtube.com/shorts/eYqORaboiA8",
+  "quando": "2026-11-03T16:11:33.444582+00:00",
+  "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess",
+  "comentario_id": "UgyAlMv8zWvVqsrUGcB4AaABAg"
  }
 ]
