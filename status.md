@@ -1,6 +1,6 @@
 # Status do robô
 
-Última execução: 03/11 03:58 (Brasília) — ação `votos`
+Última execução: 03/11 07:58 (Brasília) — ação `postar`
 
 ## Fila
 
@@ -8,6 +8,7 @@
 
 ## Votações
 
+- **biel-p3-paga** (aberta até 04/11 07:58): MENTE: 0 · CONTA: 0 https://www.instagram.com/reel/DfRuHJCC1_1/
 - **biel-p2-esconde** (encerrada — venceu PAGA): PAGA: 5 · ESPERA: 0 https://www.instagram.com/reel/DfMzmhCM29_/
 - **biel-p1b** (encerrada — venceu ESCONDE): ESCONDE: 6 · CHAMA: 0 https://www.instagram.com/reel/DfLRRY-sZip/
 - **biel-p1** (encerrada — venceu None): PEGA: 0 · FECHA: 0 https://www.instagram.com/reel/DfKzsFoSIFK/
@@ -17,4 +18,3 @@
 - **s12** (encerrada — venceu None): GRAVO: 0 · DESLIGO: 0 https://www.instagram.com/reel/DfKPdDxsEVI/
 - **s11** (encerrada — venceu None): PARO: 0 · SIGO: 0 https://www.instagram.com/reel/DfI8e2XsVW9/
 - **s10** (encerrada — venceu None): SAIO: 0 · FICO: 0 https://www.instagram.com/reel/DfIYRGzBMiq/
-- **s09** (encerrada — venceu None): MIO: 0 · ESCONDO: 0 https://www.instagram.com/reel/DfHzPwIort1/

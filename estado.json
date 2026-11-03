@@ -493,6 +493,29 @@
         "placar_total": 5,
         "vencedor": "PAGA"
       }
+    },
+    {
+      "id": "biel-p3-paga",
+      "media_id": "18120885415760468",
+      "permalink": "https://www.instagram.com/reel/DfRuHJCC1_1/",
+      "publicado_em": "2026-11-03T10:58:56+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "MENTE",
+          "CONTA"
+        ],
+        "ate": "2026-11-04T10:58:56+00:00",
+        "votos": {
+          "MENTE": 0,
+          "CONTA": 0
+        },
+        "continuacao": {
+          "MENTE": "biel-p4-mente",
+          "CONTA": "biel-p4-conta"
+        },
+        "comentario_id": "18110602514196242"
+      }
     }
   ]
 }
