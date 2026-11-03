@@ -14,43 +14,56 @@
 - profile_visits: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18114547925121466/insights: {"error)
 
 ## biel-p1b  https://www.instagram.com/reel/DfLRRY-sZip/
-- views: 1366
+- views: 1368
 - reach: 1095
 - likes: 46
 - comments: 12
 - shares: 1
 - saved: 2
 - total_interactions: 61
-- ig_reels_avg_watch_time: 24149 (35% do vídeo)
-- ig_reels_video_view_total_time: 26154270
+- ig_reels_avg_watch_time: 24118 (35% do vídeo)
+- ig_reels_video_view_total_time: 26168855
 - follows: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/17877899154650732/insights: {"error)
 - profile_visits: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/17877899154650732/insights: {"error)
 
 ## biel-p2-esconde  https://www.instagram.com/reel/DfMzmhCM29_/
-- views: 1189
-- reach: 1036
+- views: 1192
+- reach: 1039
 - likes: 50
 - comments: 9
 - shares: 0
 - saved: 1
 - total_interactions: 60
-- ig_reels_avg_watch_time: 28968 (36% do vídeo)
-- ig_reels_video_view_total_time: 29606247
+- ig_reels_avg_watch_time: 28972 (36% do vídeo)
+- ig_reels_video_view_total_time: 29697267
 - follows: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18081054095740935/insights: {"error)
 - profile_visits: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18081054095740935/insights: {"error)
 
 ## biel-p3-paga  https://www.instagram.com/reel/DfRuHJCC1_1/
-- views: 150
-- reach: 127
+- views: 190
+- reach: 165
 - likes: 1
 - comments: 1
 - shares: 0
 - saved: 0
 - total_interactions: 2
-- ig_reels_avg_watch_time: 13829 (20% do vídeo)
-- ig_reels_video_view_total_time: 1797854
+- ig_reels_avg_watch_time: 14084 (21% do vídeo)
+- ig_reels_video_view_total_time: 2408410
 - follows: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18120885415760468/insights: {"error)
 - profile_visits: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18120885415760468/insights: {"error)
+
+## biel-v2-p1  https://www.instagram.com/reel/DfSRp8zKY2x/
+- views: 169
+- reach: 139
+- likes: 2
+- comments: 1
+- shares: 0
+- saved: 0
+- total_interactions: 3
+- ig_reels_avg_watch_time: 18077 (45% do vídeo)
+- ig_reels_video_view_total_time: 2567012
+- follows: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18221847082358453/insights: {"error)
+- profile_visits: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18221847082358453/insights: {"error)
 
 ## Conta
 ```
@@ -58,21 +71,21 @@
  "perfil": {
   "id": "17841411694131308",
   "followers_count": 37,
-  "media_count": 3,
+  "media_count": 4,
   "username": "ocorredobiel"
  },
  "reach": {
-  "value": 16847
+  "value": 16993
  },
  "profile_views": {
-  "value": 587
+  "value": 594
  },
  "follows_and_unfollows": "indisponível (list index out of range)",
  "accounts_engaged": {
-  "value": 662
+  "value": 665
  },
  "views": {
-  "value": 22663
+  "value": 22874
  },
  "seguidores_por_pais": "indisponível (list index out of range)"
 }
