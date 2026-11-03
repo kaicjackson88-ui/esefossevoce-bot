@@ -7,7 +7,7 @@ import bot
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 METRICAS = ['views', 'reach', 'likes', 'comments', 'shares', 'saved', 'total_interactions',
             'ig_reels_avg_watch_time', 'ig_reels_video_view_total_time', 'follows', 'profile_visits']
-DURACAO = {'biel-p1': 46.1, 'biel-p1b': 69.5, 'biel-p2-esconde': 80.5, 'biel-p3-paga': 68.4}  # segundos de cada vídeo
+DURACAO = {'biel-p1': 46.1, 'biel-p1b': 69.5, 'biel-p2-esconde': 80.5, 'biel-p3-paga': 68.4, 'biel-v2-p1': 39.9}  # segundos de cada vídeo
 
 
 def uma(media_id, m):
