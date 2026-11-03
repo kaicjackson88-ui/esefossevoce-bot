@@ -517,6 +517,29 @@
         "comentario_id": "18110602514196242",
         "atualizado_em": "2026-11-03T15:20:56+00:00"
       }
+    },
+    {
+      "id": "biel-v2-p1",
+      "media_id": "18221847082358453",
+      "permalink": "https://www.instagram.com/reel/DfSRp8zKY2x/",
+      "publicado_em": "2026-11-03T16:09:11+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "ESCONDE",
+          "CHAMA"
+        ],
+        "ate": "2026-11-04T16:09:11+00:00",
+        "votos": {
+          "ESCONDE": 0,
+          "CHAMA": 0
+        },
+        "continuacao": {
+          "ESCONDE": "biel-v2-p2-esconde",
+          "CHAMA": "biel-v2-p2-chama"
+        },
+        "comentario_id": "18035934965670627"
+      }
     }
   ]
 }
