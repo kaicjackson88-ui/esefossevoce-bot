@@ -1,0 +1,81 @@
+{
+ "id": "p3",
+ "titulo": "A CINTA",
+ "parte": 3,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Biel": "Puck",
+  "Lorival": "Algenib"
+ },
+ "grupos": [
+  [
+   "Narrador"
+  ],
+  [
+   "Lorival"
+  ],
+  [
+   "Biel"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, sotaque brasileiro natural, como o narrador de um filme de suspense policial: voz grave, ritmo tenso, pausas dramáticas nas reticências, quase sussurrando nas frases de revelação. Nada de tom de locutor ou robô.",
+ "estilo_por": {
+  "Narrador": "Leia em português do Brasil, como o narrador de um filme de suspense policial: voz grave, tensa, com pausas dramáticas nas reticências e mais baixo nas revelações:",
+  "Lorival": "Leia em português do Brasil, voz de homem mais velho, rouca, lenta e fria, personagem de uma série de ficção. Na primeira fala, debochado; na segunda, assustado, gaguejando:",
+  "Biel": "Leia em português do Brasil, voz de rapaz jovem de 19 anos, firme mas nervosa, falando baixo:"
+ },
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "O Seu Lorival olhou pro dinheiro... e o sangue sumiu do rosto dele."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Uma hora antes. Vocês decidiram: paga. Biel cortou a viela com oito mil na mochila... e a arma escondida por baixo das notas."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "O bar do Lorival fecha às onze. Já passava da meia-noite. E a porta... tava aberta."
+  },
+  {
+   "cena": 3,
+   "quem": "Lorival",
+   "texto": "Ora, ora... o mecânico veio pagar. Eu já ia mandar te buscar, moleque."
+  },
+  {
+   "cena": 4,
+   "quem": "Biel",
+   "texto": "Tá aqui. Oito mil. Tudo. Agora me deixa em paz."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "Biel jogou os maços na mesa. Lorival puxou um... e travou. Na cinta das notas... um escorpião vermelho."
+  },
+  {
+   "cena": 6,
+   "quem": "Lorival",
+   "texto": "Onde... onde você arrumou esse dinheiro?"
+  },
+  {
+   "cena": 7,
+   "quem": "Narrador",
+   "texto": "Lá fora, um carro parou. Farol alto. Motor ligado. E Biel entendeu: o Lorival conhece o dono desse dinheiro."
+  },
+  {
+   "cena": 8,
+   "quem": "Narrador",
+   "texto": "E agora? Biel mente e diz que é da oficina... ou conta a verdade? Comenta mente ou conta. E segue pra ver a parte quatro."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "MENTE",
+   "CONTA"
+  ],
+  "horas": 24
+ }
+}
