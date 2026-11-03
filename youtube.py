@@ -138,6 +138,32 @@ def comentar_enquete(at, vid, item):
     return r.get('id')
 
 
+def por_capa(at, vid, url):
+    """Coloca a capa (thumbnail) no vídeo. O YouTube exige canal verificado por telefone para capas personalizadas."""
+    with urllib.request.urlopen(url, timeout=60) as r:
+        img = r.read()
+    http('POST', f'https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={vid}',
+         headers={'Authorization': f'Bearer {at}', 'Content-Type': 'image/jpeg', 'Content-Length': str(len(img))}, raw=img)
+
+
+def capas():
+    """Coloca a capa nos vídeos já enviados que ainda estão sem."""
+    env = ler(ENVIADOS, [])
+    fila = ler(RAIZ / 'fila' / 'fila.json', {'itens': {}})['itens']
+    at = access_token()
+    for e in env:
+        url = fila.get(e['id'], {}).get('capa_url')
+        if not e.get('video_id') or e.get('capa') == 'ok' or not url:
+            continue
+        try:
+            por_capa(at, e['video_id'], url); e['capa'] = 'ok'
+            print('🖼️ capa colocada:', e['titulo'])
+        except Exception as x:  # noqa: BLE001
+            e['capa'] = 'erro: ' + str(x)[:200]
+            print('capa falhou:', e['titulo'], str(x)[:300])
+    gravar(ENVIADOS, env)
+
+
 def pendentes():
     estado = ler(RAIZ / 'estado.json', {'publicados': []})
     fila = ler(RAIZ / 'fila' / 'fila.json', {'itens': {}})['itens']
@@ -169,6 +195,11 @@ def enviar(n=None):
             continue
         reg = {'id': item['id'], 'video_id': vid, 'privacidade': priv, 'titulo': titulo,
                'link': f'https://youtube.com/shorts/{vid}', 'quando': datetime.now(timezone.utc).isoformat()}
+        if item.get('capa_url'):
+            try:
+                por_capa(at, vid, item['capa_url']); reg['capa'] = 'ok'
+            except Exception as e:  # noqa: BLE001
+                reg['capa'] = 'erro: ' + str(e)[:200]
         try:
             reg['comentario_id'] = comentar_enquete(at, vid, item)
         except Exception as e:  # noqa: BLE001
@@ -213,6 +244,8 @@ def main():
         enviar(int(a[1]) if len(a) > 1 and a[1].isdigit() else None)
     elif a[0] == 'metricas':
         metricas()
+    elif a[0] == 'capas':
+        capas()
 
 
 if __name__ == '__main__':

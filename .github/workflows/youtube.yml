@@ -10,7 +10,7 @@ on:
         required: true
         default: "enviar"
         type: choice
-        options: [enviar, autorizar, metricas]
+        options: [enviar, autorizar, metricas, capas]
       codigo:
         description: "Código da página yt-biel.html (só para autorizar)"
         required: false
