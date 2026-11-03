@@ -1,24 +1,26 @@
-capa falhou: O Corre do Biel • Parte 1 — O Furo #shorts Google respondeu 403: {
-  "error": {
-    "code": 403,
-    "message": "The authenticated user doesn't have permissions to upload and set custom video thumbnails.",
-    "errors": [
-      {
-        "message": "The authenticated user doesn't have permissions to upload and set custom video thumbnails.",
-
-capa falhou: O Corre do Biel • Parte 2 — O Recado #shorts Google respondeu 403: {
-  "error": {
-    "code": 403,
-    "message": "The authenticated user doesn't have permissions to upload and set custom video thumbnails.",
-    "errors": [
-      {
-        "message": "The authenticated user doesn't have permissions to upload and set custom video thumbnails.",
-
-capa falhou: O Corre do Biel • Parte 3 — A Cinta #shorts Google respondeu 403: {
-  "error": {
-    "code": 403,
-    "message": "The authenticated user doesn't have permissions to upload and set custom video thumbnails.",
-    "errors": [
-      {
-        "message": "The authenticated user doesn't have permissions to upload and set custom video thumbnails.",
-
+[
+ {
+  "episodio": "biel-p1b",
+  "privacidade": "public",
+  "views": 3,
+  "curtidas": 0,
+  "comentarios": 1,
+  "link": "https://youtube.com/shorts/32RtmuP4VZI"
+ },
+ {
+  "episodio": "biel-p2-esconde",
+  "privacidade": "public",
+  "views": 2,
+  "curtidas": 0,
+  "comentarios": 1,
+  "link": "https://youtube.com/shorts/kae1GOf3OIw"
+ },
+ {
+  "episodio": "biel-p3-paga",
+  "privacidade": "public",
+  "views": 1,
+  "curtidas": 1,
+  "comentarios": 1,
+  "link": "https://youtube.com/shorts/KfcIDoVYCwc"
+ }
+]

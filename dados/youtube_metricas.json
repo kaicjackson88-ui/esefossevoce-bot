@@ -1,0 +1,35 @@
+{
+ "canal": {
+  "viewCount": "0",
+  "subscriberCount": "0",
+  "hiddenSubscriberCount": false,
+  "videoCount": "3"
+ },
+ "atualizado": "2026-11-03T15:18:36.842363+00:00",
+ "videos": [
+  {
+   "episodio": "biel-p1b",
+   "privacidade": "public",
+   "views": 3,
+   "curtidas": 0,
+   "comentarios": 1,
+   "link": "https://youtube.com/shorts/32RtmuP4VZI"
+  },
+  {
+   "episodio": "biel-p2-esconde",
+   "privacidade": "public",
+   "views": 2,
+   "curtidas": 0,
+   "comentarios": 1,
+   "link": "https://youtube.com/shorts/kae1GOf3OIw"
+  },
+  {
+   "episodio": "biel-p3-paga",
+   "privacidade": "public",
+   "views": 1,
+   "curtidas": 1,
+   "comentarios": 1,
+   "link": "https://youtube.com/shorts/KfcIDoVYCwc"
+  }
+ ]
+}
