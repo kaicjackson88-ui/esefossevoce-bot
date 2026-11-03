@@ -6,7 +6,8 @@
   "titulo": "O Corre do Biel • Parte 1 — O Furo #shorts",
   "link": "https://youtube.com/shorts/32RtmuP4VZI",
   "quando": "2026-11-03T10:07:06.941716+00:00",
-  "comentario_id": "Ugz9JBJuKEDD95xRuwx4AaABAg"
+  "comentario_id": "Ugz9JBJuKEDD95xRuwx4AaABAg",
+  "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess"
  },
  {
   "id": "biel-p2-esconde",
@@ -15,7 +16,8 @@
   "titulo": "O Corre do Biel • Parte 2 — O Recado #shorts",
   "link": "https://youtube.com/shorts/kae1GOf3OIw",
   "quando": "2026-11-03T10:07:09.298741+00:00",
-  "comentario_id": "Ugy1SkroIeKoYAszmA54AaABAg"
+  "comentario_id": "Ugy1SkroIeKoYAszmA54AaABAg",
+  "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess"
  },
  {
   "id": "biel-p3-paga",
@@ -24,6 +26,7 @@
   "titulo": "O Corre do Biel • Parte 3 — A Cinta #shorts",
   "link": "https://youtube.com/shorts/KfcIDoVYCwc",
   "quando": "2026-11-03T11:00:05.389405+00:00",
-  "comentario_id": "Ugza16pW4GJSk6pUAa94AaABAg"
+  "comentario_id": "Ugza16pW4GJSk6pUAa94AaABAg",
+  "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess"
  }
 ]
