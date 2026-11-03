@@ -1,0 +1,86 @@
+{
+ "id": "p1v2",
+ "titulo": "1 MILHÃO NO PORTA-MALAS",
+ "parte": 1,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Terno": "Orus"
+ },
+ "grupos": [
+  [
+   "Narrador"
+  ],
+  [
+   "Terno"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil.",
+ "estilo_por": {
+  "Narrador": "Leia em português do Brasil, como o narrador de um vídeo viral de suspense falando direto com quem assiste (você): ritmo rápido, frases curtas e secas, voz grave e tensa, sem pausas longas, mais baixo e lento só nas revelações:",
+  "Terno": "Leia em português do Brasil, voz de homem de uns 45 anos, apressado, autoritário e nervoso, personagem de uma série de ficção:"
+ },
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Um milhão e duzentos mil reais. No porta-malas de um cliente."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "E você? Você tinha trinta e sete reais na conta."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "Quase meia-noite. Um carro preto parou na sua oficina."
+  },
+  {
+   "cena": 3,
+   "quem": "Terno",
+   "texto": "Pneu furado. Resolve rápido, moleque."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Você olhou o pneu... e gelou. O furo era de bala."
+  },
+  {
+   "cena": 5,
+   "quem": "Terno",
+   "texto": "Guarda o carro aqui. Eu volto em uma hora."
+  },
+  {
+   "cena": 6,
+   "quem": "Narrador",
+   "texto": "Uma hora virou três. Ele não voltou."
+  },
+  {
+   "cena": 7,
+   "quem": "Narrador",
+   "texto": "Você abriu o porta-malas."
+  },
+  {
+   "cena": 8,
+   "quem": "Narrador",
+   "texto": "Notas de cem. Mochilas lotadas. E uma arma."
+  },
+  {
+   "cena": 9,
+   "quem": "Narrador",
+   "texto": "Aí uma viatura virou a esquina."
+  },
+  {
+   "cena": 10,
+   "quem": "Narrador",
+   "texto": "Você esconde o carro... ou chama a polícia? Comenta. Os comentários decidem a parte dois."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "ESCONDE",
+   "CHAMA"
+  ],
+  "horas": 24
+ }
+}
