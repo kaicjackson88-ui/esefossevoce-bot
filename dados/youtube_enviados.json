@@ -47,5 +47,15 @@
   "link": "https://youtube.com/shorts/e_PYvDJ5AlU",
   "quando": "2026-11-04T09:57:21+00:00",
   "capa": "erro: canal sem verificação"
+ },
+ {
+  "id": "biel-bl1",
+  "video_id": "ssPtLHGdTS8",
+  "privacidade": "public",
+  "titulo": "O Corre do Biel • Parte 1 — O Bilhete Premiado #shorts",
+  "link": "https://youtube.com/shorts/ssPtLHGdTS8",
+  "quando": "2026-11-04T21:53:14.292884+00:00",
+  "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess",
+  "comentario_id": "UgwqXTLi9jKxlpCK3Vt4AaABAg"
  }
 ]
