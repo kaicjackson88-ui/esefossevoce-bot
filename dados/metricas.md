@@ -40,28 +40,28 @@
 - profile_visits: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18081054095740935/insights: {"error)
 
 ## biel-p3-paga  https://www.instagram.com/reel/DfRuHJCC1_1/
-- views: 190
-- reach: 165
+- views: 211
+- reach: 187
 - likes: 1
 - comments: 1
 - shares: 0
 - saved: 0
 - total_interactions: 2
-- ig_reels_avg_watch_time: 14084 (21% do vídeo)
-- ig_reels_video_view_total_time: 2408410
+- ig_reels_avg_watch_time: 13174 (19% do vídeo)
+- ig_reels_video_view_total_time: 2529594
 - follows: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18120885415760468/insights: {"error)
 - profile_visits: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18120885415760468/insights: {"error)
 
 ## biel-v2-p1  https://www.instagram.com/reel/DfSRp8zKY2x/
-- views: 169
-- reach: 139
+- views: 195
+- reach: 165
 - likes: 2
 - comments: 1
 - shares: 0
 - saved: 0
 - total_interactions: 3
-- ig_reels_avg_watch_time: 18077 (45% do vídeo)
-- ig_reels_video_view_total_time: 2567012
+- ig_reels_avg_watch_time: 17533 (44% do vídeo)
+- ig_reels_video_view_total_time: 2963102
 - follows: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18221847082358453/insights: {"error)
 - profile_visits: indisponível (HTTP 400 em https://graph.facebook.com/v24.0/18221847082358453/insights: {"error)
 
@@ -75,17 +75,17 @@
   "username": "ocorredobiel"
  },
  "reach": {
-  "value": 16993
+  "value": 16209
  },
  "profile_views": {
-  "value": 594
+  "value": 567
  },
  "follows_and_unfollows": "indisponível (list index out of range)",
  "accounts_engaged": {
-  "value": 665
+  "value": 638
  },
  "views": {
-  "value": 22874
+  "value": 22048
  },
  "seguidores_por_pais": "indisponível (list index out of range)"
 }
