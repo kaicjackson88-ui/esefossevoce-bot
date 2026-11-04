@@ -26,8 +26,12 @@ MODELOS = {
         "@{u} {o} na veia! 🔥 Segue a página pra ver se o Biel aguenta as consequências na próxima parte 👀",
         "@{u} anotado: {o} ✅ Ativa o seguir que a Parte 2 vai depender de você 😬",
         "@{u} voto contado! {o} tá na disputa 👀 Segue pra não perder o que acontece com o Biel",
-        "@{u} {o}?! Corajoso(a) 😳 Segue a página que amanhã você descobre se valeu a pena",
+        "@{u} {o}, hein? 😳 Segue a página que amanhã você descobre se valeu a pena",
         "@{u} {o} registrado 🗳️ Se seguir a página, você vê primeiro o que acontece",
+    ],
+    "encerrada": [
+        "@{u} valeu por votar! 🙌 Essa votação já fechou ({g} venceu), mas a história continua: segue a página e vota no episódio novo 👀",
+        "@{u} {g} levou essa! 🔥 Agora tem episódio novo esperando o seu voto, segue a página pra não perder",
     ],
     "geral": [
         "@{u} valeu demais por assistir! 🙌 E você, faria o quê no lugar do Biel? Segue pra ver a próxima parte 👀",
@@ -50,7 +54,15 @@ def gemini(prompt):
         with urllib.request.urlopen(req, timeout=40) as r:
             d = json.loads(r.read().decode())
         return d["candidates"][0]["content"]["parts"][0]["text"].strip()
-    except (urllib.error.HTTPError, urllib.error.URLError, KeyError, IndexError, TimeoutError, ValueError):
+    except urllib.error.HTTPError as e:
+        if not getattr(gemini, "avisou", False):
+            gemini.avisou = True
+            print(f"Gemini indisponível ({e.code}): {e.read().decode(errors='replace')[:200]}")
+        return None
+    except (urllib.error.URLError, KeyError, IndexError, TimeoutError, ValueError) as e:
+        if not getattr(gemini, "avisou", False):
+            gemini.avisou = True
+            print(f"Gemini sem resposta: {str(e)[:200]}")
         return None
 
 
@@ -65,12 +77,13 @@ def limpo(txt, usuario):
     return txt
 
 
-def escrever(comentario, usuario, voto, resumo, opcoes):
+def escrever(comentario, usuario, voto, resumo, opcoes, vencedor=None):
     prompt = (
         "Você administra o Instagram @ocorredobiel, uma série animada brasileira em que o público decide o que o personagem Biel faz. "
         f"Episódio: {resumo}\nOpções da votação: {' ou '.join(opcoes)}.\n"
         f"Um seguidor (@{usuario}) comentou: \"{comentario}\"\n"
         + (f"Ele votou em {voto}.\n" if voto else "")
+        + (f"ATENÇÃO: essa votação já terminou e {vencedor} venceu; não diga que o voto foi contado, convide para o episódio mais novo da página.\n" if vencedor else "")
         + "Escreva UMA resposta curta (no máximo 2 frases, até 180 caracteres), em português do Brasil informal e simpático, "
           "reagindo ao que ele disse de forma específica, e puxando ele a seguir a página para ver a próxima parte (sem implorar). "
           "No máximo 1 ou 2 emojis. Sem link, sem hashtag, sem prometer prêmio, sem inventar fatos da história além do que está no episódio. "
@@ -80,7 +93,8 @@ def escrever(comentario, usuario, voto, resumo, opcoes):
     if txt and txt.strip().upper().startswith("PULAR"):
         return None
     if not txt:
-        txt = random.choice(MODELOS["voto" if voto else "geral"]).format(u=usuario, o=voto or "")
+        tipo = "encerrada" if vencedor else ("voto" if voto else "geral")
+        txt = random.choice(MODELOS[tipo]).format(u=usuario, o=voto or "", g=vencedor or "")
     return limpo(txt, usuario)
 
 
@@ -126,7 +140,8 @@ def responder_comentarios(estado):
             if any(x.get("username") == minha_conta for x in (c.get("replies") or {}).get("data", [])):
                 feitos.add(c["id"])
                 continue
-            texto = escrever(c.get("text", ""), u, voto_de(c.get("text"), opcoes), resumo, opcoes)
+            vencedor = None if v.get("aberta") else v.get("vencedor")
+            texto = escrever(c.get("text", ""), u, voto_de(c.get("text"), opcoes), resumo, opcoes, vencedor)
             feitos.add(c["id"])
             if not texto:
                 continue
