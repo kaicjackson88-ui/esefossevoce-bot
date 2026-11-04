@@ -541,6 +541,29 @@
         "comentario_id": "18035934965670627",
         "atualizado_em": "2026-11-04T09:28:12+00:00"
       }
+    },
+    {
+      "id": "biel-px1",
+      "media_id": "17980522505924653",
+      "permalink": "https://www.instagram.com/reel/DfULrRGxpY4/",
+      "publicado_em": "2026-11-04T09:55:29+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "DEVOLVE",
+          "FICA"
+        ],
+        "ate": "2026-11-05T09:55:29+00:00",
+        "votos": {
+          "DEVOLVE": 0,
+          "FICA": 0
+        },
+        "continuacao": {
+          "DEVOLVE": "biel-px2-devolve",
+          "FICA": "biel-px2-fica"
+        },
+        "comentario_id": "18131339896882145"
+      }
     }
   ]
 }
