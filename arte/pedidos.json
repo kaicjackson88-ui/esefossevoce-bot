@@ -984,5 +984,197 @@
   "refs": [
    "p1_c3a"
   ]
+ },
+ {
+  "id": "px_c1a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 401,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Lying on a pillow in a tiny dark bedroom at 3 a.m., his face lit only by cold blue phone-screen light coming from below the frame, eyes wide open in disbelief. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "px_c1b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 422,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Lying on a pillow in a tiny dark bedroom at 3 a.m., his face lit only by cold blue phone-screen light coming from below the frame, eyes wide open in disbelief. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "px_c1c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 443,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Lying on a pillow in a tiny dark bedroom at 3 a.m., his face lit only by cold blue phone-screen light coming from below the frame, eyes wide open in disbelief. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "px_c2a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 401,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Exterior of a small unfinished brick house on a favela hillside at night, only one small window lit with warm light, laundry on a line, quiet street, moon. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "px_c2b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 422,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Exterior of a small unfinished brick house on a favela hillside at night, only one small window lit with warm light, laundry on a line, quiet street, moon. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "px_c2c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 443,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. Exterior of a small unfinished brick house on a favela hillside at night, only one small window lit with warm light, laundry on a line, quiet street, moon. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "px_c3a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 401,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The woman from image 0 (same face, same curly black hair tied up, same grey t-shirt, same art style). Sitting alone at a small kitchen table at night under a weak bulb, a pile of unpaid paper bills on the table in front of her, tired worried look. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "px_c3b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 422,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The woman from image 0 (same face, same curly black hair tied up, same grey t-shirt, same art style). Sitting alone at a small kitchen table at night under a weak bulb, a pile of unpaid paper bills on the table in front of her, tired worried look. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "px_c3c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 443,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The woman from image 0 (same face, same curly black hair tied up, same grey t-shirt, same art style). Sitting alone at a small kitchen table at night under a weak bulb, a pile of unpaid paper bills on the table in front of her, tired worried look. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "px_c4a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 401,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Sitting on the edge of a narrow bed in a dark tiny bedroom, worried tired face, staring down, cracked wall behind him, weak light. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "px_c4b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 422,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Sitting on the edge of a narrow bed in a dark tiny bedroom, worried tired face, staring down, cracked wall behind him, weak light. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "px_c4c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 443,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Sitting on the edge of a narrow bed in a dark tiny bedroom, worried tired face, staring down, cracked wall behind him, weak light. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "px_c5a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 401,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The woman from image 0 (same face, same curly black hair tied up, same grey t-shirt, same art style). Peeking through a half-open bedroom door at night, warm hallway light behind her, sleepy worried look, speaking softly. Only her face and one shoulder visible at the door edge, NO hands. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "px_c5b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 422,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The woman from image 0 (same face, same curly black hair tied up, same grey t-shirt, same art style). Peeking through a half-open bedroom door at night, warm hallway light behind her, sleepy worried look, speaking softly. Only her face and one shoulder visible at the door edge, NO hands. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "px_c5c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 443,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The woman from image 0 (same face, same curly black hair tied up, same grey t-shirt, same art style). Peeking through a half-open bedroom door at night, warm hallway light behind her, sleepy worried look, speaking softly. Only her face and one shoulder visible at the door edge, NO hands. Vertical composition.",
+  "refs": [
+   "mae_ref"
+  ]
+ },
+ {
+  "id": "px_c6a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 401,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. A small mechanic workshop at night seen from across a dark street: closed corrugated metal roll-up door, a dim lamp above it, an old tire leaning on the wall, eerie, as if photographed secretly from a parked car. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "px_c6b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 422,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. A small mechanic workshop at night seen from across a dark street: closed corrugated metal roll-up door, a dim lamp above it, an old tire leaning on the wall, eerie, as if photographed secretly from a parked car. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "px_c6c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 443,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. A small mechanic workshop at night seen from across a dark street: closed corrugated metal roll-up door, a dim lamp above it, an old tire leaning on the wall, eerie, as if photographed secretly from a parked car. No people, no hands. Vertical composition."
+ },
+ {
+  "id": "px_c7a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 401,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Face lit by cold blue phone light from below, terrified, sweat on his forehead, holding his breath, dark bedroom. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "px_c7b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 422,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Face lit by cold blue phone light from below, terrified, sweat on his forehead, holding his breath, dark bedroom. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
+ },
+ {
+  "id": "px_c7c",
+  "w": 1088,
+  "h": 1920,
+  "seed": 443,
+  "prompt": "2D cartoon illustration, Brazilian animated series / graphic novel style, bold clean black outlines, painterly cel shading, cinematic lighting with strong contrast, correct anatomy, no text, no letters, no numbers, no signs, no watermark. The young man from image 0 (same face, same curly black hair, same art style), at home at night WITHOUT cap, wearing a plain white tank top. Face lit by cold blue phone light from below, terrified, sweat on his forehead, holding his breath, dark bedroom. Tight close-up: only head, neck and shoulders visible, NO arms and NO hands in the frame. Vertical composition.",
+  "refs": [
+   "biel_ref"
+  ]
  }
 ]
