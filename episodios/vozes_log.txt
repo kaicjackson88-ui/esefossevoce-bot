@@ -1,4 +1,2 @@
-ok voz_Narrador.mp3
-ok voz_Mae.mp3
-ok voz_Biel.mp3
+ok voz_Narrador_Cara.mp3
 total
