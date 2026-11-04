@@ -19,7 +19,7 @@ import bot
 
 MAX_POR_RODADA = int(os.environ.get("RESPOSTAS_POR_RODADA", "15"))
 DIAS = 7
-MODELO = "gemini-2.5-flash"
+MODELOS_IA = ["gemini-flash-latest", "gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.0-flash"]
 
 MODELOS = {
     "voto": [
@@ -46,24 +46,36 @@ def gemini(prompt):
     chave = os.environ.get("GEMINI_API_KEY", "").strip()
     if not chave:
         return None
-    corpo = {"contents": [{"parts": [{"text": prompt}]}],
-             "generationConfig": {"temperature": 0.9, "maxOutputTokens": 120, "thinkingConfig": {"thinkingBudget": 0}}}
-    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{MODELO}:generateContent?key={chave}",
-                                 data=json.dumps(corpo).encode(), method="POST", headers={"Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=40) as r:
-            d = json.loads(r.read().decode())
-        return d["candidates"][0]["content"]["parts"][0]["text"].strip()
-    except urllib.error.HTTPError as e:
-        if not getattr(gemini, "avisou", False):
-            gemini.avisou = True
-            print(f"Gemini indisponível ({e.code}): {e.read().decode(errors='replace')[:200]}")
-        return None
-    except (urllib.error.URLError, KeyError, IndexError, TimeoutError, ValueError) as e:
-        if not getattr(gemini, "avisou", False):
-            gemini.avisou = True
-            print(f"Gemini sem resposta: {str(e)[:200]}")
-        return None
+    corpo = json.dumps({"contents": [{"parts": [{"text": prompt}]}],
+                        "generationConfig": {"temperature": 0.9, "maxOutputTokens": 200}}).encode()
+    for m in list(MODELOS_IA):
+        req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={chave}",
+                                     data=corpo, method="POST", headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=40) as r:
+                d = json.loads(r.read().decode())
+            partes = d["candidates"][0]["content"]["parts"]
+            txt = " ".join(x.get("text", "") for x in partes if not x.get("thought")).strip()
+            if txt:
+                MODELOS_IA[:] = [m] + [x for x in MODELOS_IA if x != m]  # guarda o que funcionou
+                return txt
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                MODELOS_IA.remove(m)
+                continue
+            if not getattr(gemini, "avisou", False):
+                gemini.avisou = True
+                print(f"Gemini indisponível em {m} ({e.code}): {e.read().decode(errors='replace')[:160]}")
+            return None
+        except (urllib.error.URLError, KeyError, IndexError, TimeoutError, ValueError) as e:
+            if not getattr(gemini, "avisou", False):
+                gemini.avisou = True
+                print(f"Gemini sem resposta: {str(e)[:160]}")
+            return None
+    if not getattr(gemini, "avisou", False):
+        gemini.avisou = True
+        print("Gemini: nenhum modelo disponível, usando modelos prontos")
+    return None
 
 
 def limpo(txt, usuario):
