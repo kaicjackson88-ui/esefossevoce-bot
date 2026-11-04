@@ -1,10 +1,6 @@
 # Status do robô
 
-Última execução: 04/11 14:42 (Brasília) — ação `votos`
-
-## Avisos
-
-- A continuação 'biel-v2-p2-esconde' (ESCONDE) ainda não está na fila. Peça ao Claude para produzir.
+Última execução: 04/11 15:06 (Brasília) — ação `votos`
 
 ## Fila
 
