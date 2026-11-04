@@ -54,6 +54,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ACAO: ${{ steps.escolha.outputs.acao }}
+          FORCAR_POST: ${{ github.event_name == 'workflow_dispatch' && inputs.acao == 'postar' && '1' || '' }}
         run: python bot.py "$ACAO"
 
       - name: Salvar estado no repositório

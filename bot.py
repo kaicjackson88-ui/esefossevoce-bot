@@ -193,6 +193,11 @@ def postar(fila, estado):
     if not item:
         fila["proximos"].pop(0)
         raise ErroAPI(f"O item '{item_id}' está em 'proximos' mas não existe em 'itens'. Removido da fila.")
+    intervalo = float(os.environ.get("INTERVALO_MIN_H", "4"))
+    ultimos = [datetime.fromisoformat(x["publicado_em"]) for x in estado["publicados"] if x.get("publicado_em")]
+    if ultimos and agora() - max(ultimos) < timedelta(hours=intervalo) and not os.environ.get("FORCAR_POST"):
+        avisos.append(f"Último post foi há menos de {intervalo:g}h: '{item_id}' espera a próxima rodada.")
+        return None
     if item.get("nao_antes") and agora() < datetime.fromisoformat(item["nao_antes"]):
         avisos.append(f"'{item_id}' agendado para {br(datetime.fromisoformat(item['nao_antes']))}: ainda não postei.")
         return None
