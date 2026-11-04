@@ -1,10 +1,6 @@
 # Status do robô
 
-Última execução: 04/11 10:37 (Brasília) — ação `votos`
-
-## Avisos
-
-- A continuação 'biel-p4-mente' (MENTE) ainda não está na fila. Peça ao Claude para produzir.
+Última execução: 04/11 10:39 (Brasília) — ação `votos`
 
 ## Fila
 
