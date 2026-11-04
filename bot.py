@@ -415,6 +415,11 @@ def main(argv):
             avisos.append(f"Token OK: conta @{usuario}.")
         if acao in ("votos", "ciclo"):
             atualizar_votos(fila, estado)
+            try:
+                import responder
+                responder.responder_comentarios(estado)
+            except (ErroAPI, OSError) as e:  # resposta automática nunca derruba a contagem de votos
+                avisos.append(f"Respostas automáticas: {esconder(str(e))}")
         if acao in ("postar", "ciclo"):
             postar(fila, estado)
     except (ErroAPI, OSError) as e:

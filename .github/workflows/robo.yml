@@ -52,6 +52,7 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ACAO: ${{ steps.escolha.outputs.acao }}
         run: python bot.py "$ACAO"
 
