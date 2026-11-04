@@ -68,3 +68,36 @@ falhou p3_c4g: HTTP 400
   HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (1dba867f-fd01-4bfd-ba0d-e73a7cad7752)","code":3030}],"success":false,"result":{},"messages":[]}
 falhou p3_c4h: HTTP 400
 OK p3_c4i (6s)
+contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
+token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
+  verificação (token de usuário): status active
+  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
+segredos OK | GEMINI_API_KEY ok
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (b0435957-f7a7-4e23-a775-d31a37157aa1)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4b: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (4f02e2de-78ff-4e41-aa6a-6165235ec909)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4e: HTTP 400
+OK p3_c4f (8s)
+OK p3_c4g (5s)
+OK p3_c4h (9s)
+OK px_c1a (6s)
+OK px_c1b (8s)
+OK px_c1c (6s)
+OK px_c2a (10s)
+OK px_c2b (9s)
+OK px_c2c (9s)
+OK px_c3a (9s)
+OK px_c3b (8s)
+OK px_c3c (8s)
+OK px_c4a (6s)
+OK px_c4b (6s)
+OK px_c4c (7s)
+OK px_c5a (6s)
+OK px_c5b (5s)
+OK px_c5c (7s)
+OK px_c6a (7s)
+OK px_c6b (7s)
+OK px_c6c (7s)
+OK px_c7a (7s)
+OK px_c7b (9s)
+OK px_c7c (6s)
