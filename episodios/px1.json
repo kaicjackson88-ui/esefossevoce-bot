@@ -1,0 +1,86 @@
+{
+ "id": "px1",
+ "titulo": "O PIX ERRADO",
+ "parte": 1,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Mae": "Sulafat",
+  "Biel": "Puck"
+ },
+ "grupos": [
+  [
+   "Narrador"
+  ],
+  [
+   "Mae"
+  ],
+  [
+   "Biel"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil.",
+ "estilo_por": {
+  "Narrador": "Leia em português do Brasil, como o narrador de uma história de suspense contada direto para quem assiste (você): voz grave e próxima, ritmo natural, sem pressa, com uma pequena pausa nas reticências; no começo, calmo e humano; nas revelações, mais baixo e tenso:",
+  "Mae": "Leia em português do Brasil, voz de mulher de uns 45 anos, sonolenta, baixinho, carinhosa e preocupada, falando com o filho de madrugada:",
+  "Biel": "Leia em português do Brasil, voz de rapaz de 19 anos, falando baixinho, disfarçando o nervosismo para não preocupar a mãe:"
+ },
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Três e doze da manhã. Caiu um pix de quarenta e oito mil reais na sua conta."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Você tem dezenove anos. Conserta carro de dia… e de noite, não dorme."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "Desde que a sua mãe perdeu o emprego, quem paga o aluguel dessa casa é você."
+  },
+  {
+   "cena": 3,
+   "quem": "Narrador",
+   "texto": "Ontem, o seu saldo era trinta e sete reais. E o aluguel vence sexta."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Agora tem quarenta e oito mil. De um nome que você nunca viu."
+  },
+  {
+   "cena": 5,
+   "quem": "Mae",
+   "texto": "Filho? Tá acordado?"
+  },
+  {
+   "cena": 6,
+   "quem": "Biel",
+   "texto": "Tô, mãe. Vai dormir… tá tudo bem."
+  },
+  {
+   "cena": 7,
+   "quem": "Narrador",
+   "texto": "Aí o celular vibrou de novo. Número desconhecido."
+  },
+  {
+   "cena": 8,
+   "quem": "Narrador",
+   "texto": "Foi engano. Devolve até as oito. E embaixo… uma foto da sua oficina."
+  },
+  {
+   "cena": 9,
+   "quem": "Narrador",
+   "texto": "Quarenta e oito mil resolviam a sua vida. Você devolve… ou fica? Comenta DEVOLVE ou FICA. Os comentários decidem a parte dois."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "DEVOLVE",
+   "FICA"
+  ],
+  "horas": 24
+ }
+}
