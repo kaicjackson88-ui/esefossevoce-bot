@@ -1,6 +1,6 @@
 # Status do robô
 
-Última execução: 04/11 19:15 (Brasília) — ação `ciclo`
+Última execução: 04/11 20:15 (Brasília) — ação `ciclo`
 
 ## Avisos
 
@@ -12,7 +12,7 @@
 
 ## Votações
 
-- **biel-bl1** (aberta até 05/11 18:51): CONTA: 0 · GUARDA: 0 https://www.instagram.com/reel/DfVdn9dI_I2/
+- **biel-bl1** (aberta até 05/11 18:51): CONTA: 0 · GUARDA: 1 https://www.instagram.com/reel/DfVdn9dI_I2/
 - **biel-px1** (aberta até 05/11 06:55): DEVOLVE: 5 · FICA: 1 https://www.instagram.com/reel/DfULrRGxpY4/
 - **biel-v2-p1** (encerrada — venceu ESCONDE): ESCONDE: 1 · CHAMA: 1 https://www.instagram.com/reel/DfSRp8zKY2x/
 - **biel-p3-paga** (encerrada — venceu MENTE): MENTE: 0 · CONTA: 0 https://www.instagram.com/reel/DfRuHJCC1_1/
