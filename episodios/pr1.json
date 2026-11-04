@@ -1,0 +1,65 @@
+{
+ "id": "pr1",
+ "titulo": "A PROPOSTA",
+ "parte": 1,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Cara": "Charon"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Cara"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história de suspense contada direto para quem assiste (você): voz grave e próxima, ritmo natural sem pressa, pequena pausa nas reticências; humano no começo, mais baixo e tenso nas revelações. Cara: homem de uns 35 anos, voz fria, baixa, calma e ameaçadora, personagem de uma série de ficção.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Dez mil reais. Em dinheiro. Por um serviço de dez minutos."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Você tem dezenove anos e deve oito mil pro agiota. O prazo acaba sexta."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "Meia-noite. Uma caminhonete parou na porta da sua oficina."
+  },
+  {
+   "cena": 3,
+   "quem": "Cara",
+   "texto": "Tira o rastreador dela. Te pago dez mil. Agora."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Você achou o rastreador escondido… e entendeu na hora. Essa caminhonete é roubada."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "Aí o celular vibrou. Era o agiota: sexta é o último dia."
+  },
+  {
+   "cena": 6,
+   "quem": "Cara",
+   "texto": "E aí, mecânico? Decide logo."
+  },
+  {
+   "cena": 7,
+   "quem": "Narrador",
+   "texto": "Você aceita os dez mil… ou recusa e se vira com o agiota? Comenta ACEITA ou RECUSA. Os comentários decidem a parte dois."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "ACEITA",
+   "RECUSA"
+  ],
+  "horas": 24
+ }
+}

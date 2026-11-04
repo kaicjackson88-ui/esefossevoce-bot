@@ -1,0 +1,65 @@
+{
+ "id": "bl1",
+ "titulo": "O BILHETE",
+ "parte": 1,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Cida": "Gacrux"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Cida"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história de suspense contada direto para quem assiste (você): voz grave e próxima, ritmo natural sem pressa, pequena pausa nas reticências; humano no começo, mais baixo e tenso nas revelações. Cida: senhora de 78 anos, voz doce, frágil e carinhosa, falando com um rapaz que ela conhece desde criança.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Esse papel vale doze milhões de reais. E a dona dele não faz ideia."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Você conserta carro na comunidade. Ganha mil e quinhentos por mês… quando o cliente paga."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "A Dona Cida, setenta e oito anos, é sua cliente desde que você era criança."
+  },
+  {
+   "cena": 3,
+   "quem": "Cida",
+   "texto": "Confere meu joguinho pra mim, meu filho? Minha vista não ajuda mais."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Você abriu o resultado. Seis números. Todos certos."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "Doze milhões. E ninguém mais viu esse bilhete. Só você."
+  },
+  {
+   "cena": 6,
+   "quem": "Cida",
+   "texto": "E aí, filho? Deu alguma coisa?"
+  },
+  {
+   "cena": 7,
+   "quem": "Narrador",
+   "texto": "Você conta a verdade… ou diz que não deu nada e guarda o bilhete? Comenta CONTA ou GUARDA. Os comentários decidem a parte dois."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "CONTA",
+   "GUARDA"
+  ],
+  "horas": 24
+ }
+}
