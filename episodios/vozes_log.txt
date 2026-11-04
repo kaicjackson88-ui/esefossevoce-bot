@@ -1,3 +1,4 @@
 ok voz_Narrador.mp3
-ok voz_Terno.mp3
+ok voz_Mae.mp3
+ok voz_Biel.mp3
 total
