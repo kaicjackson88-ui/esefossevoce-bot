@@ -21,24 +21,11 @@ MAX_POR_RODADA = int(os.environ.get("RESPOSTAS_POR_RODADA", "15"))
 DIAS = 7
 MODELOS_IA = ["gemini-flash-latest", "gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.0-flash"]
 
-MODELOS = {
-    "voto": [
-        "@{u} {o} na veia! 🔥 Segue a página pra ver se o Biel aguenta as consequências na próxima parte 👀",
-        "@{u} anotado: {o} ✅ Ativa o seguir que a Parte 2 vai depender de você 😬",
-        "@{u} voto contado! {o} tá na disputa 👀 Segue pra não perder o que acontece com o Biel",
-        "@{u} {o}, hein? 😳 Segue a página que amanhã você descobre se valeu a pena",
-        "@{u} {o} registrado 🗳️ Se seguir a página, você vê primeiro o que acontece",
-    ],
-    "encerrada": [
-        "@{u} valeu por votar! 🙌 Essa votação já fechou ({g} venceu), mas a história continua: segue a página e vota no episódio novo 👀",
-        "@{u} {g} levou essa! 🔥 Agora tem episódio novo esperando o seu voto, segue a página pra não perder",
-    ],
-    "geral": [
-        "@{u} valeu demais por assistir! 🙌 E você, faria o quê no lugar do Biel? Segue pra ver a próxima parte 👀",
-        "@{u} 👀 Comenta qual é o seu voto e segue a página, a Parte 2 vai depender dos comentários!",
-        "@{u} tamo junto! A história só tá começando 😬 Segue pra não perder",
-        "@{u} 🔥 Fica de olho que a próxima parte vem pesada. Segue a página pra acompanhar!",
-    ],
+CTA = "Quer aparecer na próxima parte? Compartilha com seus amigos e já segue a gente pra não perder! 👀"
+REACOES = {
+    "voto": ["{o} anotado! 🔥", "Voto em {o} contado ✅", "{o}, hein? 😳", "Boa, {o} tá na disputa! 🗳️", "{o} registrado 👊"],
+    "encerrada": ["Essa votação já fechou ({g} venceu), mas tem episódio novo esperando seu voto! 🔥", "{g} levou essa! Já tem episódio novo no perfil 👀"],
+    "geral": ["Valeu demais por assistir! 🙌", "Tamo junto! 🔥", "Boa! E você, faria o quê no lugar do Biel? 🤔", "Essa história ainda vai longe 😬"],
 }
 
 
@@ -82,8 +69,8 @@ def limpo(txt, usuario):
     """Garante resposta curta, sem link e começando pelo @ da pessoa."""
     txt = re.sub(r"https?://\S+", "", txt).replace("\n", " ").strip().strip('"')
     txt = re.sub(r"\s+", " ", txt)
-    if len(txt) > 220:
-        txt = txt[:217].rsplit(" ", 1)[0] + "…"
+    if len(txt) > 280:
+        txt = txt[:277].rsplit(" ", 1)[0] + "…"
     if not txt.lower().startswith("@" + usuario.lower()):
         txt = f"@{usuario} {txt}"
     return txt
@@ -96,17 +83,18 @@ def escrever(comentario, usuario, voto, resumo, opcoes, vencedor=None):
         f"Um seguidor (@{usuario}) comentou: \"{comentario}\"\n"
         + (f"Ele votou em {voto}.\n" if voto else "")
         + (f"ATENÇÃO: essa votação já terminou e {vencedor} venceu; não diga que o voto foi contado, convide para o episódio mais novo da página.\n" if vencedor else "")
-        + "Escreva UMA resposta curta (no máximo 2 frases, até 180 caracteres), em português do Brasil informal e simpático, "
-          "reagindo ao que ele disse de forma específica, e puxando ele a seguir a página para ver a próxima parte (sem implorar). "
-          "No máximo 1 ou 2 emojis. Sem link, sem hashtag, sem prometer prêmio, sem inventar fatos da história além do que está no episódio. "
+        + "Escreva UMA resposta curta (1 frase curta), em português do Brasil informal e simpático, "
+          "reagindo ao que ele disse de forma específica. NÃO peça pra seguir nem compartilhar (isso é adicionado depois). "
+          "No máximo 1 emoji, até 90 caracteres. Sem link, sem hashtag, sem prometer prêmio, sem inventar fatos da história além do que está no episódio. "
           "Se o comentário for ofensivo ou spam, responda só com: PULAR. Responda apenas com o texto."
     )
     txt = gemini(prompt)
     if txt and txt.strip().upper().startswith("PULAR"):
         return None
-    if not txt:
+    if not txt or len(txt) > 120:
         tipo = "encerrada" if vencedor else ("voto" if voto else "geral")
-        txt = random.choice(MODELOS[tipo]).format(u=usuario, o=voto or "", g=vencedor or "")
+        txt = random.choice(REACOES[tipo]).format(o=voto or "", g=vencedor or "")
+    txt = txt.strip().rstrip(".") + ". " + CTA if not txt.strip().endswith(("!", "?", "👀", "🔥", "✅", "😳", "🗳️", "👊", "🙌", "🤔", "😬")) else txt.strip() + " " + CTA
     return limpo(txt, usuario)
 
 
