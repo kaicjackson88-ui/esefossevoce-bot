@@ -193,6 +193,9 @@ def postar(fila, estado):
     if not item:
         fila["proximos"].pop(0)
         raise ErroAPI(f"O item '{item_id}' está em 'proximos' mas não existe em 'itens'. Removido da fila.")
+    if item.get("nao_antes") and agora() < datetime.fromisoformat(item["nao_antes"]):
+        avisos.append(f"'{item_id}' agendado para {br(datetime.fromisoformat(item['nao_antes']))}: ainda não postei.")
+        return None
     caminho = os.path.join(RAIZ, item["video"])
     with open(caminho, "rb") as f:
         dados = f.read()

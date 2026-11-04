@@ -393,7 +393,8 @@
    "continuacao": {
     "CONTA": "biel-bl2-conta",
     "GUARDA": "biel-bl2-guarda"
-   }
+   },
+   "nao_antes": "2026-11-04T18:45:00-03:00"
   },
   "biel-pr1": {
    "video": "fila/biel-pr1.mp4",
@@ -413,7 +414,8 @@
    "continuacao": {
     "ACEITA": "biel-pr2-aceita",
     "RECUSA": "biel-pr2-recusa"
-   }
+   },
+   "nao_antes": "2026-11-05T11:45:00-03:00"
   }
  }
 }
