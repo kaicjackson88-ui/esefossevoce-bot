@@ -1,6 +1,10 @@
 # Status do robô
 
-Última execução: 04/11 18:51 (Brasília) — ação `postar`
+Última execução: 04/11 19:15 (Brasília) — ação `ciclo`
+
+## Avisos
+
+- Último post foi há menos de 4h: 'biel-pr1' espera a próxima rodada.
 
 ## Fila
 
