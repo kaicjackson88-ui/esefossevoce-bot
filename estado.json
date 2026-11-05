@@ -646,6 +646,29 @@
         "comentario_id": "17889456729623013",
         "atualizado_em": "2026-11-05T13:21:04+00:00"
       }
+    },
+    {
+      "id": "biel-au1",
+      "media_id": "18004440677796904",
+      "permalink": "https://www.instagram.com/reel/DfXJfgwsPOa/",
+      "publicado_em": "2026-11-05T13:34:08+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "APAGA",
+          "DEIXA"
+        ],
+        "ate": "2026-11-06T13:34:08+00:00",
+        "votos": {
+          "APAGA": 0,
+          "DEIXA": 0
+        },
+        "continuacao": {
+          "APAGA": "biel-au2-apaga",
+          "DEIXA": "biel-au2-deixa"
+        },
+        "comentario_id": "18095152727676638"
+      }
     }
   ],
   "respondidos": [
