@@ -595,6 +595,29 @@
         "placar_em": "2026-11-04T23:15:15+00:00",
         "placar_total": 1
       }
+    },
+    {
+      "id": "biel-em1",
+      "media_id": "17944802706090763",
+      "permalink": "https://www.instagram.com/reel/DfWur1MqhmI/",
+      "publicado_em": "2026-11-05T09:39:53+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "COBRA",
+          "ESQUECE"
+        ],
+        "ate": "2026-11-06T09:39:53+00:00",
+        "votos": {
+          "COBRA": 0,
+          "ESQUECE": 0
+        },
+        "continuacao": {
+          "COBRA": "biel-em2-cobra",
+          "ESQUECE": "biel-em2-esquece"
+        },
+        "comentario_id": "18464540557185294"
+      }
     }
   ],
   "respondidos": [
