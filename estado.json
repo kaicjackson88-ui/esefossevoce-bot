@@ -622,6 +622,29 @@
         "placar_em": "2026-11-05T11:16:32+00:00",
         "placar_total": 13
       }
+    },
+    {
+      "id": "biel-px2-devolve",
+      "media_id": "18234381937322327",
+      "permalink": "https://www.instagram.com/reel/DfW_AeFhpWE/",
+      "publicado_em": "2026-11-05T12:02:29+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "ABRE",
+          "CONFIA"
+        ],
+        "ate": "2026-11-06T12:02:29+00:00",
+        "votos": {
+          "ABRE": 0,
+          "CONFIA": 0
+        },
+        "continuacao": {
+          "ABRE": "biel-px3-abre",
+          "CONFIA": "biel-px3-confia"
+        },
+        "comentario_id": "17889456729623013"
+      }
     }
   ],
   "respondidos": [
