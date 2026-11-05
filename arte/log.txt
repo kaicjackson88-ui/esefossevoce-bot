@@ -223,3 +223,38 @@ OK px2_c3b (7s)
 OK px2_c4b (9s)
 OK px2_c7a (8s)
 OK px2_c7b (6s)
+contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
+token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
+  verificação (token de usuário): status active
+  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
+segredos OK | GEMINI_API_KEY ok
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (e1c84af9-f635-47c5-a6b1-2c939aa4e3b6)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4b: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (bc7172ce-6e8b-479b-b977-b9415c24833d)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4e: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (4bf00319-8ad9-4c1d-b8e0-7d91058e6bd0)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au_c5a: HTTP 400
+OK em2_c1a (8s)
+OK em2_c1b (7s)
+OK em2_c2a (8s)
+OK em2_c2b (7s)
+OK em2_c3a (9s)
+OK em2_c3b (8s)
+OK em2_c4a (8s)
+OK em2_c4b (9s)
+OK em2_c5a (8s)
+OK em2_c5b (14s)
+OK em2_c6a (8s)
+OK em2_c6b (7s)
+OK au2_c1a (8s)
+OK au2_c1b (6s)
+OK au2_c2a (11s)
+OK au2_c2b (9s)
+OK au2_c3a (8s)
+OK au2_c3b (10s)
+OK au2_c4a (9s)
+OK au2_c4b (10s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (30f34741-b418-4ee7-9e49-2c3a62bf96fb)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au2_c5a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (6a67c9e8-4abe-49d7-b150-d43103520186)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au2_c5b: HTTP 400
