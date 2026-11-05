@@ -110,9 +110,8 @@ def responder_comentarios(estado):
     _, minha_conta = bot.conta()
     limite = bot.agora() - timedelta(days=DIAS)
     respondidas = 0
+    fas = estado.setdefault("fas", {})  # {episodio: {usuario: nº de comentários}} para @ e ranking
     for p in reversed(estado["publicados"]):
-        if respondidas >= MAX_POR_RODADA:
-            break
         if not p["id"].startswith("biel") or not p.get("media_id"):
             continue
         try:
@@ -131,6 +130,12 @@ def responder_comentarios(estado):
             continue
         resumo = " ".join((m.get("caption") or "").split("\n")[:4])[:400]
         ja_respondi_usuario = set()
+        cont = {}
+        for c in r.get("data", []):
+            u = c.get("username") or ""
+            if u and u != minha_conta:
+                cont[u] = cont.get(u, 0) + 1
+        fas[p["id"]] = cont
         for c in sorted(r.get("data", []), key=lambda x: x.get("timestamp", "")):
             if respondidas >= MAX_POR_RODADA:
                 break
