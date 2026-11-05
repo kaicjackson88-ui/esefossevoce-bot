@@ -1,0 +1,60 @@
+{
+ "id": "em2",
+ "titulo": "O EMPRÉSTIMO",
+ "parte": 2,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Leo": "Achird"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Leo"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história contada direto para quem assiste (você): voz grave e próxima, ritmo ágil e natural, pequena pausa nas reticências; tom de fofoca que esquentou, cada vez mais tenso. Leo: rapaz de 20 anos, voz ofendida e dramática, fazendo de vítima.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Vocês decidiram: você cobrou. Na foto dele, pra todo mundo ver: e os meus quinhentos?"
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Em dez minutos, o seu comentário tinha trezentas curtidas."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "Aí o Léo respondeu. Na frente de todo mundo."
+  },
+  {
+   "cena": 3,
+   "quem": "Leo",
+   "texto": "Me expor por quinhentos reais, mano? Achei que a gente era irmão."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "E metade dos comentários… ficou do lado dele."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "Meia hora depois, caiu um pix. Duzentos e cinquenta. Com a mensagem: o resto, se ainda for meu amigo."
+  },
+  {
+   "cena": 6,
+   "quem": "Narrador",
+   "texto": "Você pega a metade e perdoa… ou cobra até o último centavo? Comenta PERDOA ou COBRA. Os comentários decidem a parte três."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "PERDOA",
+   "COBRA"
+  ],
+  "horas": 24
+ }
+}

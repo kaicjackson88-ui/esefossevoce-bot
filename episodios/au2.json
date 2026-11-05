@@ -1,0 +1,60 @@
+{
+ "id": "au2",
+ "titulo": "O ÁUDIO",
+ "parte": 2,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Rose": "Leda"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Rose"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história contada direto para quem assiste (você): voz grave e próxima, ritmo ágil e natural, pequena pausa nas reticências; tom de desespero cômico, cada vez mais rápido. Rose: tia de 55 anos, voz desconfiada, doce e afiada de tia de grupo da família.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Vocês decidiram: você apagou. Mas quarenta e três pessoas viram: mensagem apagada."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Em um minuto, o grupo da família explodiu."
+  },
+  {
+   "cena": 2,
+   "quem": "Rose",
+   "texto": "Apagou por quê, meu filho? Era sobre a tia?"
+  },
+  {
+   "cena": 3,
+   "quem": "Narrador",
+   "texto": "Aí o seu primo… o que era pra receber o áudio… escreveu no grupo:"
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Relaxa, tia. Ele mandou pra mim também. Tá tudo aqui."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "E a Tia Rose respondeu na hora: manda pra mim, Juninho."
+  },
+  {
+   "cena": 6,
+   "quem": "Narrador",
+   "texto": "Você liga pro seu primo e implora… ou conta tudo pra tia antes dele? Comenta IMPLORA ou CONTA. Os comentários decidem a parte três."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "IMPLORA",
+   "CONTA"
+  ],
+  "horas": 24
+ }
+}
