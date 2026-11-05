@@ -1,0 +1,60 @@
+{
+ "id": "em1",
+ "titulo": "O EMPRÉSTIMO",
+ "parte": 1,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Leo": "Achird"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Leo"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história contada direto para quem assiste (você): voz grave e próxima, ritmo ágil e natural, pequena pausa nas reticências; tom de indignação contida, como quem conta algo que todo mundo já passou. Leo: rapaz de 20 anos, voz simpática e cara de pau, enrolando o amigo.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Seu melhor amigo te deve quinhentos reais. E acabou de postar isso."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Seis meses atrás, o Léo pediu emprestado. Disse que pagava no dia cinco."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "O dia cinco passou. Seis vezes."
+  },
+  {
+   "cena": 3,
+   "quem": "Leo",
+   "texto": "Tô apertado, mano. Semana que vem eu te passo, juro."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Hoje ele tá na praia. Camisa nova… e bebida na mão."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "E o seu aluguel vence amanhã. Falta exatamente quinhentos reais."
+  },
+  {
+   "cena": 6,
+   "quem": "Narrador",
+   "texto": "Você cobra ele no comentário da foto… ou deixa pra lá pra não perder a amizade? Comenta COBRA ou ESQUECE. Os comentários decidem a parte dois."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "COBRA",
+   "ESQUECE"
+  ],
+  "horas": 24
+ }
+}

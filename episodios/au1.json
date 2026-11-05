@@ -1,0 +1,60 @@
+{
+ "id": "au1",
+ "titulo": "O ÁUDIO",
+ "parte": 1,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Rose": "Leda"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Rose"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história contada direto para quem assiste (você): voz grave e próxima, ritmo ágil e natural, pequena pausa nas reticências; tom de desespero cômico, cada vez mais tenso. Rose: tia de 55 anos, voz animada, alta e carinhosa de tia de grupo da família.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Você mandou o áudio no grupo errado. E a sua tia tá online."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Era pro seu primo. Um minuto e meio falando da Tia Rose."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "Que ela cuida da vida de todo mundo… e que o pavê dela é horrível."
+  },
+  {
+   "cena": 3,
+   "quem": "Narrador",
+   "texto": "Mas foi pro grupo da família. Quarenta e três pessoas."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Ninguém ouviu ainda. Até que ela mandou:"
+  },
+  {
+   "cena": 5,
+   "quem": "Rose",
+   "texto": "Bom dia, família! Deixa eu ver o áudio que o meu sobrinho mandou!"
+  },
+  {
+   "cena": 6,
+   "quem": "Narrador",
+   "texto": "Se você apagar, todo mundo vê mensagem apagada… e vai perguntar. Você apaga ou deixa? Comenta APAGA ou DEIXA. Os comentários decidem a parte dois."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "APAGA",
+   "DEIXA"
+  ],
+  "horas": 24
+ }
+}

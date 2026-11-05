@@ -1,0 +1,65 @@
+{
+ "id": "px2",
+ "titulo": "O PIX",
+ "parte": 2,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Homem": "Charon"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Homem"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história contada direto para quem assiste (você): voz grave e próxima, ritmo ágil e natural, pequena pausa nas reticências; suspense, mais baixo e tenso nas revelações. Homem: senhor de 50 anos, voz grave, calma, educada e misteriosa, personagem de uma série de ficção.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Vocês decidiram. Você devolveu os quarenta e oito mil. Sete e cinquenta e oito da manhã."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Seu saldo voltou pra trinta e sete reais. E o aluguel ainda vence sexta."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "Oito e quinze, um carro preto parou na frente da oficina."
+  },
+  {
+   "cena": 3,
+   "quem": "Homem",
+   "texto": "Quarenta e oito pessoas receberam esse pix. Só você devolveu."
+  },
+  {
+   "cena": 4,
+   "quem": "Homem",
+   "texto": "Eu preciso de alguém honesto. Cinco mil por mês. Começa hoje."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "Ele deixou a chave do carro na sua mão. E falou só mais uma coisa."
+  },
+  {
+   "cena": 6,
+   "quem": "Homem",
+   "texto": "Nunca abre o porta-malas."
+  },
+  {
+   "cena": 7,
+   "quem": "Narrador",
+   "texto": "Você abre o porta-malas… ou confia nele? Comenta ABRE ou CONFIA. Os comentários decidem a parte três."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "ABRE",
+   "CONFIA"
+  ],
+  "horas": 24
+ }
+}
