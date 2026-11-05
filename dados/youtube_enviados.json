@@ -57,5 +57,15 @@
   "quando": "2026-11-04T21:53:14.292884+00:00",
   "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess",
   "comentario_id": "UgwqXTLi9jKxlpCK3Vt4AaABAg"
+ },
+ {
+  "id": "biel-em1",
+  "video_id": "67Hp1LMu6R0",
+  "privacidade": "public",
+  "titulo": "O Corre do Biel • Parte 1 — O Empréstimo #shorts",
+  "link": "https://youtube.com/shorts/67Hp1LMu6R0",
+  "quando": "2026-11-05T09:41:05.861768+00:00",
+  "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess",
+  "comentario_id": "Ugzxpb4S0O4bxUJEH8d4AaABAg"
  }
 ]
