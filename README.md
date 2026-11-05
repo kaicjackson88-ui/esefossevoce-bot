@@ -19,7 +19,7 @@ Também dá para rodar na mão: aba **Actions** > **Robô E Se Fosse Você** > *
 
 ## Token que não expira (token de página)
 
-1. No [Explorador da Graph API](https://developers.facebook.com/tools/explorer/), gere um token de usuário com `instagram_basic`, `instagram_content_publish`, `instagram_manage_comments`, `pages_show_list`, `pages_read_engagement` e `business_management`.
+1. No [Explorador da Graph API](https://developers.facebook.com/tools/explorer/), gere um token de usuário com `instagram_basic`, `instagram_content_publish`, `instagram_manage_comments`, `pages_show_list`, `pages_read_engagement`, `pages_manage_posts` (para postar os Reels na página do Facebook) e `business_management`.
 2. No [Depurador de token](https://developers.facebook.com/tools/debug/accesstoken/), toque em **Estender token de acesso** e copie o token longo.
 3. De volta ao Explorador, cole o token longo no campo de token e envie a consulta `me/accounts?fields=name,access_token`.
 4. Copie o `access_token` da página **E Se Fosse Você?**. Confira no Depurador: em "Expira" deve aparecer **Nunca**.
