@@ -1,5 +1,1 @@
-Token pertence a: E Se Fosse Você? Histórias (id 1450273264828927)
-Permissões: não deu pra ler (normal em token de página). HTTP 400: {"error":{"message":"(#100) Tried accessing nonexisting field (permissions)","type":"OAuthException","code":10
-Páginas (/me/accounts): não deu pra ler — HTTP 400: {"error":{"message":"(#100) Tried accessing nonexisting field (accounts)","type":"OAuthException","code":100,"fbtrace_id":"A3SMnDQ0r6PQ6HaSEdSZxyt"}}
-Página escolhida: E Se Fosse Você? Histórias (id 1450273264828927)
-Detalhes: {"instagram_business_account": {"username": "ocorredobiel", "id": "17841411694131308"}, "fan_count": 0, "link": "https://www.facebook.com/1450273264828927"}
+ERRO: HTTP 403: {"error":{"message":"(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.","type":"OAuthException","code":200,"fbtrace_id":"AeaCikX1M1bRgSCPRO28Nkg"}}
