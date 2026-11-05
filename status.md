@@ -1,10 +1,6 @@
 # Status do robô
 
-Última execução: 04/11 23:15 (Brasília) — ação `ciclo`
-
-## Avisos
-
-- 'biel-pr1' agendado para 05/11 11:45: ainda não postei.
+Última execução: 05/11 04:00 (Brasília) — ação `votos`
 
 ## Fila
 
