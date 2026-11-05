@@ -672,6 +672,29 @@
         "placar_em": "2026-11-05T14:17:10+00:00",
         "placar_total": 4
       }
+    },
+    {
+      "id": "biel-pr1",
+      "media_id": "18056767775658491",
+      "permalink": "https://www.instagram.com/reel/DfXTlkVKfew/",
+      "publicado_em": "2026-11-05T15:02:20+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "ACEITA",
+          "RECUSA"
+        ],
+        "ate": "2026-11-06T15:02:20+00:00",
+        "votos": {
+          "ACEITA": 0,
+          "RECUSA": 0
+        },
+        "continuacao": {
+          "ACEITA": "biel-pr2-aceita",
+          "RECUSA": "biel-pr2-recusa"
+        },
+        "comentario_id": "18134575585748333"
+      }
     }
   ],
   "respondidos": [
