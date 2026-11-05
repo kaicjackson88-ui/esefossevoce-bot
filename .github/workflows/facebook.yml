@@ -24,11 +24,12 @@ concurrency:
 jobs:
   facebook:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     env:
       FB_TOKEN: ${{ secrets.FB_TOKEN }}
       IG_TOKEN: ${{ secrets.IG_TOKEN }}
       FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      FB_PULAR: "biel-p1"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
