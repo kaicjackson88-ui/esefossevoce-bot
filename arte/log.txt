@@ -146,3 +146,63 @@ OK pr_c5c (6s)
 OK pr_c6a (8s)
 OK pr_c6b (8s)
 OK pr_c6c (7s)
+contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
+token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
+  verificação (token de usuário): status active
+  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
+segredos OK | GEMINI_API_KEY ok
+  HTTP 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (4bde9b0d-4fde-4115-b4a4-3182462b3d0a)","code":4006}],"success":false,"result":{},"messages":[]}
+cota da conta 1 acabou: usando a conta 2
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (481549d5-78a3-452a-ba2d-25cdca47025a)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4b: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (d1912110-e6c6-498f-926d-764a255cc1f1)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4e: HTTP 400
+OK em_c1a (8s)
+OK em_c1b (8s)
+OK em_c2a (6s)
+OK em_c2b (6s)
+OK em_c3a (7s)
+OK em_c3b (6s)
+OK em_c4a (10s)
+OK em_c4b (8s)
+OK em_c5a (8s)
+OK em_c5b (10s)
+OK em_c6a (6s)
+OK em_c6b (7s)
+OK em_c7a (6s)
+OK em_c7b (7s)
+OK au_c1a (9s)
+OK au_c1b (7s)
+OK au_c2a (7s)
+OK au_c2b (7s)
+OK au_c3a (12s)
+OK au_c3b (9s)
+OK au_c4a (8s)
+OK au_c4b (7s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (7af704b3-4c5a-4cbd-94c9-2b67d7bd99dc)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au_c5a: HTTP 400
+OK au_c5b (6s)
+OK au_c6a (10s)
+OK au_c6b (9s)
+OK au_c7a (7s)
+OK au_c7b (7s)
+OK px2_c1a (6s)
+OK px2_c1b (7s)
+OK px2_c2a (7s)
+OK px2_c2b (6s)
+OK px2_c3a (9s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (14baf643-4171-4db9-b9e8-de9ca3498597)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou px2_c3b: HTTP 400
+OK px2_c4a (9s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (8e7ef2fe-db6e-43ed-aeb5-2d461bbb8c0b)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou px2_c4b: HTTP 400
+OK px2_c5a (9s)
+OK px2_c5b (8s)
+OK px2_c6a (9s)
+OK px2_c6b (8s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (ab6b1d0c-6b9c-46ab-a6c0-11f49d5c9b38)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou px2_c7a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (7d586574-a0d2-48ba-8422-3762010f88f8)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou px2_c7b: HTTP 400
+OK px2_c8a (6s)
+OK px2_c8b (7s)
