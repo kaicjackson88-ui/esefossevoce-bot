@@ -170,6 +170,19 @@ if __name__ == "__main__":
     try:
         if acao == "diagnostico":
             diagnostico()
+        elif acao == "postar" and len(sys.argv) > 2 and sys.argv[2] == "todos":
+            # posta, do mais antigo pro mais novo, todos os episódios já publicados no Instagram que faltam no Facebook
+            pular = set(os.environ.get("FB_PULAR", "").split(","))
+            estado = ler(os.path.join(RAIZ, "estado.json"), {"publicados": []})
+            fila = ler(os.path.join(RAIZ, "fila", "fila.json"), {"itens": {}})["itens"]
+            for p in sorted(estado["publicados"], key=lambda p: p.get("publicado_em", "")):
+                i = p["id"]
+                if i.startswith("biel") and i in fila and i not in pular and i not in ler(ARQ, {}):
+                    try:
+                        publicar(i)
+                    except Erro as e:
+                        print(f"Falhou {i}:", esconder(str(e)))
+                    time.sleep(20)
         elif acao == "postar":
             publicar(sys.argv[2] if len(sys.argv) > 2 else None)
         else:
