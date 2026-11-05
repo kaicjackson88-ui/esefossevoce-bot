@@ -120,8 +120,20 @@ def publicar(item_id=None):
     if item_id:
         alvo = item_id
     else:
+        janela = float(os.environ.get("FB_JANELA_H", "0") or 0)  # 0 = sem limite; no robô só posta o que saiu nas últimas horas
+        limite = time.time() - janela * 3600
+
+        def recente(p):
+            if not janela:
+                return True
+            try:
+                from datetime import datetime
+                return datetime.fromisoformat(p["publicado_em"]).timestamp() >= limite
+            except (KeyError, ValueError):
+                return False
+
         cand = [p["id"] for p in sorted(estado["publicados"], key=lambda p: p.get("publicado_em", ""))
-                if p["id"].startswith("biel") and p["id"] not in feitos and p["id"] in fila]
+                if p["id"].startswith("biel") and p["id"] not in feitos and p["id"] in fila and recente(p)]
         if not cand:
             print("Nada novo para o Facebook.")
             return
