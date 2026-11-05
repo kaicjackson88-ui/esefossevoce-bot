@@ -1,1 +1,1 @@
-ERRO: HTTP 403: {"error":{"message":"(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.","type":"OAuthException","code":200,"fbtrace_id":"AeaCikX1M1bRgSCPRO28Nkg"}}
+Publicado no Facebook (E Se Fosse Você? Histórias): biel-au1 -> https://www.facebook.com/reel/1872619724091792
