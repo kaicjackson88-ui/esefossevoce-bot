@@ -1,6 +1,10 @@
 # Status do robô
 
-Última execução: 05/11 10:34 (Brasília) — ação `postar`
+Última execução: 05/11 11:18 (Brasília) — ação `ciclo`
+
+## Avisos
+
+- Último post foi há menos de 4h: 'biel-pr1' espera a próxima rodada.
 
 ## Fila
 
@@ -8,7 +12,7 @@
 
 ## Votações
 
-- **biel-au1** (aberta até 06/11 10:34): APAGA: 0 · DEIXA: 0 https://www.instagram.com/reel/DfXJfgwsPOa/
+- **biel-au1** (aberta até 06/11 10:34): APAGA: 4 · DEIXA: 0 https://www.instagram.com/reel/DfXJfgwsPOa/
 - **biel-px2-devolve** (aberta até 06/11 09:02): ABRE: 0 · CONFIA: 0 https://www.instagram.com/reel/DfW_AeFhpWE/
 - **biel-em1** (aberta até 06/11 06:39): COBRA: 17 · ESQUECE: 0 https://www.instagram.com/reel/DfWur1MqhmI/
 - **biel-bl1** (aberta até 05/11 18:51): CONTA: 1 · GUARDA: 1 https://www.instagram.com/reel/DfVdn9dI_I2/
