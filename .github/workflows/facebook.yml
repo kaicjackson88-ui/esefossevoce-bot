@@ -1,0 +1,42 @@
+name: Facebook (Biel)
+
+on:
+  workflow_dispatch:
+    inputs:
+      acao:
+        description: "diagnostico ou postar"
+        required: true
+        default: "diagnostico"
+        type: choice
+        options: [diagnostico, postar]
+      ep:
+        description: "id do episódio (vazio = o mais recente ainda não enviado)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: facebook
+  cancel-in-progress: false
+
+jobs:
+  facebook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      FB_TOKEN: ${{ secrets.FB_TOKEN }}
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python facebook.py ${{ inputs.acao }} ${{ inputs.ep }} 2>&1 | tee dados/facebook_log.txt
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "robo-esfv"; git config user.email "robo@users.noreply.github.com"
+          git add -f dados && git commit -qm "facebook: ${{ inputs.acao }}" && git pull -q --rebase && git push -q || echo nada
