@@ -1,16 +1,16 @@
 {
  "canal": {
-  "viewCount": "100",
-  "subscriberCount": "4",
+  "viewCount": "272",
+  "subscriberCount": "8",
   "hiddenSubscriberCount": false,
-  "videoCount": "6"
+  "videoCount": "10"
  },
- "atualizado": "2026-11-05T08:50:57.522895+00:00",
+ "atualizado": "2026-11-06T00:24:11.347459+00:00",
  "videos": [
   {
    "episodio": "biel-p1b",
    "privacidade": "public",
-   "views": 26,
+   "views": 29,
    "curtidas": 1,
    "comentarios": 1,
    "link": "https://youtube.com/shorts/32RtmuP4VZI"
@@ -18,7 +18,7 @@
   {
    "episodio": "biel-p2-esconde",
    "privacidade": "public",
-   "views": 17,
+   "views": 19,
    "curtidas": 0,
    "comentarios": 1,
    "link": "https://youtube.com/shorts/kae1GOf3OIw"
@@ -26,7 +26,7 @@
   {
    "episodio": "biel-p3-paga",
    "privacidade": "public",
-   "views": 6,
+   "views": 8,
    "curtidas": 1,
    "comentarios": 1,
    "link": "https://youtube.com/shorts/KfcIDoVYCwc"
@@ -34,7 +34,7 @@
   {
    "episodio": "biel-v2-p1",
    "privacidade": "public",
-   "views": 6,
+   "views": 10,
    "curtidas": 1,
    "comentarios": 1,
    "link": "https://youtube.com/shorts/eYqORaboiA8"
@@ -42,18 +42,50 @@
   {
    "episodio": "biel-px1",
    "privacidade": "public",
-   "views": 206,
-   "curtidas": 10,
-   "comentarios": 2,
+   "views": 376,
+   "curtidas": 17,
+   "comentarios": 3,
    "link": "https://youtube.com/shorts/e_PYvDJ5AlU"
   },
   {
    "episodio": "biel-bl1",
    "privacidade": "public",
-   "views": 8,
+   "views": 12,
    "curtidas": 1,
    "comentarios": 1,
    "link": "https://youtube.com/shorts/ssPtLHGdTS8"
+  },
+  {
+   "episodio": "biel-em1",
+   "privacidade": "public",
+   "views": 144,
+   "curtidas": 7,
+   "comentarios": 4,
+   "link": "https://youtube.com/shorts/67Hp1LMu6R0"
+  },
+  {
+   "episodio": "biel-px2-devolve",
+   "privacidade": "public",
+   "views": 16,
+   "curtidas": 0,
+   "comentarios": 3,
+   "link": "https://youtube.com/shorts/kdmUXJbcoWQ"
+  },
+  {
+   "episodio": "biel-au1",
+   "privacidade": "public",
+   "views": 12,
+   "curtidas": 0,
+   "comentarios": 1,
+   "link": "https://youtube.com/shorts/aEfMcLcCPqc"
+  },
+  {
+   "episodio": "biel-pr1",
+   "privacidade": "public",
+   "views": 4,
+   "curtidas": 0,
+   "comentarios": 1,
+   "link": "https://youtube.com/shorts/Ggakk5Lyejk"
   }
  ]
 }
