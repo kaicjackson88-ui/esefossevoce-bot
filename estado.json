@@ -780,6 +780,29 @@
         },
         "comentario_id": "18173474227460397"
       }
+    },
+    {
+      "id": "biel-pt1",
+      "media_id": "18196675261398233",
+      "permalink": "https://www.instagram.com/reel/DfaiNRNsGrS/",
+      "publicado_em": "2026-11-06T21:07:50+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "DESCULPA",
+          "AUMENTO"
+        ],
+        "ate": "2026-11-07T21:07:50+00:00",
+        "votos": {
+          "DESCULPA": 0,
+          "AUMENTO": 0
+        },
+        "continuacao": {
+          "DESCULPA": "biel-pt2-desculpa",
+          "AUMENTO": "biel-pt2-aumento"
+        },
+        "comentario_id": "18362534956222509"
+      }
     }
   ],
   "respondidos": [
