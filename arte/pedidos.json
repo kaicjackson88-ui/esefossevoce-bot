@@ -2427,5 +2427,68 @@
   "h": 1024,
   "seed": 11,
   "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a realistic human brain sculpture, glossy"
+ },
+ {
+  "id": "ad_burger",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a delicious juicy cheeseburger with fries in a takeaway box"
+ },
+ {
+  "id": "ad_moedas",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a small stack of shiny gold coins with a few coins falling"
+ },
+ {
+  "id": "ad_loja",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a cute small neighborhood shop storefront with an awning, miniature diorama style"
+ },
+ {
+  "id": "ad_sacola",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a colorful paper shopping bag"
+ },
+ {
+  "id": "ad_mascara",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a plain theatrical white face mask, front view"
+ },
+ {
+  "id": "ad_fone",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a pair of over-ear studio headphones"
+ },
+ {
+  "id": "ad_onibus",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a small city bus, miniature toy style, side view"
+ },
+ {
+  "id": "ad_sofa",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a cozy orange sofa, miniature diorama style"
+ },
+ {
+  "id": "ad_relogio",
+  "w": 1024,
+  "h": 1024,
+  "seed": 21,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a classic analog wristwatch, angled"
  }
 ]

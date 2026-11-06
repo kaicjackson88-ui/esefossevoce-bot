@@ -1,0 +1,133 @@
+{
+ "vozes": {
+  "Preco": "Puck",
+  "Mobil": "Fenrir",
+  "Prova": "Charon",
+  "Renda": "Kore",
+  "Rosto": "Orus"
+ },
+ "grupos": [
+  [
+   "Preco"
+  ],
+  [
+   "Mobil"
+  ],
+  [
+   "Prova"
+  ],
+  [
+   "Renda"
+  ],
+  [
+   "Rosto"
+  ]
+ ],
+ "estilo": "Locutor de anúncio brasileiro profissional, natural e convincente, energia alta mas sem gritar, pausas curtas nas reticências, sotaque brasileiro.",
+ "falas": [
+  {
+   "quem": "Preco",
+   "texto": "Dezenove e noventa."
+  },
+  {
+   "quem": "Preco",
+   "texto": "Menos que um lanche no aplicativo."
+  },
+  {
+   "quem": "Preco",
+   "texto": "E é o preço pra aprender a criar desenhos animados com inteligência artificial."
+  },
+  {
+   "quem": "Preco",
+   "texto": "Do roteiro à edição... tudo pelo celular."
+  },
+  {
+   "quem": "Preco",
+   "texto": "O lanche acaba em dez minutos. Isso aqui fica com você."
+  },
+  {
+   "quem": "Preco",
+   "texto": "Animador de Bolso. Clica e começa hoje."
+  },
+  {
+   "quem": "Mobil",
+   "texto": "Você acha que precisa de um computador caro pra fazer isso?"
+  },
+  {
+   "quem": "Mobil",
+   "texto": "Não precisa."
+  },
+  {
+   "quem": "Mobil",
+   "texto": "Personagem, voz, legenda e efeito. Tudo no celular que tá na sua mão."
+  },
+  {
+   "quem": "Mobil",
+   "texto": "No ônibus, no intervalo do trabalho, no sofá."
+  },
+  {
+   "quem": "Mobil",
+   "texto": "O Animador de Bolso te mostra o passo a passo. Por dezenove e noventa."
+  },
+  {
+   "quem": "Prova",
+   "texto": "Esse desenho passou de três milhões de visualizações."
+  },
+  {
+   "quem": "Prova",
+   "texto": "E perfis assim viraram negócio."
+  },
+  {
+   "quem": "Prova",
+   "texto": "Eles fazem no computador. Eu te mostro como fazer parecido... só com o celular."
+  },
+  {
+   "quem": "Prova",
+   "texto": "Roteiro, personagem e voz, com inteligência artificial."
+  },
+  {
+   "quem": "Prova",
+   "texto": "Animador de Bolso. Dezenove e noventa."
+  },
+  {
+   "quem": "Renda",
+   "texto": "Toda loja do seu bairro precisa de vídeo."
+  },
+  {
+   "quem": "Renda",
+   "texto": "E quase ninguém sabe fazer."
+  },
+  {
+   "quem": "Renda",
+   "texto": "Com inteligência artificial, você cria animações pro Instagram delas... pelo celular."
+  },
+  {
+   "quem": "Renda",
+   "texto": "Eu já passei de quarenta vendas nesse nicho."
+  },
+  {
+   "quem": "Renda",
+   "texto": "Aprenda o passo a passo no Animador de Bolso. Dezenove e noventa."
+  },
+  {
+   "quem": "Rosto",
+   "texto": "Você não precisa aparecer."
+  },
+  {
+   "quem": "Rosto",
+   "texto": "Não precisa gravar sua voz. Nem saber desenhar."
+  },
+  {
+   "quem": "Rosto",
+   "texto": "A inteligência artificial cria o personagem, a voz narra... e você só monta."
+  },
+  {
+   "quem": "Rosto",
+   "texto": "Sem rosto. Sem microfone. Sem computador."
+  },
+  {
+   "quem": "Rosto",
+   "texto": "Animador de Bolso. Dezenove e noventa. Começa hoje."
+  }
+ ]
+}
