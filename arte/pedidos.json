@@ -2343,5 +2343,47 @@
   "refs": [
    "biel_ref"
   ]
+ },
+ {
+  "id": "obj_claquete",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "high quality 3D render, glossy stylized product shot, soft studio lighting, subtle rim light, single object centered, isolated on a pure flat white background, no shadow on background, no text, no letters, no watermark. a black and white movie clapperboard, slightly open, tilted"
+ },
+ {
+  "id": "obj_microfone",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "high quality 3D render, glossy stylized product shot, soft studio lighting, subtle rim light, single object centered, isolated on a pure flat white background, no shadow on background, no text, no letters, no watermark. a modern studio condenser microphone with gold accents"
+ },
+ {
+  "id": "obj_lapis",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "high quality 3D render, glossy stylized product shot, soft studio lighting, subtle rim light, single object centered, isolated on a pure flat white background, no shadow on background, no text, no letters, no watermark. a big yellow pencil writing, with a small golden spark at the tip"
+ },
+ {
+  "id": "obj_rolo",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "high quality 3D render, glossy stylized product shot, soft studio lighting, subtle rim light, single object centered, isolated on a pure flat white background, no shadow on background, no text, no letters, no watermark. a vintage film reel with a strip of film unrolling in a curve"
+ },
+ {
+  "id": "obj_moedas",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "high quality 3D render, glossy stylized product shot, soft studio lighting, subtle rim light, single object centered, isolated on a pure flat white background, no shadow on background, no text, no letters, no watermark. a small stack of shiny gold coins with one coin standing on its edge"
+ },
+ {
+  "id": "obj_play",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "high quality 3D render, glossy stylized product shot, soft studio lighting, subtle rim light, single object centered, isolated on a pure flat white background, no shadow on background, no text, no letters, no watermark. a glossy red rounded play button icon like a video app, 3D, puffy"
  }
 ]

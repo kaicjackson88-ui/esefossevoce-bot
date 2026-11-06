@@ -1,0 +1,44 @@
+{
+ "id": "ad2",
+ "vozes": {
+  "Narrador": "Fenrir"
+ },
+ "grupos": [
+  [
+   "Narrador"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil como narrador de anúncio para Instagram: voz grave, confiante e empolgada, ritmo rápido e marcado, com pequenas pausas nas reticências. Fale como Narrador:",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Esse desenho aqui… teve quase dezessete mil visualizações."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "E foi feito inteiro… só no celular."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "Roteiro, personagem, voz e edição. Tudo com inteligência artificial."
+  },
+  {
+   "cena": 3,
+   "quem": "Narrador",
+   "texto": "Perfis de animação assim estão explodindo."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "E isso já virou renda extra: mais de quarenta vendas, só com animação."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "No Animador de Bolso, eu te mostro o passo a passo. Por dezenove e noventa."
+  }
+ ]
+}
