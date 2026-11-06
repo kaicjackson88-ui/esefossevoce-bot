@@ -1,6 +1,11 @@
 # Status do robô
 
-Última execução: 06/11 09:01 (Brasília) — ação `postar`
+Última execução: 06/11 09:17 (Brasília) — ação `ciclo`
+
+## Avisos
+
+- A continuação 'biel-px3-confia' (CONFIA) ainda não está na fila. Peça ao Claude para produzir.
+- Fila vazia: nada foi postado. Peça novos vídeos ao Claude.
 
 ## Fila
 
@@ -8,11 +13,11 @@
 
 ## Votações
 
-- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 0 · CONTA: 0 https://www.instagram.com/reel/DfZjs6Rop02/
+- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 4 · CONTA: 2 https://www.instagram.com/reel/DfZjs6Rop02/
 - **biel-em2-cobra** (aberta até 07/11 07:01): PERDOA: 0 · COBRA: 2 https://www.instagram.com/reel/DfZV7JCxwFY/
 - **biel-pr1** (aberta até 06/11 12:02): ACEITA: 3 · RECUSA: 1 https://www.instagram.com/reel/DfXTlkVKfew/
-- **biel-au1** (aberta até 06/11 10:34): APAGA: 370 · DEIXA: 22 https://www.instagram.com/reel/DfXJfgwsPOa/
-- **biel-px2-devolve** (aberta até 06/11 09:02): ABRE: 0 · CONFIA: 7 https://www.instagram.com/reel/DfW_AeFhpWE/
+- **biel-au1** (aberta até 06/11 10:34): APAGA: 381 · DEIXA: 23 https://www.instagram.com/reel/DfXJfgwsPOa/
+- **biel-px2-devolve** (encerrada — venceu CONFIA): ABRE: 0 · CONFIA: 7 https://www.instagram.com/reel/DfW_AeFhpWE/
 - **biel-em1** (encerrada — venceu COBRA): COBRA: 26 · ESQUECE: 0 https://www.instagram.com/reel/DfWur1MqhmI/
 - **biel-bl1** (encerrada — venceu CONTA): CONTA: 1 · GUARDA: 1 https://www.instagram.com/reel/DfVdn9dI_I2/
 - **biel-px1** (encerrada — venceu DEVOLVE): DEVOLVE: 5 · FICA: 1 https://www.instagram.com/reel/DfULrRGxpY4/
