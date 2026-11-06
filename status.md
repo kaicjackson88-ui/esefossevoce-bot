@@ -1,11 +1,11 @@
 # Status do robô
 
-Última execução: 06/11 17:15 (Brasília) — ação `ciclo` — **FALHOU**
+Última execução: 06/11 17:48 (Brasília) — ação `ciclo` — **FALHOU**
 
 ## Erro
 
 ```
-HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error":{"message":"Unsupported get request. Object with ID '17879668614634135' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"A61yixza2Ontda0VX4myFUo"}}
+HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error":{"message":"Unsupported get request. Object with ID '17879668614634135' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"APo5-96VhvX_d2Rso-WZ3fp"}}
 ```
 
 ## Fila
@@ -15,7 +15,7 @@ HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error
 ## Votações
 
 - **biel-au2-apaga** (aberta até 07/11 13:20): IMPLORA: 0 · CONTA: 0 https://www.instagram.com/reel/DfaBYWGsfOj/
-- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 72 · CONTA: 14 https://www.instagram.com/reel/DfZjs6Rop02/
+- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 72 · CONTA: 15 https://www.instagram.com/reel/DfZjs6Rop02/
 - **biel-em2-cobra** (aberta até 07/11 07:01): PERDOA: 0 · COBRA: 8 https://www.instagram.com/reel/DfZV7JCxwFY/
 - **biel-pr1** (encerrada — venceu ACEITA): ACEITA: 3 · RECUSA: 1 https://www.instagram.com/reel/DfXTlkVKfew/
 - **biel-au1** (encerrada — venceu APAGA): APAGA: 443 · DEIXA: 24 https://www.instagram.com/reel/DfXJfgwsPOa/
