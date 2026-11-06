@@ -2490,5 +2490,40 @@
   "h": 1024,
   "seed": 21,
   "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a classic analog wristwatch, angled"
+ },
+ {
+  "id": "ad_etiqueta",
+  "w": 1024,
+  "h": 1024,
+  "seed": 31,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a blank red price tag label with a string, tilted"
+ },
+ {
+  "id": "ad_carrinho",
+  "w": 1024,
+  "h": 1024,
+  "seed": 31,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a small red supermarket shopping cart"
+ },
+ {
+  "id": "ad_grafico",
+  "w": 1024,
+  "h": 1024,
+  "seed": 31,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a green 3D bar chart with an upward arrow"
+ },
+ {
+  "id": "ad_cofre",
+  "w": 1024,
+  "h": 1024,
+  "seed": 31,
+  "prompt": "Colorful glossy 3D render, soft studio lighting, vibrant saturated colors, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a cute pink piggy bank with a gold coin going in"
+ },
+ {
+  "id": "ad_tesoura",
+  "w": 1024,
+  "h": 1024,
+  "seed": 31,
+  "prompt": "Black and white studio photograph, isolated on pure white background, a pair of vintage scissors, open, no text"
  }
 ]
