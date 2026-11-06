@@ -1,9 +1,10 @@
 # Status do robô
 
-Última execução: 06/11 11:22 (Brasília) — ação `ciclo`
+Última execução: 06/11 12:20 (Brasília) — ação `ciclo`
 
 ## Avisos
 
+- A continuação 'biel-pr2-aceita' (ACEITA) ainda não está na fila. Peça ao Claude para produzir.
 - Último post foi há menos de 4h: 'biel-au2-apaga' espera a próxima rodada.
 
 ## Fila
@@ -12,9 +13,9 @@
 
 ## Votações
 
-- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 21 · CONTA: 4 https://www.instagram.com/reel/DfZjs6Rop02/
-- **biel-em2-cobra** (aberta até 07/11 07:01): PERDOA: 0 · COBRA: 3 https://www.instagram.com/reel/DfZV7JCxwFY/
-- **biel-pr1** (aberta até 06/11 12:02): ACEITA: 3 · RECUSA: 1 https://www.instagram.com/reel/DfXTlkVKfew/
+- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 33 · CONTA: 5 https://www.instagram.com/reel/DfZjs6Rop02/
+- **biel-em2-cobra** (aberta até 07/11 07:01): PERDOA: 0 · COBRA: 4 https://www.instagram.com/reel/DfZV7JCxwFY/
+- **biel-pr1** (encerrada — venceu ACEITA): ACEITA: 3 · RECUSA: 1 https://www.instagram.com/reel/DfXTlkVKfew/
 - **biel-au1** (encerrada — venceu APAGA): APAGA: 443 · DEIXA: 24 https://www.instagram.com/reel/DfXJfgwsPOa/
 - **biel-px2-devolve** (encerrada — venceu CONFIA): ABRE: 0 · CONFIA: 7 https://www.instagram.com/reel/DfW_AeFhpWE/
 - **biel-em1** (encerrada — venceu COBRA): COBRA: 26 · ESQUECE: 0 https://www.instagram.com/reel/DfWur1MqhmI/
