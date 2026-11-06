@@ -1,0 +1,60 @@
+{
+ "id": "pt1",
+ "titulo": "O PRINT",
+ "parte": 1,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Jorge": "Alnilam"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Jorge"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história contada direto para quem assiste (você): voz grave e próxima, ritmo ágil e natural, pequena pausa nas reticências; tom de desespero cômico, cada vez mais tenso. Jorge: dono de oficina de 55 anos, voz grave, calma e irônica, de patrão que ficou ofendido.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Você mandou o print errado no grupo do trabalho. E o seu chefe tá digitando."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Era pro seu amigo. A conversa em que você chama o Seu Jorge de mão de vaca."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "E reclama que em três anos ele nunca pagou uma hora extra."
+  },
+  {
+   "cena": 3,
+   "quem": "Narrador",
+   "texto": "Mas foi pro grupo da oficina. Vinte e sete pessoas. Todo mundo visualizou."
+  },
+  {
+   "cena": 4,
+   "quem": "Jorge",
+   "texto": "Interessante, Biel. Passa na minha sala amanhã, às sete."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "E o seu colega ainda respondeu: agora ou ele paga… ou te manda embora."
+  },
+  {
+   "cena": 6,
+   "quem": "Narrador",
+   "texto": "Amanhã às sete, você pede desculpa… ou aproveita e pede aumento? Comenta DESCULPA ou AUMENTO. Os comentários decidem a parte dois."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "DESCULPA",
+   "AUMENTO"
+  ],
+  "horas": 24
+ }
+}
