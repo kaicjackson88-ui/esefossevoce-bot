@@ -728,6 +728,29 @@
         "placar_em": "2026-11-06T11:08:49+00:00",
         "placar_total": 2
       }
+    },
+    {
+      "id": "biel-au2-apaga",
+      "media_id": "17900678598612028",
+      "permalink": "https://www.instagram.com/reel/DfZjs6Rop02/",
+      "publicado_em": "2026-11-06T12:01:51+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "IMPLORA",
+          "CONTA"
+        ],
+        "ate": "2026-11-07T12:01:51+00:00",
+        "votos": {
+          "IMPLORA": 0,
+          "CONTA": 0
+        },
+        "continuacao": {
+          "IMPLORA": "biel-au3-implora",
+          "CONTA": "biel-au3-conta"
+        },
+        "comentario_id": "17915291904552927"
+      }
     }
   ],
   "respondidos": [
