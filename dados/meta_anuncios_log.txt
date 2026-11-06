@@ -1,0 +1,8 @@
+  aviso: Meta recusou me/permissions: (#100) Tried accessing nonexisting field (permissions) (código 100/None) 
+Permissões concedidas: (nenhuma lida)
+Faltam para anúncios: ads_management, ads_read
+  aviso: Meta recusou me/adaccounts: (#100) Tried accessing nonexisting field (adaccounts) (código 100/None) 
+  aviso: Meta recusou me/accounts: (#100) Tried accessing nonexisting field (accounts) (código 100/None) 
+Pixel 1479327760890680 : {'id': '1479327760890680', 'name': 'pixel meu cao obdece', 'last_fired_time': '2026-11-05T18:14:40+0000', 'owner_business': {'id': '3744560922226564', 'name': 'Kaic Jakson'}}
+  eventos (últimos dias): {'ViewContent': 2, 'PageView': 1}
+Gravado em dados/meta_anuncios_status.json

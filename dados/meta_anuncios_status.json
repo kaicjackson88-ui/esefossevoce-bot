@@ -1,0 +1,26 @@
+{
+ "permissoes": [],
+ "faltam": [
+  "ads_management",
+  "ads_read"
+ ],
+ "contas_anuncio": [],
+ "paginas": [],
+ "pixels": [],
+ "pixel_site": {
+  "1479327760890680": {
+   "id": "1479327760890680",
+   "name": "pixel meu cao obdece",
+   "last_fired_time": "2026-11-05T18:14:40+0000",
+   "owner_business": {
+    "id": "3744560922226564",
+    "name": "Kaic Jakson"
+   },
+   "eventos": {
+    "ViewContent": 2,
+    "PageView": 1
+   }
+  }
+ },
+ "instagrams": []
+}
