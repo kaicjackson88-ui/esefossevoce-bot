@@ -2385,5 +2385,47 @@
   "h": 1024,
   "seed": 11,
   "prompt": "high quality 3D render, glossy stylized product shot, soft studio lighting, subtle rim light, single object centered, isolated on a pure flat white background, no shadow on background, no text, no letters, no watermark. a glossy red rounded play button icon like a video app, 3D, puffy"
+ },
+ {
+  "id": "ad_claquete",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a vintage wooden film clapperboard, slightly open, tilted"
+ },
+ {
+  "id": "ad_microfone",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a professional studio condenser microphone with pop filter"
+ },
+ {
+  "id": "ad_lapis",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a single long pencil, diagonal, sharpened tip"
+ },
+ {
+  "id": "ad_rolo",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a classic 35mm film reel with a strip of film unrolling"
+ },
+ {
+  "id": "ad_celular",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a modern smartphone floating at an angle, screen dark and glossy"
+ },
+ {
+  "id": "ad_cerebro",
+  "w": 1024,
+  "h": 1024,
+  "seed": 11,
+  "prompt": "Black and white studio product photograph, high contrast, dramatic soft light, ultra sharp, isolated on pure white background, centered, nothing else in frame, no text, no letters, no logo. a realistic human brain sculpture, glossy"
  }
 ]

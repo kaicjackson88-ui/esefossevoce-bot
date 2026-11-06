@@ -1,0 +1,37 @@
+{
+ "vozes": {
+  "Narrador": "Fenrir"
+ },
+ "grupos": [
+  [
+   "Narrador"
+  ]
+ ],
+ "estilo": "Narrador de anúncio brasileiro, jovem, empolgado e confiante, ritmo rápido, pausas curtas e dramáticas nas reticências, sotaque brasileiro natural.",
+ "falas": [
+  {
+   "quem": "Narrador",
+   "texto": "Esse desenho teve dezesseis mil visualizações."
+  },
+  {
+   "quem": "Narrador",
+   "texto": "E foi feito inteiro... no celular."
+  },
+  {
+   "quem": "Narrador",
+   "texto": "Roteiro, personagem, voz e edição. Tudo com inteligência artificial."
+  },
+  {
+   "quem": "Narrador",
+   "texto": "Perfis de animação estão explodindo agora."
+  },
+  {
+   "quem": "Narrador",
+   "texto": "E dá pra transformar isso em renda extra. Eu já passei de quarenta vendas nesse nicho."
+  },
+  {
+   "quem": "Narrador",
+   "texto": "No Animador de Bolso, eu te mostro o passo a passo. Por dezenove e noventa."
+  }
+ ]
+}
