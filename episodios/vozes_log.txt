@@ -1,2 +1,6 @@
-ok voz_Narrador.mp3
+ok voz_Preco.mp3
+ok voz_Mobil.mp3
+ok voz_Prova.mp3
+ok voz_Renda.mp3
+ok voz_Rosto.mp3
 total
