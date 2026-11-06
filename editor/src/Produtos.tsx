@@ -138,3 +138,34 @@ export const BannerCheckout: React.FC = () => (
     <div style={{position: 'absolute', right: -60, top: -170, width: 1080, height: 1080, transform: 'scale(.72)', transformOrigin: 'top right'}}><ProdCurso /></div>
   </AbsoluteFill>
 );
+
+// Fundo do checkout (sem texto) e capa alternativa com personagem
+export const FundoCheckout: React.FC = () => (
+  <AbsoluteFill style={{background: '#0d0c0b', overflow: 'hidden'}}>
+    <div style={{position: 'absolute', left: -200, top: -300, width: 1200, height: 1200, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,122,61,.28), transparent 65%)'}} />
+    <div style={{position: 'absolute', right: -300, bottom: -400, width: 1300, height: 1300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,179,92,.18), transparent 65%)'}} />
+    <AbsoluteFill style={{backgroundImage: 'radial-gradient(rgba(244,239,230,.06) 1.5px, transparent 1.6px)', backgroundSize: '36px 36px'}} />
+    {['au_c4a', 'em2_c1a', 'au2_c3a', 'em2_c5a', 'au2_c2a', 'em2_c3a'].map((k, i) => (
+      <Img key={k} src={S(`biel/${k}.jpg`)} style={{position: 'absolute', width: 260, height: 460, objectFit: 'cover', borderRadius: 26, opacity: 0.16, left: [60, 1600, 1700, 120, 1450, 330][i], top: [620, 80, 600, 120, 880, 900][i], transform: `rotate(${[-10, 8, -6, 7, -9, 5][i]}deg)`, filter: 'grayscale(.3)'}} />
+    ))}
+  </AbsoluteFill>
+);
+export const CapaPersonagem: React.FC = () => (
+  <AbsoluteFill>
+    <Fontes /><FundoMarca />
+    <div style={{position: 'absolute', left: 520, top: 170, width: 520, height: 520, borderRadius: '50%', background: `linear-gradient(135deg,${ACC},${ACC2})`}} />
+    <Img src={S('prod/biel_ref.jpg')} style={{position: 'absolute', left: 560, top: 210, width: 440, height: 440, borderRadius: '50%', objectFit: 'cover', border: '10px solid #0d0c0b'}} />
+    <Fone x={760} y={560} w={230} rot={8} z={3}>
+      <Img src={S('biel/au_c4a.jpg')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      <div style={{position: 'absolute', bottom: 60, width: '100%', textAlign: 'center', fontFamily: 'Anton', fontSize: 28, color: '#fff', WebkitTextStroke: '2px #000'}}>▶ 22 MIL VIEWS</div>
+    </Fone>
+    <div style={{position: 'absolute', left: 70, top: 100, fontFamily: SANS, color: TXT, zIndex: 5}}>
+      <div style={{fontSize: 24, fontWeight: 700, letterSpacing: '0.16em', color: ACC}}>CURSO PELO CELULAR</div>
+      <div style={{fontWeight: 800, fontSize: 104, letterSpacing: '-0.05em', lineHeight: 0.95, marginTop: 16}}>Animador<br /><span style={{fontFamily: SERIF, fontStyle: 'italic', fontWeight: 400, color: ACC2, fontSize: 118}}>de Bolso</span></div>
+      <div style={{marginTop: 22, fontSize: 28, color: '#c9c1b4', lineHeight: 1.3, maxWidth: 360}}>Crie seu personagem e faça ele viralizar, só com o celular</div>
+    </div>
+    <div style={{position: 'absolute', left: 70, bottom: 80, zIndex: 5, display: 'flex', gap: 14, fontFamily: SANS}}>
+      {['7 módulos', 'IA no celular', 'garantia 7 dias'].map((t) => <span key={t} style={{background: 'rgba(244,239,230,.08)', border: '1px solid rgba(244,239,230,.16)', color: TXT, fontWeight: 700, fontSize: 24, padding: '10px 20px', borderRadius: 99}}>{t}</span>)}
+    </div>
+  </AbsoluteFill>
+);
