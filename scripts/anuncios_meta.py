@@ -1,0 +1,493 @@
+"""Gestor de anúncios da Meta (Marketing API) — Animador de Bolso (O Corre do Biel).
+Comandos (python scripts/anuncios_meta.py <comando> [arquivo de campanha]):
+  checar     → permissões da chave, contas de anúncio, páginas, Instagram e pixels (dados/meta_anuncios_status.json)
+  montar     → sobe as mídias e cria campanha + conjunto + anúncios, tudo PAUSADO (dados/meta_campanha_<id>.json)
+  ativar     → liga campanha, conjunto e anúncios (só quando o dono autorizar o gasto)
+  pausar     → pausa a campanha inteira
+  relatorio  → números por anúncio, aplica as regras de corte (pausa automática) e avisa no celular
+  funil      → só leitura: cliques, chegadas no site, quiz, Lead e checkout (dados/meta_funil.md)
+Regras de autonomia: o robô só PAUSA (perdedores e limite de gasto). Nunca aumenta orçamento nem cria gasto novo sozinho.
+Usa o segredo META_ADS_TOKEN (usuário do sistema com ads_management/ads_read); se não existir, tenta o IG_TOKEN. Nunca imprime a chave."""
+import base64, json, os, sys, time, urllib.error, urllib.parse, urllib.request
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+
+RAIZ = Path(__file__).resolve().parents[1]
+DADOS = RAIZ / 'dados'
+API = 'https://graph.facebook.com/v26.0'
+TOKEN = (os.environ.get('META_ADS_TOKEN') or os.environ.get('IG_TOKEN') or '').strip()
+BRT = timezone(timedelta(hours=-3))
+import builtins, re as _re
+_print_original = builtins.print
+def _ESCONDE(*a, **k):
+    a = [_re.sub(r'(access_token=|"access_token":\s*")[^&"\s]+', r'\1***', str(x)) for x in a]
+    if TOKEN: a = [x.replace(TOKEN, '***') for x in a]
+    _print_original(*a, **k)
+builtins.print = _ESCONDE
+STATUS = DADOS / 'meta_anuncios_status.json'
+# economia do produto: R$19,90 menos taxas da Kiwify ≈ R$15,60 líquido (sem contar os order bumps)
+ALVO_CPA, TETO_CPA = 15.0, 25.0
+
+
+# ---------------- chamada à API ----------------
+def api(metodo, caminho, params=None):
+    p = {k: (json.dumps(v, ensure_ascii=False) if isinstance(v, (dict, list)) else v) for k, v in (params or {}).items()}
+    p.setdefault('access_token', TOKEN)
+    corpo = urllib.parse.urlencode(p).encode()
+    url = caminho if caminho.startswith('http') else f'{API}/{caminho}'
+    req = urllib.request.Request(f'{url}?{corpo.decode()}') if metodo == 'GET' else urllib.request.Request(url, data=corpo, method=metodo)
+    for t in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return json.loads(r.read().decode())
+        except urllib.error.HTTPError as e:
+            txt = e.read().decode(errors='replace')
+            try:
+                err = json.loads(txt).get('error', {})
+            except ValueError:
+                err = {'message': txt[:300]}
+            if err.get('code') in (1, 2, 17, 613) and t < 2:   # limite/instabilidade: espera e tenta de novo
+                time.sleep(20 * (t + 1)); continue
+            raise RuntimeError(f"Meta recusou {caminho.split('?')[0]}: {err.get('message')} "
+                               f"(código {err.get('code')}/{err.get('error_subcode')}) {err.get('error_user_msg') or ''}") from None
+    raise RuntimeError(f'Meta não respondeu em {caminho}')
+
+
+def _try(f, padrao=None):
+    try:
+        return f()
+    except Exception as e:  # noqa: BLE001
+        print('  aviso:', str(e)[:250]); return padrao
+
+
+def ler(p, padrao=None):
+    return json.loads(Path(p).read_text(encoding='utf-8')) if Path(p).exists() else padrao
+
+
+def gravar(p, obj):
+    Path(p).parent.mkdir(exist_ok=True)
+    Path(p).write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding='utf-8')
+
+
+def avisar(titulo, texto):
+    topico = os.environ.get('NTFY_TOPIC', '').strip()
+    if not topico:
+        return
+    corpo = json.dumps({'topic': topico, 'title': titulo, 'message': texto[:3500], 'tags': ['moneybag']}).encode()
+    _try(lambda: urllib.request.urlopen(urllib.request.Request('https://ntfy.sh/', data=corpo, headers={'Content-Type': 'application/json'}, method='POST'), timeout=30))
+
+
+# ---------------- checar ----------------
+def checar(_=None):
+    perms = _try(lambda: api('GET', 'me/permissions'), {}) or {}
+    concedidas = sorted(p['permission'] for p in perms.get('data', []) if p.get('status') == 'granted')
+    print('Permissões concedidas:', ', '.join(concedidas) or '(nenhuma lida)')
+    falta = [p for p in ('ads_management', 'ads_read') if p not in concedidas]
+    print('Faltam para anúncios:', ', '.join(falta) or 'nada — dá para gerenciar anúncios')
+    r = _try(lambda: api('GET', 'me/adaccounts', {'fields': 'id,name,currency,account_status,amount_spent,funding_source_details', 'limit': 50}), {}) or {}
+    contas = [{'id': c['id'], 'nome': c.get('name'), 'moeda': c.get('currency'), 'status': c.get('account_status'), 'gasto': c.get('amount_spent'),
+               'pagamento': (c.get('funding_source_details') or {}).get('display_string')} for c in r.get('data', [])]
+    for c in contas:
+        print('Conta de anúncio:', c)
+    r = _try(lambda: api('GET', 'me/accounts', {'fields': 'id,name,access_token,instagram_business_account{id,username}'}), {}) or {}
+    paginas = [{'id': p['id'], 'nome': p.get('name'), 'ig': (p.get('instagram_business_account') or {}).get('id'),
+                'ig_user': (p.get('instagram_business_account') or {}).get('username')} for p in r.get('data', [])]
+    tok_pag = {p['id']: p.get('access_token') for p in r.get('data', [])}
+    for p in paginas:
+        print('Página:', p)
+    pixels = []
+    for c in contas:
+        r = _try(lambda: api('GET', f"{c['id']}/adspixels", {'fields': 'id,name,last_fired_time'}), {}) or {}
+        for px in r.get('data', []):
+            pixels.append({'conta': c['id'], 'id': px['id'], 'nome': px.get('name'), 'ultimo_evento': px.get('last_fired_time')})
+            print('Pixel:', pixels[-1])
+    # pixel do site (o que dispara no meucaoobedece) — pode não estar listado na conta
+    r = None
+    for pixel_site in os.environ.get('PIXEL_SITE', '1479327760890680').split(','):
+        x = _try(lambda: api('GET', pixel_site, {'fields': 'id,name,last_fired_time,owner_business{id,name}'}), None)
+        print('Pixel', pixel_site, ':', x if x else 'NÃO visível para o robô')
+        if x:
+            ev = _try(lambda: api('GET', f'{pixel_site}/stats', {'aggregation': 'event'}), None)
+            cont = {}
+            for b in (ev or {}).get('data', []):
+                for d in b.get('data', []):
+                    cont[d.get('value')] = cont.get(d.get('value'), 0) + int(d.get('count') or 0)
+            print('  eventos (últimos dias):', cont or '(nenhum)')
+            x['eventos'] = cont
+            r = r or {}
+            r[pixel_site] = x
+    # Instagram para anúncio (outras rotas, já que instagram_business_account pede instagram_basic)
+    igs = []
+    for p in paginas:
+        for rota in (f"{p['id']}/instagram_accounts", f"{p['id']}/page_backed_instagram_accounts"):
+            d = _try(lambda: api('GET', rota, {'fields': 'id,username', 'access_token': tok_pag.get(p['id']) or TOKEN}), {}) or {}
+            for x in d.get('data', []):
+                igs.append({'pagina': p['id'], 'rota': rota.split('/')[1], 'id': x['id'], 'user': x.get('username')})
+    for c in contas:
+        d = _try(lambda: api('GET', f"{c['id']}/instagram_accounts", {'fields': 'id,username'}), {}) or {}
+        igs += [{'conta': c['id'], 'rota': 'conta', 'id': x['id'], 'user': x.get('username')} for x in d.get('data', [])]
+        f = _try(lambda: api('GET', c['id'], {'fields': 'funding_source,funding_source_details,disable_reason,business{id,name}'}), {}) or {}
+        print('Pagamento da conta:', {k: f.get(k) for k in ('funding_source', 'funding_source_details', 'disable_reason', 'business')})
+    for x in igs:
+        print('Instagram p/ anúncio:', x)
+    gravar(STATUS, {'permissoes': concedidas, 'faltam': falta, 'contas_anuncio': contas, 'paginas': paginas, 'pixels': pixels,
+                    'pixel_site': r, 'instagrams': igs})
+    print('Gravado em', STATUS.relative_to(RAIZ))
+    return not falta and bool(contas)
+
+
+# ---------------- montar ----------------
+def _alvos(cfg):
+    """Conta, página, Instagram e pixel: os do arquivo de campanha, senão os achados pelo checar."""
+    st = ler(STATUS, {}) or {}
+    if not st.get('contas_anuncio'):
+        checar(); st = ler(STATUS, {})
+    contas = [c for c in st.get('contas_anuncio', []) if c.get('status') == 1] or st.get('contas_anuncio', [])
+    conta = cfg.get('conta') or (contas[0]['id'] if contas else None)
+    pag = next((p for p in st.get('paginas', []) if p.get('ig') and 'biel' in (p.get('nome') or '').lower()), None) or \
+        next((p for p in st.get('paginas', []) if p.get('ig')), {})
+    pixs = sorted([p for p in st.get('pixels', []) if p['conta'] == conta], key=lambda p: p.get('ultimo_evento') or '', reverse=True)
+    if not pag:
+        pag = next((p for p in st.get('paginas', []) if 'biel' in (p.get('nome') or '').lower()), {})
+    ig2 = next((x['id'] for x in st.get('instagrams', []) if x.get('rota') == 'instagram_accounts' and x.get('pagina') == pag.get('id')), None) or \
+        next((x['id'] for x in st.get('instagrams', []) if x.get('rota') == 'conta'), None)
+    out = {'conta': conta, 'pagina': cfg.get('pagina') or pag.get('id'), 'ig': cfg.get('instagram') or pag.get('ig') or ig2,
+           'pixel': cfg.get('pixel') or (pixs[0]['id'] if pixs else None)}
+    falta = [k for k, v in out.items() if not v and k != 'ig']
+    if falta:
+        sys.exit(f'Não achei: {", ".join(falta)}. Rode "checar" e confira as permissões/ativos do usuário do sistema.')
+    print('Usando:', out)
+    return out
+
+
+def _url(cfg, nome):
+    return f"https://raw.githubusercontent.com/kaicjackson88-ui/esefossevoce-bot/{cfg['midia_branch']}/{nome}"
+
+
+def _imagem(conta, cfg, nome):
+    dados = urllib.request.urlopen(urllib.request.Request(_url(cfg, nome), headers={'User-Agent': 'mco'}), timeout=60).read()
+    r = api('POST', f'{conta}/adimages', {'bytes': base64.b64encode(dados).decode('ascii'), 'name': nome})
+    return next(iter(r['images'].values()))['hash']
+
+
+def _video(conta, cfg, nome):
+    vid = api('POST', f'{conta}/advideos', {'file_url': _url(cfg, nome), 'name': nome})['id']
+    for _ in range(60):   # espera a Meta processar (até ~10 min)
+        st = (api('GET', vid, {'fields': 'status'}).get('status') or {}).get('video_status')
+        if st == 'ready':
+            return vid
+        if st == 'error':
+            raise RuntimeError(f'A Meta não conseguiu processar o vídeo {nome}')
+        time.sleep(10)
+    raise RuntimeError(f'Vídeo {nome} demorou demais para processar')
+
+
+def _cta(link):
+    return {'type': 'LEARN_MORE', 'value': {'link': link}}
+
+
+def _criativo(alvo, cfg, ad):
+    conta, link = alvo['conta'], cfg['link']
+    spec = {'page_id': alvo['pagina']}
+    if alvo.get('ig'):
+        spec['instagram_user_id'] = alvo['ig']
+    if ad['tipo'] == 'video':
+        vid = _video(conta, cfg, ad['arquivos'][0])
+        capa = _imagem(conta, cfg, ad['arquivos'][1])
+        spec['video_data'] = {'video_id': vid, 'image_hash': capa, 'message': ad['texto'], 'title': ad['titulo'], 'call_to_action': _cta(link)}
+    elif ad['tipo'] == 'imagem':
+        h = _imagem(conta, cfg, ad['arquivos'][0])
+        spec['link_data'] = {'image_hash': h, 'link': link, 'message': ad['texto'], 'name': ad['titulo'], 'call_to_action': _cta(link)}
+    elif ad['tipo'] == 'carrossel':
+        filhos = [{'link': link, 'image_hash': _imagem(conta, cfg, a), 'name': t, 'call_to_action': _cta(link)}
+                  for a, t in zip(ad['arquivos'], ad['cartoes'])]
+        spec['link_data'] = {'link': link, 'message': ad['texto'], 'child_attachments': filhos, 'multi_share_optimized': False,
+                             'multi_share_end_card': False, 'call_to_action': _cta(link)}
+    else:
+        raise ValueError(ad['tipo'])
+    corpo = {'name': f"{cfg['nome']} | {ad['nome']}", 'object_story_spec': spec, 'url_tags': cfg['url_tags']}
+    try:
+        return api('POST', f'{conta}/adcreatives', corpo)['id']
+    except RuntimeError as e:
+        if 'instagram_user_id' not in spec:
+            raise
+        print('  Instagram recusado, criativo sai com a identidade da Página no Instagram:', str(e)[:160])
+        spec.pop('instagram_user_id')
+        return api('POST', f'{conta}/adcreatives', corpo)['id']
+
+
+def montar(arq):
+    cfg = ler(arq)
+    saida = DADOS / f"meta_campanha_{cfg['id']}.json"
+    est = ler(saida, {}) or {}
+    alvo = _alvos(cfg)
+    conta = alvo['conta']
+    if est.get('conta') and est['conta'] != conta:   # campanha mudou de conta: guarda o estado antigo e começa do zero
+        gravar(DADOS / f"meta_campanha_{cfg['id']}_{est['conta']}.json", est)
+        print('Conta nova:', conta, '(estado da conta', est['conta'], 'arquivado)')
+        est = {}
+    est.update({k: alvo[k] for k in alvo})
+    _try(lambda: api('POST', f"{alvo['pixel']}/shared_accounts", {'account_id': conta.replace('act_', ''), 'business': os.environ.get('BM_ID', '3744560922226564')}))
+    if not est.get('campanha'):
+        est['campanha'] = api('POST', f'{conta}/campaigns', {'name': cfg['nome'], 'objective': 'OUTCOME_SALES', 'status': 'PAUSED',
+                                                             'special_ad_categories': [], 'is_adset_budget_sharing_enabled': 'false'})['id']
+        print('Campanha criada (pausada):', est['campanha']); gravar(saida, est)
+    if not est.get('conjunto'):
+        est['conjunto'] = api('POST', f'{conta}/adsets', {
+            'name': cfg['conjunto'], 'campaign_id': est['campanha'], 'status': 'PAUSED',
+            'daily_budget': int(round(cfg['orcamento_dia'] * 100)), 'billing_event': 'IMPRESSIONS',
+            'optimization_goal': 'OFFSITE_CONVERSIONS', 'bid_strategy': 'LOWEST_COST_WITHOUT_CAP',
+            'promoted_object': {'pixel_id': alvo['pixel'], 'custom_event_type': 'PURCHASE'},
+            'targeting': {'geo_locations': {'countries': ['BR']}, 'age_min': 18, 'targeting_automation': {'advantage_audience': 1}},
+        })['id']
+        print('Conjunto criado (pausado):', est['conjunto']); gravar(saida, est)
+    else:   # orçamento do arquivo manda (só reduzir/ajustar com o conjunto ainda pausado ou por ordem do dono)
+        _try(lambda: api('POST', est['conjunto'], {'daily_budget': int(round(cfg['orcamento_dia'] * 100))}))
+        print('Orçamento do conjunto ajustado para R$', cfg['orcamento_dia'], '/dia')
+    est.setdefault('anuncios', {})
+    for ad in cfg['anuncios']:
+        if ad.get('pular'):
+            print('Pulando (marcado para depois):', ad['nome']); continue
+        if est['anuncios'].get(ad['nome'], {}).get('id'):
+            continue
+        cid = est['anuncios'].get(ad['nome'], {}).get('criativo')
+        try:
+            if not cid:
+                cid = _criativo(alvo, cfg, ad)
+                est['anuncios'][ad['nome']] = {'criativo': cid}; gravar(saida, est)
+            aid = api('POST', f'{conta}/ads', {'name': ad['nome'], 'adset_id': est['conjunto'], 'creative': {'creative_id': cid}, 'status': 'PAUSED'})['id']
+            est['anuncios'][ad['nome']] = {'id': aid, 'criativo': cid}
+            print('Anúncio criado (pausado):', ad['nome'], aid)
+        except Exception as e:  # noqa: BLE001
+            est['anuncios'][ad['nome']] = {'erro': str(e)[:400], 'criativo': cid}
+            print('FALHOU', ad['nome'], '→', str(e)[:400])
+        gravar(saida, est)
+    est['montado_em'] = datetime.now(BRT).isoformat()
+    gravar(saida, est)
+    ok = [n for n, a in est['anuncios'].items() if a.get('id')]
+    print(f'Pronto: {len(ok)} anúncio(s) criados, tudo PAUSADO. Para ligar: ativar.')
+
+
+def _estado(arq):
+    cfg = ler(arq)
+    est = ler(DADOS / f"meta_campanha_{cfg['id']}.json")
+    if not est or not est.get('campanha'):
+        sys.exit('Campanha ainda não montada.')
+    return cfg, est
+
+
+def ativar(arq):
+    cfg, est = _estado(arq)
+    for nome, a in est['anuncios'].items():
+        if a.get('id') and a.get('status') != 'PAUSADO_PELO_ROBO':
+            api('POST', a['id'], {'status': 'ACTIVE'}); print('Ligado:', nome)
+    api('POST', est['conjunto'], {'status': 'ACTIVE'}); api('POST', est['campanha'], {'status': 'ACTIVE'})
+    est['ativado_em'] = datetime.now(BRT).isoformat(); gravar(DADOS / f"meta_campanha_{cfg['id']}.json", est)
+    print('Campanha ligada.'); avisar('🚀 Anúncios no ar', f"{cfg['nome']} ligada com R${cfg['orcamento_dia']:.0f}/dia.")
+
+
+def pausar(arq):
+    cfg, est = _estado(arq)
+    api('POST', est['campanha'], {'status': 'PAUSED'}); print('Campanha pausada.')
+
+
+# ---------------- relatório + regras ----------------
+def _acao(lista, *tipos):
+    for t in tipos:
+        for a in lista or []:
+            if a.get('action_type') == t:
+                return float(a.get('value') or 0)
+    return 0.0
+
+
+def relatorio(arq):
+    cfg, est = _estado(arq)
+    saida = DADOS / f"meta_campanha_{cfg['id']}.json"
+    campos = 'ad_id,ad_name,spend,impressions,frequency,inline_link_clicks,inline_link_click_ctr,cpc,actions,video_thruplay_watched_actions'
+    r = api('GET', f"{est['campanha']}/insights", {'level': 'ad', 'date_preset': 'maximum', 'fields': campos, 'limit': 100})
+    linhas, acoes, total, vendas_tot = [], [], 0.0, 0
+    ativado = datetime.fromisoformat(est['ativado_em']) if est.get('ativado_em') else None
+    dias = (datetime.now(BRT) - ativado).days if ativado else 0
+    for d in r.get('data', []):
+        gasto = float(d.get('spend') or 0); imp = float(d.get('impressions') or 0); total += gasto
+        ctr = float(d.get('inline_link_click_ctr') or 0)
+        v3 = _acao(d.get('actions'), 'video_view'); hook = (v3 / imp * 100) if imp and v3 else None
+        compras = int(_acao(d.get('actions'), 'offsite_conversion.fb_pixel_purchase', 'purchase', 'omni_purchase'))
+        ic = int(_acao(d.get('actions'), 'offsite_conversion.fb_pixel_initiate_checkout', 'initiate_checkout', 'omni_initiated_checkout'))
+        vendas_tot += compras
+        cpa = gasto / compras if compras else None
+        freq = float(d.get('frequency') or 0)
+        nome, aid = d.get('ad_name'), d.get('ad_id')
+        dec = 'manter'
+        if gasto >= 15 and (ctr < 0.8 or (hook is not None and hook < 25)):
+            dec = 'PAUSAR (gancho fraco)'
+        elif gasto >= 45 and compras == 0:
+            dec = 'PAUSAR (R$45 sem venda)'
+        elif cpa is not None and cpa > TETO_CPA and dias >= 3:
+            dec = 'PAUSAR (custo/venda alto)'
+        elif freq > 3:
+            dec = 'trocar criativo (frequência alta)'
+        elif cpa is not None and cpa <= ALVO_CPA:
+            dec = 'manter — vencedor'
+        if dec.startswith('PAUSAR'):
+            info = est['anuncios'].get(nome, {})
+            if info.get('status') != 'PAUSADO_PELO_ROBO':
+                _try(lambda: api('POST', aid, {'status': 'PAUSED'}))
+                info['status'] = 'PAUSADO_PELO_ROBO'; info['motivo'] = dec; est['anuncios'][nome] = info
+                acoes.append(f'⏸ pausei {nome}: {dec[8:-1]}')
+        linhas.append(f"| {nome} | R${gasto:.2f} | {ctr:.2f}% | {f'{hook:.0f}%' if hook is not None else '—'} | {ic} | {compras} | "
+                      f"{f'R${cpa:.2f}' if cpa else '—'} | {dec} |")
+    limite = cfg.get('limite_total', 200)
+    if total >= limite and vendas_tot == 0:
+        _try(lambda: api('POST', est['campanha'], {'status': 'PAUSED'}))
+        acoes.append(f'🛑 pausei a campanha: gastou R${total:.2f} (limite R${limite}) sem venda — hora de revisar oferta/página')
+    agora = datetime.now(BRT).strftime('%d/%m %H:%M')
+    md = [f"# {cfg['nome']} — {agora}", '', f'Gasto total: **R${total:.2f}** de R${limite} · vendas: **{vendas_tot}** · dia {dias + 1} do teste', '',
+          '| anúncio | gasto | CTR link | hook 3s | checkouts | vendas | custo/venda | decisão |', '|---|---|---|---|---|---|---|---|'] + linhas
+    md += ['', '**Ações do robô:** ' + ('; '.join(acoes) if acoes else 'nenhuma — dentro das regras.')]
+    if dias < 3:
+        md.append('_Primeiros 3 dias: só pausas de segurança; nada de mexer no resto (o aprendizado reinicia)._')
+    (DADOS / 'meta_relatorio.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
+    est['ultimo_relatorio'] = agora; gravar(saida, est)
+    print('\n'.join(md))
+    avisar(f'📈 Anúncios {agora}: R${total:.0f} · {vendas_tot} venda(s)',
+           '\n'.join(l.split('|')[1].strip() + ': ' + l.split('|')[2].strip() + ', ' + l.split('|')[6].strip() + ' venda(s) → ' + l.split('|')[8].strip()
+                     for l in linhas) + ('\n' + '\n'.join(acoes) if acoes else ''))
+
+
+
+def situacao(arq):
+    """Só leitura: em que pé está a entrega (análise, aprovado, rejeitado, problemas)."""
+    _, est = _estado(arq)
+    c = _try(lambda: api('GET', est['conta'], {'fields': 'account_status,disable_reason,balance,spend_cap,amount_spent,funding_source_details'}), {}) or {}
+    print('Conta:', {k: c.get(k) for k in ('account_status', 'disable_reason', 'balance', 'amount_spent', 'spend_cap')},
+          'pagamento:', (c.get('funding_source_details') or {}).get('display_string'))
+    for nome, oid in [('Campanha', est.get('campanha')), ('Conjunto', est.get('conjunto'))] + [(k, v.get('id')) for k, v in est.get('anuncios', {}).items()]:
+        if not oid:
+            continue
+        campos = 'name,status,effective_status,issues_info' + (',ad_review_feedback' if nome not in ('Campanha', 'Conjunto') else '')
+        r = _try(lambda: api('GET', oid, {'fields': campos}), {}) or {}
+        print(f"{nome}: {r.get('effective_status')} (configurado {r.get('status')})")
+        if r.get('issues_info'):
+            print('   problemas:', json.dumps(r['issues_info'], ensure_ascii=False)[:600])
+        if r.get('ad_review_feedback'):
+            print('   análise:', json.dumps(r['ad_review_feedback'], ensure_ascii=False)[:600])
+
+def funil(arq):
+    """Só leitura: caminho depois do clique (anúncio → site → quiz → página → checkout). Grava dados/meta_funil.md."""
+    cfg, est = _estado(arq)
+    tipos = [('link_click', 'cliques no link'), ('landing_page_view', 'chegaram no site (carregou)'),
+             ('offsite_conversion.fb_pixel_view_content', 'ViewContent (quiz iniciado/pulado ou leu a página)'),
+             ('offsite_conversion.fb_pixel_lead', 'Lead (terminou o quiz)'),
+             ('offsite_conversion.fb_pixel_initiate_checkout', 'InitiateCheckout'),
+             ('offsite_conversion.fb_pixel_purchase', 'compra')]
+    r = _try(lambda: api('GET', f"{est['campanha']}/insights", {'level': 'ad', 'date_preset': 'maximum',
+             'fields': 'ad_name,spend,actions', 'limit': 100}), {}) or {}
+    md = [f"# Funil dos anúncios — {datetime.now(BRT):%d/%m %H:%M}", '', '## Pelos anúncios (Meta atribui ao clique)', '',
+          '| anúncio | gasto | ' + ' | '.join(t[0].split('.')[-1] for t in tipos) + ' |', '|---|---|' + '---|' * len(tipos)]
+    tot = [0.0] * len(tipos)
+    for d in r.get('data', []):
+        vals = [_acao(d.get('actions'), t[0]) for t in tipos]
+        tot = [a + b for a, b in zip(tot, vals)]
+        md.append(f"| {d.get('ad_name')} | R${float(d.get('spend') or 0):.2f} | " + ' | '.join(f'{v:.0f}' for v in vals) + ' |')
+    md.append('| **total** | | ' + ' | '.join(f'**{v:.0f}**' for v in tot) + ' |')
+    md += [''] + [f'- {t[0].split(".")[-1]}: {t[1]}' for t in tipos]
+    pixel = cfg.get('pixel')
+    if pixel:
+        ini = int(datetime.fromisoformat(est['ativado_em']).timestamp()) if est.get('ativado_em') else int(time.time()) - 2 * 86400
+        md += ['', '## No pixel do site (todo o tráfego desde que o anúncio ligou, inclusive orgânico)', '']
+        s = _try(lambda: api('GET', f'{pixel}/stats', {'aggregation': 'event', 'start_time': ini}), {}) or {}
+        cont = {}
+        for b in s.get('data', []):
+            for x in b.get('data', []):
+                cont[x.get('value')] = cont.get(x.get('value'), 0) + int(x.get('count') or 0)
+        md += [f'- {k}: {v}' for k, v in sorted(cont.items(), key=lambda kv: -kv[1])] or ['- (sem dados do pixel)']
+        c = _try(lambda: api('GET', f'{pixel}/stats', {'aggregation': 'custom_data_field', 'event': 'ViewContent', 'start_time': ini}), {}) or {}
+        det = {}
+        for b in c.get('data', []):
+            for x in b.get('data', []):
+                k = f"{x.get('key', '')}={x.get('value')}"
+                det[k] = det.get(k, 0) + int(x.get('count') or 0)
+        if det:
+            md += ['', 'ViewContent por tipo:'] + [f'- {k}: {v}' for k, v in sorted(det.items(), key=lambda kv: -kv[1])]
+    (DADOS / 'meta_funil.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
+    print('\n'.join(md))
+
+
+def analise(arq):
+    """Só leitura: tudo do teste para análise (anúncios, público, posicionamento, horário, vídeo, pixel por hora). Grava dados/meta_analise.json."""
+    cfg, est = _estado(arq)
+    camp = est['campanha']
+    base = {'date_preset': 'maximum', 'limit': 200}
+    f_ad = ('ad_name,spend,impressions,reach,frequency,cpm,clicks,inline_link_clicks,inline_link_click_ctr,cost_per_inline_link_click,'
+            'outbound_clicks,actions,video_p25_watched_actions,video_p50_watched_actions,video_p75_watched_actions,'
+            'video_p100_watched_actions,video_avg_time_watched_actions,video_thruplay_watched_actions,quality_ranking,engagement_rate_ranking')
+    out = {'gerado': datetime.now(BRT).isoformat(timespec='minutes'), 'ativado_em': est.get('ativado_em')}
+    out['anuncios'] = (_try(lambda: api('GET', f'{camp}/insights', dict(base, level='ad', fields=f_ad)), {}) or {}).get('data', [])
+    f = 'spend,impressions,inline_link_clicks,actions'
+    for nome, br in [('idade_sexo', 'age,gender'), ('posicionamento', 'publisher_platform,platform_position'), ('regiao', 'region'),
+                     ('dispositivo', 'impression_device'), ('horas', 'hourly_stats_aggregated_by_audience_time_zone')]:
+        out[nome] = (_try(lambda: api('GET', f'{camp}/insights', dict(base, fields=f, breakdowns=br)), {}) or {}).get('data', [])
+    out['por_dia'] = (_try(lambda: api('GET', f'{camp}/insights', dict(base, fields=f, time_increment=1)), {}) or {}).get('data', [])
+    pixel = cfg.get('pixel')
+    if pixel:
+        ini = int(datetime.fromisoformat(est['ativado_em']).timestamp()) - 3 * 86400 if est.get('ativado_em') else int(time.time()) - 6 * 86400
+        s = _try(lambda: api('GET', f'{pixel}/stats', {'aggregation': 'event', 'start_time': ini}), {}) or {}
+        ph = {}
+        for b in s.get('data', []):
+            for x in b.get('data', []):
+                ph.setdefault(x.get('value'), []).append({'hora': b.get('start_time'), 'qtd': int(x.get('count') or 0)})
+        out['pixel_hora'] = ph
+        for agg in ('device_type', 'url'):
+            out[f'pixel_{agg}'] = (_try(lambda: api('GET', f'{pixel}/stats', {'aggregation': agg, 'start_time': ini}), {}) or {}).get('data', [])
+    (DADOS / 'meta_analise.json').write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding='utf-8')
+    print('ok', {k: len(v) if isinstance(v, (list, dict)) else v for k, v in out.items()})
+
+
+def pixeldiag(arq):
+    """Só leitura: configuração e diagnósticos do pixel (por que um evento não chega)."""
+    cfg, _ = _estado(arq)
+    px_id = cfg.get('pixel')
+    for campos in ['name,is_unavailable,last_fired_time,data_use_setting,first_party_cookie_status,enable_automatic_matching,owner_business{id,name}',
+                   'is_restricted_use,restricted_reason', 'event_stats', 'config']:
+        r = _try(lambda: api('GET', px_id, {'fields': campos}), None)
+        if isinstance(r, dict): r.pop('paging', None)
+        print('CAMPOS', campos, '->', json.dumps(r, ensure_ascii=False)[:1500])
+    for rota in ['da_checks', 'shared_accounts', 'assigned_users']:
+        r = _try(lambda: api('GET', f'{px_id}/{rota}', {}), None)
+        print('ROTA', rota, '->', json.dumps(r, ensure_ascii=False)[:2500])
+    ini = int(time.time()) - 2 * 86400
+    for agg in ['event', 'event_total_counts', 'event_source', 'event_processing_results', 'event_detection_method', 'pixel_fire', 'had_pii', 'match_keys']:
+        r = _try(lambda: api('GET', f'{px_id}/stats', {'aggregation': agg, 'start_time': ini}), None)
+        if isinstance(r, dict): r.pop('paging', None)
+        print('STATS', agg, '->', json.dumps(r, ensure_ascii=False)[:1500])
+
+
+def comparar(arq):
+    """Só leitura: todas as contas, campanhas e anúncios com números do período inteiro. Grava dados/meta_comparar.json."""
+    campos = ('spend,impressions,reach,frequency,cpm,clicks,inline_link_clicks,inline_link_click_ctr,cost_per_inline_link_click,'
+              'actions,action_values,cost_per_action_type,date_start,date_stop')
+    contas = (_try(lambda: api('GET', 'me/adaccounts', {'fields': 'id,name,currency,account_status,amount_spent', 'limit': 50}), {}) or {}).get('data', [])
+    out = {'gerado': datetime.now(BRT).isoformat(timespec='minutes'), 'contas': []}
+    for c in contas:
+        cc = dict(c, campanhas=[])
+        camps = (_try(lambda: api('GET', f"{c['id']}/campaigns", {'fields': 'id,name,objective,status,effective_status,created_time,start_time,stop_time,daily_budget,lifetime_budget', 'limit': 100}), {}) or {}).get('data', [])
+        for k in camps:
+            ins = (_try(lambda: api('GET', f"{k['id']}/insights", {'date_preset': 'maximum', 'fields': campos}), {}) or {}).get('data', [])
+            ads = (_try(lambda: api('GET', f"{k['id']}/insights", {'date_preset': 'maximum', 'level': 'ad', 'fields': 'ad_name,' + campos, 'limit': 100}), {}) or {}).get('data', [])
+            sets = (_try(lambda: api('GET', f"{k['id']}/adsets", {'fields': 'name,optimization_goal,promoted_object,targeting,daily_budget', 'limit': 50}), {}) or {}).get('data', [])
+            for st in sets:
+                t = st.get('targeting') or {}
+                st['targeting'] = {x: t.get(x) for x in ('age_min', 'age_max', 'genders', 'geo_locations', 'publisher_platforms', 'flexible_spec') if x in t}
+            cc['campanhas'].append(dict(k, insights=ins[0] if ins else {}, anuncios=ads, conjuntos=sets))
+        out['contas'].append(cc)
+    (DADOS / 'meta_comparar.json').write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding='utf-8')
+    print('ok', [(c['name'], len(c['campanhas'])) for c in out['contas']])
+
+
+if __name__ == '__main__':
+    cmd = sys.argv[1] if len(sys.argv) > 1 else 'checar'
+    arq = sys.argv[2] if len(sys.argv) > 2 else str(RAIZ / 'anuncios' / 'teste2.json')
+    if not TOKEN:
+        sys.exit('Sem chave: crie o segredo META_ADS_TOKEN.')
+    {'checar': checar, 'montar': montar, 'ativar': ativar, 'pausar': pausar, 'relatorio': relatorio, 'situacao': situacao, 'funil': funil, 'analise': analise, 'pixeldiag': pixeldiag, 'comparar': comparar}[cmd](arq)

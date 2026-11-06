@@ -1,0 +1,45 @@
+{
+ "_leia": "Campanha de teste 1 do Animador de Bolso: 4 criativos num conjunto só. O robô monta tudo PAUSADO e só liga com autorização do Kaic. Antes de montar: preencher 'link' com o endereço da Vercel e conferir 'pagina'/'instagram' depois do checar.",
+ "id": "animador1",
+ "nome": "ADB | Teste 1 | Vendas",
+ "conjunto": "ADB | Brasil aberto",
+ "conta": "act_1654358850033325",
+ "pixel": "",
+ "pagina": "1450273264828927",
+ "instagram": "",
+ "orcamento_dia": 25,
+ "limite_total": 100,
+ "link": "",
+ "url_tags": "utm_source=meta&utm_medium=pago&utm_campaign=animador1&utm_content={{ad.name}}",
+ "midia_branch": "midia-anuncios-animador1",
+ "anuncios": [
+  {
+   "nome": "A_Prova3Milhoes",
+   "tipo": "video",
+   "arquivos": ["prova.mp4", "prova_capa.jpg"],
+   "texto": "Você já viu esses perfis de desenho animado com milhões de visualizações? 👀\n\nEles fazem no computador. No Animador de Bolso você aprende a fazer igual, só com o celular: roteiro, personagem, voz e animação com inteligência artificial.\n\nR$19,90, pagamento único, com 7 dias de garantia.",
+   "titulo": "Faça animações que viralizam"
+  },
+  {
+   "nome": "B_Preco",
+   "tipo": "video",
+   "arquivos": ["preco.mp4", "preco_capa.jpg"],
+   "texto": "R$19,90. Menos que um lanche no aplicativo. 🍔\n\nÉ o preço pra aprender a criar desenhos animados iguais aos dos perfis que viralizam, do roteiro à animação, tudo pelo celular.\n\nPagamento único, acesso imediato e 7 dias de garantia.",
+   "titulo": "Curso completo por R$19,90"
+  },
+  {
+   "nome": "C_SemComputador",
+   "tipo": "video",
+   "arquivos": ["mobil.mp4", "mobil_capa.jpg"],
+   "texto": "Acha que precisa de um computador caro pra fazer desenho animado? Não precisa. 📱\n\nPersonagem, voz, animação e legenda, tudo no celular. No ônibus, no intervalo do trabalho, no sofá.\n\nAnimador de Bolso: o passo a passo do zero por R$19,90.",
+   "titulo": "Animação só com o celular"
+  },
+  {
+   "nome": "D_RendaExtra",
+   "tipo": "video",
+   "arquivos": ["renda.mp4", "renda_capa.jpg"],
+   "texto": "Toda loja do seu bairro precisa de vídeo. E quase ninguém sabe fazer. 🏪\n\nAprenda a criar animações com inteligência artificial pelo celular, para o seu perfil ou para clientes.\n\nAnimador de Bolso por R$19,90, com 7 dias de garantia.",
+   "titulo": "Aprenda e ofereça esse serviço"
+  }
+ ]
+}
