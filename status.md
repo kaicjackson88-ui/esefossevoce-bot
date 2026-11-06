@@ -1,13 +1,14 @@
 # Status do robô
 
-Última execução: 06/11 06:49 (Brasília) — ação `votos`
+Última execução: 06/11 07:01 (Brasília) — ação `postar`
 
 ## Fila
 
-1. biel-em2-cobra
+(vazia)
 
 ## Votações
 
+- **biel-em2-cobra** (aberta até 07/11 07:01): PERDOA: 0 · COBRA: 0 https://www.instagram.com/reel/DfZV7JCxwFY/
 - **biel-pr1** (aberta até 06/11 12:02): ACEITA: 3 · RECUSA: 1 https://www.instagram.com/reel/DfXTlkVKfew/
 - **biel-au1** (aberta até 06/11 10:34): APAGA: 302 · DEIXA: 18 https://www.instagram.com/reel/DfXJfgwsPOa/
 - **biel-px2-devolve** (aberta até 06/11 09:02): ABRE: 0 · CONFIA: 7 https://www.instagram.com/reel/DfW_AeFhpWE/
@@ -17,4 +18,3 @@
 - **biel-v2-p1** (encerrada — venceu ESCONDE): ESCONDE: 1 · CHAMA: 1 https://www.instagram.com/reel/DfSRp8zKY2x/
 - **biel-p3-paga** (encerrada — venceu MENTE): MENTE: 0 · CONTA: 0 https://www.instagram.com/reel/DfRuHJCC1_1/
 - **biel-p2-esconde** (encerrada — venceu PAGA): PAGA: 5 · ESPERA: 0 https://www.instagram.com/reel/DfMzmhCM29_/
-- **biel-p1b** (encerrada — venceu ESCONDE): ESCONDE: 6 · CHAMA: 0 https://www.instagram.com/reel/DfLRRY-sZip/

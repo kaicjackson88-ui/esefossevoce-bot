@@ -702,6 +702,29 @@
         "placar_em": "2026-11-06T09:45:39+00:00",
         "placar_total": 4
       }
+    },
+    {
+      "id": "biel-em2-cobra",
+      "media_id": "18189779863416107",
+      "permalink": "https://www.instagram.com/reel/DfZV7JCxwFY/",
+      "publicado_em": "2026-11-06T10:01:12+00:00",
+      "votacao": {
+        "aberta": true,
+        "opcoes": [
+          "PERDOA",
+          "COBRA"
+        ],
+        "ate": "2026-11-07T10:01:12+00:00",
+        "votos": {
+          "PERDOA": 0,
+          "COBRA": 0
+        },
+        "continuacao": {
+          "PERDOA": "biel-em3-perdoa",
+          "COBRA": "biel-em3-cobra"
+        },
+        "comentario_id": "18102106688430299"
+      }
     }
   ],
   "respondidos": [
