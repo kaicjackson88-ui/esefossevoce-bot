@@ -363,3 +363,26 @@ OK obj_lapis (5s)
 OK obj_rolo (6s)
 OK obj_moedas (5s)
 OK obj_play (5s)
+contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
+token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
+  verificação (token de usuário): status active
+  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
+segredos OK | GEMINI_API_KEY ok
+  HTTP 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (3fa5e99f-fe44-4ea5-983f-8ec0f39f0692)","code":4006}],"success":false,"result":{},"messages":[]}
+cota da conta 1 acabou: usando a conta 2
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (9d11088b-fe1e-49ee-81a0-626132968efc)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4e: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (e98351dd-cc4b-48cb-984c-b2a77f53667d)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au2_c5a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (52493eda-c742-4234-aa67-6c1d110ba45d)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au2_c5b: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (27a23541-6724-4767-99b7-f955d910b4d6)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou mco_s1_c4a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (66f637d9-39e6-4505-8b6a-e03f2c516873)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou pt_c3b: HTTP 400
+OK ad_claquete (6s)
+OK ad_microfone (6s)
+OK ad_lapis (8s)
+OK ad_rolo (9s)
+OK ad_celular (5s)
+OK ad_cerebro (7s)
