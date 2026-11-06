@@ -458,7 +458,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <script>
 // Links de checkout da Kiwify: cole aqui quando os produtos estiverem criados.
 // Enquanto estiverem vazios, os botões levam até a oferta.
-var LINKS = { curso: "", roteiros: "", personagens: "", mentoria: "" };
+var LINKS = { curso: "https://pay.kiwify.com.br/DPqtnSJ", roteiros: "", personagens: "", mentoria: "" };
 document.querySelectorAll(".js-comprar").forEach(function (a) {
   var url = LINKS[a.getAttribute("data-link") || "curso"] || LINKS.curso;
   if (url) { a.href = url; a.rel = "noopener"; }
