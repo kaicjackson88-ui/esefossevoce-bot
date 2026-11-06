@@ -1,0 +1,60 @@
+{
+ "id": "mco1",
+ "titulo": "O SÍNDICO",
+ "parte": 1,
+ "vozes": {
+  "Narrador": "Fenrir",
+  "Valdir": "Algenib"
+ },
+ "grupos": [
+  [
+   "Narrador",
+   "Valdir"
+  ]
+ ],
+ "estilo": "Leia em português do Brasil, como o narrador de uma história contada direto para quem assiste (você): voz grave e próxima, ritmo ágil e natural, pequena pausa nas reticências; tom de desespero cômico, cada vez mais tenso. Valdir: síndico de 60 anos, voz rouca, mal-humorada e autoritária, gravando áudio no grupo do condomínio.",
+ "falas": [
+  {
+   "cena": 0,
+   "quem": "Narrador",
+   "texto": "Seu cachorro latiu a madrugada inteira. E o síndico acabou de mandar áudio no grupo do condomínio."
+  },
+  {
+   "cena": 1,
+   "quem": "Narrador",
+   "texto": "Três e quarenta da manhã. O Thor latindo pra porta… sem parar."
+  },
+  {
+   "cena": 2,
+   "quem": "Narrador",
+   "texto": "No grupo, oitenta e dois moradores. E todo mundo acordado."
+  },
+  {
+   "cena": 3,
+   "quem": "Valdir",
+   "texto": "Bom dia, condomínio. Quem é o dono do cachorro do bloco B? Vou aplicar multa."
+  },
+  {
+   "cena": 4,
+   "quem": "Narrador",
+   "texto": "Aí a vizinha do lado respondeu: é do 302. Todo dia é isso."
+  },
+  {
+   "cena": 5,
+   "quem": "Narrador",
+   "texto": "Multa de trezentos reais. E se repetir… o Thor pode ter que sair do prédio."
+  },
+  {
+   "cena": 6,
+   "quem": "Narrador",
+   "texto": "Você responde no grupo e pede desculpa… ou ignora e finge que não é com você? Comenta RESPONDE ou IGNORA. Os comentários decidem a parte dois."
+  }
+ ],
+ "votacao": {
+  "opcoes": [
+   "RESPONDE",
+   "IGNORA"
+  ],
+  "horas": 24
+ }
+}

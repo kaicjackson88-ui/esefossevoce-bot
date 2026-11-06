@@ -2061,5 +2061,171 @@
   "refs": [
    "biel_ref"
   ]
+ },
+ {
+  "id": "mco_ana_ref",
+  "w": 1024,
+  "h": 1024,
+  "seed": 901,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. Ana: a Brazilian woman in her late 20s, warm light-brown skin, long wavy dark-brown hair, friendly face, teal t-shirt with a small white paw print, blue jeans. Bust portrait facing the camera, gentle smile, cozy apartment living room behind, soft daylight."
+ },
+ {
+  "id": "mco_thor_ref",
+  "w": 1024,
+  "h": 1024,
+  "seed": 901,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. Thor: a golden retriever puppy, fluffy golden fur, big shiny brown eyes, floppy ears, red collar. Close portrait of the puppy sitting, looking at the camera, head tilted, happy, cozy living room behind."
+ },
+ {
+  "id": "mco_valdir_ref",
+  "w": 1024,
+  "h": 1024,
+  "seed": 901,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. Seu Valdir: a grumpy Brazilian building manager of 60, bald on top with grey hair on the sides, thick grey mustache, round belly, light-blue short-sleeve button shirt, reading glasses hanging on a cord. Bust portrait facing the camera, frowning, arms crossed, apartment building hallway behind."
+ },
+ {
+  "id": "mco_neide_ref",
+  "w": 1024,
+  "h": 1024,
+  "seed": 901,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. Dona Neide: a Brazilian woman of 62, short curly silver hair, pearl necklace, purple cardigan, judgmental raised eyebrow. Bust portrait facing the camera, judgmental look, one eyebrow raised, cozy living room behind."
+ },
+ {
+  "id": "mco_s1_c1a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 911,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The woman from image 0, at night in a dark bedroom, sitting up in bed in pajamas, horrified, eyes wide, face lit by blue phone light from below. Head and shoulders, NO hands. Vertical composition.",
+  "refs": [
+   "mco_ana_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c1b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 947,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The woman from image 0, at night in a dark bedroom, sitting up in bed in pajamas, horrified, eyes wide, face lit by blue phone light from below. Head and shoulders, NO hands. Vertical composition.",
+  "refs": [
+   "mco_ana_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c2a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 911,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The puppy from image 0, at night in a dark apartment hallway, barking loudly at the front door, mouth open, moonlight from a window. Vertical composition.",
+  "refs": [
+   "mco_thor_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c2b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 947,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The puppy from image 0, at night in a dark apartment hallway, barking loudly at the front door, mouth open, moonlight from a window. Vertical composition.",
+  "refs": [
+   "mco_thor_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c3a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 911,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. Night view of a tall Brazilian apartment building, many windows lighting up one by one, people waking up, dark blue sky. Vertical composition."
+ },
+ {
+  "id": "mco_s1_c3b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 947,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. Night view of a tall Brazilian apartment building, many windows lighting up one by one, people waking up, dark blue sky. Vertical composition."
+ },
+ {
+  "id": "mco_s1_c4a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 911,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The man from image 0, in his apartment at night in a white tank top, angry, talking into his phone held near his mouth recording a voice message, messy grey hair. Vertical composition.",
+  "refs": [
+   "mco_valdir_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c4b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 947,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The man from image 0, in his apartment at night in a white tank top, angry, talking into his phone held near his mouth recording a voice message, messy grey hair. Vertical composition.",
+  "refs": [
+   "mco_valdir_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c5a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 911,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. A nosy Brazilian woman neighbor of 50 with curlers in her hair and a pink robe, peeking through her door peephole at night, smirking, gossip face. Head and shoulders. Vertical composition."
+ },
+ {
+  "id": "mco_s1_c5b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 947,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. A nosy Brazilian woman neighbor of 50 with curlers in her hair and a pink robe, peeking through her door peephole at night, smirking, gossip face. Head and shoulders. Vertical composition."
+ },
+ {
+  "id": "mco_s1_c6a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 911,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The woman from image 0, in pajamas, sitting on the floor of her living room at night hugging a golden retriever puppy, worried and sad, soft lamp light. Vertical composition.",
+  "refs": [
+   "mco_ana_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c6b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 947,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The woman from image 0, in pajamas, sitting on the floor of her living room at night hugging a golden retriever puppy, worried and sad, soft lamp light. Vertical composition.",
+  "refs": [
+   "mco_ana_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c7a",
+  "w": 1088,
+  "h": 1920,
+  "seed": 911,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The woman from image 0, dramatic extreme close-up, face split by warm and cold light, worried, deciding. Only head, NO hands. Vertical composition.",
+  "refs": [
+   "mco_ana_ref"
+  ]
+ },
+ {
+  "id": "mco_s1_c7b",
+  "w": 1088,
+  "h": 1920,
+  "seed": 947,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. The woman from image 0, dramatic extreme close-up, face split by warm and cold light, worried, deciding. Only head, NO hands. Vertical composition.",
+  "refs": [
+   "mco_ana_ref"
+  ]
+ },
+ {
+  "id": "mco_avatar",
+  "w": 1024,
+  "h": 1024,
+  "seed": 911,
+  "prompt": "3D animated feature film style: soft global illumination, warm cozy colors, smooth stylized shapes, big expressive eyes, subsurface skin, high detail, cinematic lighting, family-friendly, no text, no letters, no numbers, no logos, no watermark. Close portrait of the puppy from image 0, happy, tongue out, looking at the camera, centered, plain warm yellow background, the face fills the frame.",
+  "refs": [
+   "mco_thor_ref"
+  ]
  }
 ]
