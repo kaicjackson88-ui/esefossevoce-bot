@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, Easing} from 'remotion';
+import {AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, Easing} from 'remotion';
 import TT from './campanha_tempos.json';
 
 // Campanha "Animador de Bolso": criativos com uma dor e um estilo cada
@@ -422,6 +422,111 @@ export const CriRosto: React.FC = () => {
         </AbsoluteFill>
       )}
       <Flash f={f} cortes={cortes} cor={AM} />
+    </AbsoluteFill>
+  );
+};
+
+// =============== 3. PROVA 3 MILHÕES — pôster vermelho com vídeos reais ===============
+export const CriProva: React.FC = () => {
+  const f = useCurrentFrame();
+  const {ini, total} = TEMPOS.Prova; const [a, b, c, d, e] = ini;
+  const VR = '#e5321f', PAPEL = '#e8e6e1', TI = '#0e0e0e';
+  const cortes = [b, c, d, e];
+  const v = Math.round(lin(f, 6, 60, 0, 3000000, Easing.out(Easing.cubic)));
+  const det = (tag: string) => (
+    <div style={{position: 'absolute', top: 120, left: 60, right: 60, display: 'flex', justifyContent: 'space-between', fontFamily: F, fontWeight: 600, fontSize: 22, letterSpacing: '0.08em', color: TI}}>
+      <span>ANIMADOR DE BOLSO<br /><span style={{opacity: .5}}>{tag}</span></span><span style={{textAlign: 'right', opacity: .6}}>PERFIS<br />REAIS</span>
+    </div>
+  );
+  const circ = (fr: number, size: number, x: number, y: number, cor = VR) => <div style={{position: 'absolute', left: x - size / 2, top: y - size / 2, width: size, height: size, borderRadius: '50%', background: cor, transform: `scale(${sp(fr, 14, 90)})`}} />;
+  return (
+    <AbsoluteFill style={{background: PAPEL}}>
+      <Fontes /><Sons voz="Prova" cortes={cortes} fim={total} />
+      <Sequence from={a + 60}><Audio src={S('ad/hit.wav')} volume={0.45} /></Sequence>
+      {f < b && (
+        <AbsoluteFill>
+          <Letreiro f={f} t="3 MILHÕES" top={520} cor="rgba(14,14,14,.09)" vel={8} />
+          {circ(f, 820, 540, 860)}
+          {det('VIRAL DE VERDADE')}
+          <Celular rx={lin(f, 0, 30, 30, 6) + Math.sin(f / 25) * 2} ry={lin(f, 0, 30, -40, -14)} rz={2} s={lin(f, 0, 30, 0.5, 0.6)} y={lin(f, 0, 30, 500, -80)}>
+            <OffthreadVideo src={S('ad/rec_predio.mp4')} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+          </Celular>
+          <div style={{position: 'absolute', right: 70, top: 560, fontFamily: F, fontWeight: 900, fontSize: 50, background: '#fff', padding: '14px 28px', borderRadius: 50, boxShadow: '0 20px 40px rgba(0,0,0,.25)', transform: `scale(${sp(f - 30, 10, 180)})`}}>♥ 1 mi</div>
+          <div style={{position: 'absolute', left: 60, top: 900, fontFamily: F, fontWeight: 900, fontSize: 50, background: '#fff', padding: '14px 28px', borderRadius: 50, boxShadow: '0 20px 40px rgba(0,0,0,.25)', transform: `scale(${sp(f - 42, 10, 180)})`}}>↗ 89 mil</div>
+          <Centro top={1440}>
+            <div style={{fontFamily: F, fontWeight: 900, fontSize: 150, color: TI, letterSpacing: '-0.06em', transform: `scale(${1 + 0.07 * (1 - sp(f - 60, 8, 200))})`}}>{v >= 3000000 ? '3 MILHÕES' : v.toLocaleString('pt-BR')}</div>
+            <div style={{fontFamily: F, fontWeight: 800, fontSize: 44, color: '#fff', background: TI, padding: '8px 22px', marginTop: 6}}>DE VISUALIZAÇÕES</div>
+          </Centro>
+        </AbsoluteFill>
+      )}
+      {f >= b && f < c && (
+        <AbsoluteFill style={{background: TI}}>
+          <Letreiro f={f - b} t="NEGÓCIO" top={1340} cor="rgba(229,50,31,.35)" vel={-12} />
+          {[{src: 'ad/rec_predio.mp4', x: -330, r: -8, k: 0}, {src: 'ad/rec_cara.mp4', x: 0, r: 0, k: 6}, {src: 'ad/rec_amigos.mp4', x: 330, r: 8, k: 12}].map((o) => {
+            const s = sp(f - b - o.k, 13, 120);
+            return (
+              <div key={o.src} style={{position: 'absolute', top: 360, left: 540 - 190 + o.x, width: 380, height: 820, borderRadius: 40, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.6)', border: '6px solid #fff', transform: `translateY(${(1 - s) * 1200}px) rotate(${o.r}deg) scale(${o.x === 0 ? 1.1 : 0.95})`, zIndex: o.x === 0 ? 2 : 1}}>
+                <Sequence from={b}><OffthreadVideo src={S(o.src)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} /></Sequence>
+              </div>
+            );
+          })}
+          <Centro top={1300}><div style={{fontFamily: F, fontWeight: 900, fontSize: 96, color: '#fff', letterSpacing: '-0.05em', transform: `scale(${sp(f - b - 20, 10, 170)}) rotate(-2deg)`, background: VR, padding: '6px 34px'}}>viraram negócio</div></Centro>
+        </AbsoluteFill>
+      )}
+      {f >= c && f < d && (() => {
+        const t2 = c + 52;
+        const risco = lin(f, c + 30, c + 40, 0, 1);
+        return (
+          <AbsoluteFill>
+            {det('O ATALHO')}
+            {f < t2 + 4 ? (
+              <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
+                <svg width={620} height={520} viewBox="0 0 620 520" style={{transform: `scale(${sp(f - c, 12, 140)})`}}>
+                  <rect x={40} y={20} width={540} height={340} rx={24} fill={TI} /><rect x={66} y={46} width={488} height={288} rx={8} fill="#3a3a3a" />
+                  <rect x={260} y={360} width={100} height={70} fill={TI} /><rect x={160} y={430} width={300} height={26} rx={10} fill={TI} />
+                  <line x1={20} y1={20} x2={20 + 580 * risco} y2={20 + 480 * risco} stroke={VR} strokeWidth={40} strokeLinecap="round" />
+                </svg>
+                <div style={{marginTop: 60}}><Txt t="eles fazem no PC" f0={c + 4} size={96} /></div>
+              </AbsoluteFill>
+            ) : (
+              <AbsoluteFill>
+                {circ(f - t2, 640, 540, 800)}
+                <Obj src="ad/ad_celular_t.png" f={f - t2} size={820} x={540} y={820} rot={-12} />
+                <Centro top={1340}><Txt t="você faz parecido" f0={t2 + 2} size={84} peso={800} /><div style={{height: 14}} /><Txt t="só com o celular." f0={t2 + 22} size={110} cor={VR} /></Centro>
+              </AbsoluteFill>
+            )}
+          </AbsoluteFill>
+        );
+      })()}
+      {f >= d && f < e && (
+        <AbsoluteFill>
+          {det('O MÉTODO')}
+          {[{src: 'ad/ad_lapis_t.png', t: 'Roteiro', x: 200, k: 2}, {src: 'biel/avatar_biel.jpg', t: 'Personagem', x: 540, k: 20, st: true}, {src: 'ad/ad_microfone_t.png', t: 'Voz', x: 880, k: 40}].map((o) => {
+            const s = sp(f - d - o.k, 11, 150);
+            return (
+              <React.Fragment key={o.t}>
+                {circ(f - d - o.k + 2, 300, o.x, 760, o.st ? VR : '#d3d0c9')}
+                {o.st ? <Img src={S(o.src)} style={{position: 'absolute', left: o.x - 125, top: 635, width: 250, height: 250, borderRadius: '50%', border: '10px solid #fff', objectFit: 'cover', transform: `scale(${s})`}} /> : <Obj src={o.src} f={f - d - o.k} size={340} x={o.x} y={760} rot={-8} sombra={false} />}
+                <div style={{position: 'absolute', left: o.x - 180, width: 360, top: 940, textAlign: 'center', fontFamily: F, fontWeight: 900, fontSize: 58, color: TI, opacity: Math.min(1, s)}}>{o.t}</div>
+              </React.Fragment>
+            );
+          })}
+          {f >= d + 80 && <Centro top={1200}><div style={{fontFamily: F, fontWeight: 900, fontSize: 120, color: '#fff', background: TI, padding: '6px 40px', letterSpacing: '-0.05em', transform: `scale(${sp(f - d - 80, 9, 200)}) rotate(-2deg)`}}>COM IA</div></Centro>}
+        </AbsoluteFill>
+      )}
+      {f >= e && (
+        <AbsoluteFill>
+          <Letreiro f={f - e} t="ANIMADOR" top={1380} cor="rgba(14,14,14,.08)" vel={8} />
+          {circ(f - e, 720, 540, 700)}
+          <Obj src="ad/ad_rolo_t.png" f={f - e - 6} size={600} x={540} y={700} rot={10} />
+          {det('PASSO A PASSO')}
+          <Centro top={1100}>
+            <Txt t="Animador" f0={e + 4} size={160} /><Txt t="de Bolso" f0={e + 12} size={160} cor={VR} />
+            <div style={{marginTop: 50, transform: `scale(${sp(f - e - 26, 11)})`}}><Botao f={f} fim={total} fundo={TI} cor="#fff" /></div>
+          </Centro>
+        </AbsoluteFill>
+      )}
+      <Flash f={f} cortes={cortes} />
     </AbsoluteFill>
   );
 };

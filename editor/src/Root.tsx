@@ -4,9 +4,9 @@ import {BielHist, BielHistCapa, totalHist} from './BielHist';
 import {EPS} from './eps';
 import {AdTeste, AD_DUR} from './Motion';
 import {AdV2, AD2_DUR} from './AdV2';
-import {CriPreco, CriMobil, CriRenda, CriRosto, TEMPOS} from './Campanha';
+import {CriPreco, CriMobil, CriRenda, CriRosto, CriProva, TEMPOS} from './Campanha';
 
-const CRIATIVOS = {Preco: CriPreco, Mobil: CriMobil, Renda: CriRenda, Rosto: CriRosto};
+const CRIATIVOS = {Preco: CriPreco, Mobil: CriMobil, Prova: CriProva, Renda: CriRenda, Rosto: CriRosto};
 
 export const Root: React.FC = () => (
   <>
