@@ -107,5 +107,15 @@
   "quando": "2026-11-06T10:03:10.862069+00:00",
   "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess",
   "comentario_id": "UgwqTu_ZBkcayLyblf94AaABAg"
+ },
+ {
+  "id": "biel-au2-apaga",
+  "video_id": "TufbQju88I4",
+  "privacidade": "public",
+  "titulo": "O Corre do Biel • Parte 2 — O Áudio Errado #shorts",
+  "link": "https://youtube.com/shorts/TufbQju88I4",
+  "quando": "2026-11-06T12:03:52.191856+00:00",
+  "capa": "erro: Google respondeu 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"mess",
+  "comentario_id": "Ugwwgn9HbyaIkRnMWrh4AaABAg"
  }
 ]
