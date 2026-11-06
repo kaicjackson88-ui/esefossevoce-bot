@@ -258,3 +258,39 @@ OK au2_c4b (10s)
 falhou au2_c5a: HTTP 400
   HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (6a67c9e8-4abe-49d7-b150-d43103520186)","code":3030}],"success":false,"result":{},"messages":[]}
 falhou au2_c5b: HTTP 400
+contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
+token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
+  verificação (token de usuário): status active
+  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
+segredos OK | GEMINI_API_KEY ok
+OK p3_c4b (6s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (6c88383c-7ada-488b-9d14-a640144526d5)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4e: HTTP 400
+OK au_c5a (6s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (044afa8d-ac74-4918-930e-26df77fdf83d)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au2_c5a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (951f2b4b-6c0d-404d-a2b0-9a42d5cac97d)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au2_c5b: HTTP 400
+OK mco_ana_ref (10s)
+OK mco_thor_ref (8s)
+OK mco_valdir_ref (10s)
+OK mco_neide_ref (10s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (e61d9bf1-ce0e-43a9-b3ea-3d9dc3713064)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou mco_s1_c1a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (6f79d17c-6f46-4944-9836-c156c90873f0)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou mco_s1_c1b: HTTP 400
+OK mco_s1_c2a (9s)
+OK mco_s1_c2b (6s)
+OK mco_s1_c3a (10s)
+OK mco_s1_c3b (10s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (625b8543-1056-4435-9862-f2d225375211)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou mco_s1_c4a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (f0ddeb1d-5b61-4aee-8ab1-bbfc5c3c9559)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou mco_s1_c4b: HTTP 400
+OK mco_s1_c5a (11s)
+OK mco_s1_c5b (9s)
+OK mco_s1_c6a (7s)
+OK mco_s1_c6b (27s)
+OK mco_s1_c7a (7s)
+OK mco_s1_c7b (6s)
+OK mco_avatar (4s)
