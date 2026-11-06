@@ -1,6 +1,10 @@
 # Status do robô
 
-Última execução: 06/11 08:10 (Brasília) — ação `votos`
+Última execução: 06/11 08:15 (Brasília) — ação `ciclo`
+
+## Avisos
+
+- Fila vazia: nada foi postado. Peça novos vídeos ao Claude.
 
 ## Fila
 
@@ -10,7 +14,7 @@
 
 - **biel-em2-cobra** (aberta até 07/11 07:01): PERDOA: 0 · COBRA: 2 https://www.instagram.com/reel/DfZV7JCxwFY/
 - **biel-pr1** (aberta até 06/11 12:02): ACEITA: 3 · RECUSA: 1 https://www.instagram.com/reel/DfXTlkVKfew/
-- **biel-au1** (aberta até 06/11 10:34): APAGA: 350 · DEIXA: 21 https://www.instagram.com/reel/DfXJfgwsPOa/
+- **biel-au1** (aberta até 06/11 10:34): APAGA: 353 · DEIXA: 21 https://www.instagram.com/reel/DfXJfgwsPOa/
 - **biel-px2-devolve** (aberta até 06/11 09:02): ABRE: 0 · CONFIA: 7 https://www.instagram.com/reel/DfW_AeFhpWE/
 - **biel-em1** (encerrada — venceu COBRA): COBRA: 26 · ESQUECE: 0 https://www.instagram.com/reel/DfWur1MqhmI/
 - **biel-bl1** (encerrada — venceu CONTA): CONTA: 1 · GUARDA: 1 https://www.instagram.com/reel/DfVdn9dI_I2/
