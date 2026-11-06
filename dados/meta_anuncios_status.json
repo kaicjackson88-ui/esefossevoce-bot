@@ -1,17 +1,105 @@
 {
- "permissoes": [],
- "faltam": [
+ "permissoes": [
   "ads_management",
-  "ads_read"
+  "ads_read",
+  "business_management",
+  "email",
+  "instagram_basic",
+  "instagram_branded_content_ads_brand",
+  "instagram_branded_content_brand",
+  "instagram_branded_content_creator",
+  "instagram_content_publish",
+  "instagram_creator_marketplace_discovery",
+  "instagram_creator_marketplace_messaging",
+  "instagram_manage_comments",
+  "instagram_manage_contents",
+  "instagram_manage_engagement",
+  "instagram_manage_events",
+  "instagram_manage_insights",
+  "instagram_manage_messages",
+  "instagram_manage_upcoming_events",
+  "instagram_shopping_tag_products",
+  "pages_manage_posts",
+  "pages_read_engagement",
+  "pages_show_list",
+  "public_profile"
  ],
- "contas_anuncio": [],
- "paginas": [],
- "pixels": [],
+ "faltam": [],
+ "contas_anuncio": [
+  {
+   "id": "act_1799202680158211",
+   "nome": "Kaic Jackson",
+   "moeda": "BRL",
+   "status": 1,
+   "gasto": "188990",
+   "pagamento": "Saldo disponível (R$2,47 BRL)"
+  },
+  {
+   "id": "act_1654358850033325",
+   "nome": "Protocolo ausência ",
+   "moeda": "BRL",
+   "status": 1,
+   "gasto": "0",
+   "pagamento": null
+  }
+ ],
+ "paginas": [
+  {
+   "id": "1450273264828927",
+   "nome": "O corre do biel",
+   "ig": "17841411694131308",
+   "ig_user": "ocorredobiel"
+  },
+  {
+   "id": "1284657694728838",
+   "nome": "Meu cão obedece",
+   "ig": "17841474456587008",
+   "ig_user": "meu_cao_obedece"
+  },
+  {
+   "id": "592133483991652",
+   "nome": "Codigo ausencia",
+   "ig": null,
+   "ig_user": null
+  }
+ ],
+ "pixels": [
+  {
+   "conta": "act_1799202680158211",
+   "id": "1702277674672285",
+   "nome": "Código ausência",
+   "ultimo_evento": "2026-11-03T23:58:44-0300"
+  },
+  {
+   "conta": "act_1799202680158211",
+   "id": "1479327760890680",
+   "nome": "pixel meu cao obdece",
+   "ultimo_evento": "2026-11-05T15:14:40-0300"
+  },
+  {
+   "conta": "act_1799202680158211",
+   "id": "1814241013073630",
+   "nome": "pixel meu cao obdece \\veo1",
+   "ultimo_evento": null
+  },
+  {
+   "conta": "act_1654358850033325",
+   "id": "1028043296250722",
+   "nome": "Dados do código ausência",
+   "ultimo_evento": "2026-07-28T11:50:25-0300"
+  },
+  {
+   "conta": "act_1654358850033325",
+   "id": "1479327760890680",
+   "nome": "pixel meu cao obdece",
+   "ultimo_evento": "2026-11-05T15:14:40-0300"
+  }
+ ],
  "pixel_site": {
   "1479327760890680": {
    "id": "1479327760890680",
    "name": "pixel meu cao obdece",
-   "last_fired_time": "2026-11-05T18:14:40+0000",
+   "last_fired_time": "2026-11-05T15:14:40-0300",
    "owner_business": {
     "id": "3744560922226564",
     "name": "Kaic Jakson"
@@ -22,5 +110,30 @@
    }
   }
  },
- "instagrams": []
+ "instagrams": [
+  {
+   "pagina": "1450273264828927",
+   "rota": "instagram_accounts",
+   "id": "17841411694131308",
+   "user": "ocorredobiel"
+  },
+  {
+   "pagina": "1284657694728838",
+   "rota": "instagram_accounts",
+   "id": "17841474456587008",
+   "user": "meu_cao_obedece"
+  },
+  {
+   "pagina": "1284657694728838",
+   "rota": "page_backed_instagram_accounts",
+   "id": "17841439293755946",
+   "user": null
+  },
+  {
+   "pagina": "592133483991652",
+   "rota": "page_backed_instagram_accounts",
+   "id": "17841475059523175",
+   "user": null
+  }
+ ]
 }
