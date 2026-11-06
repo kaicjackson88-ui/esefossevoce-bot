@@ -1,21 +1,21 @@
 # Status do robô
 
-Última execução: 06/11 10:22 (Brasília) — ação `ciclo`
+Última execução: 06/11 11:22 (Brasília) — ação `ciclo`
 
 ## Avisos
 
-- Fila vazia: nada foi postado. Peça novos vídeos ao Claude.
+- Último post foi há menos de 4h: 'biel-au2-apaga' espera a próxima rodada.
 
 ## Fila
 
-(vazia)
+1. biel-au2-apaga
 
 ## Votações
 
-- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 15 · CONTA: 4 https://www.instagram.com/reel/DfZjs6Rop02/
-- **biel-em2-cobra** (aberta até 07/11 07:01): PERDOA: 0 · COBRA: 2 https://www.instagram.com/reel/DfZV7JCxwFY/
+- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 21 · CONTA: 4 https://www.instagram.com/reel/DfZjs6Rop02/
+- **biel-em2-cobra** (aberta até 07/11 07:01): PERDOA: 0 · COBRA: 3 https://www.instagram.com/reel/DfZV7JCxwFY/
 - **biel-pr1** (aberta até 06/11 12:02): ACEITA: 3 · RECUSA: 1 https://www.instagram.com/reel/DfXTlkVKfew/
-- **biel-au1** (aberta até 06/11 10:34): APAGA: 415 · DEIXA: 24 https://www.instagram.com/reel/DfXJfgwsPOa/
+- **biel-au1** (encerrada — venceu APAGA): APAGA: 443 · DEIXA: 24 https://www.instagram.com/reel/DfXJfgwsPOa/
 - **biel-px2-devolve** (encerrada — venceu CONFIA): ABRE: 0 · CONFIA: 7 https://www.instagram.com/reel/DfW_AeFhpWE/
 - **biel-em1** (encerrada — venceu COBRA): COBRA: 26 · ESQUECE: 0 https://www.instagram.com/reel/DfWur1MqhmI/
 - **biel-bl1** (encerrada — venceu CONTA): CONTA: 1 · GUARDA: 1 https://www.instagram.com/reel/DfVdn9dI_I2/
