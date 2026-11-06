@@ -109,3 +109,32 @@ export const ProdMentoria: React.FC = () => (
     </div>
   </AbsoluteFill>
 );
+
+// Capa quadrada do produto (Kiwify) e banner do checkout, com fundo escuro da marca
+const FundoMarca: React.FC = () => (
+  <AbsoluteFill style={{background: 'radial-gradient(ellipse at 70% 40%, #3a2416 0%, #151311 45%, #0d0c0b 100%)'}} />
+);
+export const CapaKiwify: React.FC = () => (
+  <AbsoluteFill>
+    <Fontes /><FundoMarca />
+    <div style={{position: 'absolute', left: 70, top: 90, fontFamily: SANS, color: TXT, zIndex: 5}}>
+      <div style={{fontSize: 24, fontWeight: 700, letterSpacing: '0.16em', color: ACC}}>CURSO PELO CELULAR</div>
+      <div style={{fontWeight: 800, fontSize: 108, letterSpacing: '-0.05em', lineHeight: 0.95, marginTop: 16}}>Animador<br /><span style={{fontFamily: SERIF, fontStyle: 'italic', fontWeight: 400, color: ACC2, fontSize: 122}}>de Bolso</span></div>
+      <div style={{marginTop: 22, fontSize: 28, color: '#c9c1b4', lineHeight: 1.3, maxWidth: 330}}>Desenhos animados que viralizam, só com o celular</div>
+    </div>
+    <div style={{position: 'absolute', left: 300, top: 150, width: 1080, height: 1080, transform: 'scale(.82)', transformOrigin: 'top left'}}><ProdCurso /></div>
+  </AbsoluteFill>
+);
+export const BannerCheckout: React.FC = () => (
+  <AbsoluteFill>
+    <Fontes /><FundoMarca />
+    <div style={{position: 'absolute', left: 70, top: 0, bottom: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', fontFamily: SANS, color: TXT, zIndex: 5}}>
+      <div style={{fontSize: 22, fontWeight: 700, letterSpacing: '0.16em', color: ACC}}>VOCÊ ESTÁ A UM PASSO</div>
+      <div style={{fontWeight: 800, fontSize: 84, letterSpacing: '-0.05em', lineHeight: 1, marginTop: 10}}>Animador <span style={{fontFamily: SERIF, fontStyle: 'italic', fontWeight: 400, color: ACC2, fontSize: 94}}>de Bolso</span></div>
+      <div style={{display: 'flex', gap: 26, marginTop: 22, fontSize: 24, color: '#c9c1b4'}}>
+        {['Acesso imediato', 'Pagamento único', 'Garantia de 7 dias'].map((t) => <span key={t} style={{display: 'flex', alignItems: 'center', gap: 10}}><span style={{width: 10, height: 10, borderRadius: 5, background: '#2fd6a3'}} />{t}</span>)}
+      </div>
+    </div>
+    <div style={{position: 'absolute', right: -60, top: -170, width: 1080, height: 1080, transform: 'scale(.72)', transformOrigin: 'top right'}}><ProdCurso /></div>
+  </AbsoluteFill>
+);
