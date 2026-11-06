@@ -159,7 +159,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .oferta .btn{width:100%;padding:21px 28px;font-size:18px}
 .bumps{margin-top:26px;border-top:1px solid var(--linha);padding-top:22px}
 .bumps p{margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mut2)}
-.bump{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px dashed var(--linha)}
+.bump{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px dashed var(--linha)}
+.bump img{width:72px;height:72px;flex:none;border-radius:14px;background:var(--bg3);object-fit:contain}
+.bump > div{flex:1;min-width:0}
+.prodimg{width:min(360px,90%);margin:-6px auto 0}
 .bump:last-child{border-bottom:0}
 .bump b{font-size:15.5px;font-weight:700;display:block}
 .bump small{font-size:13.5px;color:var(--mut)}
@@ -225,6 +228,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .toast .ic{width:34px;height:34px}
   .passos{grid-template-columns:1fr}
   .hero .acoes .btn,.hero .acoes .btn-sec{width:100%}
+  .bump{flex-wrap:wrap;gap:6px 12px}
+  .bump img{width:56px;height:56px}
+  .bump > div{flex:1 1 160px}
+  .bump .pr{flex-basis:100%;padding-left:68px}
 }
 </style>
 
@@ -379,6 +386,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </div>
       <div class="oferta rev">
         <span class="tag">Acesso completo</span>
+        <img class="prodimg" src="img/prod_curso.webp" alt="Animador de Bolso: área de membros com os 7 módulos no celular" width="720" height="720">
         <div class="preco" aria-label="R$ 19,90"><span class="rs">R$</span><span class="v">19</span><span class="c">,90</span></div>
         <div class="de">pagamento único · Pix ou cartão</div>
         <ul>
@@ -390,9 +398,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         <a class="btn js-comprar" data-link="curso" href="#oferta">Quero o Animador de Bolso <span class="seta" aria-hidden="true">→</span></a>
         <div class="bumps">
           <p>Você pode adicionar no checkout</p>
-          <div class="bump"><div><b>Pack 30 Roteiros Virais</b><small>histórias prontas para animar</small></div><span class="pr">+ R$ 9,90</span></div>
-          <div class="bump"><div><b>Pack de Personagens Fixos</b><small>personagens com folha de expressões</small></div><span class="pr">+ R$ 27,00</span></div>
-          <div class="bump"><div><b>Mentoria individual</b><small>revisão do seu perfil e do primeiro vídeo</small></div><span class="pr">+ R$ 47,00</span></div>
+          <div class="bump"><img src="img/prod_roteiros.webp" alt="" width="72" height="72" loading="lazy"><div><b>Pack 30 Roteiros Virais</b><small>histórias prontas para animar</small></div><span class="pr">+ R$ 9,90</span></div>
+          <div class="bump"><img src="img/prod_personagens.webp" alt="" width="72" height="72" loading="lazy"><div><b>Pack de Personagens Fixos</b><small>personagens com folha de expressões</small></div><span class="pr">+ R$ 27,00</span></div>
+          <div class="bump"><img src="img/prod_mentoria.webp" alt="" width="72" height="72" loading="lazy"><div><b>Mentoria individual</b><small>revisão do seu perfil e do primeiro vídeo</small></div><span class="pr">+ R$ 47,00</span></div>
         </div>
       </div>
       <div class="garantia rev"><div class="sel">7d</div><p><b>Garantia de 7 dias.</b> Se não gostar, pede o reembolso pela plataforma e recebe 100% de volta.</p></div>

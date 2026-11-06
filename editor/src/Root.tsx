@@ -8,6 +8,7 @@ import {ProvaV3, PROVA3_DUR} from './ProvaV3';
 import {PrecoV3, PRECO3_DUR} from './PrecoV3';
 import {MobilV3, MOBIL3_DUR} from './MobilV3';
 import {RendaV3, RENDA3_DUR} from './RendaV3';
+import {ProdCurso, ProdRoteiros, ProdPersonagens, ProdMentoria} from './Produtos';
 import {CriPreco, CriMobil, CriRenda, CriRosto, CriProva, TEMPOS} from './Campanha';
 
 const CRIATIVOS = {Preco: CriPreco, Mobil: CriMobil, Prova: CriProva, Renda: CriRenda, Rosto: CriRosto};
@@ -17,6 +18,7 @@ export const Root: React.FC = () => (
     {Object.entries(CRIATIVOS).map(([k, C]) => (
       <Composition key={k} id={`Cri-${k}`} component={C} durationInFrames={TEMPOS[k].total} fps={30} width={1080} height={1920} />
     ))}
+    {Object.entries({Curso: ProdCurso, Roteiros: ProdRoteiros, Personagens: ProdPersonagens, Mentoria: ProdMentoria}).map(([k, C]) => <Composition key={k} id={`Prod-${k}`} component={C} durationInFrames={1} fps={30} width={1080} height={1080} />)}
     <Composition id="Cri-Renda3" component={RendaV3} durationInFrames={RENDA3_DUR} fps={30} width={1080} height={1920} />
     <Composition id="Cri-Mobil3" component={MobilV3} durationInFrames={MOBIL3_DUR} fps={30} width={1080} height={1920} />
     <Composition id="Cri-Preco3" component={PrecoV3} durationInFrames={PRECO3_DUR} fps={30} width={1080} height={1920} />
