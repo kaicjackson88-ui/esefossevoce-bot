@@ -147,7 +147,7 @@ const VENDAS: Venda[] = [
 
 const Cena: React.FC<{f: number; de: number; ate: number; children: React.ReactNode; fundo?: string}> = ({f, de, ate, children, fundo}) => {
   if (f < de - 1 || f >= ate + 6) return null;
-  const ent = lin(f, de - 1, de + 8, 0, 1);
+  const ent = de <= 0 ? 1 : lin(f, de - 1, de + 8, 0, 1);
   const sai = lin(f, ate - 2, ate + 6, 0, 1, Easing.in(Easing.cubic));
   return <AbsoluteFill style={{background: fundo, opacity: 1 - sai, filter: `blur(${(1 - ent) * 24 + sai * 30}px)`, transform: `scale(${0.88 + 0.12 * ent + sai * 0.3}) rotate(${(1 - ent) * -2 + sai * 2}deg)`}}>{children}</AbsoluteFill>;
 };
@@ -174,21 +174,21 @@ export const ProvaV3: React.FC = () => {
       <Cena f={f} de={a} ate={b}>
         <Papel />
         <Letreiro f={f} t="3.000.000" top={600} cor="rgba(14,14,14,.07)" vel={7} />
-        <Circulo f={f - 2} size={780} x={540} y={930} anel />
+        <Circulo f={f + 8} size={780} x={540} y={930} anel />
         <Cantos f={f} tag="VIRAL DE VERDADE" num="nº 01" />
         <Centro top={250}>{f < a + 78 ? <Frase f0={a + 2} size={84} p={[{t: 'você já viu', serif: true}, {t: 'esses perfis?'}]} /> : <Frase f0={a + 80} size={84} p={[{t: 'esse desenho', serif: true}, {t: 'passou de'}]} />}</Centro>
-        <Celular rx={lin(f, 0, 34, 34, 6) + Math.sin(f / 26) * 2} ry={lin(f, 0, 34, -42, -15) + Math.sin(f / 34) * 4} rz={3} s={lin(f, 0, 34, 0.46, 0.55)} y={lin(f, 0, 34, 520, -10)}>
+        <Celular rx={lin(f, 0, 14, 34, 6) + Math.sin(f / 26) * 2} ry={lin(f, 0, 14, -42, -15) + Math.sin(f / 34) * 4} rz={3} s={lin(f, 0, 14, 0.46, 0.55)} y={lin(f, 0, 14, 520, -10)}>
           <OffthreadVideo src={S('ad/rec_predio.mp4')} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         </Celular>
         <Chip f={f - 30} t="♥ 1 mi" x={880} y={640} lx={700} ly={760} />
         <Chip f={f - 40} t="↗ 89 mil" x={190} y={880} lx={390} ly={960} />
         <Chip f={f - 50} t="💬 3.422" x={870} y={1160} lx={690} ly={1100} />
-        <Centro top={1390}>
+        {f >= a + 78 && <Centro top={1390}>
           <div style={{fontFamily: SANS, fontWeight: 900, fontSize: 150, color: TI, letterSpacing: '-0.065em', lineHeight: 1, transform: `scale(${1 + 0.08 * (1 - sp(f - 140, 8, 220))})`}}>
             {contador >= 3000000 ? <>3 <span style={{fontFamily: SERIF, fontStyle: 'italic', fontWeight: 400, letterSpacing: '-0.02em'}}>milhões</span></> : contador.toLocaleString('pt-BR')}
           </div>
           <div style={{marginTop: 10, fontFamily: SANS, fontWeight: 800, fontSize: 38, letterSpacing: '0.12em', color: '#fff', background: TI, padding: '8px 22px'}}>DE VISUALIZAÇÕES</div>
-        </Centro>
+        </Centro>}
         {f > a + 142 && <div style={{position: 'absolute', left: 720, top: 1320, fontFamily: SANS, fontWeight: 900, fontSize: 40, color: VR, border: `5px solid ${VR}`, padding: '6px 18px', borderRadius: 12, transform: `rotate(-12deg) scale(${lin(f, a + 142, a + 148, 2, 1, Easing.out(Easing.back(2)))})`}}>VIRAL ✓</div>}
       </Cena>
 
