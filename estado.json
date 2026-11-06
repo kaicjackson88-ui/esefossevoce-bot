@@ -720,14 +720,14 @@
         "ate": "2026-11-07T10:01:12+00:00",
         "votos": {
           "PERDOA": 0,
-          "COBRA": 7
+          "COBRA": 8
         },
         "continuacao": {
           "PERDOA": "biel-em3-perdoa",
           "COBRA": "biel-em3-cobra"
         },
         "comentario_id": "18102106688430299",
-        "atualizado_em": "2026-11-06T18:15:28+00:00",
+        "atualizado_em": "2026-11-06T19:15:52+00:00",
         "placar_em": "2026-11-06T17:15:45+00:00",
         "placar_total": 7
       }
@@ -745,17 +745,17 @@
         ],
         "ate": "2026-11-07T12:01:51+00:00",
         "votos": {
-          "IMPLORA": 63,
-          "CONTA": 8
+          "IMPLORA": 68,
+          "CONTA": 12
         },
         "continuacao": {
           "IMPLORA": "biel-au3-implora",
           "CONTA": "biel-au3-conta"
         },
         "comentario_id": "17915291904552927",
-        "atualizado_em": "2026-11-06T18:15:31+00:00",
-        "placar_em": "2026-11-06T12:16:56+00:00",
-        "placar_total": 6
+        "atualizado_em": "2026-11-06T19:15:56+00:00",
+        "placar_em": "2026-11-06T19:15:57+00:00",
+        "placar_total": 80
       }
     },
     {
