@@ -310,3 +310,32 @@ OK mco_s1_c1b (8s)
   HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (b49b71c1-2579-4971-b9f0-9254c6b1424b)","code":3030}],"success":false,"result":{},"messages":[]}
 falhou mco_s1_c4a: HTTP 400
 OK mco_s1_c4b (8s)
+contas que o token enxerga: 0 | o CF_ACCOUNT_ID salvo está entre elas: False
+token: 53 caracteres | começa com cfut_: True | espaço/aspas: False
+  verificação (token de usuário): status active
+  verificação (token da conta): HTTP 401 {"success":false,"errors":[{"code":1000,"message":"Invalid API Token"}],"messages":[],"result":null}
+segredos OK | GEMINI_API_KEY ok
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (7ecbfdac-2b5c-4e79-b1dd-eccfcbecac2f)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou p3_c4e: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (f5993dab-8fe8-4d7e-8c6c-5d8211bfe14a)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au2_c5a: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (26b18838-7e17-4d92-9310-49cd44f0c804)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou au2_c5b: HTTP 400
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (66af9f08-10e9-4471-a5e4-949b727bb589)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou mco_s1_c4a: HTTP 400
+OK pt_c1a (6s)
+OK pt_c1b (7s)
+OK pt_c2a (7s)
+OK pt_c2b (6s)
+OK pt_c3a (9s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (efa7d5d8-e632-4603-9d04-6c5ceec3efb6)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou pt_c3b: HTTP 400
+OK pt_c4a (8s)
+OK pt_c4b (9s)
+OK pt_c5a (8s)
+  HTTP 400: {"errors":[{"message":"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (e7631992-cde9-42ac-be0b-636ae72e0985)","code":3030}],"success":false,"result":{},"messages":[]}
+falhou pt_c5b: HTTP 400
+OK pt_c6a (8s)
+OK pt_c6b (7s)
+OK pt_c7a (6s)
+OK pt_c7b (5s)
