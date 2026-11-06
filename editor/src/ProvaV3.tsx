@@ -3,7 +3,7 @@ import {AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, spring,
 import TT from './campanha_tempos.json';
 
 // Criativo "Prova 3 milhões" v3 — pôster editorial com camadas, tipografia mista e vendas reais
-const T = (TT as Record<string, {ini: number[]; total: number}>).Prova;
+const T = (TT as Record<string, {ini: number[]; total: number}>).Prova6;
 export const PROVA3_DUR = T.total;
 const SANS = 'Inter, sans-serif', SERIF = 'InstrumentSerif, serif';
 const VR = '#e5321f', PAPEL = '#e9e6df', TI = '#0e0e0e';
@@ -157,18 +157,18 @@ export const ProvaV3: React.FC = () => {
   const [a, b, c, d, e] = T.ini; const fim = T.total;
   const plims = VENDAS.map((_, i) => b + 14 + i * 8);
   const plimsCta = [e + 40, e + 52, e + 64];
-  const contador = Math.round(lin(f, 10, 70, 0, 3000000, Easing.out(Easing.cubic)));
-  const vira = c + 56;
+  const contador = Math.round(lin(f, 80, 140, 0, 3000000, Easing.out(Easing.cubic)));
+  const vira = c + 57;
 
   return (
     <AbsoluteFill style={{background: PAPEL}}>
       <Fontes />
       <Audio src={S('ad/beat.wav')} volume={0.2} />
-      <Audio src={S('ad/voz_Prova.wav')} />
+      <Audio src={S('ad/voz_Prova6.wav')} />
       {[b, c, d, e].map((x) => <Sequence key={x} from={x - 7}><Audio src={S('biel/sfx_whoosh.wav')} volume={0.42} /></Sequence>)}
       {[...plims, ...plimsCta].map((x) => <Sequence key={x} from={x}><Audio src={S('ad/plim.wav')} volume={0.5} /></Sequence>)}
-      {[a + 70, c + 30, d + 82].map((x) => <Sequence key={x} from={x}><Audio src={S('ad/hit.wav')} volume={0.42} /></Sequence>)}
-      {[d + 4, d + 22, d + 42].map((x) => <Sequence key={x} from={x}><Audio src={S('biel/pop.wav')} volume={0.4} /></Sequence>)}
+      {[a + 140, c + 30, d + 108].map((x) => <Sequence key={x} from={x}><Audio src={S('ad/hit.wav')} volume={0.42} /></Sequence>)}
+      {[d + 4, d + 28, d + 52, d + 72].map((x) => <Sequence key={x} from={x}><Audio src={S('biel/pop.wav')} volume={0.4} /></Sequence>)}
       <Sequence from={fim - 40}><Audio src={S('biel/pop.wav')} volume={0.7} /></Sequence>
 
       <Cena f={f} de={a} ate={b}>
@@ -176,7 +176,7 @@ export const ProvaV3: React.FC = () => {
         <Letreiro f={f} t="3.000.000" top={600} cor="rgba(14,14,14,.07)" vel={7} />
         <Circulo f={f - 2} size={780} x={540} y={930} anel />
         <Cantos f={f} tag="VIRAL DE VERDADE" num="nº 01" />
-        <Centro top={250}><Frase f0={a + 2} size={84} p={[{t: 'esse desenho', serif: true}, {t: 'passou de'}]} /></Centro>
+        <Centro top={250}>{f < a + 78 ? <Frase f0={a + 2} size={84} p={[{t: 'você já viu', serif: true}, {t: 'esses perfis?'}]} /> : <Frase f0={a + 80} size={84} p={[{t: 'esse desenho', serif: true}, {t: 'passou de'}]} />}</Centro>
         <Celular rx={lin(f, 0, 34, 34, 6) + Math.sin(f / 26) * 2} ry={lin(f, 0, 34, -42, -15) + Math.sin(f / 34) * 4} rz={3} s={lin(f, 0, 34, 0.46, 0.55)} y={lin(f, 0, 34, 520, -10)}>
           <OffthreadVideo src={S('ad/rec_predio.mp4')} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         </Celular>
@@ -184,17 +184,17 @@ export const ProvaV3: React.FC = () => {
         <Chip f={f - 40} t="↗ 89 mil" x={190} y={880} lx={390} ly={960} />
         <Chip f={f - 50} t="💬 3.422" x={870} y={1160} lx={690} ly={1100} />
         <Centro top={1390}>
-          <div style={{fontFamily: SANS, fontWeight: 900, fontSize: 150, color: TI, letterSpacing: '-0.065em', lineHeight: 1, transform: `scale(${1 + 0.08 * (1 - sp(f - 70, 8, 220))})`}}>
+          <div style={{fontFamily: SANS, fontWeight: 900, fontSize: 150, color: TI, letterSpacing: '-0.065em', lineHeight: 1, transform: `scale(${1 + 0.08 * (1 - sp(f - 140, 8, 220))})`}}>
             {contador >= 3000000 ? <>3 <span style={{fontFamily: SERIF, fontStyle: 'italic', fontWeight: 400, letterSpacing: '-0.02em'}}>milhões</span></> : contador.toLocaleString('pt-BR')}
           </div>
           <div style={{marginTop: 10, fontFamily: SANS, fontWeight: 800, fontSize: 38, letterSpacing: '0.12em', color: '#fff', background: TI, padding: '8px 22px'}}>DE VISUALIZAÇÕES</div>
         </Centro>
-        {f > a + 72 && <div style={{position: 'absolute', left: 720, top: 1320, fontFamily: SANS, fontWeight: 900, fontSize: 40, color: VR, border: `5px solid ${VR}`, padding: '6px 18px', borderRadius: 12, transform: `rotate(-12deg) scale(${lin(f, a + 72, a + 78, 2, 1, Easing.out(Easing.back(2)))})`}}>VIRAL ✓</div>}
+        {f > a + 142 && <div style={{position: 'absolute', left: 720, top: 1320, fontFamily: SANS, fontWeight: 900, fontSize: 40, color: VR, border: `5px solid ${VR}`, padding: '6px 18px', borderRadius: 12, transform: `rotate(-12deg) scale(${lin(f, a + 142, a + 148, 2, 1, Easing.out(Easing.back(2)))})`}}>VIRAL ✓</div>}
       </Cena>
 
       <Cena f={f} de={b} ate={c} fundo={TI}>
         <Papel escuro />
-        <Letreiro f={f - b} t="negócio" top={1250} cor="rgba(229,50,31,.4)" vel={-11} serif />
+        <Letreiro f={f - b} t="faturando" top={1250} cor="rgba(229,50,31,.4)" vel={-11} serif />
         <Cantos f={f - b} tag="PERFIS QUE VIRARAM RENDA" num="nº 02" escuro />
         {[{src: 'ad/rec_predio.mp4', x: -300, r: -9, k: 0, z: 1}, {src: 'ad/rec_cara.mp4', x: 0, r: 0, k: 5, z: 3}, {src: 'ad/rec_amigos.mp4', x: 300, r: 9, k: 10, z: 2}].map((o) => {
           const s = sp(f - b - o.k, 14, 110);
@@ -207,7 +207,7 @@ export const ProvaV3: React.FC = () => {
         <div style={{position: 'absolute', top: 230, left: 0, right: 0, perspective: 1500, zIndex: 5}}>
           {VENDAS.map((v, i) => <Notif key={i} f={f - plims[i]} v={v} style={{position: 'absolute', left: 60 + (i % 2) * 40, right: 100 - (i % 2) * 40, top: (VENDAS.length - 1 - i) * 128}} />)}
         </div>
-        <Centro top={1350} z={6}><Frase f0={b + 4} size={104} cor="#fff" p={[{t: 'perfis assim', serif: true}, {t: 'viraram'}, {t: 'NEGÓCIO', bloco: VR}]} /></Centro>
+        <Centro top={1350} z={6}><Frase f0={b + 4} size={104} cor="#fff" p={[{t: 'e eles estão', serif: true}, {t: 'FATURANDO', bloco: VR}]} /></Centro>
       </Cena>
 
       <Cena f={f} de={c} ate={d}>
@@ -236,7 +236,7 @@ export const ProvaV3: React.FC = () => {
           <>
             <Circulo f={f - vira} size={640} x={540} y={790} anel />
             <Obj src="ad/ad_celular_t.png" f={f - vira} size={860} x={540} y={800} rot={-14} />
-            <Centro top={1240}><Frase f0={vira + 2} size={92} p={[{t: 'você faz parecido', serif: true}]} /><div style={{height: 8}} /><Frase f0={vira + 30} size={118} p={[{t: 'só com o'}, {t: 'celular.', cor: VR}]} /></Centro>
+            <Centro top={1240}><Frase f0={vira + 2} size={92} p={[{t: 'você vai fazer', serif: true}, {t: 'IGUAL', bloco: VR, cor: '#fff'}]} /><div style={{height: 8}} /><Frase f0={vira + 30} size={118} p={[{t: 'só com o'}, {t: 'celular.', cor: VR}]} /></Centro>
           </>
         )}
       </Cena>
@@ -247,9 +247,9 @@ export const ProvaV3: React.FC = () => {
         {(() => {
           const R = 330, cx = 540, cy = 860;
           const giro = (f - d) * 0.35;
-          const prog = lin(f - d, 4, 80, 0.001, 0.9999);
+          const prog = lin(f - d, 4, 104, 0.001, 0.9999);
           const ang2 = prog * Math.PI * 2;
-          const itens = [{src: 'ad/ad_lapis_t.png', t: 'roteiro', k: 2, ang: -90, st: false}, {src: 'biel/avatar_biel.jpg', t: 'personagem', k: 20, ang: 30, st: true}, {src: 'ad/ad_microfone_t.png', t: 'voz', k: 40, ang: 150, st: false}];
+          const itens = [{src: 'ad/ad_lapis_t.png', t: 'roteiro', k: 2, ang: -90, st: false}, {src: 'biel/avatar_biel.jpg', t: 'personagem', k: 26, ang: 0, st: true}, {src: 'ad/ad_microfone_t.png', t: 'voz', k: 50, ang: 90, st: false}, {src: 'ad/ad_claquete_t.png', t: 'animação', k: 70, ang: 180, st: false}];
           return (
             <>
               <svg width={1080} height={1920} style={{position: 'absolute'}}>
@@ -275,8 +275,8 @@ export const ProvaV3: React.FC = () => {
                 );
               })}
               <div style={{position: 'absolute', left: cx - 220, top: cy - 90, width: 440, textAlign: 'center'}}>
-                {f >= d + 82
-                  ? <div style={{fontFamily: SANS, fontWeight: 900, fontSize: 160, letterSpacing: '-0.06em', color: TI, transform: `scale(${lin(f, d + 82, d + 88, 2.2, 1, Easing.out(Easing.back(2)))})`}}>IA</div>
+                {f >= d + 108
+                  ? <div style={{fontFamily: SANS, fontWeight: 900, fontSize: 160, letterSpacing: '-0.06em', color: TI, transform: `scale(${lin(f, d + 108, d + 114, 2.2, 1, Easing.out(Easing.back(2)))})`}}>IA</div>
                   : <div style={{fontFamily: SERIF, fontStyle: 'italic', fontSize: 90, color: TI, opacity: lin(f - d, 6, 16, 0, 1), marginTop: 30}}>tudo com</div>}
               </div>
               <Centro top={1430}><Frase f0={d + 50} size={66} p={[{t: 'do zero,', serif: true}, {t: 'no seu celular'}]} /></Centro>

@@ -76,7 +76,7 @@ const Cupom: React.FC<{f: number; linhas: [string, string][]; total: [string, st
 export const PrecoV3: React.FC = () => {
   const f = useCurrentFrame();
   const [a, b, c, d, e, g] = T.ini; const fim = T.total;
-  const vira = e + Math.round((g - e) * 0.42);
+  const vira = e + 65;
   const plims = [vira + 8, vira + 16, vira + 24, vira + 32];
   return (
     <AbsoluteFill style={{background: AM}}>
@@ -121,7 +121,7 @@ export const PrecoV3: React.FC = () => {
           return (
             <div key={o.src} style={{position: 'absolute', left: o.x, top: 580, width: 340, transform: `translateY(${(1 - s) * 1300}px) rotate(${o.r}deg)`}}>
               <div style={{background: '#fff', padding: 14, borderRadius: 24, boxShadow: '0 30px 60px rgba(0,0,0,.35)'}}>
-                <div style={{height: 600, borderRadius: 14, overflow: 'hidden'}}><Sequence from={c}><OffthreadVideo src={S(o.src)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} /></Sequence></div>
+                <div style={{position: 'relative', height: 600, borderRadius: 14, overflow: 'hidden'}}><Sequence from={c}><OffthreadVideo src={S(o.src)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} /></Sequence></div>
                 <div style={{fontFamily: COND, fontSize: 60, color: VM, textAlign: 'center', marginTop: 8}}>{o.tag}</div>
               </div>
             </div>
