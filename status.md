@@ -1,11 +1,11 @@
 # Status do robô
 
-Última execução: 06/11 20:15 (Brasília) — ação `ciclo` — **FALHOU**
+Última execução: 06/11 20:17 (Brasília) — ação `votos` — **FALHOU**
 
 ## Erro
 
 ```
-HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error":{"message":"Unsupported get request. Object with ID '17879668614634135' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"A6hiFOnKsQ4MiIa6mhMuVD-"}}
+HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error":{"message":"Unsupported get request. Object with ID '17879668614634135' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"AKLWCMazEAqdPt6PM7U6rV1"}}
 ```
 
 ## Fila
