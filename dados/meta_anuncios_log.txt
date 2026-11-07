@@ -1,7 +1,11 @@
-Conta: {'account_status': 1, 'disable_reason': 0, 'balance': '0', 'amount_spent': '188990', 'spend_cap': '198431'} pagamento: Saldo disponível (R$107,47 BRL)
-Campanha: ACTIVE (configurado ACTIVE)
-Conjunto: ACTIVE (configurado ACTIVE)
-A_Prova3Milhoes: ACTIVE (configurado ACTIVE)
-B_Preco: ACTIVE (configurado ACTIVE)
-C_SemComputador: ACTIVE (configurado ACTIVE)
-D_RendaExtra: ACTIVE (configurado ACTIVE)
+# ADB | Teste 1 | Vendas — 07/11 02:45
+
+Gasto total: **R$0.66** de R$100 · vendas: **0** · dia 1 do teste
+
+| anúncio | gasto | CTR link | hook 3s | checkouts | vendas | custo/venda | decisão |
+|---|---|---|---|---|---|---|---|
+| A_Prova3Milhoes | R$0.64 | 0.00% | 14% | 0 | 0 | — | manter |
+| B_Preco | R$0.02 | 0.00% | — | 0 | 0 | — | manter |
+
+**Ações do robô:** nenhuma — dentro das regras.
+_Primeiros 3 dias: só pausas de segurança; nada de mexer no resto (o aprendizado reinicia)._
