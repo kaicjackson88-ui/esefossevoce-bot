@@ -1,16 +1,12 @@
 # Status do robô
 
-Última execução: 07/11 13:54 (Brasília) — ação `votos` — **FALHOU**
+Última execução: 07/11 16:19 (Brasília) — ação `ciclo` — **FALHOU**
 
 ## Erro
 
 ```
-HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error":{"message":"Unsupported get request. Object with ID '17879668614634135' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"ANyV8qMCbnudVcBtXa0Fk4e"}}
+HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error":{"message":"Unsupported get request. Object with ID '17879668614634135' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"Auc8T35cW9BBOeDHEe4O0E3"}}
 ```
-
-## Avisos
-
-- A continuação 'biel-au3-implora' (IMPLORA) ainda não está na fila. Peça ao Claude para produzir.
 
 ## Fila
 
