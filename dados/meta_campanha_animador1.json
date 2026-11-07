@@ -7,21 +7,21 @@
  "conjunto": "120254224317790279",
  "anuncios": {
   "A_Prova3Milhoes": {
-   "erro": "Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.",
-   "criativo": null
+   "id": "120254224598080279",
+   "criativo": "1075184708837048"
   },
   "B_Preco": {
-   "erro": "Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.",
-   "criativo": null
+   "id": "120254224602520279",
+   "criativo": "1488087803176038"
   },
   "C_SemComputador": {
-   "erro": "Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.",
-   "criativo": null
+   "id": "120254224605650279",
+   "criativo": "1791566725935166"
   },
   "D_RendaExtra": {
-   "erro": "Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.",
-   "criativo": null
+   "id": "120254224608300279",
+   "criativo": "1783481472914949"
   }
  },
- "montado_em": "2026-11-06T23:19:30.752474-03:00"
+ "montado_em": "2026-11-06T23:43:53.900946-03:00"
 }
