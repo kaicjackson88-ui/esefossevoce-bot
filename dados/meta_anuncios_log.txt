@@ -1,5 +1,5 @@
-Usando: {'conta': 'act_1799202680158211', 'pagina': '1450273264828927', 'ig': '17841411694131308', 'pixel': '3074445196234996'}
-Link trocado: A_Prova3Milhoes -> https://animador-de-bolso-two.vercel.app/
-Link trocado: B_Preco -> https://animador-de-bolso-two.vercel.app/
-Link trocado: C_SemComputador -> https://animador-de-bolso-two.vercel.app/
-Link trocado: D_RendaExtra -> https://animador-de-bolso-two.vercel.app/
+Ligado: A_Prova3Milhoes
+Ligado: B_Preco
+Ligado: C_SemComputador
+Ligado: D_RendaExtra
+Campanha ligada.
