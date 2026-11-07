@@ -229,6 +229,23 @@ def criarpixel(arq):
     print('Pixel criado:', r.get('id'))
 
 
+def trocarlink(arq):
+    """Recria o criativo de cada anúncio com o link atual do arquivo da campanha (status não muda)."""
+    cfg = ler(arq)
+    saida = DADOS / f"meta_campanha_{cfg['id']}.json"
+    est = ler(saida, {}) or {}
+    alvo = _alvos(cfg)
+    for ad in cfg['anuncios']:
+        reg = est.get('anuncios', {}).get(ad['nome'], {})
+        if not reg.get('id'):
+            continue
+        cid = _criativo(alvo, cfg, ad)
+        api('POST', reg['id'], {'creative': {'creative_id': cid}})
+        reg['criativo'] = cid
+        gravar(saida, est)
+        print('Link trocado:', ad['nome'], '->', cfg['link'])
+
+
 def montar(arq):
     cfg = ler(arq)
     if not cfg.get('pixel') or not cfg.get('link'):
@@ -505,4 +522,4 @@ if __name__ == '__main__':
     arq = sys.argv[2] if len(sys.argv) > 2 else str(RAIZ / 'anuncios' / 'teste2.json')
     if not TOKEN:
         sys.exit('Sem chave: crie o segredo META_ADS_TOKEN.')
-    {'checar': checar, 'montar': montar, 'ativar': ativar, 'pausar': pausar, 'relatorio': relatorio, 'situacao': situacao, 'funil': funil, 'analise': analise, 'pixeldiag': pixeldiag, 'comparar': comparar, 'criarpixel': criarpixel}[cmd](arq)
+    {'checar': checar, 'montar': montar, 'ativar': ativar, 'pausar': pausar, 'relatorio': relatorio, 'situacao': situacao, 'funil': funil, 'analise': analise, 'pixeldiag': pixeldiag, 'comparar': comparar, 'criarpixel': criarpixel, 'trocarlink': trocarlink}[cmd](arq)
