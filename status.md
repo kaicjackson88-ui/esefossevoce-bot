@@ -1,16 +1,16 @@
 # Status do robô
 
-Última execução: 07/11 07:26 (Brasília) — ação `votos` — **FALHOU**
+Última execução: 07/11 13:54 (Brasília) — ação `votos` — **FALHOU**
 
 ## Erro
 
 ```
-HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error":{"message":"Unsupported get request. Object with ID '17879668614634135' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"AG0ULeOA0n7crq1pAmaFWDi"}}
+HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error":{"message":"Unsupported get request. Object with ID '17879668614634135' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"ANyV8qMCbnudVcBtXa0Fk4e"}}
 ```
 
 ## Avisos
 
-- A continuação 'biel-em3-cobra' (COBRA) ainda não está na fila. Peça ao Claude para produzir.
+- A continuação 'biel-au3-implora' (IMPLORA) ainda não está na fila. Peça ao Claude para produzir.
 
 ## Fila
 
@@ -20,7 +20,7 @@ HTTP 400 em https://graph.facebook.com/v24.0/17879668614634135/comments: {"error
 
 - **biel-pt1** (aberta até 07/11 18:07): DESCULPA: 0 · AUMENTO: 0 https://www.instagram.com/reel/DfaiNRNsGrS/
 - **biel-au2-apaga** (aberta até 07/11 13:20): IMPLORA: 0 · CONTA: 0 https://www.instagram.com/reel/DfaBYWGsfOj/
-- **biel-au2-apaga** (aberta até 07/11 09:01): IMPLORA: 85 · CONTA: 18 https://www.instagram.com/reel/DfZjs6Rop02/
+- **biel-au2-apaga** (encerrada — venceu IMPLORA): IMPLORA: 90 · CONTA: 22 https://www.instagram.com/reel/DfZjs6Rop02/
 - **biel-em2-cobra** (encerrada — venceu COBRA): PERDOA: 0 · COBRA: 8 https://www.instagram.com/reel/DfZV7JCxwFY/
 - **biel-pr1** (encerrada — venceu ACEITA): ACEITA: 3 · RECUSA: 1 https://www.instagram.com/reel/DfXTlkVKfew/
 - **biel-au1** (encerrada — venceu APAGA): APAGA: 443 · DEIXA: 24 https://www.instagram.com/reel/DfXJfgwsPOa/

@@ -739,24 +739,25 @@
       "permalink": "https://www.instagram.com/reel/DfZjs6Rop02/",
       "publicado_em": "2026-11-06T12:01:51+00:00",
       "votacao": {
-        "aberta": true,
+        "aberta": false,
         "opcoes": [
           "IMPLORA",
           "CONTA"
         ],
         "ate": "2026-11-07T12:01:51+00:00",
         "votos": {
-          "IMPLORA": 85,
-          "CONTA": 18
+          "IMPLORA": 90,
+          "CONTA": 22
         },
         "continuacao": {
           "IMPLORA": "biel-au3-implora",
           "CONTA": "biel-au3-conta"
         },
         "comentario_id": "17915291904552927",
-        "atualizado_em": "2026-11-07T10:26:18+00:00",
+        "atualizado_em": "2026-11-07T16:54:49+00:00",
         "placar_em": "2026-11-07T10:26:19+00:00",
-        "placar_total": 103
+        "placar_total": 103,
+        "vencedor": "IMPLORA"
       }
     },
     {
