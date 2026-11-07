@@ -30,7 +30,7 @@ jobs:
       - name: Rodar
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
-          META_ADS_TOKEN: ${{ secrets.META_ADS_TOKEN }}
+          META_ADS_TOKEN: ${{ (inputs.acao == 'montar' && secrets.META_ADS_TOKEN_MONTAR) || secrets.META_ADS_TOKEN }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           ACAO: ${{ github.event_name == 'schedule' && 'relatorio' || inputs.acao }}
           CAMPANHA: ${{ inputs.campanha || 'anuncios/animador1.json' }}
