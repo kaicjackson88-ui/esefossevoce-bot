@@ -1,2 +1,12 @@
-  aviso: Meta recusou act_1799202680158211/adspixels: (#6200) A pixel already exists for this account (código 6200/None) 
-Pixel criado: 3074445196234996
+Usando: {'conta': 'act_1799202680158211', 'pagina': '1450273264828927', 'ig': '17841411694131308', 'pixel': '3074445196234996'}
+Campanha criada (pausada): 120254224317380279
+Conjunto criado (pausado): 120254224317790279
+  Instagram recusado, criativo sai com a identidade da Página no Instagram: Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de 
+FALHOU A_Prova3Milhoes → Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.
+  Instagram recusado, criativo sai com a identidade da Página no Instagram: Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de 
+FALHOU B_Preco → Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.
+  Instagram recusado, criativo sai com a identidade da Página no Instagram: Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de 
+FALHOU C_SemComputador → Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.
+  Instagram recusado, criativo sai com a identidade da Página no Instagram: Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de 
+FALHOU D_RendaExtra → Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.
+Pronto: 0 anúncio(s) criados, tudo PAUSADO. Para ligar: ativar.

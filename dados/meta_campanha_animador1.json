@@ -1,0 +1,27 @@
+{
+ "conta": "act_1799202680158211",
+ "pagina": "1450273264828927",
+ "ig": "17841411694131308",
+ "pixel": "3074445196234996",
+ "campanha": "120254224317380279",
+ "conjunto": "120254224317790279",
+ "anuncios": {
+  "A_Prova3Milhoes": {
+   "erro": "Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.",
+   "criativo": null
+  },
+  "B_Preco": {
+   "erro": "Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.",
+   "criativo": null
+  },
+  "C_SemComputador": {
+   "erro": "Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.",
+   "criativo": null
+  },
+  "D_RendaExtra": {
+   "erro": "Meta recusou act_1799202680158211/adcreatives: Invalid parameter (código 100/1885183) O post do criativo dos anúncios foi criado por um app que está em modo de desenvolvimento. Ele deve estar em modo público para criar este anúncio.",
+   "criativo": null
+  }
+ },
+ "montado_em": "2026-11-06T23:19:30.752474-03:00"
+}
