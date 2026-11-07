@@ -3,11 +3,13 @@ import React from 'react';
 import {AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, useCurrentFrame, interpolate} from 'remotion';
 import {Fontes, Frase, Pal, SANS, SERIF, COND, lin, sp, S, Cena} from './Kit';
 import CL from './aulas_clipes.json';
+import VZ from './aulas_vozes.json';
+const VOZ = VZ as Record<string, number>;
 
 const CLIPES = CL as Record<string, {dur: number; w: number; h: number}>;
 const ACC = '#ff7a3d', ACC2 = '#ffb35c', TXT = '#f4efe6', BG = '#0d0c0b';
-type App = 'gemini' | 'capcut' | 'instagram' | 'chatgpt';
-type Vis = 'lista' | 'cenas' | 'tts' | 'zoom' | 'efeitos' | 'post';
+type App = 'gemini' | 'capcut' | 'instagram' | 'chatgpt' | 'biel';
+type Vis = 'modulos' | 'lista' | 'cenas' | 'tts' | 'zoom' | 'efeitos' | 'post';
 export type Item =
   | {k: 'abre'}
   | {k: 'clip'; id: string; passo: number; txt: string; rapido?: boolean}
@@ -16,9 +18,12 @@ export type Item =
   | {k: 'fim'};
 export type Aula = {mod: number; titulo: string; serif: string; app: App; prox: string; itens: Item[]};
 
-const durItem = (a: Aula, it: Item) =>
+const vozF = (a: Aula, i: number) => { const v = VOZ[`A${a.mod}_${i}`]; return v ? Math.ceil(v * 30) + 22 : 0; };
+const baseItem = (it: Item) =>
   it.k === 'abre' ? 75 : it.k === 'fim' ? 66 : it.k === 'resultado' ? 291 : it.k === 'card' ? 70 + 34 * it.passos.length : Math.round(CLIPES[it.id].dur * 30);
-export const durAula = (a: Aula) => a.itens.reduce((s, it) => s + durItem(a, it), 0);
+const durItem = (a: Aula, it: Item, i: number) => Math.max(baseItem(it), vozF(a, i));
+const taxa = (a: Aula, it: Item, i: number) => baseItem(it) / durItem(a, it, i);
+export const durAula = (a: Aula) => a.itens.reduce((s, it, i) => s + durItem(a, it, i), 0);
 
 const Logo: React.FC<{app: App; size: number; f: number; style?: React.CSSProperties}> = ({app, size, f, style}) => {
   const q = sp(f, 11, 140);
@@ -76,7 +81,7 @@ const Legenda: React.FC<{passo?: number; txt: string; f: number; top: number}> =
   </div>
 );
 
-const Clip: React.FC<{id: string; passo: number; txt: string; rapido?: boolean}> = ({id, passo, txt, rapido}) => {
+const Clip: React.FC<{id: string; passo: number; txt: string; rapido?: boolean; rate: number}> = ({id, passo, txt, rapido, rate}) => {
   const f = useCurrentFrame();
   const c = CLIPES[id];
   const BW = 880, BH = 1180, TOP = 220;
@@ -87,7 +92,7 @@ const Clip: React.FC<{id: string; passo: number; txt: string; rapido?: boolean}>
   return (
     <AbsoluteFill>
       <div style={{position: 'absolute', left: (1080 - w) / 2, top, width: w, height: h, borderRadius: 38, overflow: 'hidden', border: '2px solid rgba(244,239,230,.14)', boxShadow: `0 40px 90px rgba(0,0,0,.6), 0 0 ${60 + Math.sin(f / 15) * 20}px rgba(255,122,61,.18)`, transform: `translateY(${(1 - q) * 120}px) scale(${0.92 + q * 0.08})`, opacity: q}}>
-        <OffthreadVideo src={S(`aula/${id}.mp4`)} muted style={{width: w, height: h}} />
+        <OffthreadVideo src={S(`aula/${id}.mp4`)} muted playbackRate={rate} style={{width: w, height: h}} />
       </div>
       {rapido && <div style={{position: 'absolute', right: (1080 - w) / 2 + 20, top: top + 20, background: 'rgba(13,12,11,.85)', color: ACC2, fontFamily: SANS, fontWeight: 800, fontSize: 24, padding: '8px 16px', borderRadius: 99, border: `1px solid ${ACC2}`, opacity: lin(f, 10, 18, 0, 1)}}>⏩ acelerado</div>}
       <Legenda passo={passo} txt={txt} f={f} top={TOP + BH + 70} />
@@ -102,6 +107,21 @@ const Visual: React.FC<{vis: Vis; f: number}> = ({vis, f}) => {
       <Img src={S(`aula/${img}`)} style={{width: '100%', height: '100%', objectFit: 'cover', ...inner}} />
     </div>
   );
+  if (vis === 'modulos') {
+    const M: [App, string][] = [['gemini', 'Roteiro com IA'], ['gemini', 'Personagem fixo'], ['capcut', 'Montagem e voz'], ['capcut', 'Movimento nas imagens'], ['capcut', 'Legendas e exportação'], ['instagram', 'Postar a série'], ['biel', 'Bônus: prompts prontos']];
+    return (
+      <div style={{display: 'flex', flexDirection: 'column', gap: 16, width: 860, fontFamily: SANS}}>
+        {M.map(([ap, t], i) => {
+          const q = sp(f - 8 - i * 12, 13, 130);
+          return <div key={t} style={{display: 'flex', alignItems: 'center', gap: 26, background: 'rgba(244,239,230,.07)', border: '1px solid rgba(244,239,230,.1)', borderRadius: 26, padding: '16px 26px', opacity: q, transform: `translateX(${(1 - q) * 140}px)`}}>
+            <div style={{fontFamily: SERIF, fontStyle: 'italic', fontSize: 52, color: ACC, width: 48}}>{i + 2 <= 7 ? i + 2 : '★'}</div>
+            <Img src={S(`aula/logo_${ap}.png`)} style={{width: 70, height: 70, borderRadius: 18}} />
+            <div style={{color: TXT, fontWeight: 800, fontSize: 42, letterSpacing: '-0.03em'}}>{t}</div>
+          </div>;
+        })}
+      </div>
+    );
+  }
   if (vis === 'cenas') {
     return (
       <div style={{position: 'relative', width: 1080, height: 800}}>
@@ -214,14 +234,16 @@ export const AulaVideo: React.FC<{a: Aula}> = ({a}) => {
   const f = useCurrentFrame();
   let t = 0;
   const seqs = a.itens.map((it, i) => {
-    const d = durItem(a, it);
+    const d = durItem(a, it, i);
+    const vk = `A${a.mod}_${i}`;
     const de = t;
     t += d;
-    const corpo = it.k === 'abre' ? <Abre a={a} /> : it.k === 'fim' ? <Fim a={a} /> : it.k === 'resultado' ? <Resultado /> : it.k === 'card' ? <Card titulo={it.titulo} passos={it.passos} vis={it.vis} /> : <Clip id={it.id} passo={it.passo} txt={it.txt} rapido={it.rapido} />;
+    const corpo = it.k === 'abre' ? <Abre a={a} /> : it.k === 'fim' ? <Fim a={a} /> : it.k === 'resultado' ? <Resultado /> : it.k === 'card' ? <Card titulo={it.titulo} passos={it.passos} vis={it.vis} /> : <Clip id={it.id} passo={it.passo} txt={it.txt} rapido={it.rapido} rate={taxa(a, it, i)} />;
     return {it, de, d, el: (
       <Sequence key={i} from={de} durationInFrames={d + 6}>
         <Cena f={f - de} de={0} ate={d} giro={1.5}>{corpo}</Cena>
         <Audio src={S('ad/hit.wav')} volume={0.18} />
+        {VOZ[vk] && <Sequence from={8}><Audio src={S(`aula/voz/${vk}.mp3`)} volume={1} /></Sequence>}
       </Sequence>
     )};
   });
@@ -233,12 +255,20 @@ export const AulaVideo: React.FC<{a: Aula}> = ({a}) => {
       <Fundo />
       {seqs.map((s) => s.el)}
       <div style={{opacity: topo ? 1 : 0}}><Topo a={a} /></div>
-      <Audio src={S('ad/beat.wav')} loop volume={(fr) => (res && fr >= res.de && fr < res.de + res.d ? 0.02 : 0.1)} />
+      <Audio src={S('ad/beat.wav')} loop volume={(fr) => (res && fr >= res.de && fr < res.de + res.d ? 0.02 : 0.06)} />
     </AbsoluteFill>
   );
 };
 
 export const AULAS: Record<string, Aula> = {
+  A1: {mod: 1, titulo: 'Comece', serif: 'aqui', app: 'biel', prox: 'Módulo 2 · Roteiro com IA', itens: [
+    {k: 'abre'},
+    {k: 'card', vis: 'modulos', titulo: [{t: 'O que você vai'}, {t: 'aprender', serif: true, cor: ACC2}], passos: []},
+    {k: 'card', vis: 'lista', titulo: [{t: 'O'}, {t: 'resultado', serif: true, cor: ACC2}], passos: []},
+    {k: 'resultado'},
+    {k: 'card', vis: 'lista', titulo: [{t: 'Você só'}, {t: 'precisa de', serif: true, cor: ACC2}], passos: ['Um celular', 'Gemini e CapCut, gratuitos', 'Uma boa história (os prompts vêm prontos)']},
+    {k: 'fim'},
+  ]},
   A2: {mod: 2, titulo: 'Roteiro com', serif: 'IA', app: 'gemini', prox: 'Módulo 3 · Personagem fixo', itens: [
     {k: 'abre'},
     {k: 'clip', id: 'rot_prompt', passo: 1, txt: 'Abra o Gemini e cole o prompt do roteiro'},

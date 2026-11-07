@@ -1,0 +1,60 @@
+{
+ "A1": [
+  "Bem-vindo ao Animador de Bolso. Aqui você vai criar desenhos animados que prendem a atenção, usando só o celular.",
+  "São sete módulos curtos e diretos. Roteiro com inteligência artificial, personagem fixo, montagem e voz, movimento, legendas, e como postar a série pra virar votação nos comentários.",
+  "No final, você vai fazer um vídeo assim.",
+  null,
+  "Você só precisa do celular, de dois aplicativos gratuitos, o Gemini e o CapCut, e de uma boa história. Os prompts já vêm prontos pra copiar.",
+  "Bora pro primeiro passo: o roteiro."
+ ],
+ "A2": [
+  "Módulo dois: roteiro com inteligência artificial.",
+  "Abra o Gemini e cole o prompt do roteiro, que está logo abaixo desta aula.",
+  "Em segundos, ele entrega as falas, a descrição de cada cena e até a legenda do post.",
+  "O segredo é simples: a primeira frase já mostra o problema, as frases são curtas, e o vídeo termina com uma votação de duas opções.",
+  "Agora, vamos criar o personagem."
+ ],
+ "A3": [
+  "Módulo três: personagem fixo.",
+  "No Gemini, toque no mais, escolha criar imagem e cole o prompt do personagem.",
+  null,
+  "Pronto. Esse é o seu personagem.",
+  "Quer mudar alguma coisa? Peça: mantenha tudo igual, só mude isso.",
+  null,
+  "Mesmo rosto, mesma roupa. Só mudou o que você pediu.",
+  "Agora, as cenas. Anexe a imagem do personagem, cole o prompt da cena, e repita pra cada fala do roteiro.",
+  "Depois, baixe cada imagem no tamanho original.",
+  "E aí está: três cenas com o mesmo personagem. Cada cena vai ser uma fala do vídeo.",
+  "Próximo passo: montar e colocar a voz."
+ ],
+ "A4": [
+  "Módulo quatro: montagem e voz no CapCut.",
+  "Abra o CapCut e toque em novo vídeo.",
+  "Selecione as cenas na ordem da história e toque em adicionar.",
+  "As cenas entram na linha do tempo. Agora, vamos colocar a narração.",
+  "Toque em texto, adicione um texto e cole a fala. Depois, selecione o texto e toque em texto para fala. Escolha a voz e repita em cada fala. No final, apague as caixas de texto: o áudio continua.",
+  "Agora, vamos dar vida às imagens."
+ ],
+ "A5": [
+  "Módulo cinco: movimento nas imagens.",
+  "Coloque a barra no começo da cena e toque no losango. Vá até o fim da cena e aumente a imagem com dois dedos. O CapCut cria um zoom suave sozinho.",
+  "Pra dar tensão, use o efeito tremor. Pra ritmo, a animação de balanço. E entre as cenas, uma transição de zoom ou desfoque.",
+  null,
+  "Agora, as legendas."
+ ],
+ "A6": [
+  "Módulo seis: legendas e exportação.",
+  "Toque em texto e depois em legendas automáticas, em português. Depois, ajuste o estilo, a fonte e a cor das palavras. Destaque as palavras mais fortes com cores diferentes. Isso prende quem assiste sem som.",
+  "Pra exportar, escolha mil e oitenta pixels e trinta quadros por segundo.",
+  null,
+  null,
+  "Último módulo: postar a série."
+ ],
+ "A7": [
+  "Módulo sete: postar a série.",
+  "No Instagram, toque no mais, escolha reel e selecione o vídeo.",
+  "Cole a legenda com a votação e toque em compartilhar.",
+  "Depois, conte os votos nos comentários. A opção que ganhar vira a parte dois. E comece a parte dois mostrando o placar: isso faz o público voltar.",
+  "No bônus, você encontra todos os prompts prontos pra copiar."
+ ]
+}
