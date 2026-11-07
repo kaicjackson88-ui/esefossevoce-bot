@@ -8,6 +8,7 @@
 <meta property="og:description" content="Crie desenhos animados que viralizam, só com o celular. R$ 19,90.">
 <meta property="og:image" content="v/prova.jpg">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','3074445196234996');fbq('track','PageView');fbq('track','ViewContent',{content_name:'Animador de Bolso',value:19.90,currency:'BRL'});</script>
 <title>Animador de Bolso</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Aprenda a criar desenhos animados que viralizam, iguais aos dos perfis de milhões de visualizações, usando só o celular e inteligência artificial.">
@@ -462,6 +463,7 @@ var LINKS = { curso: "https://pay.kiwify.com.br/DPqtnSJ", roteiros: "", personag
 document.querySelectorAll(".js-comprar").forEach(function (a) {
   var url = LINKS[a.getAttribute("data-link") || "curso"] || LINKS.curso;
   if (url) { a.href = url; a.rel = "noopener"; }
+  a.addEventListener("click", function () { try { fbq("track", "InitiateCheckout", {content_name: "Animador de Bolso", value: 19.90, currency: "BRL"}); } catch (e) {} });
 });
 
 var calmo = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;

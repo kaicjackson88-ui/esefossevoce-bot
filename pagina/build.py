@@ -8,8 +8,10 @@ head = ('<!doctype html>\n<html lang="pt-BR">\n<head>\n<meta charset="utf-8">\n'
         '<meta property="og:description" content="Crie desenhos animados que viralizam, só com o celular. R$ 19,90.">\n'
         '<meta property="og:image" content="v/prova.jpg">\n'
         '<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>\n')
+PIXEL = '3074445196234996'
+px = ("<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','" + PIXEL + "');fbq('track','PageView');fbq('track','ViewContent',{content_name:'Animador de Bolso',value:19.90,currency:'BRL'});</script>\n")
 i = c.index('</style>') + len('</style>')
-(R / 'index.html').write_text(head + c[:i] + '\n</head>\n<body>\n' + c[i:] + '\n</body>\n</html>\n', encoding='utf-8')
+(R / 'index.html').write_text(head + px + c[:i] + '\n</head>\n<body>\n' + c[i:] + '\n</body>\n</html>\n', encoding='utf-8')
 tipos = {'.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.mp4': 'video/mp4'}
 def emb(m):
     arq = R / m.group(2)

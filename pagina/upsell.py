@@ -1,0 +1,108 @@
+"""Gera as páginas pós-compra: /oferta (Robô Animador, R$197) → /mentoria (R$47) → /aulas.
+python3 pagina/upsell.py"""
+import pathlib
+AQUI = pathlib.Path(__file__).resolve().parent
+PIXEL = '3074445196234996'          # id do pixel "Animador de Bolso" (Meta)
+LINKS = {'robo': '', 'mentoria': ''}   # links de checkout/upsell da Kiwify
+
+CSS = """
+:root{--bg:#0d0c0b;--card:#171513;--card2:#1f1c19;--line:rgba(244,239,230,.1);--txt:#f4efe6;--mut:#a8a196;--acc:#ff7a3d;--acc2:#ffb35c}
+*{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+.it{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--acc2)}
+.glow{position:fixed;border-radius:50%;pointer-events:none;z-index:0}
+.g1{width:700px;height:700px;left:-260px;top:-320px;background:radial-gradient(circle,rgba(255,122,61,.24),transparent 65%);animation:flu 14s ease-in-out infinite}
+.g2{width:800px;height:800px;right:-320px;bottom:-380px;background:radial-gradient(circle,rgba(255,179,92,.13),transparent 65%);animation:flu 18s ease-in-out infinite reverse}
+.dots{position:fixed;inset:0;background-image:radial-gradient(rgba(244,239,230,.05) 1.2px,transparent 1.3px);background-size:32px 32px;pointer-events:none}
+@keyframes flu{50%{transform:translate(40px,30px) scale(1.06)}}
+@keyframes up{from{opacity:0;transform:translateY(26px)}}
+@keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+@keyframes brilho{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(320%) skewX(-20deg)}}
+.wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:22px 16px 60px}
+.ok{display:flex;align-items:center;gap:12px;background:#15241a;border:1px solid #2c5a37;color:#9fe3a9;border-radius:16px;padding:12px 16px;font-weight:700;font-size:14px;animation:up .6s both}
+.ok b{display:grid;place-items:center;width:28px;height:28px;flex:none;border-radius:50%;background:#2f8a43;color:#fff;animation:pop .6s .2s both}
+.passos{display:flex;gap:8px;margin:18px 0 6px;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--mut);animation:up .6s .05s both}
+.passos span{flex:1;text-align:center;padding:8px 4px;border-radius:99px;background:rgba(244,239,230,.05)}
+.passos .feito{color:#9fe3a9}.passos .agora{background:var(--acc);color:#1a0d05}
+.tag{display:inline-block;margin-top:26px;font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--acc);animation:up .6s .1s both}
+h1{font-size:clamp(34px,8vw,56px);font-weight:900;letter-spacing:-.055em;line-height:1;margin-top:10px;animation:up .7s .15s both}
+.sub{color:var(--mut);font-size:18px;line-height:1.5;margin-top:14px;animation:up .7s .2s both}
+.vid{margin:26px auto 0;max-width:330px;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 70px rgba(255,122,61,.18);animation:up .8s .25s both;position:relative}
+.vid video{width:100%;display:block;aspect-ratio:9/16;object-fit:cover}
+.lista{margin-top:28px;display:grid;gap:10px}
+.lista div{display:flex;gap:14px;align-items:flex-start;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:16px;opacity:0;transform:translateY(18px);transition:opacity .6s,transform .7s cubic-bezier(.16,1,.3,1)}
+.lista div.on{opacity:1;transform:none}
+.lista i{font-style:normal;font-size:24px;line-height:1}
+.lista b{display:block;font-size:17px;letter-spacing:-.02em}.lista small{display:block;color:var(--mut);font-size:14px;margin-top:4px;line-height:1.45}
+.preco{margin-top:28px;text-align:center;background:linear-gradient(160deg,#241a12,var(--card));border:1px solid rgba(255,122,61,.35);border-radius:24px;padding:24px 18px}
+.preco .de{color:var(--mut);font-size:14px;font-weight:700;letter-spacing:.1em}
+.preco .v{font-size:58px;font-weight:900;letter-spacing:-.05em;margin-top:4px}
+.preco .v small{font-size:22px;color:var(--mut);font-weight:700}
+.preco p{color:var(--mut);font-size:14px;margin-top:6px;line-height:1.5}
+.sim{position:relative;overflow:hidden;display:block;width:100%;margin-top:18px;background:var(--acc);color:#1a0d05;font-weight:900;font-size:18px;text-align:center;text-decoration:none;border-radius:18px;padding:19px 16px;box-shadow:0 14px 40px rgba(255,122,61,.35);transition:transform .2s}
+.sim:active{transform:scale(.98)}
+.sim::after{content:"";position:absolute;top:0;bottom:0;width:30%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);animation:brilho 2.8s infinite}
+.nao{display:block;text-align:center;margin-top:16px;color:var(--mut);font-size:15px;font-weight:700;text-decoration:underline;text-underline-offset:4px;padding:10px}
+.nota{margin-top:20px;font-size:13px;color:#7d776e;text-align:center;line-height:1.5}
+.pre{display:inline-block;margin-top:12px;background:rgba(255,179,92,.12);color:var(--acc2);border:1px solid rgba(255,179,92,.35);border-radius:99px;padding:6px 14px;font-size:13px;font-weight:800}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.lista div{opacity:1;transform:none}}
+"""
+
+
+def pagina(titulo, passo, corpo, valor, nome_produto):
+    px = '' if not PIXEL else f"""<script>!function(f,b,e,v,n,t,s){{if(f.fbq)return;n=f.fbq=function(){{n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)}};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','{PIXEL}');fbq('track','PageView');fbq('track','ViewContent',{{content_name:'{nome_produto}',value:{valor},currency:'BRL'}});</script>"""
+    return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex, nofollow">
+<title>{titulo}</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet"><style>{CSS}</style>{px}</head>
+<body><div class="glow g1"></div><div class="glow g2"></div><div class="dots"></div><div class="wrap">
+<div class="ok"><b>✓</b><span>Pagamento aprovado! O acesso ao Animador de Bolso também foi enviado para o seu e-mail.</span></div>
+<div class="passos"><span class="feito">✓ COMPRA</span><span class="{'agora' if passo == 1 else 'feito'}">{'OFERTA ÚNICA' if passo == 1 else '✓ OFERTA'}</span><span class="{'agora' if passo == 2 else ''}">{'ÚLTIMO PASSO' if passo == 2 else 'MENTORIA'}</span><span>SUAS AULAS</span></div>
+{corpo}
+</div>
+<script>
+var els=document.querySelectorAll('.lista div');var io='IntersectionObserver' in window?new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting){{e.target.classList.add('on');io.unobserve(e.target)}}}})}},{{threshold:.15}}):null;
+els.forEach(function(el,i){{el.style.transitionDelay=(i%3)*90+'ms';if(io)io.observe(el);else el.classList.add('on')}});setTimeout(function(){{els.forEach(function(el){{el.classList.add('on')}})}},2500);
+document.querySelectorAll('.sim').forEach(function(a){{a.addEventListener('click',function(){{try{{fbq('track','InitiateCheckout',{{content_name:'{nome_produto}',value:{valor},currency:'BRL'}})}}catch(e){{}}}})}});
+document.querySelectorAll('a[data-vazio]').forEach(function(a){{a.addEventListener('click',function(e){{if(a.getAttribute('href')==='#'){{e.preventDefault();alert('Link em configuração. Fale com o suporte.')}}}})}});
+</script></body></html>"""
+
+
+def item(ic, t, d):
+    return f'<div><i>{ic}</i><span><b>{t}</b><small>{d}</small></span></div>'
+
+
+robo = f"""<div class="tag">OFERTA ÚNICA · SÓ NESTA PÁGINA</div>
+<h1>E se o vídeo se fizesse <span class="it">sozinho?</span></h1>
+<p class="sub">No Animador de Bolso você aprende a fazer cada vídeo à mão. O <b>Robô Animador</b> faz o roteiro, as imagens, a narração e a montagem pra você. Você só revisa e posta.</p>
+<div class="vid"><video src="../v/prova.mp4" poster="../v/prova.jpg" autoplay muted loop playsinline></video></div>
+<div class="lista">
+{item('✍️', 'Roteiros prontos todos os dias', 'O robô escreve episódios novos no formato que prende: gancho, falas curtas e votação no final.')}
+{item('🎨', 'Imagens com o seu personagem', 'Gera todas as cenas com o mesmo rosto e a mesma roupa, em lote.')}
+{item('🎙️', 'Narração com voz natural', 'Voz em português gerada automaticamente para cada fala.')}
+{item('🎬', 'Montagem com movimento e legenda', 'Zoom, transições, efeitos sonoros e legendas palavra por palavra, sem abrir o CapCut.')}
+{item('📲', 'Postagem programada', 'Publica no horário que você escolher no Instagram, Facebook e YouTube.')}
+{item('🧭', 'Passo a passo de configuração', 'Aulas mostrando como deixar tudo funcionando, copiando e colando.')}
+</div>
+<div class="preco"><div class="de">CONDIÇÃO DESTA PÁGINA</div><div class="v">R$197 <small>à vista</small></div><p>ou parcelado no cartão · pagamento único · 7 dias de garantia</p><span class="pre">Pré-venda: acesso liberado em até 7 dias, com aviso por e-mail</span></div>
+<a class="sim" href="{LINKS['robo'] or '#'}" data-vazio>Sim, quero o Robô Animador</a>
+<a class="nao" href="../mentoria/">Não, obrigado. Prefiro fazer tudo à mão →</a>
+<p class="nota">É o mesmo sistema que publica a série do @ocorredobiel. Resultados variam de perfil para perfil.</p>"""
+
+mentoria = f"""<div class="tag">ÚLTIMO PASSO ANTES DAS AULAS</div>
+<h1>Quer que eu olhe o seu <span class="it">primeiro vídeo?</span></h1>
+<p class="sub">Uma <b>mentoria individual</b> por chamada de vídeo comigo, o criador do @ocorredobiel. A gente ajusta o seu personagem, o seu roteiro e o seu perfil antes de você postar.</p>
+<div class="vid"><video src="../v/cara.mp4" poster="../v/cara.jpg" autoplay muted loop playsinline></video></div>
+<div class="lista">
+{item('🧑‍🎨', 'Seu personagem', 'Deixamos o visual dele marcante e fácil de reconhecer.')}
+{item('📝', 'Seu primeiro roteiro', 'Revisamos o gancho e a votação pra prender nos 3 primeiros segundos.')}
+{item('📈', 'Seu perfil', 'Bio, capa e frequência de postagem pra série crescer.')}
+{item('💬', 'Suas dúvidas', 'Tudo o que travar no caminho, resolvido ao vivo.')}
+</div>
+<div class="preco"><div class="de">MENTORIA INDIVIDUAL</div><div class="v">R$47</div><p>pagamento único · você agenda o horário depois da compra</p></div>
+<a class="sim" href="{LINKS['mentoria'] or '#'}" data-vazio>Sim, quero a mentoria</a>
+<a class="nao" href="../aulas/">Agora não, quero começar minhas aulas →</a>"""
+
+for pasta, tit, passo, corpo, valor, nome in [('oferta', 'Oferta única · Robô Animador', 1, robo, 197, 'Robo Animador'), ('mentoria', 'Mentoria individual · Animador de Bolso', 2, mentoria, 47, 'Mentoria')]:
+    d = AQUI / pasta; d.mkdir(exist_ok=True)
+    (d / 'index.html').write_text(pagina(tit, passo, corpo, valor, nome), encoding='utf-8')
+print('ok')

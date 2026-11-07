@@ -449,6 +449,7 @@ var LINKS = { curso: "https://pay.kiwify.com.br/DPqtnSJ", roteiros: "", personag
 document.querySelectorAll(".js-comprar").forEach(function (a) {
   var url = LINKS[a.getAttribute("data-link") || "curso"] || LINKS.curso;
   if (url) { a.href = url; a.rel = "noopener"; }
+  a.addEventListener("click", function () { try { fbq("track", "InitiateCheckout", {content_name: "Animador de Bolso", value: 19.90, currency: "BRL"}); } catch (e) {} });
 });
 
 var calmo = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
