@@ -465,6 +465,14 @@ document.querySelectorAll(".js-comprar").forEach(function (a) {
   if (url) { a.href = url; a.rel = "noopener"; }
   a.addEventListener("click", function () { try { fbq("track", "InitiateCheckout", {content_name: "Animador de Bolso", value: 19.90, currency: "BRL"}); } catch (e) {} });
 });
+// selo de confiança logo acima de cada botão de compra do curso
+document.querySelectorAll(".js-comprar").forEach(function (a) {
+  if ((a.getAttribute("data-link") || "curso") !== "curso") return;
+  var d = document.createElement("div");
+  d.textContent = "R$ 19,90 · pagamento único · acesso imediato · 7 dias de garantia";
+  d.style.cssText = "font:600 13px/1.4 Inter,system-ui,sans-serif;color:#9fe3a9;text-align:center;margin:0 0 10px;letter-spacing:.01em";
+  a.parentNode.insertBefore(d, a);
+});
 
 var calmo = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
