@@ -1,5 +1,7 @@
-Ligado: A_Prova3Milhoes
-Ligado: B_Preco
-Ligado: C_SemComputador
-Ligado: D_RendaExtra
-Campanha ligada.
+Conta: {'account_status': 1, 'disable_reason': 0, 'balance': '0', 'amount_spent': '188990', 'spend_cap': '198431'} pagamento: Saldo disponível (R$107,47 BRL)
+Campanha: ACTIVE (configurado ACTIVE)
+Conjunto: ACTIVE (configurado ACTIVE)
+A_Prova3Milhoes: ACTIVE (configurado ACTIVE)
+B_Preco: ACTIVE (configurado ACTIVE)
+C_SemComputador: ACTIVE (configurado ACTIVE)
+D_RendaExtra: ACTIVE (configurado ACTIVE)
