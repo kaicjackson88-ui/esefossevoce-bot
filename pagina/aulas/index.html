@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Animador de Bolso · Área do aluno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0c0b;--card:#171513;--card2:#1f1c19;--line:rgba(244,239,230,.1);--txt:#f4efe6;--mut:#a8a196;--acc:#ff7a3d;--acc2:#ffb35c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+.it{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--acc2)}
+.glow{position:fixed;border-radius:50%;filter:blur(10px);pointer-events:none;z-index:0}
+.g1{width:700px;height:700px;left:-250px;top:-300px;background:radial-gradient(circle,rgba(255,122,61,.22),transparent 65%);animation:flu 14s ease-in-out infinite}
+.g2{width:800px;height:800px;right:-300px;bottom:-350px;background:radial-gradient(circle,rgba(255,179,92,.13),transparent 65%);animation:flu 18s ease-in-out infinite reverse}
+.dots{position:fixed;inset:0;background-image:radial-gradient(rgba(244,239,230,.05) 1.2px,transparent 1.3px);background-size:32px 32px;pointer-events:none;z-index:0}
+@keyframes flu{50%{transform:translate(40px,30px) scale(1.06)}}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:28px 16px 80px}
+header{display:flex;align-items:center;gap:14px;animation:up .7s both}
+header img{width:52px;height:52px;border-radius:14px;object-fit:cover}
+header .t1{font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--acc)}
+header .t2{font-size:22px;font-weight:800;letter-spacing:-.03em}
+.hero{margin-top:28px;display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.box{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:24px;padding:24px;animation:up .7s both}
+.hero h1{font-size:clamp(30px,6vw,46px);font-weight:900;letter-spacing:-.05em;line-height:1.02}
+.hero p{color:var(--mut);margin-top:12px;line-height:1.5}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:var(--acc);color:#1a0d05;font-weight:900;border:0;border-radius:99px;padding:14px 22px;font-size:15px;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px) scale(1.02)}
+.prog{display:flex;align-items:center;gap:20px;animation-delay:.1s}
+.ring{--p:0;width:118px;height:118px;flex:none;border-radius:50%;background:conic-gradient(var(--acc) calc(var(--p)*1%),rgba(244,239,230,.08) 0);display:grid;place-items:center}
+.ring div{width:92px;height:92px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-size:26px;font-weight:900}
+.prog .l1{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--acc)}
+.prog .l2{font-size:20px;font-weight:800;margin-top:6px;letter-spacing:-.02em}
+.prog .l3{color:var(--mut);font-size:14px;margin-top:6px}
+h2{margin:40px 0 16px;font-size:26px;font-weight:900;letter-spacing:-.04em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.mod{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;cursor:pointer;opacity:0;transform:translateY(24px);transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s}
+.mod.on{opacity:1;transform:none;transition:opacity .6s,transform .7s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s}
+.mod:hover{transform:translateY(-6px);border-color:rgba(255,122,61,.5);box-shadow:0 24px 50px rgba(0,0,0,.45),0 0 40px rgba(255,122,61,.12)}
+.thumb{position:relative;aspect-ratio:9/12;background:#000;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform .6s}
+.mod:hover .thumb img{transform:scale(1.06)}
+.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(13,12,11,.95))}
+.play{position:absolute;left:50%;top:44%;width:58px;height:58px;margin:-29px;border-radius:50%;background:rgba(255,122,61,.92);display:grid;place-items:center;z-index:2;transform:scale(.85);transition:transform .3s;animation:pulse 2.4s infinite}
+.mod:hover .play{transform:scale(1)}
+.play::before{content:"";border-left:18px solid #1a0d05;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,122,61,.5)}70%{box-shadow:0 0 0 18px rgba(255,122,61,0)}100%{box-shadow:0 0 0 0 rgba(255,122,61,0)}}
+.info{position:absolute;left:0;right:0;bottom:0;padding:16px;z-index:2}
+.num{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--acc)}
+.nome{font-size:20px;font-weight:900;letter-spacing:-.03em;margin-top:4px;line-height:1.1}
+.meta{display:flex;align-items:center;gap:8px;margin-top:8px;color:var(--mut);font-size:13px}
+.meta img{width:22px;height:22px;border-radius:6px}
+.ok{position:absolute;top:12px;right:12px;z-index:3;background:#1f3a24;color:#7ee08a;font-size:12px;font-weight:800;padding:6px 10px;border-radius:99px;display:none}
+.mod.visto .ok{display:block}
+.bonus{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.pr{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;opacity:0;transform:translateY(20px)}
+.pr.on{opacity:1;transform:none;transition:opacity .6s,transform .7s cubic-bezier(.16,1,.3,1)}
+.pr .tag{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--acc)}
+.pr h3{font-size:18px;font-weight:800;margin:6px 0 10px;letter-spacing:-.02em}
+.pr pre{white-space:pre-wrap;font-family:inherit;font-size:14px;line-height:1.5;color:#d6cfc3;background:rgba(0,0,0,.25);border-radius:12px;padding:12px;max-height:180px;overflow:auto}
+.cp{margin-top:10px;background:transparent;border:1px solid rgba(255,122,61,.6);color:var(--acc2);font-weight:800;border-radius:99px;padding:9px 16px;cursor:pointer;font-size:13px;transition:background .2s}
+.cp:hover{background:rgba(255,122,61,.12)}
+.cp.feito{background:var(--acc);color:#1a0d05}
+.ov{position:fixed;inset:0;z-index:20;background:rgba(8,7,6,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:none;overflow-y:auto}
+.ov.on{display:block;animation:fd .3s both}
+.pl{max-width:1000px;margin:0 auto;padding:10px 16px 60px;display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:22px;animation:up .5s .05s both}
+.vid{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 60px rgba(255,122,61,.15)}
+.vid video{width:100%;display:block;aspect-ratio:9/16;background:#000}
+.fechar{position:sticky;top:0;display:flex;justify-content:flex-end;padding:14px 16px 0;max-width:1000px;margin:0 auto;z-index:2}
+.fechar button{background:var(--card2);border:1px solid var(--line);color:var(--txt);border-radius:99px;padding:10px 16px;font-weight:800;cursor:pointer}
+.side .num{font-size:13px}
+.side h2{margin:6px 0 10px;font-size:32px}
+.side p{color:var(--mut);line-height:1.55}
+.nav{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.nav button{background:var(--card2);border:1px solid var(--line);color:var(--txt);border-radius:99px;padding:12px 18px;font-weight:800;cursor:pointer}
+.nav .marcar{background:var(--acc);color:#1a0d05;border:0}
+.side .pr{opacity:1;transform:none;margin-top:14px}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+@keyframes fd{from{opacity:0}}
+footer{margin-top:50px;text-align:center;color:#6f695f;font-size:13px}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.pl{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.nome{font-size:16px}.thumb{aspect-ratio:9/13}.info{padding:12px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.mod,.pr{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="dots"></div>
+<div class="wrap">
+ <header><img src="logo_biel.jpg" alt=""><div><div class="t1">ÁREA DO ALUNO</div><div class="t2">Animador <span class="it">de Bolso</span></div></div></header>
+ <section class="hero">
+  <div class="box"><h1>Seu primeiro desenho <span class="it">viral</span>, do zero, no celular.</h1><p>7 aulas curtas e diretas. Assista na ordem, copie os prompts e faça junto.</p><button class="btn" id="cont">▶ <span id="contTxt">Começar pelo módulo 1</span></button></div>
+  <div class="box prog"><div class="ring" id="ring"><div id="pct">0%</div></div><div><div class="l1">SEU PROGRESSO</div><div class="l2" id="feitos">0 de 7 aulas</div><div class="l3">As aulas que você assistir ficam marcadas aqui.</div></div></div>
+ </section>
+ <h2>Módulos</h2>
+ <div class="grid" id="grid"></div>
+ <h2>Bônus · <span class="it">prompts prontos</span></h2>
+ <div class="bonus" id="bonus"></div>
+ <footer>Animador de Bolso · conteúdo exclusivo para alunos</footer>
+</div>
+<div class="ov" id="ov"><div class="fechar"><button id="fechar">✕ Fechar</button></div><div class="pl"><div class="vid"><video id="video" controls playsinline preload="metadata"></video></div><div class="side" id="side"></div></div></div>
+<script>
+var P = {
+ rot: "Você é roteirista de séries animadas curtas para Reels. Escreva um episódio de 40 segundos sobre: \"caiu um Pix de 3 mil reais na sua conta e não é seu\". Personagem: Biel, 19 anos, mecânico, boné vermelho. Regras: 1) a primeira frase já mostra o problema; 2) 6 falas curtas de até 12 palavras, com o narrador falando com \"você\"; 3) para cada fala, descreva a cena em uma linha; 4) termine com uma pergunta com duas opções de uma palavra para o público votar nos comentários; 5) escreva a legenda do post com a votação.",
+ rotModelo: "Você é roteirista de séries animadas curtas para Reels. Escreva um episódio de 40 segundos sobre: [SITUAÇÃO DO DIA A DIA]. Personagem: [NOME, IDADE, PROFISSÃO, UM DETALHE MARCANTE]. Regras: 1) a primeira frase já mostra o problema; 2) 6 falas curtas de até 12 palavras, com o narrador falando com \"você\"; 3) para cada fala, descreva a cena em uma linha; 4) termine com uma pergunta com duas opções de uma palavra para o público votar nos comentários; 5) escreva a legenda do post com a votação.",
+ per: "Crie a imagem de um personagem de desenho animado 2D, estilo graphic novel: Biel, rapaz brasileiro de 19 anos, pele morena, cabelo curto escuro, boné vermelho virado pra trás, regata branca suja de graxa, macacão jeans azul, expressão simpática. Corpo inteiro, de frente, fundo liso cinza claro, sem texto. Formato vertical 9:16.",
+ perModelo: "Crie a imagem de um personagem de desenho animado 2D, estilo graphic novel: [NOME], [IDADE], [APARÊNCIA: pele, cabelo, rosto], [ROUPA COM 2 DETALHES FÁCEIS DE RECONHECER], expressão [EMOÇÃO]. Corpo inteiro, de frente, fundo liso cinza claro, sem texto. Formato vertical 9:16.",
+ ajuste: "Mantenha tudo igual, só deixe o boné vermelho mais vivo e coloque uma chave de boca na mão direita.",
+ cena1: "Use o personagem da imagem anexada exatamente igual (rosto, roupa e boné). Cena: Biel deitado na cama à noite, quarto simples, rosto iluminado pela tela do celular, expressão de susto. Desenho 2D estilo graphic novel, vertical 9:16, sem texto na imagem.",
+ cena2: "Mesmo personagem, exatamente igual. Cena: Biel sentado na mesa de uma cozinha simples, olhando preocupado para um boleto de aluguel em cima da mesa, luz amarela de lâmpada. Desenho 2D estilo graphic novel, vertical 9:16, sem texto.",
+ cena3: "Mesmo personagem, exatamente igual. Cena: Biel em pé no quarto escuro, segurando o celular com as duas mãos, dúvida no rosto, luz azul da tela. Desenho 2D estilo graphic novel, vertical 9:16, sem texto.",
+ cenaModelo: "Use o personagem da imagem anexada exatamente igual (rosto, roupa e detalhes). Cena: [O QUE ELE FAZ], [ONDE], [LUZ: noite, lâmpada amarela, tela do celular...], expressão de [EMOÇÃO]. Desenho 2D estilo graphic novel, vertical 9:16, sem texto na imagem.",
+ falas: "Caiu um Pix de três mil reais na sua conta. E não é seu.\nMensagem do banco, onze da noite: Pix recebido.\nNome que você nunca viu na vida.\nO aluguel vence amanhã. Faltam oitocentos reais.\nDez minutos depois: moço, pelo amor de Deus, devolve.\nPode ser golpe. Pode ser alguém desesperado.\nE aí… você devolve direto, ou vai no banco primeiro? Comenta DEVOLVE ou BANCO.",
+ legenda: "Caiu um Pix de 3 mil na sua conta e não é seu… 😳\nVocê devolvia direto ou ia no banco primeiro?\nComenta DEVOLVE ou BANCO 👇 Os comentários decidem a parte 2.\nMarca aquele amigo que ia gastar tudo 😂\n#animacao #historia #serieinterativa",
+ parte2: "Escreva a parte 2 do episódio abaixo. O público votou [OPÇÃO VENCEDORA] com [PLACAR]. Comece mostrando o resultado da votação em uma frase, mostre a consequência da escolha nos primeiros 5 segundos e termine com um dilema novo e maior, com duas opções de uma palavra. Mesmas regras: 6 falas de até 12 palavras, descrição de cada cena e legenda com votação.\n\nEpisódio anterior: [COLE O ROTEIRO DA PARTE 1]"
+};
+var M = [
+ {n:1, nome:"Comece aqui", app:"biel", desc:"Tudo o que você vai aprender e o vídeo que você vai fazer no final. Você só precisa do celular, do Gemini e do CapCut (gratuitos).", pr:[]},
+ {n:2, nome:"Roteiro com IA", app:"gemini", desc:"Abra o Gemini, cole o prompt abaixo e receba falas, cenas e legenda prontas. A primeira frase mostra o problema; o fim é sempre uma votação.", pr:[["Prompt do roteiro","rot"]]},
+ {n:3, nome:"Personagem fixo", app:"gemini", desc:"No Gemini: + → Criar imagem → cole o prompt do personagem. Depois, anexe a imagem dele e gere uma cena por fala do roteiro. Baixe tudo no tamanho original.", pr:[["Prompt do personagem","per"],["Pedido de ajuste","ajuste"],["Cena 1","cena1"],["Cena 2","cena2"],["Cena 3","cena3"]]},
+ {n:4, nome:"Montagem e voz", app:"capcut", desc:"CapCut → Novo vídeo → selecione as cenas em ordem. Depois: Texto → Adicionar texto → cole a fala → Texto para fala. Repita em cada fala e apague as caixas de texto.", pr:[["Falas para a narração","falas"]]},
+ {n:5, nome:"Movimento nas imagens", app:"capcut", desc:"Zoom com keyframe (toque no ◆ no começo e no fim da cena), efeito tremor para tensão, animação de balanço e transições de zoom ou blur entre as cenas.", pr:[]},
+ {n:6, nome:"Legendas e exportação", app:"capcut", desc:"Texto → Legendas automáticas (Português). Ajuste fonte, contorno e a cor das palavras mais fortes. Exporte em 1080p e 30 fps.", pr:[]},
+ {n:7, nome:"Postar a série", app:"instagram", desc:"Instagram → + → Reel → escolha o vídeo, cole a legenda com a votação e compartilhe. A opção que ganhar nos comentários vira a parte 2.", pr:[["Legenda do post","legenda"],["Prompt da parte 2","parte2"]]}
+];
+var DUR = {};
+var B = [["Roteiro","Modelo de roteiro para qualquer história","rotModelo"],["Personagem","Modelo de personagem","perModelo"],["Cenas","Modelo de cena com o mesmo personagem","cenaModelo"],["Série","Parte 2 a partir da votação","parte2"],["Exemplo","Roteiro completo: O Pix Errado","rot"],["Postagem","Legenda com votação","legenda"]];
+var vistos = [];
+try { vistos = JSON.parse(localStorage.getItem('adb_vistos') || '[]'); } catch (e) {}
+function salvar(){ try { localStorage.setItem('adb_vistos', JSON.stringify(vistos)); } catch (e) {} }
+function esc(s){ return s.replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
+function prompt(tag, titulo, k){ return '<div class="pr"><div class="tag">'+tag+'</div><h3>'+titulo+'</h3><pre>'+esc(P[k])+'</pre><button class="cp" data-k="'+k+'">Copiar</button></div>'; }
+function progresso(){
+ var n = vistos.length, p = Math.round(n/7*100);
+ document.getElementById('ring').style.setProperty('--p', p);
+ document.getElementById('pct').textContent = p + '%';
+ document.getElementById('feitos').textContent = n + ' de 7 aulas';
+ var prox = M.filter(function(m){ return vistos.indexOf(m.n) < 0; })[0];
+ document.getElementById('contTxt').textContent = prox ? (n ? 'Continuar: módulo ' + prox.n : 'Começar pelo módulo 1') : 'Rever o módulo 1';
+ document.getElementById('cont').onclick = function(){ abrir(prox ? prox.n : 1); };
+ document.querySelectorAll('.mod').forEach(function(el){ el.classList.toggle('visto', vistos.indexOf(+el.dataset.n) >= 0); });
+}
+var g = document.getElementById('grid');
+g.innerHTML = M.map(function(m){ return '<div class="mod" data-n="'+m.n+'"><div class="ok">✓ vista</div><div class="thumb"><img src="v/aula_'+m.n+'.jpg" alt="" loading="lazy"><div class="play"></div></div><div class="info"><div class="num">MÓDULO '+m.n+'</div><div class="nome">'+m.nome+'</div><div class="meta"><img src="logo_'+m.app+'.jpg" alt=""><span data-dur="'+m.n+'">aula curta</span></div></div></div>'; }).join('');
+document.getElementById('bonus').innerHTML = B.map(function(b){ return prompt(b[0].toUpperCase(), b[1], b[2]); }).join('');
+var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }); }, {threshold:.1}) : null;
+document.querySelectorAll('.mod,.pr').forEach(function(el, i){ el.style.transitionDelay = (i % 4) * 70 + 'ms'; if (io) io.observe(el); else el.classList.add('on'); });
+setTimeout(function(){ document.querySelectorAll('.mod,.pr').forEach(function(el){ el.classList.add('on'); }); }, 2500);
+g.addEventListener('click', function(e){ var c = e.target.closest('.mod'); if (c) abrir(+c.dataset.n); });
+document.addEventListener('click', function(e){
+ var b = e.target.closest('.cp'); if (!b) return;
+ var t = P[b.dataset.k];
+ var ok = function(){ b.textContent = 'Copiado ✓'; b.classList.add('feito'); setTimeout(function(){ b.textContent = 'Copiar'; b.classList.remove('feito'); }, 1800); };
+ if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, ok); else ok();
+});
+var ov = document.getElementById('ov'), video = document.getElementById('video'), atual = 1;
+function abrir(n){
+ atual = n; var m = M[n-1];
+ video.src = 'v/aula_' + n + '.mp4'; video.poster = 'v/aula_' + n + '.jpg';
+ var visto = vistos.indexOf(n) >= 0;
+ document.getElementById('side').innerHTML = '<div class="num">MÓDULO '+n+'</div><h2>'+m.nome+'</h2><p>'+m.desc+'</p><div class="nav">'+(n>1?'<button data-ir="'+(n-1)+'">← Anterior</button>':'')+'<button class="marcar" id="marcar">'+(visto?'✓ Vista':'Marcar como vista')+'</button>'+(n<7?'<button data-ir="'+(n+1)+'">Próxima →</button>':'')+'</div>' + m.pr.map(function(p){ return prompt('COPIE E COLE', p[0], p[1]); }).join('');
+ ov.classList.add('on'); ov.scrollTop = 0; document.body.style.overflow = 'hidden';
+ var pp = video.play(); if (pp && pp.catch) pp.catch(function(){});
+}
+function marcar(){ if (vistos.indexOf(atual) < 0) { vistos.push(atual); salvar(); } progresso(); var b = document.getElementById('marcar'); if (b) b.textContent = '✓ Vista'; }
+document.getElementById('side').addEventListener('click', function(e){ var b = e.target.closest('button'); if (!b) return; if (b.id === 'marcar') marcar(); else if (b.dataset.ir) abrir(+b.dataset.ir); });
+video.addEventListener('ended', function(){ marcar(); if (atual < 7) setTimeout(function(){ abrir(atual + 1); }, 900); });
+function fechar(){ video.pause(); ov.classList.remove('on'); document.body.style.overflow = ''; }
+document.getElementById('fechar').onclick = fechar;
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') fechar(); });
+M.forEach(function(m){ var v = document.createElement('video'); v.preload = 'metadata'; v.src = 'v/aula_' + m.n + '.mp4'; v.onloadedmetadata = function(){ var s = Math.round(v.duration), el = document.querySelector('[data-dur="'+m.n+'"]'); if (el && s) el.textContent = Math.floor(s/60) + ':' + ('0' + s%60).slice(-2) + ' min'; }; });
+progresso();
+</script>
+</body>
+</html>
