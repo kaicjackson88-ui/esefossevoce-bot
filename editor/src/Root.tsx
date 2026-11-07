@@ -8,7 +8,7 @@ import {ProvaV3, PROVA3_DUR} from './ProvaV3';
 import {PrecoV3, PRECO3_DUR} from './PrecoV3';
 import {MobilV3, MOBIL3_DUR} from './MobilV3';
 import {RendaV3, RENDA3_DUR} from './RendaV3';
-import {ProdCurso, ProdRoteiros, ProdPersonagens, ProdMentoria, CapaKiwify, BannerCheckout, FundoCheckout, CapaPersonagem} from './Produtos';
+import {ProdCurso, ProdRoteiros, ProdPersonagens, ProdMentoria, CapaKiwify, BannerCheckout, FundoCheckout, CapaPersonagem, CapaRoteiros} from './Produtos';
 import {AulaVideo, AULAS, durAula} from './Aulas';
 import {CriPreco, CriMobil, CriRenda, CriRosto, CriProva, TEMPOS} from './Campanha';
 
@@ -24,6 +24,7 @@ export const Root: React.FC = () => (
     <Composition id="Banner-Checkout" component={BannerCheckout} durationInFrames={1} fps={30} width={1500} height={500} />
     {Object.entries(AULAS).map(([k, a]) => <Composition key={k} id={`Aula-${a.mod}`} component={AulaVideo} defaultProps={{a}} durationInFrames={durAula(a)} fps={30} width={1080} height={1920} />)}
     <Composition id="Fundo-Checkout" component={FundoCheckout} durationInFrames={1} fps={30} width={1920} height={1080} />
+    <Composition id="Capa-Roteiros" component={CapaRoteiros} durationInFrames={1} fps={30} width={1080} height={1080} />
     <Composition id="Capa-Personagem" component={CapaPersonagem} durationInFrames={1} fps={30} width={1080} height={1080} />
     <Composition id="Cri-Renda3" component={RendaV3} durationInFrames={RENDA3_DUR} fps={30} width={1080} height={1920} />
     <Composition id="Cri-Mobil3" component={MobilV3} durationInFrames={MOBIL3_DUR} fps={30} width={1080} height={1920} />

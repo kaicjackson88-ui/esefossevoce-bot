@@ -169,3 +169,18 @@ export const CapaPersonagem: React.FC = () => (
     </div>
   </AbsoluteFill>
 );
+export const CapaRoteiros: React.FC = () => (
+  <AbsoluteFill>
+    <Fontes /><FundoMarca />
+    <div style={{position: 'absolute', left: 70, top: 90, fontFamily: SANS, color: TXT, zIndex: 5}}>
+      <div style={{fontSize: 24, fontWeight: 700, letterSpacing: '0.16em', color: ACC}}>PDF · PRONTO PRA ANIMAR</div>
+      <div style={{fontWeight: 900, fontSize: 210, letterSpacing: '-0.06em', lineHeight: 0.85, marginTop: 14, color: ACC}}>30</div>
+      <div style={{fontWeight: 800, fontSize: 84, letterSpacing: '-0.05em', lineHeight: 0.95, marginTop: 6}}>roteiros<br /><span style={{fontFamily: SERIF, fontStyle: 'italic', fontWeight: 400, color: ACC2, fontSize: 96}}>virais</span></div>
+      <div style={{marginTop: 22, fontSize: 28, color: '#c9c1b4', lineHeight: 1.3, maxWidth: 360}}>Gancho, falas, cenas, votação e legenda</div>
+    </div>
+    <div style={{position: 'absolute', left: 340, top: 210, width: 1080, height: 1080, transform: 'scale(.7)', transformOrigin: 'top left'}}><ProdRoteiros /></div>
+    <div style={{position: 'absolute', left: 70, bottom: 80, zIndex: 5, display: 'flex', gap: 14, fontFamily: SANS}}>
+      {['30 histórias', 'votação pronta', 'legenda pronta'].map((t) => <span key={t} style={{background: 'rgba(244,239,230,.08)', border: '1px solid rgba(244,239,230,.16)', color: TXT, fontWeight: 700, fontSize: 24, padding: '10px 20px', borderRadius: 99}}>{t}</span>)}
+    </div>
+  </AbsoluteFill>
+);
