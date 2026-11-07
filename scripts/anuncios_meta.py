@@ -221,7 +221,10 @@ def criarpixel(arq):
     cfg = ler(arq)
     if cfg.get('pixel'):
         print('A campanha já tem pixel:', cfg['pixel']); return
-    r = api('POST', f"{cfg['conta']}/adspixels", {'name': cfg.get('nome_pixel', cfg['nome'])})
+    nome = cfg.get('nome_pixel', cfg['nome'])
+    r = _try(lambda: api('POST', f"{cfg['conta']}/adspixels", {'name': nome}), None)
+    if not r:   # a conta já tem pixel: cria no gerenciador de negócios
+        r = api('POST', f"{os.environ.get('BM_ID', '3744560922226564')}/adspixels", {'name': nome})
     gravar(DADOS / f"meta_pixel_{cfg['id']}.json", r)
     print('Pixel criado:', r.get('id'))
 
